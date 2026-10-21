@@ -5,10 +5,21 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import {
   StreamableHTTPServerTransport
 } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
+import { createCharacterStore } from "./lib/character-store.mjs";
+import { createReferenceLibrary } from "./lib/reference-library.mjs";
+import { applyVisualCharacterPatch, createVisualCharacterModel } from "./lib/visual-editor.mjs";
 
-const VERSION = "1.0.0";
+const VERSION = "1.1.0";
 const MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const ai = new OpenAI();
+const characterStore = createCharacterStore();
+const referenceLibrary = createReferenceLibrary();
+
+function authorised(req) {
+  const configured = process.env.MCP_API_TOKEN;
+  if (!configured) return process.env.NODE_ENV !== "production";
+  return req.headers.authorization === `Bearer ${configured}`;
+}
 
 const fields = {
   persona: [
@@ -503,11 +514,103 @@ function makeServer() {
     }
   );
 
+  tool(
+    server,
+    "save_character",
+    "Persist a complete character or persona record in the local character library.",
+    { record: z.record(z.unknown()) },
+    async ({ record }) => {
+      const saved = await characterStore.save(record);
+      return result(saved, JSON.stringify(saved, null, 2));
+    }
+  );
+
+  tool(
+    server,
+    "list_characters",
+    "List persisted character records without exposing secrets.",
+    {},
+    async () => {
+      const records = await characterStore.list();
+      return result({ records: records.map(({ id, name, Name, updatedAt, createdAt }) => ({ id, name: name || Name, updatedAt, createdAt })) }, JSON.stringify(records, null, 2));
+    }
+  );
+
+  tool(
+    server,
+    "get_character",
+    "Retrieve one persisted character record by ID.",
+    { id: z.string().min(1) },
+    async ({ id }) => {
+      const record = await characterStore.get(id);
+      return result(record, JSON.stringify(record, null, 2));
+    }
+  );
+
+  tool(
+    server,
+    "list_references",
+    "List local Markdown, text, JSON, and PDF references available to the creator.",
+    {},
+    async () => {
+      const references = await referenceLibrary.list();
+      return result({ references }, JSON.stringify(references, null, 2));
+    }
+  );
+
+  tool(
+    server,
+    "search_references",
+    "Search the configured reference library and return excerpts with source paths.",
+    { query: z.string().min(1) },
+    async ({ query }) => {
+      const matches = await referenceLibrary.search(query);
+      return result({ query, matches }, JSON.stringify(matches, null, 2));
+    }
+  );
+
+  tool(
+    server,
+    "read_reference",
+    "Read a selected reference. PDF extraction uses pdftotext when installed.",
+    { path: z.string().min(1) },
+    async ({ path }) => {
+      const reference = await referenceLibrary.read(path);
+      return result(reference, reference.text || reference.message || JSON.stringify(reference));
+    }
+  );
+
+  tool(
+    server,
+    "create_visual_character_model",
+    "Convert a character record into an editable visual-character model.",
+    { character: z.record(z.unknown()) },
+    async ({ character }) => {
+      const model = createVisualCharacterModel(character);
+      return result(model, JSON.stringify(model, null, 2));
+    }
+  );
+
+  tool(
+    server,
+    "update_visual_character_model",
+    "Apply a constrained visual edit without changing unrelated character fields.",
+    { model: z.record(z.unknown()), patch: z.record(z.unknown()) },
+    async ({ model, patch }) => {
+      const updated = applyVisualCharacterPatch(model, patch);
+      return result(updated, JSON.stringify(updated, null, 2));
+    }
+  );
+
   return server;
 }
 
 const port = Number(process.env.PORT || 8787);
-const host = "127.0.0.1";
+const host = process.env.HOST || "127.0.0.1";
+
+if (process.env.NODE_ENV === "production" && !process.env.MCP_API_TOKEN) {
+  throw new Error("MCP_API_TOKEN is required when NODE_ENV=production.");
+}
 
 createServer(async (req, res) => {
   const url = new URL(req.url || "/", `http://${host}:${port}`);
@@ -521,6 +624,12 @@ createServer(async (req, res) => {
   if (req.method !== "POST" || url.pathname !== "/mcp") {
     res.writeHead(404);
     res.end("Not found");
+    return;
+  }
+
+  if (!authorised(req)) {
+    res.writeHead(401, { "content-type": "text/plain", "www-authenticate": "Bearer" });
+    res.end("Unauthorised");
     return;
   }
 
