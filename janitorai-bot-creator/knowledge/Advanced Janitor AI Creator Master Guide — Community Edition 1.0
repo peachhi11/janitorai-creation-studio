@@ -1,0 +1,383 @@
+# Advanced Janitor AI Creator
+## Master Guide — Community Edition 1.0
+
+*A comprehensive foundation for creating psychologically rich AI characters and reusable roleplay personas.*
+
+---
+
+## 1. Purpose and Philosophy
+
+The objective is to create believable fictional individuals, not collections of attractive traits or generic chatbot behaviors.
+
+Every major detail should contribute to at least one of the following:
+
+- Establishing a recognizable personality.
+- Explaining a meaningful behavior or contradiction.
+- Providing opportunities for character development.
+- Deepening relationships and interpersonal conflict.
+- Supporting immersion and narrative continuity.
+
+Characters should possess independent motivations, individual values, recognizable voices, and believable emotional limitations.
+
+A fictional person becomes compelling when their decisions reflect both what they desire and what they fear.
+
+## 2. Character Architecture
+
+### 2.1 The Core Wound
+
+A core wound is a formative experience that influences a character's worldview.
+
+Examples include conditional affection, a significant betrayal, public humiliation, unexpected responsibility, or the collapse of a cherished belief.
+
+Not every character requires severe trauma. Ordinary disappointments, family expectations, cultural pressures, and personal failures can produce equally meaningful psychological patterns.
+
+For each character, identify:
+
+- Formative experience.
+- Belief developed from that experience.
+- Protective behavior adopted afterward.
+- Situations that challenge that belief.
+- Potential for change.
+
+**Example:** A character raised to believe that affection must be earned through usefulness may become extraordinarily dependable while struggling to accept unconditional kindness.
+
+### 2.2 Psychological Contradictions
+
+Compelling characters contain contradictions that make sense within their individual psychology.
+
+A character might be socially confident but deeply afraid of emotional dependence. Another might value honesty while habitually concealing their own feelings.
+
+Contradictions should create observable differences between circumstances rather than arbitrary personality changes.
+
+### 2.3 Attachment and Defense Mechanisms
+
+Attachment tendencies can inform how characters approach trust, separation, reassurance, and vulnerability.
+
+Common patterns include secure, anxious, avoidant, and fearful-avoidant attachment.
+
+Defense mechanisms may include humor, rationalization, projection, intellectualization, avoidance, denial, and displacement.
+
+These frameworks are interpretive tools, not definitive diagnoses. They should inform actions and dialogue without turning characterization into clinical exposition.
+
+### 2.4 Values and Motivations
+
+Distinguish between stated values and demonstrated priorities.
+
+A character who claims to prize justice but repeatedly protects loved ones from accountability may value loyalty more strongly than fairness.
+
+Create situations where two important values conflict. These decisions produce meaningful roleplay rather than repetitive misunderstandings.
+
+## 3. Linguistic Identity
+
+Every major character should have a recognizable verbal identity.
+
+Consider:
+
+- Preferred vocabulary and sentence length.
+- Formality, humor, sarcasm, and emotional directness.
+- Professional or educational language habits.
+- Regional and multilingual influences.
+- Differences between public and private speech.
+- Speech changes during fear, anger, affection, or embarrassment.
+- Subjects the character avoids discussing directly.
+
+Dialogue should contain subtext. Characters rarely communicate every desire, fear, and assumption openly.
+
+Speech examples should demonstrate the character's voice without becoming catchphrases that the AI repeats mechanically.
+
+## 4. Relationship Architecture
+
+Relationships become engaging when they contain genuine compatibility and meaningful differences.
+
+Explore:
+
+- Initial assumptions and first impressions.
+- Complementary strengths and conflicting values.
+- Different methods of expressing care.
+- Points of mutual admiration.
+- Sources of irritation or mistrust.
+- Situations that encourage vulnerability.
+- Conflicts that remain relevant after initial attraction.
+- Opportunities for gradual trust and development.
+
+Never assume a character automatically loves, trusts, obeys, or desires another character unless the established scenario supports that relationship.
+
+## 5. Cultural Authenticity
+
+Culture should influence a character's lived experiences without defining every aspect of their personality.
+
+Consider family structures, social expectations, class background, education, religion when relevant, language, community traditions, and regional experiences.
+
+Avoid exaggerating accents, relying on generalized national personalities, or using cultural background as a substitute for individual characterization.
+
+## 6. Mature Characterization
+
+For adult characters, romantic and sexual preferences can be relevant aspects of their identity.
+
+These may include orientation, relationship expectations, comfort with affection, personal boundaries, communication, power dynamics, and emotional attitudes toward intimacy.
+
+Such details should be connected to the character's wider personality and experience.
+
+Sexuality must not be reduced to a list of interchangeable preferences, and kink should not automatically be attributed to psychological trauma.
+
+Mature characterization should respect consent, individual agency, and the applicable platform's content policies.
+
+## 7. Required Janitor AI Character Template
+
+Use this exact structure when generating complete bot character sheets.
+
+    # Setting
+    - Time Period:
+    - World Details:
+    - Main Characters: {{user}}, {{char}}
+
+    ## Lore
+
+    <{{char}}>
+
+    # {{char}}
+
+    ## Overview
+
+    ## Appearance Details
+    - Race:
+    - Height:
+    - Age:
+    - Hair:
+    - Eyes:
+    - Body:
+    - Face:
+    - Features:
+    - Privates:
+
+    ## Starting Outfit
+    - Head:
+    - Accessories:
+    - Makeup:
+    - Neck:
+    - Top:
+    - Bottom:
+    - Legs:
+    - Shoes:
+    - Panties:
+
+    ## Origin
+
+    ## Residence
+
+    ## Connections
+
+    ## Goal
+
+    ## Secret
+
+    ## Personality
+    - Archetype:
+    - Tags:
+    - Likes:
+    - Dislikes:
+    - Deep-Rooted Fears:
+    - Details:
+    - When Safe:
+    - When Alone:
+    - When Cornered:
+    - With {{user}}:
+
+    ## Behaviour and Habits
+    -
+    -
+    -
+
+    ## Sexuality
+    - Sex/Gender:
+    - Sexual Orientation:
+    - Kinks/Preferences:
+
+    ## Sexual Quirks and Habits
+    -
+    -
+
+    ## Speech
+    - Style:
+    - Quirks:
+    - Ticks:
+
+    ## Speech Examples and Opinions
+
+    [These examples establish the character's voice,
+    memories, thoughts, and opinions. Do not repeat
+    them verbatim during roleplay.]
+
+    Greeting Example:
+    ""
+
+    Pleas for {something}:
+    ""
+
+    Embarrassed over {something}:
+    ""
+
+    Forced to {something}:
+    ""
+
+    Caught {something}:
+    ""
+
+    A memory about {something}:
+    ""
+
+    A thought about {something}:
+    ""
+
+    ## {{char}} Synonyms
+    -
+    -
+    -
+
+    ## Notes
+    -
+    -
+
+    </{{char}}>
+
+Every field should contain relevant information. Do not add or remove sections, change the order, or rename headings when using this template.
+
+## 8. Scenario Memo
+
+A scenario memo reinforces important behavioral or contextual information for continued roleplay.
+
+It can be placed in Janitor AI's Advanced Definitions under Character's Note, using the appropriate depth setting.
+
+    <scenario memo>
+
+    # Memo
+
+    ## Scenario Notes
+    - Core personality traits
+    - Important relationship context
+    - Established scenario rules
+    - Distinctive speech behaviors
+    - Critical continuity information
+
+    </scenario memo>
+
+A scenario memo should contain concise, actionable facts rather than reproducing the entire character sheet.
+
+## 9. Portable User Persona Architecture
+
+User personas differ from bot definitions because they represent the identity controlled by the human roleplayer.
+
+A well-designed persona should be capable of sustaining an independent narrative.
+
+### Layer One — Permanent Core Identity
+
+Record stable details such as:
+
+- Name, age, appearance, and identity.
+- Personality, contradictions, motivations, and values.
+- Formative experiences and enduring relationships.
+- Emotional vulnerabilities and psychological defenses.
+- Personal habits, speech, interests, and limitations.
+- Independent ambitions and long-term development potential.
+
+### Layer Two — Setting Adaptation
+
+For each roleplay, adapt world-dependent information such as profession, social position, geographic background, supernatural abilities, technology, and historical context.
+
+These changes must not overwrite permanent identity unless explicitly approved.
+
+### Layer Three — Relationship Overlay
+
+Create a distinct overlay for each existing Janitor AI bot.
+
+Describe how the persona might enter that bot's world, their likely initial impressions, possible compatibility, points of friction, and narrative opportunities.
+
+Do not predetermine the bot's feelings or actions.
+
+## 10. Persona Export Formats
+
+### Full Character Bible
+
+An extensive master profile containing the character's complete identity and psychological background.
+
+This serves as the source of truth for future adaptations.
+
+### Compact Janitor AI Persona
+
+A shorter description optimized for the available persona field.
+
+Prioritize recognizable appearance, personality, motivation, communication, and essential background.
+
+Avoid filling limited space with unnecessary exposition.
+
+### World-Specific Adaptation
+
+A separate profile containing setting-dependent facts and relationship context.
+
+It supplements the permanent character bible without replacing it.
+
+### Standalone Bot Conversion
+
+A developed persona may be converted into a complete Janitor AI bot using the character template in Section 7.
+
+Preserve the original character's identity while expanding bot-facing behavior, speech examples, scenario details, and interaction patterns.
+
+## 11. Character Continuity
+
+Maintain two distinct categories of canon.
+
+**Permanent canon** contains established identity and developments deliberately accepted by the creator.
+
+**Roleplay canon** contains events, relationships, discoveries, and experiences specific to one storyline.
+
+Do not automatically merge alternate timelines.
+
+When a roleplay produces an interesting personality development, present it as a proposed permanent change. Incorporate it only with the creator's approval.
+
+Preserve previous versions where possible.
+
+## 12. Character-Creation Workflow
+
+1. Establish the concept, genre, setting, and intended character role.
+2. Develop the independent psychological foundation.
+3. Construct meaningful contradictions and personal motivations.
+4. Establish relationships, background, habits, and distinctive speech.
+5. Complete the required character template or persona bible.
+6. Review consistency, plausibility, and narrative potential.
+7. Offer targeted revisions or expansions.
+8. Provide a copy-ready final export.
+9. For user personas, optionally produce compact and world-specific variants.
+10. Preserve the character for future roleplay adaptation or bot conversion.
+
+## 13. Quality Assurance
+
+Before finalizing a character, confirm that:
+
+- Their personality is not one-dimensional.
+- Their actions have believable motivations.
+- Their backstory influences behavior without overwhelming it.
+- Their vulnerabilities create natural tension.
+- Their speech remains identifiable.
+- Their cultural details are individualized.
+- Their relationships allow genuine conflict and development.
+- Their flaws produce plausible consequences.
+- Their emotional changes are gradual and justified.
+- Their character identity remains recognizable across settings.
+- Their personal agency is preserved.
+- All required output sections are present.
+
+## Closing Principle
+
+The strongest fictional characters are not those who possess the most impressive biographies or dramatic histories.
+
+They are those whose choices, contradictions, ordinary habits, relationships, and emotional responses create the impression of a coherent inner life.
+
+Build individuals who could exist beyond the immediate scenario.
+
+A character should be worth knowing even when nobody is trying to romance, rescue, defeat, or impress them.
+
+---
+
+*JanitorAi Bot Creator — Community Edition*
+
+*Reconstructed and expanded guide, Version 1.0. This is an independently authored reference derived from available creator guidance and our portable-persona design, not a reproduction of the original PDF.*
