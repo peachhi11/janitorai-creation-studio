@@ -8,6 +8,8 @@ import {
 import { createCharacterStore } from "./lib/character-store.mjs";
 import { createReferenceLibrary } from "./lib/reference-library.mjs";
 import { applyVisualCharacterPatch, createVisualCharacterModel } from "./lib/visual-editor.mjs";
+import { createCharacterApplication } from "./lib/application.mjs";
+import { registerMcpTools } from "./lib/mcp-tools.mjs";
 
 const VERSION = "1.1.0";
 const MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
@@ -328,280 +330,24 @@ function errorResult(error) {
   };
 }
 
-function tool(server, name, description, inputSchema, fn) {
-  server.registerTool(
-    name,
-    { title: name.replaceAll("_", " "), description, inputSchema },
-    async args => {
-      try {
-        return await fn(args);
-      } catch (error) {
-        return errorResult(error);
-      }
-    }
-  );
-}
+
+const application = createCharacterApplication({
+  generate,
+  fields,
+  personaMarkdown,
+  compactPersona,
+  botMarkdown,
+  scenarioMemo,
+  characterStore,
+  referenceLibrary
+});
 
 function makeServer() {
   const server = new McpServer({
     name: "janitorai-bot-creator",
     version: VERSION
   });
-
-  tool(
-    server,
-    "create_character",
-    "Generate a complete Janitor AI bot character sheet.",
-    {
-      concept: z.string().min(1),
-      setting: z.string().optional(),
-      preferences: z.string().optional()
-    },
-    async input => {
-      const character = await generate(
-        "Create a full Janitor AI bot definition.",
-        input,
-        fields.bot
-      );
-      const markdown = botMarkdown(character);
-      return result(
-        { character, markdown, memo: scenarioMemo(character.Notes) },
-        markdown
-      );
-    }
-  );
-
-  tool(
-    server,
-    "revise_character",
-    "Revise an existing bot while preserving established canon.",
-    {
-      character: z.record(z.string()),
-      changes: z.string().min(1)
-    },
-    async input => {
-      const character = await generate(
-        "Revise the existing bot. Preserve all unrequested details. Return a complete replacement definition.",
-        input,
-        fields.bot
-      );
-      const markdown = botMarkdown(character);
-      return result({ character, markdown }, markdown);
-    }
-  );
-
-  tool(
-    server,
-    "create_user_persona",
-    "Create an independent reusable roleplay persona with full biography and compact export.",
-    {
-      concept: z.string().min(1),
-      preferences: z.string().optional(),
-      maxChars: z.number().int().min(300).max(10000).optional()
-    },
-    async input => {
-      const persona = await generate(
-        "Create a complete portable fictional identity. Do not include facts that require any particular bot or setting.",
-        input,
-        fields.persona
-      );
-
-      const bible = personaMarkdown(persona);
-      const compact = compactPersona(persona, input.maxChars ?? 2000);
-
-      const payload = {
-        schemaVersion: VERSION,
-        core: persona,
-        adaptations: [],
-        roleplayHistory: [],
-        bible,
-        compact
-      };
-
-      return result(
-        payload,
-        `# Character Bible\n\n${bible}\n\n# Compact Persona\n\n${compact}`
-      );
-    }
-  );
-
-  tool(
-    server,
-    "adapt_persona_to_bot",
-    "Create a world-specific and bot-specific adaptation without altering permanent persona canon.",
-    {
-      persona: z.record(z.string()),
-      botDescription: z.string().min(1),
-      scenario: z.string().optional()
-    },
-    async input => {
-      const keys = [
-        "Setting", "Occupation", "World Background",
-        "Appearance Adjustments", "Abilities and Limits",
-        "Reason for Meeting",
-        "First Impressions", "Possible Chemistry",
-        "Potential Conflicts", "Boundaries",
-        "Story Hooks", "Canon Compatibility Notes"
-      ];
-
-      const overlay = await generate(
-        "Create a roleplay adaptation. Preserve the entire supplied permanent identity. Do not declare the bot's feelings or choices as facts. Clearly distinguish new invented lore from supplied canon.",
-        input,
-        keys
-      );
-
-      const markdown = Object.entries(overlay)
-        .map(([k, v]) => `## ${k}\n${v}`)
-        .join("\n\n");
-
-      return result({
-        core: input.persona,
-        adaptation: overlay,
-        markdown
-      }, markdown);
-    }
-  );
-
-  tool(
-    server,
-    "update_persona_canon",
-    "Promote explicitly selected roleplay discoveries into a persona's permanent character bible.",
-    {
-      persona: z.record(z.string()),
-      selectedDevelopments: z.array(z.string()).min(1),
-      continuityNotes: z.string().optional()
-    },
-    async input => {
-      const updated = await generate(
-        "Incorporate ONLY the explicitly selected developments into permanent canon. Retain the persona's original identity. Do not transfer any other roleplay events. Return every original persona field.",
-        input,
-        fields.persona
-      );
-
-      const bible = personaMarkdown(updated);
-      return result({
-        previous: input.persona,
-        core: updated,
-        promoted: input.selectedDevelopments,
-        bible,
-        compact: compactPersona(updated)
-      }, bible);
-    }
-  );
-
-  tool(
-    server,
-    "promote_persona_to_character",
-    "Convert a portable user persona into a complete Janitor AI bot definition.",
-    {
-      persona: z.record(z.string()),
-      setting: z.string().optional(),
-      intendedScenario: z.string().optional()
-    },
-    async input => {
-      const character = await generate(
-        "Convert this established persona into a Janitor AI bot. Preserve appearance, personality, motivations, voice, personal history, flaws and values. Expand the persona into the full bot template without overwriting established core canon.",
-        input,
-        fields.bot
-      );
-
-      const markdown = botMarkdown(character);
-      return result({
-        character,
-        markdown,
-        memo: scenarioMemo(character.Notes)
-      }, markdown);
-    }
-  );
-
-  tool(
-    server,
-    "save_character",
-    "Persist a complete character or persona record in the local character library.",
-    { record: z.record(z.unknown()) },
-    async ({ record }) => {
-      const saved = await characterStore.save(record);
-      return result(saved, JSON.stringify(saved, null, 2));
-    }
-  );
-
-  tool(
-    server,
-    "list_characters",
-    "List persisted character records without exposing secrets.",
-    {},
-    async () => {
-      const records = await characterStore.list();
-      return result({ records: records.map(({ id, name, Name, updatedAt, createdAt }) => ({ id, name: name || Name, updatedAt, createdAt })) }, JSON.stringify(records, null, 2));
-    }
-  );
-
-  tool(
-    server,
-    "get_character",
-    "Retrieve one persisted character record by ID.",
-    { id: z.string().min(1) },
-    async ({ id }) => {
-      const record = await characterStore.get(id);
-      return result(record, JSON.stringify(record, null, 2));
-    }
-  );
-
-  tool(
-    server,
-    "list_references",
-    "List local Markdown, text, JSON, and PDF references available to the creator.",
-    {},
-    async () => {
-      const references = await referenceLibrary.list();
-      return result({ references }, JSON.stringify(references, null, 2));
-    }
-  );
-
-  tool(
-    server,
-    "search_references",
-    "Search the configured reference library and return excerpts with source paths.",
-    { query: z.string().min(1) },
-    async ({ query }) => {
-      const matches = await referenceLibrary.search(query);
-      return result({ query, matches }, JSON.stringify(matches, null, 2));
-    }
-  );
-
-  tool(
-    server,
-    "read_reference",
-    "Read a selected reference. PDF extraction uses pdftotext when installed.",
-    { path: z.string().min(1) },
-    async ({ path }) => {
-      const reference = await referenceLibrary.read(path);
-      return result(reference, reference.text || reference.message || JSON.stringify(reference));
-    }
-  );
-
-  tool(
-    server,
-    "create_visual_character_model",
-    "Convert a character record into an editable visual-character model.",
-    { character: z.record(z.unknown()) },
-    async ({ character }) => {
-      const model = createVisualCharacterModel(character);
-      return result(model, JSON.stringify(model, null, 2));
-    }
-  );
-
-  tool(
-    server,
-    "update_visual_character_model",
-    "Apply a constrained visual edit without changing unrelated character fields.",
-    { model: z.record(z.unknown()), patch: z.record(z.unknown()) },
-    async ({ model, patch }) => {
-      const updated = applyVisualCharacterPatch(model, patch);
-      return result(updated, JSON.stringify(updated, null, 2));
-    }
-  );
-
+  registerMcpTools(server, application);
   return server;
 }
 

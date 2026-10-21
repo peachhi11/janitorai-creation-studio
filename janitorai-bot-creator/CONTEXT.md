@@ -1,0 +1,21 @@
+# Context
+
+## Domain language
+- **Character record:** a persisted JSON document representing a bot or portable persona.
+- **Reference:** a local Markdown, text, JSON, or PDF source available for retrieval.
+- **Visual model:** a constrained projection of character identity, appearance, outfit, palette, and notes.
+- **Tool:** an MCP-facing operation exposed to clients.
+- **Application:** the domain-facing module that orchestrates generation, rendering, persistence, retrieval, and visual edits.
+- **Adapter:** a transport or storage implementation behind a seam.
+
+## Current architecture
+- The HTTP server is a transport/configuration adapter.
+- MCP tool registration is isolated in `lib/mcp-tools.mjs`.
+- Application use cases are exposed through `createCharacterApplication` in `lib/application.mjs`.
+- Filesystem persistence and reference retrieval remain concrete adapters until a second implementation justifies a generic interface.
+
+## Invariants
+- Preserve the existing MCP tool names and payload intent.
+- Keep generation and rendering behind the application seam.
+- Do not claim storage is durable unless the selected storage adapter confirms the write.
+- Do not introduce a generic adapter interface for a single concrete implementation.
