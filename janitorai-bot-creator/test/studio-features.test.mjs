@@ -16,6 +16,15 @@ test("character store persists and lists records", async () => {
   assert.equal((await store.list()).length, 1);
 });
 
+test("character store rejects path traversal and writes valid JSON", async () => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), "janitor-character-"));
+  const store = createCharacterStore(directory);
+  await assert.rejects(() => store.save({ id: "../outside", name: "Unsafe" }), /Invalid record identifier/);
+  await assert.rejects(() => store.get("../outside"), /Invalid record identifier/);
+  const saved = await store.save({ id: "safe-id", name: "Safe" });
+  assert.equal((await store.get("safe-id")).name, "Safe");
+});
+
 test("reference library searches text and lists PDFs", async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), "janitor-reference-"));
   await mkdir(path.join(directory, "notes"));
@@ -24,6 +33,12 @@ test("reference library searches text and lists PDFs", async () => {
   const library = createReferenceLibrary(directory);
   assert.equal((await library.search("player agency")).length, 1);
   assert.equal((await library.list()).some(item => item.extension === "pdf"), true);
+});
+
+test("reference library rejects sibling-prefix escape paths", async () => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), "janitor-reference-"));
+  const library = createReferenceLibrary(directory);
+  await assert.rejects(() => library.read("../"), /Path escapes the configured directory/);
 });
 
 test("visual editor applies constrained patches", () => {
@@ -37,12 +52,9 @@ test("application seam delegates creation and preserves a narrow result contract
   const calls = [];
   const app = createCharacterApplication({
     fields: { bot: ["Name"], persona: ["Name"] },
-    generate: async (task, input, keys) => {
-      calls.push({ task, input, keys });
-      return { Name: "Mara", Notes: "A quiet opening." };
-    },
-    botMarkdown: character => `# ${character.Name}`,
-    personaMarkdown: character => `# ${character.Name}`,
+    generate: async (task, input, keys) => { calls.push({ task, input, keys }); return { Name: "Mara", Notes: "A quiet opening." }; },
+    botMarkdown: character => "# " + character.Name,
+    personaMarkdown: character => "# " + character.Name,
     compactPersona: character => character.Name,
     scenarioMemo: notes => notes,
     characterStore: { save: async record => record, list: async () => [], get: async id => ({ id }) },
