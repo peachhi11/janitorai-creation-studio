@@ -20,7 +20,7 @@ test("character store rejects path traversal and writes valid JSON", async () =>
   const directory = await mkdtemp(path.join(os.tmpdir(), "janitor-character-"));
   const store = createCharacterStore(directory);
   await assert.rejects(() => store.save({ id: "../outside", name: "Unsafe" }), /Invalid record identifier/);
-  await assert.rejects(() => store.get("../outside"), /Invalid record identifier/);
+  assert.throws(() => store.get("../outside"), /Invalid record identifier/);
   const saved = await store.save({ id: "safe-id", name: "Safe" });
   assert.equal((await store.get("safe-id")).name, "Safe");
 });
