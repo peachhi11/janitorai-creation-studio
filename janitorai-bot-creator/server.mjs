@@ -1,13 +1,11 @@
 import { createServer } from "node:http";
 import OpenAI from "openai";
-import { z } from "zod";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import {
   StreamableHTTPServerTransport
 } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createCharacterStore } from "./lib/character-store.mjs";
 import { createReferenceLibrary } from "./lib/reference-library.mjs";
-import { applyVisualCharacterPatch, createVisualCharacterModel } from "./lib/visual-editor.mjs";
 import { createCharacterApplication } from "./lib/application.mjs";
 import { registerMcpTools } from "./lib/mcp-tools.mjs";
 
@@ -312,24 +310,6 @@ function scenarioMemo(notes) {
     "</scenario memo>"
   ].join("\n");
 }
-
-function result(payload, display) {
-  return {
-    content: [{ type: "text", text: display }],
-    structuredContent: payload
-  };
-}
-
-function errorResult(error) {
-  return {
-    isError: true,
-    content: [{
-      type: "text",
-      text: error instanceof Error ? error.message : String(error)
-    }]
-  };
-}
-
 
 const application = createCharacterApplication({
   generate,
