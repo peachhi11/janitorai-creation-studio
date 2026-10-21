@@ -1,0 +1,1124 @@
+# Portable User Persona Architecture
+## The Complete Guide to Reusable Roleplay Identities, Character Bibles & Standalone Bot Conversion
+### JanitorAi Bot Creator — Community Edition, Version 1.0
+
+*A comprehensive framework for creating independent fictional people who can inhabit multiple roleplay universes, develop organically through interaction, and eventually become fully fledged Janitor AI characters.*
+
+---
+
+# 1. The Philosophy of Portable Characters
+
+A user persona should never exist solely to complement another character.
+
+While many roleplay personas begin as companions, rivals, romantic interests, or narrative counterparts to existing bots, the most compelling personas possess identities strong enough to support independent stories.
+
+A portable persona is therefore designed as a complete fictional individual whose defining psychological characteristics remain recognizable across different settings.
+
+Their occupation may change. Their circumstances may change. Their relationships and experiences may differ between roleplays.
+
+Their underlying identity should remain coherent.
+
+**The fundamental design principle is simple: Build the person first. Adapt the circumstances second.**
+
+A successful portable persona must possess:
+
+- An independent identity and personal history.
+- Meaningful motivations unrelated to any particular bot.
+- Distinctive personality traits and contradictions.
+- Emotional vulnerabilities and coping strategies.
+- Individual interests, habits, preferences, and values.
+- A recognizable physical and linguistic identity.
+- Relationship expectations and personal boundaries.
+- Room for believable development.
+- Sufficient flexibility to inhabit different fictional worlds.
+- Enough narrative depth to become a standalone character.
+
+---
+
+# 2. The Three-Layer Character Architecture
+
+Every portable persona should be organized into three distinct layers.
+
+## Layer One — Permanent Core Identity
+
+This is the character's foundational identity.
+
+It contains the details that should normally remain consistent between roleplays.
+
+### Identity
+
+- Full name and preferred names.
+- Age or established age range.
+- Gender identity.
+- Sexual orientation, when relevant.
+- Species or ancestry, when essential to the concept.
+- Physical appearance.
+- Recognizable physical characteristics.
+
+### Psychological Foundation
+
+- Temperament.
+- Dominant personality traits.
+- Core beliefs.
+- Values and moral priorities.
+- Formative experiences.
+- Emotional vulnerabilities.
+- Attachment tendencies.
+- Defense mechanisms.
+- Personal contradictions.
+- Recurring fears and insecurities.
+
+### Behavioral Foundation
+
+- Habits and routines.
+- Preferences and dislikes.
+- Typical emotional reactions.
+- Methods of expressing affection.
+- Conflict-management style.
+- Personal boundaries.
+- Distinctive speech patterns.
+- Individual mannerisms.
+
+### Personal Identity
+
+- Core ambitions.
+- Meaningful interests.
+- Independent relationships.
+- Important memories.
+- Personal secrets.
+- Established talents.
+- Limitations and weaknesses.
+
+**Core identity should not change merely because the character encounters a different bot.**
+
+---
+
+## Layer Two — World Adaptation
+
+World adaptation describes how the character exists within a specific fictional setting.
+
+Some details must change when moving between genres, historical periods, or fictional universes.
+
+These changes should preserve the essential character rather than replace them.
+
+### Adaptable Elements
+
+- Occupation.
+- Social position.
+- Geographic location.
+- Historical circumstances.
+- Political environment.
+- Educational opportunities.
+- Technology.
+- Clothing.
+- Setting-specific abilities.
+- Species or supernatural traits, when appropriate.
+- Local relationships.
+- Immediate personal circumstances.
+
+### Example
+
+Consider a fundamentally reserved, conscientious, protective individual with a habit of studying people before trusting them.
+
+**Modern crime thriller:** They become a forensic accountant investigating financial corruption.
+
+**Medieval fantasy:** They become a royal records keeper uncovering a conspiracy.
+
+**Science fiction:** They become a navigation officer responsible for the safety of a spacecraft.
+
+**Supernatural romance:** They become a human archivist researching unexplained disappearances.
+
+Their professional expertise changes, but their psychological foundation remains recognizable.
+
+### Adaptation Rule
+
+Change the expression of the character's identity, not the underlying personality.
+
+If an adaptation requires a major change to permanent canon, flag it as an alternate-universe divergence.
+
+---
+
+## Layer Three — Relationship and Scenario Overlay
+
+This layer defines how the persona interacts with one specific Janitor AI bot.
+
+It should not become permanent identity information automatically.
+
+### Relationship Overlay Components
+
+- Identity of the target bot.
+- Relevant setting information.
+- Reason the characters might meet.
+- Initial assumptions and impressions.
+- Shared values or interests.
+- Potential disagreements.
+- Compatible and incompatible traits.
+- Relevant personal boundaries.
+- Social or professional obligations.
+- Opportunities for trust and vulnerability.
+- Possible narrative developments.
+
+The overlay must distinguish established bot canon from invented scenario details.
+
+**Never declare that a bot loves, trusts, desires, or admires the persona unless that fact is established by the supplied source material.**
+
+---
+
+# 3. Creating the Full Character Bible
+
+The character bible is the authoritative master profile for a portable persona.
+
+It contains more information than is practical to place inside a standard Janitor AI persona field.
+
+Its purpose is to preserve identity, support revisions, and facilitate future adaptations.
+
+## 3.1 Required Character Bible Template
+
+Use the following structure for full-length portable personas.
+
+    # Character Bible
+
+    ## Identity
+    - Full Name:
+    - Preferred Name:
+    - Age:
+    - Gender:
+    - Pronouns:
+    - Sexual Orientation:
+    - Romantic Orientation:
+    - Species/Ancestry:
+    - Cultural Background:
+    - Languages:
+
+    ## Overview
+
+    ## Physical Appearance
+    - Height:
+    - Build:
+    - Hair:
+    - Eyes:
+    - Face:
+    - Skin:
+    - Distinguishing Features:
+    - Voice:
+    - Scent:
+    - Posture:
+    - General Presentation:
+
+    ## Personal Style
+    - Clothing:
+    - Accessories:
+    - Grooming:
+    - Preferred Colors:
+    - Distinctive Items:
+
+    ## Origin and Background
+
+    ## Formative Experiences
+
+    ## Current Life
+
+    ## Connections
+
+    ## Goals
+    - Immediate:
+    - Long-Term:
+    - Unacknowledged:
+
+    ## Secrets
+
+    ## Psychological Foundation
+    - Core Wound:
+    - Core Belief:
+    - Attachment Tendencies:
+    - Defense Mechanisms:
+    - Cognitive Biases:
+    - Values Hierarchy:
+    - Emotional Triggers:
+    - Coping Strategies:
+
+    ## Personality
+    - Archetype:
+    - Core Traits:
+    - Contradictions:
+    - Strengths:
+    - Flaws:
+    - Likes:
+    - Dislikes:
+    - Deep-Rooted Fears:
+    - Insecurities:
+    - When Safe:
+    - When Alone:
+    - When Cornered:
+    - When Vulnerable:
+    - When Angry:
+    - When Affectionate:
+
+    ## Behaviour and Habits
+
+    ## Relationships and Intimacy
+    - Relationship Expectations:
+    - Attachment Behaviour:
+    - Romantic Preferences:
+    - Boundaries:
+    - Affection Style:
+    - Sexuality and Intimacy:
+    - Emotional Vulnerabilities:
+
+    ## Speech
+    - Style:
+    - Vocabulary:
+    - Sentence Structure:
+    - Humor:
+    - Quirks:
+    - Ticks:
+    - Emotional Speech Changes:
+    - Cultural or Regional Influences:
+
+    ## Speech Examples
+    - Casual Greeting:
+    - Annoyed:
+    - Embarrassed:
+    - Vulnerable:
+    - Affectionate:
+    - Frightened:
+    - Amused:
+    - Reflective:
+
+    ## Personal Interests
+
+    ## Skills and Limitations
+
+    ## Character Development
+    - Potential Growth:
+    - Resistance to Change:
+    - Development Triggers:
+    - Enduring Characteristics:
+
+    ## Permanent Canon Notes
+
+    ## Adaptation Rules
+
+    ## Future Character Potential
+
+### Template Usage
+
+Every section should provide actionable characterization.
+
+Avoid filling the profile with generic adjectives, arbitrary trivia, or lengthy descriptions that do not influence behavior.
+
+The character bible is not restricted to the length of the compact persona.
+
+Its purpose is completeness, continuity, and creative usefulness.
+
+---
+
+# 4. Building an Independent Character Identity
+
+A character designed primarily for a specific romantic partner may struggle when transferred to another story.
+
+To prevent this, establish independent motivations before designing relationship chemistry.
+
+## 4.1 Independent Goals
+
+Every persona should possess meaningful objectives unrelated to another bot.
+
+Possible goals include:
+
+- Pursuing professional recognition.
+- Finding a missing family member.
+- Protecting a community.
+- Understanding a personal mystery.
+- Becoming financially independent.
+- Mastering a difficult skill.
+- Escaping a restrictive social position.
+- Rebuilding a damaged reputation.
+- Seeking personal stability.
+
+These goals should remain meaningful even when romance or friendship becomes important.
+
+## 4.2 Independent Relationships
+
+A believable persona has a social history.
+
+Consider:
+
+- Family members.
+- Childhood friends.
+- Mentors.
+- Rivals.
+- Former partners.
+- Colleagues.
+- Neighbors.
+- Community ties.
+
+Not every connection requires extensive detail.
+
+A handful of meaningful relationships can create more depth than a large list of inconsequential names.
+
+## 4.3 Independent Values
+
+A persona should possess principles that influence their choices.
+
+Values may generate conflict with a target bot.
+
+A compassionate character may object to a ruthless partner's decisions.
+
+A fiercely independent persona may resist someone who attempts to control their life.
+
+Such friction is often essential to maintaining character integrity.
+
+---
+
+# 5. Psychological Portability
+
+Psychological portability means preserving recognizable behavior across different settings.
+
+## 5.1 Core Beliefs
+
+A character's beliefs about trust, worth, love, responsibility, and danger should remain broadly consistent unless an adaptation deliberately establishes a different developmental history.
+
+## 5.2 Emotional Responses
+
+A character who habitually intellectualizes distress should not suddenly become emotionally demonstrative merely because a particular bot prefers expressive partners.
+
+## 5.3 Contradictions
+
+Preserve the contradictions that make the individual recognizable.
+
+For example:
+
+A character who is publicly confident but privately terrified of disappointing others should retain this tension across settings.
+
+## 5.4 Defensive Patterns
+
+Defense mechanisms should adapt to circumstances without disappearing.
+
+A character who uses sarcasm to manage fear might make jokes about supernatural threats in fantasy and bureaucratic disasters in contemporary fiction.
+
+The subjects change. The coping pattern remains.
+
+## 5.5 Character Growth
+
+Development from one storyline should not automatically affect another.
+
+Changes must be tracked within the relevant roleplay continuity.
+
+---
+
+# 6. The Compact Janitor AI Persona
+
+A compact persona is a shortened representation of the full character bible.
+
+It should prioritize the information most likely to influence how another AI character understands and interacts with the persona.
+
+## 6.1 Information Priority
+
+Include essential details in this order, adjusting when necessary:
+
+1. Name, age, gender, and identity.
+2. Recognizable physical appearance.
+3. Dominant personality characteristics.
+4. Important contradictions or vulnerabilities.
+5. Relevant personal background.
+6. Core motivations and values.
+7. Distinctive behavioral habits.
+8. Speech patterns.
+9. Important relationship boundaries.
+
+Avoid lengthy family histories unless they directly affect the current roleplay.
+
+## 6.2 Compact Persona Template
+
+    Name:
+    Age:
+    Gender/Pronouns:
+    Appearance:
+    Personality:
+    Background:
+    Motivations:
+    Vulnerabilities:
+    Habits:
+    Speech:
+    Boundaries:
+
+This format may be compressed into a paragraph when space is limited.
+
+## 6.3 Character Limits
+
+The plugin should support configurable character limits rather than relying on a single fixed maximum.
+
+Recommended export modes:
+
+**Micro Persona:** Approximately 400–700 characters.
+
+**Compact Persona:** Approximately 1,000–1,500 characters.
+
+**Standard Persona:** Approximately 1,500–2,500 characters.
+
+**Extended Persona:** Approximately 3,000–5,000 characters.
+
+These are design targets, not claims about Janitor AI's current platform limits. Always respect the limits presented by the platform.
+
+## 6.4 Compression Principles
+
+When shortening a character:
+
+- Remove repetitive adjectives.
+- Combine related details.
+- Preserve distinguishing characteristics.
+- Prioritize behavioral information.
+- Retain psychological contradictions.
+- Remove background exposition that does not affect interaction.
+- Avoid replacing specific traits with vague labels.
+
+**Good compression preserves personality, not merely appearance.**
+
+---
+
+# 7. Matching a Persona to an Existing Bot
+
+When designing a persona for an existing Janitor AI character, analyze the bot before adapting the persona.
+
+## 7.1 Required Inputs
+
+Ideally obtain:
+
+- Bot name.
+- Character definition or description.
+- Setting and lore.
+- Personality information.
+- Scenario.
+- Opening message.
+- Established relationships.
+- Important restrictions.
+
+If only partial information is available, distinguish assumptions from established facts.
+
+## 7.2 Compatibility Analysis
+
+Consider:
+
+**World Compatibility:** Can the persona plausibly exist in the setting?
+
+**Social Compatibility:** Would their occupation, status, or background allow them to encounter the bot?
+
+**Psychological Compatibility:** Which traits create understanding or friction?
+
+**Moral Compatibility:** Do their values support or oppose each other?
+
+**Narrative Compatibility:** Can their interaction sustain a meaningful story?
+
+**Relationship Compatibility:** Are their preferences and boundaries compatible with the proposed dynamic?
+
+## 7.3 Compatibility Is Not Agreement
+
+A compelling persona does not need to agree with the bot.
+
+A fiercely independent character may create excellent conflict with an authoritarian figure.
+
+An empathetic character may challenge a cynical counterpart.
+
+A cautious character may complement an impulsive adventurer.
+
+The relationship should produce meaningful interactions without destroying the persona's identity.
+
+---
+
+# 8. Designing Relationship Chemistry
+
+## 8.1 Initial Attraction or Interest
+
+Interest may arise from:
+
+- Shared expertise.
+- Curiosity.
+- Humor.
+- Physical attraction.
+- Moral admiration.
+- Familiar experiences.
+- Contrasting personalities.
+- Mutual obligations.
+- Unexpected kindness.
+
+Do not assume romantic attraction when the scenario does not establish it.
+
+## 8.2 Initial Resistance
+
+Resistance should arise naturally from the characters' motivations.
+
+Potential reasons include:
+
+- Conflicting values.
+- Social restrictions.
+- Personal commitments.
+- Fear of vulnerability.
+- Distrust.
+- Professional responsibilities.
+- Previous experiences.
+
+## 8.3 Sustainable Conflict
+
+Long-term conflict should involve meaningful differences rather than endless misunderstandings.
+
+Examples include:
+
+- Duty versus freedom.
+- Loyalty versus justice.
+- Security versus adventure.
+- Honesty versus protection.
+- Independence versus emotional dependence.
+
+## 8.4 Earned Vulnerability
+
+Trust develops through accumulated interactions.
+
+A character might gradually reveal vulnerabilities after observing reliability, respect, compassion, or shared adversity.
+
+Avoid scripting another character's eventual emotional response.
+
+---
+
+# 9. World Adaptation Framework
+
+## 9.1 Contemporary Settings
+
+Adapt the persona's education, occupation, social relationships, and daily habits to a modern environment.
+
+Maintain recognizable values and personality.
+
+## 9.2 Historical Settings
+
+Research relevant social conventions, technology, education, legal restrictions, and language.
+
+Avoid introducing modern attitudes or terminology without explanation.
+
+## 9.3 Fantasy Settings
+
+Translate modern capabilities into setting-appropriate equivalents.
+
+A technologically skilled persona might become an engineer, artificer, scholar, or magical researcher depending on the world's rules.
+
+Do not grant abilities that contradict established lore.
+
+## 9.4 Science Fiction
+
+Adapt the character to relevant technology, institutions, political systems, and professional opportunities.
+
+Their underlying personality should remain intact.
+
+## 9.5 Supernatural Settings
+
+Determine whether the persona remains human or requires an alternate supernatural identity.
+
+If changing species or fundamental physiology, label the adaptation as a significant alternate-universe variation.
+
+## 9.6 Established Fictional Universes
+
+Preserve canon restrictions.
+
+Avoid granting the persona implausible importance, authority, or abilities simply to increase compatibility with major characters.
+
+---
+
+# 10. Adaptation Record Template
+
+Every world-specific adaptation should have its own record.
+
+    # Persona Adaptation
+
+    ## Base Persona
+    - Name:
+    - Core Version:
+
+    ## Target Setting
+    - Universe:
+    - Time Period:
+    - Location:
+    - Important Lore:
+
+    ## Adapted Identity
+    - Occupation:
+    - Social Position:
+    - Background Adjustments:
+    - Appearance Adjustments:
+    - Abilities:
+    - Limitations:
+
+    ## Relationship Overlay
+    - Target Bot:
+    - Meeting Circumstances:
+    - Initial Impression:
+    - Possible Chemistry:
+    - Potential Conflicts:
+    - Relevant Boundaries:
+    - Story Hooks:
+
+    ## Canon Compatibility
+
+    ## Changes From Base Persona
+
+    ## Roleplay-Specific Notes
+
+Do not overwrite the permanent character bible with these adaptations.
+
+---
+
+# 11. Character Canon Management
+
+Portable characters may participate in multiple incompatible storylines.
+
+A formal continuity system prevents accidental merging.
+
+## 11.1 Permanent Canon
+
+Contains approved facts belonging to the character's primary identity.
+
+## 11.2 Roleplay Canon
+
+Contains events specific to one storyline.
+
+## 11.3 Alternate-Universe Canon
+
+Contains deliberately modified identity details required by another setting.
+
+## 11.4 Proposed Canon
+
+Contains developments discovered during roleplay that the creator may wish to preserve.
+
+These developments should not automatically become permanent.
+
+---
+
+# 12. Canon Promotion
+
+Roleplay sometimes reveals unexpected aspects of a character's personality.
+
+A previously established reserved character might develop an unexpected habit of expressing affection through handwritten notes.
+
+The creator may decide this behavior belongs to the permanent character identity.
+
+## 12.1 Promotion Workflow
+
+1. Identify the potential development.
+2. Explain its psychological significance.
+3. Determine whether it conflicts with established canon.
+4. Ask whether the creator wants to preserve it.
+5. Update the permanent character bible only after approval.
+6. Record the change in a version history.
+7. Preserve the previous character version.
+
+## 12.2 Promotion Categories
+
+**Personality Development:** New recurring behaviors or values.
+
+**Personal History:** Newly established biographical facts.
+
+**Relationships:** Important permanent connections.
+
+**Skills:** Capabilities developed through a storyline.
+
+**Preferences:** Newly discovered interests or dislikes.
+
+**Emotional Growth:** Changes in trust, coping, or self-understanding.
+
+## 12.3 Continuity Restrictions
+
+Do not automatically promote:
+
+- Marriages.
+- Children.
+- Deaths.
+- Permanent injuries.
+- Supernatural transformations.
+- Major political events.
+- Setting-specific powers.
+- Incompatible relationships.
+
+Such developments normally belong to their individual roleplay continuities.
+
+---
+
+# 13. Version Control
+
+A reusable persona benefits from explicit versioning.
+
+Suggested identifiers:
+
+**Core v1.0:** Original character identity.
+
+**Core v1.1:** Minor approved developments.
+
+**Core v2.0:** Major revision to identity or history.
+
+**Fantasy-AU v1.0:** Fantasy adaptation.
+
+**SciFi-AU v1.0:** Science-fiction adaptation.
+
+**Bot-Match v1.0:** Relationship overlay for a specific character.
+
+### Versioning Rule
+
+Never silently erase established character history.
+
+Maintain the ability to compare earlier and current versions.
+
+---
+
+# 14. Character Development Across Roleplays
+
+Roleplay can serve as a creative testing environment.
+
+Different scenarios reveal how a character behaves under changing pressures.
+
+A persona might demonstrate:
+
+- Unexpected courage.
+- Unanticipated emotional sensitivity.
+- A previously unnoticed insecurity.
+- A distinctive form of humor.
+- New interpersonal boundaries.
+- Surprising leadership abilities.
+- Greater capacity for forgiveness than originally imagined.
+
+These discoveries should be evaluated according to whether they strengthen the coherent character.
+
+Not every surprising action belongs in permanent canon.
+
+---
+
+# 15. Converting a Persona Into a Standalone Bot
+
+A developed user persona may eventually become compelling enough to function as an independent Janitor AI character.
+
+This conversion should preserve their established identity.
+
+## 15.1 Conversion Requirements
+
+The character should possess:
+
+- A coherent personal history.
+- Independent motivations.
+- Meaningful flaws.
+- Recognizable speech.
+- Established emotional patterns.
+- Individual values.
+- Distinctive appearance.
+- Personal interests.
+- Relationship potential.
+- Narrative flexibility.
+
+## 15.2 Conversion Process
+
+**Step One:** Review the permanent character bible.
+
+**Step Two:** Identify which details are setting-dependent.
+
+**Step Three:** Establish the bot's default setting and circumstances.
+
+**Step Four:** Translate the persona's identity into the complete Janitor AI character template.
+
+**Step Five:** Expand interactive behaviors and speech examples.
+
+**Step Six:** Define realistic potential relationships with `{{user}}`.
+
+**Step Seven:** Create an appropriate opening scenario.
+
+**Step Eight:** Establish a scenario memo containing critical continuity anchors.
+
+**Step Nine:** Validate the completed character against original core canon.
+
+## 15.3 Preserving Identity
+
+Conversion must not automatically change:
+
+- Personality.
+- Sexual orientation.
+- Established values.
+- Core motivations.
+- Significant personal history.
+- Defining flaws.
+- Emotional boundaries.
+- Distinctive speech.
+
+Any proposed alteration should be deliberate.
+
+---
+
+# 16. Character-to-Bot Conversion Checklist
+
+Before finalizing the new bot, verify that:
+
+- The character remains recognizable.
+- Their independent goals remain meaningful.
+- Their dialogue reflects established linguistic identity.
+- Their psychological contradictions survive conversion.
+- Their history remains internally consistent.
+- Their behavior supports interactive roleplay.
+- Their relationships are not predetermined unnecessarily.
+- Their boundaries and values remain coherent.
+- The full Janitor AI template is completed.
+- The bot can sustain different scenarios without losing personality.
+
+---
+
+# 17. Persona Creation Workflow for an AI Assistant
+
+The persona creator should follow this sequence.
+
+## Phase One — Concept
+
+Ask for the intended character concept, desired traits, genre, and any essential preferences when not already provided.
+
+## Phase Two — Independent Identity
+
+Build the persona's personality and background without depending on a specific bot.
+
+## Phase Three — Psychology
+
+Establish motivations, contradictions, fears, values, attachment tendencies, and defenses.
+
+## Phase Four — Behavior
+
+Develop habits, preferences, communication patterns, and emotional reactions.
+
+## Phase Five — Full Character Bible
+
+Produce the detailed permanent profile.
+
+## Phase Six — Compact Persona
+
+Generate a character-limit-conscious export using the established identity.
+
+## Phase Seven — Optional Bot Matching
+
+Analyze a supplied bot and create a separate relationship overlay.
+
+## Phase Eight — Optional Adaptation
+
+Modify setting-dependent details while preserving core canon.
+
+## Phase Nine — Revision
+
+Incorporate requested changes without unnecessarily rewriting established identity.
+
+## Phase Ten — Future Development
+
+Offer canon updates, alternate-universe adaptations, and standalone bot conversion when relevant.
+
+---
+
+# 18. Example Portable Persona Architecture
+
+## Core Concept: The Reserved Investigator
+
+**Name:** Evelyn Vale
+
+**Age:** 29
+
+**Personality:** Observant, conscientious, quietly stubborn, empathetic, and skeptical.
+
+**Core contradiction:** She is intensely protective of others but deeply uncomfortable receiving help.
+
+**Core belief:** Competence is the most reliable form of security.
+
+**Defense mechanisms:** Intellectualization and dry humor.
+
+**Values:** Truth, personal responsibility, loyalty, independence.
+
+**Vulnerability:** Fear that being emotionally dependent will make her less capable.
+
+**Habits:** Keeps handwritten notes, remembers small details about acquaintances, and becomes unusually precise when nervous.
+
+**Speech:** Measured, articulate, understated, with subtle sarcasm.
+
+**Independent goal:** To uncover an unresolved mystery connected to her professional history.
+
+### Modern Adaptation
+
+Evelyn becomes a forensic investigator.
+
+Her analytical habits and concern with evidence translate directly into contemporary professional life.
+
+### Fantasy Adaptation
+
+Evelyn becomes an archivist attached to a royal court.
+
+Her skepticism and investigative instincts make her well suited to uncovering concealed political information.
+
+### Science-Fiction Adaptation
+
+Evelyn becomes a systems analyst aboard an exploration vessel.
+
+She approaches unfamiliar problems through methodical observation and careful reasoning.
+
+### Psychological Continuity
+
+In every setting, Evelyn remains skeptical, protective, emotionally reserved, and privately afraid of dependence.
+
+Her professional context changes, but her underlying identity persists.
+
+### Standalone Bot Potential
+
+If developed into a complete bot, Evelyn would retain these characteristics while receiving expanded speech examples, default setting details, interaction behaviors, and a scenario suitable for `{{user}}`.
+
+---
+
+# 19. Common Portable Persona Mistakes
+
+## Designing Only for Romance
+
+The character has no goals outside attracting another character.
+
+**Improvement:** Establish an independent life and meaningful ambitions.
+
+## Changing Personality to Match Every Bot
+
+A reserved persona becomes outgoing, submissive, or aggressive whenever convenient.
+
+**Improvement:** Preserve core temperament and create compatibility through circumstances.
+
+## Overwriting Canon
+
+Events from one roleplay are treated as permanent across all settings.
+
+**Improvement:** Maintain separate continuity records.
+
+## Excessive Adaptation
+
+The character becomes fundamentally different in every universe.
+
+**Improvement:** Preserve psychological and linguistic identity.
+
+## Overcomplicated Compact Profiles
+
+Essential traits become buried beneath unnecessary historical details.
+
+**Improvement:** Prioritize information affecting immediate roleplay interaction.
+
+## Premature Standalone Conversion
+
+The persona is converted into a bot before developing a coherent independent identity.
+
+**Improvement:** Establish personality, history, motivations, and behavioral consistency first.
+
+---
+
+# 20. Portable Persona Quality Assurance Checklist
+
+Before finalizing a persona, confirm that:
+
+- The character has independent motivations.
+- Their personality contains meaningful contradictions.
+- Their formative experiences influence behavior.
+- Their goals remain relevant outside romance.
+- Their speech is distinctive.
+- Their habits are believable.
+- Their emotional vulnerabilities are coherent.
+- Their boundaries remain consistent.
+- Their identity can survive alternate settings.
+- Their world adaptations do not overwrite permanent canon.
+- Their relationship overlays preserve bot autonomy.
+- Their compact version retains essential characterization.
+- Their long-form bible supports future development.
+- Their roleplay histories remain separated.
+- Their approved developments are versioned.
+- They could eventually sustain a standalone story.
+
+---
+
+# 21. Plugin Implementation Requirements
+
+A plugin supporting this framework should provide the following capabilities.
+
+### Create Persona
+
+Generate a full character bible from a concept.
+
+### Export Compact Persona
+
+Produce a concise profile according to a requested character limit.
+
+### Adapt Persona
+
+Create an alternate-setting version without modifying permanent canon.
+
+### Match Existing Bot
+
+Analyze an existing character and develop a compatible relationship overlay.
+
+### Revise Persona
+
+Apply requested modifications while preserving established identity.
+
+### Track Canon
+
+Maintain permanent, roleplay-specific, and proposed developments separately.
+
+### Promote Canon
+
+Incorporate selected developments into a new version of the permanent character bible.
+
+### Convert to Bot
+
+Generate a complete Janitor AI character sheet from the established persona.
+
+### Export Character Files
+
+Support structured data formats and copy-ready text.
+
+### Preserve Versions
+
+Allow earlier character iterations to remain available.
+
+The system should never assume that every user wants an existing persona changed permanently.
+
+---
+
+# 22. Final Character Portability Test
+
+A character can be considered portable when the following questions have satisfactory answers.
+
+**Identity:** Would the persona remain recognizable in a different fictional world?
+
+**Motivation:** Would they still have meaningful goals without a romantic partner?
+
+**Psychology:** Would their emotional responses remain understandable under different circumstances?
+
+**Voice:** Could their dialogue be identified without relying entirely on names or accent markers?
+
+**Adaptability:** Can setting-specific details change without rewriting their underlying personality?
+
+**Continuity:** Can different roleplay histories remain separate?
+
+**Development:** Can new discoveries be incorporated deliberately rather than automatically?
+
+**Independence:** Could this character eventually become the central figure in their own story?
+
+If the answer to these questions is yes, the persona has a strong foundation for long-term creative use.
+
+---
+
+# Conclusion
+
+A portable user persona is more than a profile created to accompany an existing chatbot.
+
+It is a reusable fictional identity with an independent psychological foundation, recognizable behavior, personal ambitions, and the capacity for meaningful development.
+
+The strongest personas are flexible enough to inhabit different worlds without becoming interchangeable.
+
+Their circumstances may change.
+
+Their relationships may change.
+
+Their experiences may produce different outcomes.
+
+But their defining personality, motivations, values, and behavioral patterns remain recognizable.
+
+**Build the person first. Adapt the world around them. Let their experiences reveal who they can become.**
+
+---
+
+*JanitorAi Bot Creator — Community Edition*
+
+*Guide 05 of 05. Original companion reference for portable user-persona design, independent character development, roleplay continuity, and standalone Janitor AI bot conversion.*
