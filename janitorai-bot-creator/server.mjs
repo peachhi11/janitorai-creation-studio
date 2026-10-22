@@ -9,6 +9,7 @@ import { createReferenceLibrary } from "./lib/reference-library.mjs";
 import { createCharacterApplication } from "./lib/application.mjs";
 import { registerMcpTools } from "./lib/mcp-tools.mjs";
 import { isAuthorised, loadRuntimeConfig } from "./lib/runtime-config.mjs";
+import { rejectOversizedRequest } from "./lib/request-guards.mjs";
 
 const VERSION = "1.1.0";
 const config = loadRuntimeConfig();
@@ -350,6 +351,8 @@ createServer(async (req, res) => {
     res.end("Unauthorised");
     return;
   }
+
+  if (rejectOversizedRequest(req, res, config.maxRequestBytes)) return;
 
   const server = makeServer();
   const transport = new StreamableHTTPServerTransport({

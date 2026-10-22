@@ -1,8 +1,8 @@
 import crypto from "node:crypto";
 
-function integer(value, fallback, name) {
+function integer(value, fallback, name, maximum = 65535) {
   const parsed = Number(value ?? fallback);
-  if (!Number.isInteger(parsed) || parsed < 1 || parsed > 65535) {
+  if (!Number.isInteger(parsed) || parsed < 1 || parsed > maximum) {
     throw new Error(`Invalid ${name}.`);
   }
   return parsed;
@@ -21,7 +21,13 @@ export function loadRuntimeConfig(env = process.env) {
     host: env.HOST || "127.0.0.1",
     mcpApiToken,
     characterLibraryDir: env.CHARACTER_LIBRARY_DIR || "./data/characters",
-    referenceLibraryDir: env.REFERENCE_LIBRARY_DIR || "./knowledge"
+    referenceLibraryDir: env.REFERENCE_LIBRARY_DIR || "./knowledge",
+    maxRequestBytes: integer(
+      env.MAX_REQUEST_BYTES,
+      1_048_576,
+      "MAX_REQUEST_BYTES",
+      50 * 1024 * 1024
+    )
   });
 }
 
