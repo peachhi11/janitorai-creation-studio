@@ -8,5 +8,6 @@ Skills are implementation guidance, not universal psychological laws and not aut
 
 - `relationship-conflict-tracker`: tracks relationship dimensions and conflict causes across scene updates.
 - `world-continuity`: maintains a living contemporary setting without making every project modern-day.
+- `character-construction`: links character dimensions, motives, capabilities, and story function.
 
 The source ledger in `knowledge/source-ledger.json` records provenance and disposition for these modules.

@@ -3,6 +3,14 @@
   "purpose": "Provenance for repository-native skills distilled from the ChatGPT Library.",
   "entries": [
     {
+      "skill": "character-construction",
+      "library_file_id": "libfile_37586dfb6a588191969f719280e9e123",
+      "title": "Building Characters for Writers and Roleplayers",
+      "disposition": "KEEP–CORE",
+      "use": "Distilled character-dimension, motivation, capability, and conflict-design guidance.",
+      "limitations": ["Role and archetype labels are optional creative lenses.", "The source is not a psychological diagnostic system."]
+    },
+    {
       "skill": "relationship-conflict-tracker",
       "library_file_id": "libfile_a3463096f3408191a1df2b8fb0c47b2d",
       "title": "Relationship and Conflict Tracking Skill",
