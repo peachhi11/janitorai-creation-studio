@@ -3,6 +3,22 @@
   "purpose": "Provenance for repository-native skills distilled from the ChatGPT Library.",
   "entries": [
     {
+      "skill": "emotional-logic",
+      "library_file_id": "libfile_a306180216688191b03661fc1a116341",
+      "title": "write emotional logic(1).md",
+      "disposition": "KEEP–CORE",
+      "use": "Distilled method for expressing behaviour through emotional causality and concrete signals.",
+      "limitations": ["Patterns are tendencies, not hard rules.", "No single behaviour proves a personality label."]
+    },
+    {
+      "skill": "romance-route-design",
+      "library_file_id": "libfile_708d88dc2dd081918ac470b551a5c653",
+      "title": "100 contemporary romance trope ideas for you.md",
+      "disposition": "KEEP–MODULE",
+      "use": "Trope vocabulary and optional route prompts.",
+      "limitations": ["The source is an idea inventory, not a narrative prescription.", "Tropes do not determine consent, relationship configuration, or ending."]
+    },
+    {
       "skill": "character-construction",
       "library_file_id": "libfile_37586dfb6a588191969f719280e9e123",
       "title": "Building Characters for Writers and Roleplayers",
