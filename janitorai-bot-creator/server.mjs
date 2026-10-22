@@ -12,6 +12,7 @@ import { isAuthorised, loadRuntimeConfig } from "./lib/runtime-config.mjs";
 import { rejectOversizedRequest } from "./lib/request-guards.mjs";
 import { createRateLimiter } from "./lib/rate-limiter.mjs";
 import { createPromptPresetLibrary } from "./lib/prompt-presets.mjs";
+import { NARRATIVE_LENS } from "./lib/narrative-lens.mjs";
 
 const VERSION = "1.1.0";
 const SHUTDOWN_TIMEOUT_MS = 10_000;
@@ -73,7 +74,8 @@ function schemaFor(keys) {
   };
 }
 
-const SYSTEM = `
+const SYSTEM = `${NARRATIVE_LENS}
+
 You are JanitorAi Bot Creator, an expert creator
 of immersive fictional characters and user personas.
 
