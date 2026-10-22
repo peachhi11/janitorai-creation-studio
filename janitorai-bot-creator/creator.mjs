@@ -1,12 +1,11 @@
 import OpenAI from "openai";
-import { readFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
-import { execFileSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 import {
   outputSchema,
   renderCharacter,
   renderMemo
 } from "./character-schema.mjs";
+import { getKnowledgeContext } from "./lib/knowledge-context.mjs";
 import { loadRuntimeConfig } from "./lib/runtime-config.mjs";
 
 const config = loadRuntimeConfig();
@@ -16,74 +15,6 @@ const instructionText = readFileSync(
   new URL("./prompts/creator.md", import.meta.url),
   "utf8"
 );
-
-const knowledgeDirectory = new URL(
-  "./knowledge/",
-  import.meta.url
-);
-
-const references = [
-  "ENHANCED Advanced Janitor AI Bot Creator Prompt.pdf",
-  "Character Psychology & Human Behavior Guide.pdf",
-  "Human Sexuality & Intimacy Psychology: A Character Creator's Comprehensive Database.pdf",
-  "Authentic Cross-Cultural English.pdf"
-];
-
-// Optional local PDF extraction.
-// Requires the Poppler `pdftotext` command.
-function getKnowledgeContext(concept) {
-  const extracted = [];
-
-  const keywords = concept
-    .toLowerCase()
-    .match(/[a-z]{5,}/g) ?? [];
-
-  for (const filename of references) {
-    const filePath = join(
-      knowledgeDirectory.pathname,
-      filename
-    );
-
-    if (!existsSync(filePath)) continue;
-
-    try {
-      const fullText = execFileSync(
-        "pdftotext",
-        ["-layout", filePath, "-"],
-        {
-          encoding: "utf8",
-          maxBuffer: 15 * 1024 * 1024
-        }
-      );
-
-      const paragraphs = fullText
-        .split(/\n\s*\n/)
-        .map(p => p.replace(/\s+/g, " ").trim())
-        .filter(p => p.length > 120);
-
-      const selected = paragraphs
-        .map(p => ({
-          text: p,
-          score: keywords.reduce(
-            (sum, word) =>
-              sum + Number(p.toLowerCase().includes(word)),
-            0
-          )
-        }))
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 3)
-        .map(p => p.text.slice(0, 1500));
-
-      extracted.push(
-        `SOURCE: ${filename}\n${selected.join("\n")}`
-      );
-    } catch {
-      // Missing converter: continue without this PDF.
-    }
-  }
-
-  return extracted.join("\n\n").slice(0, 18000);
-}
 
 export async function createCharacter({
   concept,
@@ -204,3 +135,4 @@ export async function reviseCharacter({
     )
   };
 }
+
