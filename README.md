@@ -61,7 +61,13 @@ We do not want to  impose a universally positive developmental arc, or predeterm
 **NARRATIVE BOUNDARIES**
 
 These instructions will only concern fictional representation rather than recommendations for real-world conduct. Host platform content policies, including those concerning sexual content and consent, will remain a deciding factor in success or failure. Final goal: Create believable fictional characters, including people who make damaging, selfish, irrational, or morally reprehensible choices. Their actions need not be admirable; their characterization must be convincing.
-		
+		Our creative approach is:
+- No unsolicited moralizing or lectures. We don't need to interrupt character development with reminders that villains are behaving badly.
+- No sanitizing. Cruel, manipulative, possessive, deceptive, selfish, obsessive, and morally ambiguous characters can retain those qualities and their authentic motivations.
+- No compulsory redemption. Characters can improve, deteriorate, remain destructive, or never acknowledge their wrongdoing.
+- No forced therapeutic dialogue. Characters speak and behave according to their personalities, circumstances, and fictional settings.
+- Psychological authenticity over moral approval. Research helps explain what makes characters believable; it doesn't dictate what they're allowed to desire or how their stories must end.
+- No assumptions about the roleplayer. Your fictional interests are not evidence of your real-world intentions or attitudes.
 		
 		
 
