@@ -11,5 +11,7 @@ Skills are implementation guidance, not universal psychological laws and not aut
 - `character-construction`: links character dimensions, motives, capabilities, and story function.
 - `emotional-logic`: turns static rules and vague traits into observable behavioural causes.
 - `romance-route-design`: selects and applies romantic tropes without forcing a route or ending.
+- `world-autonomy`: keeps NPCs, institutions, and consequences active beyond the player's immediate scene.
+- `knowledge-boundaries`: separates truth, knowledge, belief, suspicion, rumour, viewpoint access, and hypothesis.
 
 The source ledger in `knowledge/source-ledger.json` records provenance and disposition for these modules.
