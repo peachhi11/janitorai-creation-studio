@@ -10,12 +10,17 @@ import { createCharacterApplication } from "./lib/application.mjs";
 import { registerMcpTools } from "./lib/mcp-tools.mjs";
 import { isAuthorised, loadRuntimeConfig } from "./lib/runtime-config.mjs";
 import { rejectOversizedRequest } from "./lib/request-guards.mjs";
+import { createRateLimiter } from "./lib/rate-limiter.mjs";
 
 const VERSION = "1.1.0";
 const config = loadRuntimeConfig();
 const ai = new OpenAI();
 const characterStore = createCharacterStore(config.characterLibraryDir);
 const referenceLibrary = createReferenceLibrary(config.referenceLibraryDir);
+const rateLimiter = createRateLimiter({
+  limit: config.rateLimit,
+  windowMs: config.rateWindowMs
+});
 
 function authorised(req) { return isAuthorised(req, config); }
 
@@ -353,6 +358,17 @@ createServer(async (req, res) => {
   }
 
   if (rejectOversizedRequest(req, res, config.maxRequestBytes)) return;
+
+  const rateKey = req.socket.remoteAddress || "unknown";
+  const rate = rateLimiter.check(rateKey);
+  if (!rate.allowed) {
+    res.writeHead(429, {
+      "content-type": "text/plain",
+      "retry-after": String(Math.ceil(rate.retryAfterMs / 1000))
+    });
+    res.end("Too many requests");
+    return;
+  }
 
   const server = makeServer();
   const transport = new StreamableHTTPServerTransport({

@@ -27,6 +27,18 @@ export function loadRuntimeConfig(env = process.env) {
       1_048_576,
       "MAX_REQUEST_BYTES",
       50 * 1024 * 1024
+    ),
+    rateLimit: integer(
+      env.MCP_RATE_LIMIT,
+      60,
+      "MCP_RATE_LIMIT",
+      10_000
+    ),
+    rateWindowMs: integer(
+      env.MCP_RATE_WINDOW_MS,
+      60_000,
+      "MCP_RATE_WINDOW_MS",
+      86_400_000
     )
   });
 }
