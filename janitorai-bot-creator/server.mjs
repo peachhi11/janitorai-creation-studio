@@ -11,6 +11,7 @@ import { registerMcpTools } from "./lib/mcp-tools.mjs";
 import { isAuthorised, loadRuntimeConfig } from "./lib/runtime-config.mjs";
 import { rejectOversizedRequest } from "./lib/request-guards.mjs";
 import { createRateLimiter } from "./lib/rate-limiter.mjs";
+import { createPromptPresetLibrary } from "./lib/prompt-presets.mjs";
 
 const VERSION = "1.1.0";
 const SHUTDOWN_TIMEOUT_MS = 10_000;
@@ -22,6 +23,7 @@ const rateLimiter = createRateLimiter({
   limit: config.rateLimit,
   windowMs: config.rateWindowMs
 });
+const promptPresets = createPromptPresetLibrary();
 
 function authorised(req) { return isAuthorised(req, config); }
 
@@ -323,7 +325,8 @@ const application = createCharacterApplication({
   botMarkdown,
   scenarioMemo,
   characterStore,
-  referenceLibrary
+  referenceLibrary,
+  promptPresets
 });
 
 function makeServer() {

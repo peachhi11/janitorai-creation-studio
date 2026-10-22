@@ -28,7 +28,8 @@ function tool(server, name, description, inputSchema, fn) {
 
 export function registerMcpTools(server, app) {
   tool(server, "create_character", "Generate a complete Janitor AI bot character sheet.", {
-    concept: z.string().min(1), setting: z.string().optional(), preferences: z.string().optional()
+    concept: z.string().min(1), setting: z.string().optional(), preferences: z.string().optional(),
+    promptPreset: z.string().optional()
   }, async input => {
     const value = await app.createCharacter(input);
     return { payload: value, display: value.markdown };

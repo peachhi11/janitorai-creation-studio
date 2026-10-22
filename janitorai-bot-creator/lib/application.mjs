@@ -8,7 +8,8 @@ export function createCharacterApplication({
   botMarkdown,
   scenarioMemo,
   characterStore,
-  referenceLibrary
+  referenceLibrary,
+  promptPresets
 }) {
   const botResult = character => {
     const markdown = botMarkdown(character);
@@ -17,7 +18,19 @@ export function createCharacterApplication({
 
   return {
     async createCharacter(input) {
-      return botResult(await generate("Create a full Janitor AI bot definition.", input, fields.bot));
+      const preset = input.promptPreset
+        ? await promptPresets.get(input.promptPreset)
+        : null;
+      const task = [
+        "Create a full Janitor AI bot definition.",
+        preset
+          ? `Apply this explicitly selected authorial prompt preset without treating it as universal policy: ${JSON.stringify(preset)}`
+          : ""
+      ].filter(Boolean).join("\n");
+      return botResult(await generate(task, {
+        ...input,
+        selectedPromptPreset: preset
+      }, fields.bot));
     },
 
     async reviseCharacter(input) {
