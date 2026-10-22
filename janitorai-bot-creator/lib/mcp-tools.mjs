@@ -26,17 +26,24 @@ function tool(server, name, description, inputSchema, fn) {
   );
 }
 
+const referenceOptions = {
+  useReferences: z.boolean().optional().describe("Use the repository reference library for grounded craft context."),
+  referenceQuery: z.string().optional(),
+  referenceIds: z.array(z.string()).optional(),
+  maxReferenceSources: z.number().int().min(1).max(8).optional()
+};
+
 export function registerMcpTools(server, app) {
   tool(server, "create_character", "Generate a complete Janitor AI bot character sheet.", {
     concept: z.string().min(1), setting: z.string().optional(), preferences: z.string().optional(),
-    promptPreset: z.string().optional()
+    promptPreset: z.string().optional(), ...referenceOptions
   }, async input => {
     const value = await app.createCharacter(input);
     return { payload: value, display: value.markdown };
   });
 
   tool(server, "revise_character", "Revise an existing bot while preserving established canon.", {
-    character: z.record(z.string()), changes: z.string().min(1)
+    character: z.record(z.string()), changes: z.string().min(1), ...referenceOptions
   }, async input => {
     const value = await app.reviseCharacter(input);
     return { payload: value, display: value.markdown };
@@ -44,14 +51,14 @@ export function registerMcpTools(server, app) {
 
   tool(server, "create_user_persona", "Create an independent reusable roleplay persona with full biography and compact export.", {
     concept: z.string().min(1), preferences: z.string().optional(),
-    maxChars: z.number().int().min(300).max(10000).optional()
+    maxChars: z.number().int().min(300).max(10000).optional(), ...referenceOptions
   }, async input => {
     const value = await app.createUserPersona(input);
     return { payload: value, display: `# Character Bible\n\n${value.bible}\n\n# Compact Persona\n\n${value.compact}` };
   });
 
   tool(server, "adapt_persona_to_bot", "Create a world-specific and bot-specific adaptation without altering permanent persona canon.", {
-    persona: z.record(z.string()), botDescription: z.string().min(1), scenario: z.string().optional()
+    persona: z.record(z.string()), botDescription: z.string().min(1), scenario: z.string().optional(), ...referenceOptions
   }, async input => {
     const value = await app.adaptPersonaToBot(input);
     return { payload: value, display: value.markdown };
@@ -59,14 +66,14 @@ export function registerMcpTools(server, app) {
 
   tool(server, "update_persona_canon", "Promote explicitly selected roleplay discoveries into a persona's permanent character bible.", {
     persona: z.record(z.string()), selectedDevelopments: z.array(z.string()).min(1),
-    continuityNotes: z.string().optional()
+    continuityNotes: z.string().optional(), ...referenceOptions
   }, async input => {
     const value = await app.updatePersonaCanon(input);
     return { payload: value, display: value.bible };
   });
 
   tool(server, "promote_persona_to_character", "Convert a portable user persona into a complete Janitor AI bot definition.", {
-    persona: z.record(z.string()), setting: z.string().optional(), intendedScenario: z.string().optional()
+    persona: z.record(z.string()), setting: z.string().optional(), intendedScenario: z.string().optional(), ...referenceOptions
   }, async input => {
     const value = await app.promotePersonaToCharacter(input);
     return { payload: value, display: value.markdown };

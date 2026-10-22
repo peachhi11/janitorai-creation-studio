@@ -3,126 +3,56 @@ import { join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 
-const knowledgeDirectory = new URL(
-  "../knowledge/",
-  import.meta.url
-);
+const knowledgeDirectory = new URL("../knowledge/", import.meta.url);
+const fallbackEntries = ["Advanced Janitor AI Creator Master Guide — Community Edition 1.0", "Authentic Cross-Cultural English A Writer's Guide to Accents, Speech Patterns & Linguistic Authenticity Community Edition — Version 1.0", "Character Psychology & Human Behavior Comprehensive Character Creator's Reference Guide  Community Edition — Version 1.0", "Dark Fiction, Moral Ambiguity & Immersive Consent", "Human Sexuality & Intimacy Psychology A Comprehensive Character Creator's Reference Guide Community Edition — Version 1.0", "Portable User Persona Architecture The Complete Guide to Reusable Roleplay Identities, Character Bibles & Standalone Bot Conversion JanitorAi Bot Creator — Community Edition, Version 1.0", "knowledge-manifest.json", "unified-names-and-naming-conventions.csv"];
 
-const textGuideFilenames = [
-  "Advanced Janitor AI Creator Master Guide — Community Edition 1.0",
-  "Authentic Cross-Cultural English A Writer's Guide to Accents, Speech Patterns & Linguistic Authenticity Community Edition — Version 1.0",
-  "Character Psychology & Human Behavior Comprehensive Character Creator's Reference Guide  Community Edition — Version 1.0",
-  "Dark Fiction, Moral Ambiguity & Immersive Consent",
-  "Human Sexuality & Intimacy Psychology A Comprehensive Character Creator's Reference Guide Community Edition — Version 1.0",
-  "Portable User Persona Architecture The Complete Guide to Reusable Roleplay Identities, Character Bibles & Standalone Bot Conversion JanitorAi Bot Creator — Community Edition, Version 1.0",
-];
+function rootPath(directory) { return typeof directory === "string" ? directory : fileURLToPath(directory); }
+function inferFormat(filePath) { const extension = extname(filePath).toLowerCase(); return extension === "" ? "text" : extension === ".pdf" ? "pdf" : extension === ".json" ? "json" : extension === ".csv" ? "csv" : extension === ".md" || extension === ".markdown" || extension === ".txt" ? "text" : null; }
 
-const references = [
-  ...textGuideFilenames,
-  "knowledge-manifest.json",
-  "unified-names-and-naming-conventions.csv"
-];
-
-const missingReferences = references.filter(
-  filename => !existsSync(join(fileURLToPath(knowledgeDirectory), filename))
-);
-
-if (missingReferences.length > 0) {
-  console.warn(
-    `[creator] Missing knowledge reference files: ${missingReferences.join(", ")}`
-  );
+export function loadKnowledgeManifest({ directory = knowledgeDirectory } = {}) {
+  const path = join(rootPath(directory), "knowledge-manifest.json");
+  if (!existsSync(path)) return { entries: fallbackEntries.map(filePath => ({ path: filePath, format: inferFormat(filePath) })) };
+  try { const manifest = JSON.parse(readFileSync(path, "utf8")); return { ...manifest, entries: Array.isArray(manifest.entries) ? manifest.entries : [] }; }
+  catch (error) { throw new Error("Invalid knowledge-manifest.json: " + error.message); }
 }
 
-function splitParagraphs(text) {
-  return text
-    .split(/\n\s*\n/)
-    .map(p => p.replace(/\s+/g, " ").trim())
-    .filter(p => p.length > 120);
-}
-
-function splitLines(text) {
-  return text
-    .split(/\r?\n/)
-    .map(line => line.replace(/\s+/g, " ").trim())
-    .filter(line => line.length > 0);
-}
-
-// Optional local PDF extraction.
-// Requires the Poppler `pdftotext` command.
-export function getKnowledgeContext(concept, {
-  directory = knowledgeDirectory,
-  filenames = references
-} = {}) {
-  const extracted = [];
-
-  const keywords = concept
-    .toLowerCase()
-    .match(/[a-z]{5,}/g) ?? [];
-
-  for (const filename of filenames) {
-    const filePath = join(
-      typeof directory === "string" ? directory : fileURLToPath(directory),
-      filename
-    );
-
-    if (!existsSync(filePath)) continue;
-
-    try {
-      // These committed plain-text guides have version numbers, not extensions.
-      // Do not generalize this to arbitrary .0 or other unknown file formats.
-      const extension = textGuideFilenames.includes(filename)
-        ? ".txt"
-        : extname(filename).toLowerCase();
-      let paragraphs;
-
-      if (extension === ".pdf") {
-        const fullText = execFileSync(
-          "pdftotext",
-          ["-layout", filePath, "-"],
-          {
-            encoding: "utf8",
-            maxBuffer: 15 * 1024 * 1024
-          }
-        );
-        paragraphs = splitParagraphs(fullText);
-      } else if (extension === ".json") {
-        const raw = readFileSync(filePath, "utf8");
-        let text = raw;
-        try {
-          text = JSON.stringify(JSON.parse(raw), null, 2);
-        } catch {
-          // Invalid JSON: fall back to raw text.
-        }
-        paragraphs = splitLines(text);
-      } else if (extension === ".csv") {
-        paragraphs = splitLines(readFileSync(filePath, "utf8"));
-      } else if (extension === "" || extension === ".md" || extension === ".txt") {
-        paragraphs = splitParagraphs(readFileSync(filePath, "utf8"));
-      } else {
-        continue;
-      }
-
-      const selected = paragraphs
-        .map(p => ({
-          text: p,
-          score: keywords.reduce(
-            (sum, word) =>
-              sum + Number(p.toLowerCase().includes(word)),
-            0
-          )
-        }))
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 3)
-        .map(p => p.text.slice(0, 1500));
-
-      extracted.push(
-        `SOURCE: ${filename}\n${selected.join("\n")}`
-      );
-    } catch {
-      // Missing converter: continue without this PDF.
+function normaliseEntries(manifest, filenames, referenceIds) {
+  const requestedPaths = filenames ? new Set(filenames) : null;
+  const requestedIds = referenceIds ? new Set(referenceIds) : null;
+  let entries = manifest.entries.map((entry, index) => ({ id: entry.id || entry.path || "reference-" + index, path: entry.path, format: entry.format || inferFormat(entry.path), role: entry.role || "reference", purpose: entry.purpose || "" })).filter(entry => entry.path);
+  if (requestedPaths) entries = entries.filter(entry => requestedPaths.has(entry.path));
+  if (requestedIds) entries = entries.filter(entry => requestedIds.has(entry.id) || requestedIds.has(entry.path));
+  if (requestedPaths) {
+    for (const path of requestedPaths) {
+      if (!entries.some(entry => entry.path === path) && inferFormat(path)) entries.push({ id: path, path, format: inferFormat(path), role: "reference", purpose: "" });
     }
   }
-
-  return extracted.join("\n\n").slice(0, 18000);
+  return entries;
+}
+function splitParagraphs(text) { return text.split(/\n\s*\n/).map(value => value.replace(/\s+/g, " ").trim()).filter(value => value.length > 120); }
+function splitLines(text) { return text.split(/\r?\n/).map(value => value.replace(/\s+/g, " ").trim()).filter(Boolean); }
+function extract(entry, root) {
+  const filePath = join(root, entry.path); if (!existsSync(filePath)) return [];
+  if (entry.format === "pdf") return splitParagraphs(execFileSync("pdftotext", ["-layout", filePath, "-"], { encoding: "utf8", maxBuffer: 15 * 1024 * 1024 }));
+  const raw = readFileSync(filePath, "utf8");
+  if (entry.format === "json") { try { return splitLines(JSON.stringify(JSON.parse(raw), null, 2)); } catch { return splitLines(raw); } }
+  return entry.format === "csv" ? splitLines(raw) : splitParagraphs(raw);
 }
 
+export function getKnowledgeContextDetails(query = "", { directory = knowledgeDirectory, filenames, referenceIds, maxSources = 0 } = {}) {
+  const entries = normaliseEntries(loadKnowledgeManifest({ directory }), filenames, referenceIds);
+  const keywords = String(query).toLowerCase().match(/[a-z]{4,}/g) || [];
+  const ranked = [];
+  for (const entry of entries) {
+    try {
+      const paragraphs = extract(entry, rootPath(directory));
+      const selected = paragraphs.map(text => ({ text, score: keywords.reduce((sum, word) => sum + Number(text.toLowerCase().includes(word)), 0) })).sort((a, b) => b.score - a.score).slice(0, 3);
+      if (selected.length) ranked.push({ entry, selected, score: selected[0].score });
+    } catch { /* A missing PDF converter does not block creation. */ }
+  }
+  ranked.sort((a, b) => b.score - a.score);
+  const limit = String(query).trim() ? (maxSources || 4) : (maxSources || ranked.length);
+  const selected = ranked.slice(0, limit);
+  return { text: selected.map(({ entry, selected: paragraphs }) => "SOURCE: " + entry.path + "\n" + paragraphs.map(item => item.text.slice(0, 1500)).join("\n")).join("\n\n").slice(0, 18000), sources: selected.map(({ entry, score }) => ({ id: entry.id, path: entry.path, role: entry.role, purpose: entry.purpose, score })) };
+}
+export function getKnowledgeContext(query, options = {}) { return getKnowledgeContextDetails(query, options).text; }
