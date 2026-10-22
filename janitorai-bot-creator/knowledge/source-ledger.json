@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "purpose": "Provenance for repository-native skills distilled from the ChatGPT Library.",
+  "entries": [
+    {
+      "skill": "relationship-conflict-tracker",
+      "library_file_id": "libfile_a3463096f3408191a1df2b8fb0c47b2d",
+      "title": "Relationship and Conflict Tracking Skill",
+      "disposition": "KEEP–CORE",
+      "use": "Direct procedural source, expanded to preserve separate relationship dimensions and knowledge boundaries.",
+      "limitations": ["Does not determine a character's feelings.", "Does not require reconciliation or healthy outcomes."]
+    },
+    {
+      "skill": "world-continuity",
+      "library_file_id": "libfile_fd6fbdd965ac8191a69266f8c3210e53",
+      "title": "The World Today",
+      "disposition": "KEEP–MODULE",
+      "use": "Contemporary-setting checklist only.",
+      "limitations": ["Not a universal account of modern life.", "Must not override historical, speculative, or author-defined settings."]
+    }
+  ]
+}
