@@ -1,4 +1,3 @@
-
 import OpenAI from "openai";
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
@@ -8,7 +7,9 @@ import {
   renderCharacter,
   renderMemo
 } from "./character-schema.mjs";
+import { loadRuntimeConfig } from "./lib/runtime-config.mjs";
 
+const config = loadRuntimeConfig();
 const client = new OpenAI();
 
 const instructionText = readFileSync(
@@ -111,7 +112,7 @@ export async function createCharacter({
   ].join("\n");
 
   const response = await client.responses.create({
-    model: process.env.OPENAI_MODEL || "gpt-5.5",
+    model: config.model,
     instructions,
     input: [
       `CONCEPT: ${concept}`,
@@ -163,7 +164,7 @@ export async function reviseCharacter({
   }
 
   const response = await client.responses.create({
-    model: process.env.OPENAI_MODEL || "gpt-5.5",
+    model: config.model,
     instructions: [
       instructionText,
       "Revise this existing character object.",

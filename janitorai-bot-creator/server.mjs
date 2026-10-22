@@ -8,18 +8,15 @@ import { createCharacterStore } from "./lib/character-store.mjs";
 import { createReferenceLibrary } from "./lib/reference-library.mjs";
 import { createCharacterApplication } from "./lib/application.mjs";
 import { registerMcpTools } from "./lib/mcp-tools.mjs";
+import { isAuthorised, loadRuntimeConfig } from "./lib/runtime-config.mjs";
 
 const VERSION = "1.1.0";
-const MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
+const config = loadRuntimeConfig();
 const ai = new OpenAI();
-const characterStore = createCharacterStore();
-const referenceLibrary = createReferenceLibrary();
+const characterStore = createCharacterStore(config.characterLibraryDir);
+const referenceLibrary = createReferenceLibrary(config.referenceLibraryDir);
 
-function authorised(req) {
-  const configured = process.env.MCP_API_TOKEN;
-  if (!configured) return process.env.NODE_ENV !== "production";
-  return req.headers.authorization === `Bearer ${configured}`;
-}
+function authorised(req) { return isAuthorised(req, config); }
 
 const fields = {
   persona: [
@@ -134,7 +131,7 @@ Produce complete, specific, internally coherent work.
 
 async function generate(task, input, keys) {
   const response = await ai.responses.create({
-    model: MODEL,
+    model: config.model,
     instructions: SYSTEM + "\nTASK:\n" + task,
     input: JSON.stringify(input),
     text: {
@@ -331,12 +328,7 @@ function makeServer() {
   return server;
 }
 
-const port = Number(process.env.PORT || 8787);
-const host = process.env.HOST || "127.0.0.1";
-
-if (process.env.NODE_ENV === "production" && !process.env.MCP_API_TOKEN) {
-  throw new Error("MCP_API_TOKEN is required when NODE_ENV=production.");
-}
+const { port, host } = config;
 
 createServer(async (req, res) => {
   const url = new URL(req.url || "/", `http://${host}:${port}`);
