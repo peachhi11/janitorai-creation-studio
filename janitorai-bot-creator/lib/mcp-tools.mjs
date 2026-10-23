@@ -91,6 +91,21 @@ export function registerMcpTools(server, app) {
     return { payload: value, display: JSON.stringify(value, null, 2) };
   });
 
+  tool(server, "list_character_revisions", "List archived character versions, oldest first. The current version is available via get_character.", {
+    id: z.string().min(1)
+  }, async ({ id }) => ({ payload: { revisions: await app.listCharacterRevisions(id) } }));
+
+  tool(server, "get_character_revision", "Read a complete archived character version without changing the current record.", {
+    id: z.string().min(1), revisionId: z.string().min(1)
+  }, ({ id, revisionId }) => app.getCharacterRevision(id, revisionId));
+
+  tool(server, "restore_character_revision", "Restore an archived character version, preserving the current record in history first.", {
+    id: z.string().min(1), revisionId: z.string().min(1)
+  }, async ({ id, revisionId }) => {
+    const value = await app.restoreCharacterRevision(id, revisionId);
+    return { payload: value, display: JSON.stringify(value, null, 2) };
+  });
+
   tool(server, "list_references", "List local Markdown, text, JSON, and PDF references available to the creator.", {}, async () => {
     const value = await app.listReferences();
     return { payload: { references: value }, display: JSON.stringify(value, null, 2) };
