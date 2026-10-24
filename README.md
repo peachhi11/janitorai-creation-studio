@@ -59,6 +59,8 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Agent change workflow](workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
+The repository also installs a root-level Husky pre-commit hook. It runs lint-staged with Prettier and then the complete test suite from `janitorai-bot-creator/`.
+
 ## Architecture
 
 The runtime keeps transport, application use cases, generation, storage, and reference retrieval behind separate seams:
@@ -85,9 +87,18 @@ npm test
 
 The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.
 
+To inspect dependency advisories without changing the lockfile:
+
+```bash
+cd janitorai-bot-creator
+npm audit
+```
+
+The latest audit reports two high-severity advisories: a transitive `body-parser` issue and a direct Zod issue whose available remediation is a major-version upgrade. They remain a separate compatibility review rather than an automatic upgrade.
+
 ## Contributing
 
-Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams and run `npm test` before submitting changes.
+Read [`AGENTS.md`](AGENTS.md) and [`workflows/agent-change.md`](workflows/agent-change.md) before making agent-assisted changes. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
 
 ## License
 
