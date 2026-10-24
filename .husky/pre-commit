@@ -1,3 +1,4 @@
-cd janitorai-bot-creator
-npx lint-staged
-npm run test
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$repo_root"
+janitorai-bot-creator/node_modules/.bin/lint-staged
+npm --prefix janitorai-bot-creator run test

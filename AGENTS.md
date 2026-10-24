@@ -6,6 +6,8 @@ Use the repository documentation structure defined in `README.md` and `janitorai
 
 Read `workflows/agent-change.md` for the default change lifecycle. Read `janitorai-bot-creator/CONTEXT.md` for domain terms and invariants; read `janitorai-bot-creator/docs/architecture.md` for implementation boundaries.
 
+Continue autonomously through the complete requested slice. Do not stop at an intermediate milestone or ask the user to say “continue.” Stop only when the slice is complete, a genuine user decision or direction is required, or an external blocker prevents safe progress after available alternatives have been checked.
+
 ### README files
 
 Keep the root README task-oriented and scannable. Use this section order unless the project has a documented reason to differ:
@@ -50,3 +52,7 @@ Comment why a non-obvious rule exists, especially for security boundaries, persi
 ## Git safety
 
 This repository uses an agent-agnostic safety classifier at `scripts/block-dangerous-git.sh`. Before executing a Git command supplied by an agent or automation, pass the command as JSON on standard input to this classifier. A return code of `2` is an explicit denial; do not retry the command by changing its spelling or bypassing the classifier. Use reversible alternatives such as a branch, stash, revert, or explicit file-level edit when a command is denied.
+
+For routine Git operations, use `scripts/git-safe <subcommand> [options]`. It validates the command before executing Git directly without a shell. The classifier and wrapper are repository-local conventions available to any agent, not host-specific Claude configuration.
+
+After a successful commit, the final response must include a `Next steps` addendum with exactly three ranked, concrete options for continued work. Rank the recommended option first and include the expected scope or trade-off for each. Do not stop merely because the commit succeeded; complete the requested slice first, then provide the addendum.

@@ -2,6 +2,7 @@
 """Classify an agent-provided shell command for destructive Git operations."""
 
 import json
+import os
 import shlex
 import sys
 
@@ -13,7 +14,7 @@ def blocked_reason(command: str) -> str | None:
         return "blocked: command could not be parsed safely"
 
     for index, token in enumerate(tokens):
-        if token != "git" or index + 1 >= len(tokens):
+        if os.path.basename(token).lower() not in {"git", "git.exe"} or index + 1 >= len(tokens):
             continue
 
         command_index = index + 1
@@ -56,6 +57,17 @@ def blocked_reason(command: str) -> str | None:
 
 
 def main() -> int:
+    if len(sys.argv) > 1 and sys.argv[1] == "--execute":
+        command = shlex.join(["git", *sys.argv[2:]])
+        reason = blocked_reason(command)
+        if reason:
+            print(reason, file=sys.stderr)
+            return 2
+        if len(sys.argv) < 3:
+            print("blocked: git-safe requires a Git subcommand", file=sys.stderr)
+            return 2
+        os.execvp("git", ["git", *sys.argv[2:]])
+
     try:
         payload = json.load(sys.stdin)
         command = payload.get("tool_input", {}).get("command", "")

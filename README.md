@@ -33,19 +33,19 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 
 Copy `janitorai-bot-creator/.env.example` to `janitorai-bot-creator/.env`.
 
-| Variable | Description | Default |
-| --- | --- | --- |
-| `OPENAI_API_KEY` | API key for the OpenAI-compatible generation client. | None |
-| `OPENAI_MODEL` | Model name passed to the Responses API. | `gpt-5.5` |
-| `HOST` | Bind address. | `127.0.0.1` |
-| `PORT` | HTTP port. | `8787` |
-| `NODE_ENV` | Runtime mode. Production requires an API token. | `development` |
-| `MCP_API_TOKEN` | Bearer token for authenticated MCP requests. | None in development |
-| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions. | `./data/characters` |
-| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest. | `./knowledge` |
-| `MAX_REQUEST_BYTES` | Maximum accepted MCP request size. | `1048576` |
-| `MCP_RATE_LIMIT` | Requests allowed per rate-limit window. | `60` |
-| `MCP_RATE_WINDOW_MS` | Rate-limit window in milliseconds. | `60000` |
+| Variable                | Description                                                    | Default             |
+| ----------------------- | -------------------------------------------------------------- | ------------------- |
+| `OPENAI_API_KEY`        | API key for the OpenAI-compatible generation client.           | None                |
+| `OPENAI_MODEL`          | Model name passed to the Responses API.                        | `gpt-5.5`           |
+| `HOST`                  | Bind address.                                                  | `127.0.0.1`         |
+| `PORT`                  | HTTP port.                                                     | `8787`              |
+| `NODE_ENV`              | Runtime mode. Production requires an API token.                | `development`       |
+| `MCP_API_TOKEN`         | Bearer token for authenticated MCP requests.                   | None in development |
+| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions.         | `./data/characters` |
+| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest. | `./knowledge`       |
+| `MAX_REQUEST_BYTES`     | Maximum accepted MCP request size.                             | `1048576`           |
+| `MCP_RATE_LIMIT`        | Requests allowed per rate-limit window.                        | `60`                |
+| `MCP_RATE_WINDOW_MS`    | Rate-limit window in milliseconds.                             | `60000`             |
 
 Keep the service on loopback unless external exposure is deliberate and protected by a suitable reverse proxy. In production, set `NODE_ENV=production` and `MCP_API_TOKEN`.
 
@@ -77,6 +77,8 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. The shared fictional narrative lens is applied to both MCP generation and the standalone creator; genre and relationship-intensity presets remain explicit and opt-in.
 
 Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
+
+Routine Git commands should use `scripts/git-safe <subcommand> [options]`, which validates the command and executes it without a shell. The root-level pre-commit hook resolves lint-staged and Prettier from the repository root, so staged documentation and package files share one formatter configuration.
 
 ## Verification
 

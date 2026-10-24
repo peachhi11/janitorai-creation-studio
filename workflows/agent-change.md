@@ -21,8 +21,10 @@ Use this workflow for any agent-initiated repository change that modifies code, 
 6. Update domain terms, API documentation, and ADRs only when the change resolves a durable concept or boundary.
 7. Run targeted checks, then the complete test suite and `git diff --check`.
 8. Review the diff for scope, public contract changes, and documentation links.
-9. Before any destructive or history-rewriting Git command, run `scripts/block-dangerous-git.sh` and stop on exit code `2`.
-10. Present a decision-ready completion report with changed files, verification, open risks, and commit state.
+9. Continue through the complete requested slice; do not stop at an intermediate milestone or ask the user to say “continue.” Stop only for a genuine decision, direction, or external blocker.
+10. Use `scripts/git-safe <subcommand> [options]` for routine Git operations. Before any destructive or history-rewriting Git command, run `scripts/block-dangerous-git.sh` and stop on exit code `2`.
+11. Present a decision-ready completion report with changed files, verification, open risks, and commit state.
+12. After committing, append the ranked three-option `Next steps` addendum described below.
 
 ## Completion criteria
 
@@ -33,3 +35,13 @@ Use this workflow for any agent-initiated repository change that modifies code, 
 - No conflict markers or untracked generated artifacts remain unintentionally.
 - Documentation links resolve to existing repository files.
 - Git status and commit state are reported accurately.
+
+## Next steps addendum
+
+After a successful commit, provide exactly three ranked options:
+
+1. **Recommended: [concrete next slice]** — [scope, value, and trade-off].
+2. **[concrete alternative]** — [scope, value, and trade-off].
+3. **[concrete alternative]** — [scope, value, and trade-off].
+
+The options must be grounded in the current repository state. Do not use generic suggestions such as “continue improving” or list work that is already complete. If no user decision is required, the agent should proceed with the recommended next slice in the same working session before delivering the addendum.
