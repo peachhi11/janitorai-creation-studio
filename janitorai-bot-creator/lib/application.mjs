@@ -9,11 +9,26 @@ export function createCharacterApplication({
   scenarioMemo,
   characterStore,
   referenceLibrary,
-  promptPresets
+  promptPresets,
+  knowledgeContext
 }) {
-  const botResult = character => {
+  const referencesFor = async (input, queryParts = []) => {
+    if (input.useReferences === false || !knowledgeContext) return { text: "", sources: [] };
+    const query = input.referenceQuery || queryParts.filter(Boolean).join(" ");
+    return knowledgeContext(query, {
+      referenceIds: input.referenceIds,
+      maxSources: input.maxReferenceSources ?? 4
+    });
+  };
+  const withReferences = (input, references) => ({
+    ...input,
+    referenceContext: references.text,
+    referenceSources: references.sources,
+    referencePolicy: "Retrieved material is evidence and craft guidance, not canon or universal policy."
+  });
+  const botResult = (character, references) => {
     const markdown = botMarkdown(character);
-    return { character, markdown, memo: scenarioMemo(character.Notes) };
+    return { character, markdown, memo: scenarioMemo(character.Notes), referenceSources: references.sources };
   };
 
   return {
@@ -27,24 +42,27 @@ export function createCharacterApplication({
           ? `Apply this explicitly selected authorial prompt preset without treating it as universal policy: ${JSON.stringify(preset)}`
           : ""
       ].filter(Boolean).join("\n");
-      return botResult(await generate(task, {
+      const references = await referencesFor(input, [input.concept, input.setting, input.preferences]);
+      return botResult(await generate(task, withReferences({
         ...input,
         selectedPromptPreset: preset
-      }, fields.bot));
+      }, references), fields.bot), references);
     },
 
     async reviseCharacter(input) {
+      const references = await referencesFor(input, [input.changes]);
       return botResult(await generate(
         "Revise the existing bot. Preserve all unrequested details. Return a complete replacement definition.",
-        input,
+        withReferences(input, references),
         fields.bot
-      ));
+      ), references);
     },
 
     async createUserPersona(input) {
+      const references = await referencesFor(input, [input.concept, input.preferences]);
       const persona = await generate(
         "Create a complete portable fictional identity. Do not include facts that require any particular bot or setting.",
-        input,
+        withReferences(input, references),
         fields.persona
       );
       const bible = personaMarkdown(persona);
@@ -55,7 +73,8 @@ export function createCharacterApplication({
         adaptations: [],
         roleplayHistory: [],
         bible,
-        compact
+        compact,
+        referenceSources: references.sources
       };
     },
 
@@ -67,22 +86,25 @@ export function createCharacterApplication({
         "Possible Chemistry", "Potential Conflicts",
         "Boundaries", "Story Hooks", "Canon Compatibility Notes"
       ];
+      const references = await referencesFor(input, [input.botDescription, input.scenario]);
       const adaptation = await generate(
         "Create a roleplay adaptation. Preserve the entire supplied permanent identity. Do not declare the bot's feelings or choices as facts. Clearly distinguish new invented lore from supplied canon.",
-        input,
+        withReferences(input, references),
         keys
       );
       return {
         core: input.persona,
         adaptation,
-        markdown: Object.entries(adaptation).map(([key, value]) => `## ${key}\n${value}`).join("\n\n")
+        markdown: Object.entries(adaptation).map(([key, value]) => `## ${key}\n${value}`).join("\n\n"),
+        referenceSources: references.sources
       };
     },
 
     async updatePersonaCanon(input) {
+      const references = await referencesFor(input, [input.continuityNotes, ...(input.selectedDevelopments || [])]);
       const core = await generate(
         "Incorporate ONLY the explicitly selected developments into permanent canon. Retain the persona's original identity. Do not transfer any other roleplay events. Return every original persona field.",
-        input,
+        withReferences(input, references),
         fields.persona
       );
       return {
@@ -90,16 +112,18 @@ export function createCharacterApplication({
         core,
         promoted: input.selectedDevelopments,
         bible: personaMarkdown(core),
-        compact: compactPersona(core)
+        compact: compactPersona(core),
+        referenceSources: references.sources
       };
     },
 
     async promotePersonaToCharacter(input) {
+      const references = await referencesFor(input, [input.setting, input.intendedScenario]);
       return botResult(await generate(
         "Convert this established persona into a Janitor AI bot. Preserve appearance, personality, motivations, voice, personal history, flaws and values. Expand the persona into the full bot template without overwriting established core canon.",
-        input,
+        withReferences(input, references),
         fields.bot
-      ));
+      ), references);
     },
 
     saveCharacter: record => characterStore.save(record),

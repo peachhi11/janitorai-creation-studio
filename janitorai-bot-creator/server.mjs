@@ -13,6 +13,7 @@ import { rejectOversizedRequest } from "./lib/request-guards.mjs";
 import { createRateLimiter } from "./lib/rate-limiter.mjs";
 import { createPromptPresetLibrary } from "./lib/prompt-presets.mjs";
 import { NARRATIVE_LENS } from "./lib/narrative-lens.mjs";
+import { getKnowledgeContextDetails } from "./lib/knowledge-context.mjs";
 
 const VERSION = "1.1.0";
 const SHUTDOWN_TIMEOUT_MS = 10_000;
@@ -328,7 +329,8 @@ const application = createCharacterApplication({
   scenarioMemo,
   characterStore,
   referenceLibrary,
-  promptPresets
+  promptPresets,
+  knowledgeContext: getKnowledgeContextDetails
 });
 
 function makeServer() {
