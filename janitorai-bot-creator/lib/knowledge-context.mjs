@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
@@ -13,9 +13,28 @@ const MAX_QUERY_CHARS = 4_096;
 function rootPath(directory) { return typeof directory === "string" ? directory : fileURLToPath(directory); }
 function inferFormat(filePath) { const extension = extname(filePath).toLowerCase(); return extension === "" ? "text" : extension === ".pdf" ? "pdf" : extension === ".json" ? "json" : extension === ".csv" ? "csv" : extension === ".md" || extension === ".markdown" || extension === ".txt" ? "text" : null; }
 
+function discoverEntries(directory) {
+  const root = rootPath(directory);
+  if (!existsSync(root)) return [];
+  const entries = [];
+  const visit = (relative = "") => {
+    const absolute = join(root, relative);
+    for (const item of readdirSync(absolute, { withFileTypes: true })) {
+      const child = relative ? join(relative, item.name) : item.name;
+      if (item.isDirectory()) visit(child);
+      else if (inferFormat(child)) entries.push({ path: child, format: inferFormat(child) });
+    }
+  };
+  visit();
+  return entries;
+}
+
 export function loadKnowledgeManifest({ directory = knowledgeDirectory } = {}) {
   const path = join(rootPath(directory), "knowledge-manifest.json");
-  if (!existsSync(path)) return { entries: fallbackEntries.map(filePath => ({ path: filePath, format: inferFormat(filePath) })) };
+  if (!existsSync(path)) {
+    const discovered = discoverEntries(directory);
+    return { entries: discovered.length ? discovered : fallbackEntries.map(filePath => ({ path: filePath, format: inferFormat(filePath) })) };
+  }
   try { const manifest = JSON.parse(readFileSync(path, "utf8")); return { ...manifest, entries: Array.isArray(manifest.entries) ? manifest.entries : [] }; }
   catch (error) { throw new Error("Invalid knowledge-manifest.json: " + error.message); }
 }

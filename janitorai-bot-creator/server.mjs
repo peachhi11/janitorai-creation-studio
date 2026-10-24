@@ -330,7 +330,10 @@ const application = createCharacterApplication({
   characterStore,
   referenceLibrary,
   promptPresets,
-  knowledgeContext: getKnowledgeContextDetails
+  knowledgeContext: (query, options = {}) => getKnowledgeContextDetails(query, {
+    directory: config.referenceLibraryDir,
+    ...options
+  })
 });
 
 function makeServer() {
