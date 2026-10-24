@@ -1,6 +1,59 @@
 # janitorai-creation-studio
 A persona tailored to a bot should still feel like your character, not someone manufactured solely to please {{char}}. The best matches have their own values, flaws, loyalties, and potential to disagree. Sometimes a compatible character is a perfect foil rather than a perfect partner.
 
+## What the service provides
+
+The implementation lives in `janitorai-bot-creator/` and exposes a local MCP service for character generation, portable personas, reference retrieval, visual character models, persistence, and revision history.
+
+The runtime keeps transport, application use cases, storage, and reference retrieval behind separate seams:
+
+- `server.mjs` owns HTTP transport, authentication, request limits, rate limiting, and runtime composition.
+- `lib/mcp-tools.mjs` adapts MCP calls to application operations.
+- `lib/application.mjs` coordinates generation, rendering, reference context, persistence, and visual edits.
+- `lib/file-store.mjs` owns path containment, identifier validation, symlink checks, and atomic JSON writes.
+- `lib/character-store.mjs` provides current records and revision history.
+- `lib/reference-library.mjs` provides direct listing, search, and reading of configured references.
+- `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance for generation.
+
+The accepted architecture decisions are recorded in [`janitorai-bot-creator/docs/adr/`](janitorai-bot-creator/docs/adr/). `CONTEXT.md` defines the project vocabulary and the boundaries that should remain stable when extending the service.
+
+## Runtime setup
+
+```bash
+cd janitorai-bot-creator
+npm ci
+cp .env.example .env
+npm test
+npm start
+```
+
+The server listens on `HOST` and `PORT` from `.env`; the default is loopback on port `8787`. In production, set `NODE_ENV=production` and provide `MCP_API_TOKEN`. MCP requests then require `Authorization: Bearer <token>`. Keep the service on loopback unless external exposure is deliberate and protected by an appropriate reverse proxy.
+
+The OpenAI-compatible generation client uses `OPENAI_API_KEY`, `OPENAI_MODEL`, and the standard OpenAI base URL configuration. The test suite uses a local deterministic Responses API stub for generation-path coverage, so tests do not require a live model call.
+
+## Reference libraries and provenance
+
+Set `REFERENCE_LIBRARY_DIR` to choose the local reference directory. Markdown, text, JSON, CSV, and PDF references are supported; PDF extraction uses `pdftotext` when available.
+
+If the directory contains `knowledge-manifest.json`, the manifest controls reference identity, format, role, and purpose. If it does not contain a manifest, the retrieval layer discovers supported files recursively. Retrieved passages are treated as evidence and craft guidance, not as canon or universal policy, and generated results retain the selected source paths and metadata.
+
+## Policy and creative direction
+
+The shared fictional narrative lens is defined in `lib/narrative-lens.mjs` and is applied to both MCP generation and the standalone creator. Role-specific instruction builders live in `lib/creator-policy.mjs`; genre and relationship-intensity presets remain explicit and opt-in.
+
+The project supports psychologically coherent fictional characters, including morally ambiguous or destructive behaviour, without automatically imposing redemption, therapeutic correction, or a universally positive relationship outcome. Player agency, character autonomy, knowledge boundaries, applicable platform constraints, and adult-consent requirements remain runtime boundaries.
+
+## Verification
+
+Run the complete suite with:
+
+```bash
+cd janitorai-bot-creator
+npm test
+```
+
+The suite covers unit seams and real local MCP-over-HTTP acceptance paths, including health checks, authentication, tool discovery, character persistence, revision restore, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.
+
 **PSYCHOLOGICAL FRAMEWORK**
 | Framework | Evidence position | What it contributes to character design|
 | :---: | :---: | :---: |
