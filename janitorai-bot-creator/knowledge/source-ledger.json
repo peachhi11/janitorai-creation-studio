@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "purpose": "Provenance for repository-native skills distilled from the ChatGPT Library.",
+  "entries": [
+    {
+      "skill": "world-autonomy",
+      "library_file_id": "libfile_9357186fc79881918a6210f64e05130f",
+      "title": "reactive_world_lorebook.json",
+      "disposition": "KEEP–CORE",
+      "use": "Platform-neutral rules for persistent NPC activity, delayed consequences, reputation, and emergent lore.",
+      "limitations": [
+        "Background simulation is a design rule, not a claim about automatic platform memory.",
+        "Numeric pressure axes and lorebook activation syntax were not promoted."
+      ]
+    },
+    {
+      "skill": "knowledge-boundaries",
+      "library_file_id": "libfile_9357186fc79881918a6210f64e05130f",
+      "title": "reactive_world_lorebook.json",
+      "disposition": "KEEP–CORE",
+      "use": "Separate knowledge, belief, suspicion, rumour, secrecy, and thought privacy.",
+      "limitations": [
+        "Requires a selected viewpoint and project canon.",
+        "The source's player-thought marker syntax remains an adapter concern."
+      ]
+    },
+    {
+      "skill": "knowledge-boundaries",
+      "library_file_id": "libfile_3f7de61986e481919db4fa0f4cebaf09",
+      "title": "sx5_modern_world_qol_runtime_v1_README.md",
+      "disposition": "ADAPTER",
+      "use": "World truth, character truth, persona truth, and current-state separation.",
+      "limitations": [
+        "SillyTavern tags, depth, budgets, and numeric state axes are not reusable core instructions."
+      ]
+    },
+    {
+      "skill": "emotional-logic",
+      "library_file_id": "libfile_a306180216688191b03661fc1a116341",
+      "title": "write emotional logic(1).md",
+      "disposition": "KEEP–CORE",
+      "use": "Distilled method for expressing behaviour through emotional causality and concrete signals.",
+      "limitations": [
+        "Patterns are tendencies, not hard rules.",
+        "No single behaviour proves a personality label."
+      ]
+    },
+    {
+      "skill": "romance-route-design",
+      "library_file_id": "libfile_708d88dc2dd081918ac470b551a5c653",
+      "title": "100 contemporary romance trope ideas for you.md",
+      "disposition": "KEEP–MODULE",
+      "use": "Trope vocabulary and optional route prompts.",
+      "limitations": [
+        "The source is an idea inventory, not a narrative prescription.",
+        "Tropes do not determine consent, relationship configuration, or ending."
+      ]
+    },
+    {
+      "skill": "character-construction",
+      "library_file_id": "libfile_37586dfb6a588191969f719280e9e123",
+      "title": "Building Characters for Writers and Roleplayers",
+      "disposition": "KEEP–CORE",
+      "use": "Distilled character-dimension, motivation, capability, and conflict-design guidance.",
+      "limitations": [
+        "Role and archetype labels are optional creative lenses.",
+        "The source is not a psychological diagnostic system."
+      ]
+    },
+    {
+      "skill": "relationship-conflict-tracker",
+      "library_file_id": "libfile_a3463096f3408191a1df2b8fb0c47b2d",
+      "title": "Relationship and Conflict Tracking Skill",
+      "disposition": "KEEP–CORE",
+      "use": "Direct procedural source, expanded to preserve separate relationship dimensions and knowledge boundaries.",
+      "limitations": [
+        "Does not determine a character's feelings.",
+        "Does not require reconciliation or healthy outcomes."
+      ]
+    },
+    {
+      "skill": "world-continuity",
+      "library_file_id": "libfile_fd6fbdd965ac8191a69266f8c3210e53",
+      "title": "The World Today",
+      "disposition": "KEEP–MODULE",
+      "use": "Contemporary-setting checklist only.",
+      "limitations": [
+        "Not a universal account of modern life.",
+        "Must not override historical, speculative, or author-defined settings."
+      ]
+    }
+  ]
+}
