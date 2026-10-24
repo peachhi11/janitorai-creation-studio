@@ -28,8 +28,8 @@ function tool(server, name, description, inputSchema, fn) {
 
 const referenceOptions = {
   useReferences: z.boolean().optional().describe("Use the repository reference library for grounded craft context."),
-  referenceQuery: z.string().optional(),
-  referenceIds: z.array(z.string()).optional(),
+  referenceQuery: z.string().max(4_096).optional(),
+  referenceIds: z.array(z.string().min(1).max(256)).max(32).optional(),
   maxReferenceSources: z.number().int().min(1).max(8).optional()
 };
 
