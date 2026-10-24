@@ -4,6 +4,8 @@
 
 Use the repository documentation structure defined in `README.md` and `janitorai-bot-creator/docs/`.
 
+Read `workflows/agent-change.md` for the default change lifecycle. Read `janitorai-bot-creator/CONTEXT.md` for domain terms and invariants; read `janitorai-bot-creator/docs/architecture.md` for implementation boundaries.
+
 ### README files
 
 Keep the root README task-oriented and scannable. Use this section order unless the project has a documented reason to differ:
@@ -44,3 +46,7 @@ Comment why a non-obvious rule exists, especially for security boundaries, persi
 - Run `npm test` from `janitorai-bot-creator/` before committing.
 - Run `git diff --check` before committing.
 - Do not claim a change is complete until the relevant tests and documentation links have been verified.
+
+## Git safety
+
+This repository uses an agent-agnostic safety classifier at `scripts/block-dangerous-git.sh`. Before executing a Git command supplied by an agent or automation, pass the command as JSON on standard input to this classifier. A return code of `2` is an explicit denial; do not retry the command by changing its spelling or bypassing the classifier. Use reversible alternatives such as a branch, stash, revert, or explicit file-level edit when a command is denied.

@@ -52,9 +52,12 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 ## Documentation
 
 - [API and MCP tool reference](janitorai-bot-creator/docs/api-reference.md)
-- [Architecture and module boundaries](janitorai-bot-creator/CONTEXT.md)
+- [Architecture and module boundaries](janitorai-bot-creator/docs/architecture.md)
+- [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
 - [Architecture decision records](janitorai-bot-creator/docs/adr/)
 - [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
+- [Agent change workflow](workflows/agent-change.md)
+- [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
 ## Architecture
 
@@ -70,6 +73,8 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 - `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance.
 
 The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. The shared fictional narrative lens is applied to both MCP generation and the standalone creator; genre and relationship-intensity presets remain explicit and opt-in.
+
+Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
 
 ## Verification
 
