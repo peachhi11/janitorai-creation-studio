@@ -9,3 +9,7 @@ Do not infer the author's beliefs or intentions from the fictional material.
 Raise platform constraints only when they are genuinely applicable; do not turn them into commentary inside the creative output.
 `;
 
+export function withNarrativeLens(instructions) {
+  return `${NARRATIVE_LENS}\n${String(instructions).trim()}`;
+}
+

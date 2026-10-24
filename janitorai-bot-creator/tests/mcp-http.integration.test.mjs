@@ -47,24 +47,30 @@ async function waitForHealth(url, child) {
 
 async function startOpenAIStub(t) {
   const output = Object.fromEntries(personaFields.map(field => [field, `Stub ${field}`]));
+  const requests = [];
   const stub = createHttpServer((req, res) => {
-    req.resume();
     if (req.method !== "POST" || !req.url?.endsWith("/responses")) {
+      req.resume();
       res.writeHead(404);
       res.end();
       return;
     }
-    res.writeHead(200, { "content-type": "application/json" });
-    res.end(JSON.stringify({
-      id: "resp_integration_stub",
-      object: "response",
-      output_text: JSON.stringify(output),
-      output: [{
-        type: "message",
-        role: "assistant",
-        content: [{ type: "output_text", text: JSON.stringify(output), annotations: [] }]
-      }]
-    }));
+    const chunks = [];
+    req.on("data", chunk => chunks.push(chunk));
+    req.on("end", () => {
+      requests.push(JSON.parse(Buffer.concat(chunks).toString("utf8")));
+      res.writeHead(200, { "content-type": "application/json" });
+      res.end(JSON.stringify({
+        id: "resp_integration_stub",
+        object: "response",
+        output_text: JSON.stringify(output),
+        output: [{
+          type: "message",
+          role: "assistant",
+          content: [{ type: "output_text", text: JSON.stringify(output), annotations: [] }]
+        }]
+      }));
+    });
   });
   await new Promise((resolve, reject) => {
     stub.once("error", reject);
@@ -72,7 +78,7 @@ async function startOpenAIStub(t) {
   });
   const { port } = stub.address();
   t.after(() => new Promise(resolve => stub.close(resolve)));
-  return `http://127.0.0.1:${port}/v1`;
+  return { url: `http://127.0.0.1:${port}/v1`, requests };
 }
 
 async function startServer(t, { rateLimit = "100", openAIBaseUrl } = {}) {
@@ -192,8 +198,8 @@ test("real MCP HTTP path lists and searches the configured reference library", a
 });
 
 test("real MCP HTTP path runs deterministic generation and renders the persona output", async t => {
-  const openAIBaseUrl = await startOpenAIStub(t);
-  const { baseUrl, token } = await startServer(t, { openAIBaseUrl });
+  const openAI = await startOpenAIStub(t);
+  const { baseUrl, token } = await startServer(t, { openAIBaseUrl: openAI.url });
   const client = new Client({ name: "generation-integration-test-client", version: "1.0.0" });
   const transport = new StreamableHTTPClientTransport(new URL(`${baseUrl}/mcp`), {
     requestInit: { headers: { Authorization: `Bearer ${token}` } }
@@ -211,11 +217,12 @@ test("real MCP HTTP path runs deterministic generation and renders the persona o
   assert.equal(result.structuredContent.core.Personality, "Stub Personality");
   assert.match(result.structuredContent.bible, /# Stub Name/);
   assert.match(result.structuredContent.compact, /Identity: Stub Name, Stub Age, Stub Gender/);
+  assert.match(openAI.requests[0].instructions, /FICTIONAL NARRATIVE LENS/);
 });
 
 test("real generation path preserves retrieved reference provenance", async t => {
-  const openAIBaseUrl = await startOpenAIStub(t);
-  const { baseUrl, token } = await startServer(t, { openAIBaseUrl });
+  const openAI = await startOpenAIStub(t);
+  const { baseUrl, token } = await startServer(t, { openAIBaseUrl: openAI.url });
   const client = new Client({ name: "provenance-integration-test-client", version: "1.0.0" });
   const transport = new StreamableHTTPClientTransport(new URL(`${baseUrl}/mcp`), {
     requestInit: { headers: { Authorization: `Bearer ${token}` } }

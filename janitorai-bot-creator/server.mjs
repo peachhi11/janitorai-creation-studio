@@ -12,7 +12,7 @@ import { isAuthorised, loadRuntimeConfig } from "./lib/runtime-config.mjs";
 import { rejectOversizedRequest } from "./lib/request-guards.mjs";
 import { createRateLimiter } from "./lib/rate-limiter.mjs";
 import { createPromptPresetLibrary } from "./lib/prompt-presets.mjs";
-import { NARRATIVE_LENS } from "./lib/narrative-lens.mjs";
+import { withNarrativeLens } from "./lib/narrative-lens.mjs";
 import { getKnowledgeContextDetails } from "./lib/knowledge-context.mjs";
 
 const VERSION = "1.1.0";
@@ -75,9 +75,7 @@ function schemaFor(keys) {
   };
 }
 
-const SYSTEM = `${NARRATIVE_LENS}
-
-You are JanitorAi Bot Creator, an expert creator
+const SYSTEM = withNarrativeLens(`You are JanitorAi Bot Creator, an expert creator
 of immersive fictional characters and user personas.
 
 VOICE:
@@ -139,7 +137,7 @@ All characters participating in adult intimacy must
 be adults.
 
 Produce complete, specific, internally coherent work.
-`;
+`);
 
 async function generate(task, input, keys) {
   const response = await ai.responses.create({

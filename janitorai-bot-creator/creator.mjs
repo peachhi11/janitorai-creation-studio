@@ -7,6 +7,10 @@ import {
 } from "./character-schema.mjs";
 import { getKnowledgeContext } from "./lib/knowledge-context.mjs";
 import { loadRuntimeConfig } from "./lib/runtime-config.mjs";
+import {
+  buildCreateInstructions,
+  buildRevisionInstructions
+} from "./lib/creator-policy.mjs";
 
 const config = loadRuntimeConfig();
 const client = new OpenAI();
@@ -30,17 +34,7 @@ export async function createCharacter({
     [concept, setting, preferences].join(" ")
   );
 
-  const instructions = [
-    instructionText,
-    "Generate a complete character object.",
-    "All fields must contain meaningful content.",
-    "All main characters must be adults.",
-    "Use {{char}} and {{user}} literally where relevant.",
-    "List fields must contain newline-separated items.",
-    "For Notes, include continuity and scenario anchors.",
-    "For Sexually themed fields, remain within applicable",
-    "platform policy and the requested content rating."
-  ].join("\n");
+  const instructions = buildCreateInstructions(instructionText);
 
   const response = await client.responses.create({
     model: config.model,
@@ -96,14 +90,7 @@ export async function reviseCharacter({
 
   const response = await client.responses.create({
     model: config.model,
-    instructions: [
-      instructionText,
-      "Revise this existing character object.",
-      "Change only requested details and their",
-      "necessary continuity dependencies.",
-      "Preserve all required fields.",
-      "Return the complete updated character object."
-    ].join("\n"),
+    instructions: buildRevisionInstructions(instructionText),
     input: JSON.stringify({
       character: existingCharacter,
       requestedChanges: changes
