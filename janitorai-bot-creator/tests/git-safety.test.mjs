@@ -96,5 +96,8 @@ test("agent workflow requires autonomous completion and ranked next steps", () =
 
   assert.match(workflow, /do not stop at an intermediate milestone/i);
   assert.match(workflow, /exactly three ranked options/i);
+  assert.match(workflow, /assess README impact before committing/i);
+  assert.match(workflow, /README impact is addressed/i);
   assert.match(agents, /continue autonomously/i);
+  assert.match(agents, /assess README impact/i);
 });

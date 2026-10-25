@@ -24,6 +24,8 @@ Keep the root README task-oriented and scannable. Use this section order unless 
 
 Put detailed API behavior, architecture decisions, and long creative guidance in linked documents rather than expanding the README into a catch-all file.
 
+Before committing, assess README impact. Changes to user-facing behavior, setup, configuration, CI, supported runtimes, security expectations, repository conventions, or available features require a README update in the same slice; otherwise record why no README update is needed.
+
 ### API documentation
 
 Document each HTTP endpoint or MCP capability under a clear heading. State its purpose, inputs or parameters, response or result shape, errors, and one concise example when an example makes the contract clearer. Keep API names and payload terminology identical to the implementation.

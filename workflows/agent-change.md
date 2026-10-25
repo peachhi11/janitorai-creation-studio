@@ -18,13 +18,14 @@ Use this workflow for any agent-initiated repository change that modifies code, 
 3. Inspect the relevant code, tests, documentation, and recent history before editing.
 4. For behavior changes, write one focused failing test before production code.
 5. Make the smallest change that makes the test pass.
-6. Update domain terms, API documentation, and ADRs only when the change resolves a durable concept or boundary.
-7. Run targeted checks, then the complete test suite and `git diff --check`.
-8. Review the diff for scope, public contract changes, and documentation links.
-9. Continue through the complete requested slice; do not stop at an intermediate milestone or ask the user to say “continue.” Stop only for a genuine decision, direction, or external blocker.
-10. Use `scripts/git-safe <subcommand> [options]` for routine Git operations. Before any destructive or history-rewriting Git command, run `scripts/block-dangerous-git.sh` and stop on exit code `2`.
-11. Present a decision-ready completion report with changed files, verification, open risks, and commit state.
-12. After committing, append the ranked three-option `Next steps` addendum described below.
+6. Assess README impact before committing. If the change affects user-facing behavior, setup, configuration, CI, supported runtimes, security expectations, repository conventions, or available features, update `README.md` in the same slice. If it does not, record that no README update is needed in the completion report.
+7. Update domain terms, API documentation, and ADRs only when the change resolves a durable concept or boundary.
+8. Run targeted checks, then the complete test suite and `git diff --check`.
+9. Review the diff for scope, public contract changes, README accuracy, and documentation links.
+10. Continue through the complete requested slice; do not stop at an intermediate milestone or ask the user to say “continue.” Stop only for a genuine decision, direction, or external blocker.
+11. Use `scripts/git-safe <subcommand> [options]` for routine Git operations. Before any destructive or history-rewriting Git command, run `scripts/block-dangerous-git.sh` and stop on exit code `2`.
+12. Present a decision-ready completion report with changed files, verification, open risks, README impact decision, and commit state.
+13. After committing, append the ranked three-option `Next steps` addendum described below.
 
 ## Completion criteria
 
@@ -33,6 +34,7 @@ Use this workflow for any agent-initiated repository change that modifies code, 
 - The full test suite passes.
 - `git diff --check` passes.
 - No conflict markers or untracked generated artifacts remain unintentionally.
+- README impact is addressed: relevant user-facing documentation is updated, or the completion report records why no update is needed.
 - Documentation links resolve to existing repository files.
 - Git status and commit state are reported accurately.
 
