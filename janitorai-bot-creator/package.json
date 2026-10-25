@@ -11,6 +11,7 @@
     "prepare": "cd .. && husky",
     "start": "node --env-file=.env server.mjs",
     "start:production": "NODE_ENV=production node --env-file=.env server.mjs",
+    "smoke:live": "node scripts/live-model-smoke.mjs",
     "test": "node --test"
   },
   "dependencies": {

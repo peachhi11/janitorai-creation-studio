@@ -53,6 +53,7 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 
 - [API and MCP tool reference](janitorai-bot-creator/docs/api-reference.md)
 - [Architecture and module boundaries](janitorai-bot-creator/docs/architecture.md)
+- [Release and version guidance](janitorai-bot-creator/docs/release.md)
 - [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
 - [Architecture decision records](janitorai-bot-creator/docs/adr/)
 - [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
@@ -99,6 +100,8 @@ npm audit
 ```
 
 The latest dependency audit completes with no vulnerabilities at the configured high-severity threshold. Keep the lockfile committed and rerun `npm audit` after dependency changes.
+
+For an opt-in live endpoint check, set `OPENAI_API_KEY` and run `npm run smoke:live` from `janitorai-bot-creator/`. This makes one model request, verifies the expected response token, and is intentionally excluded from automated CI.
 
 ## Contributing
 
