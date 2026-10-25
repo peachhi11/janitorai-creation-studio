@@ -61,6 +61,8 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 
 The repository also installs a root-level Husky pre-commit hook. It runs lint-staged with Prettier and then the complete test suite from `janitorai-bot-creator/`.
 
+GitHub Actions runs the same test and dependency-audit checks on every pull request and push to `main`. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires both checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+
 ## Architecture
 
 The runtime keeps transport, application use cases, generation, storage, and reference retrieval behind separate seams:
@@ -96,7 +98,7 @@ cd janitorai-bot-creator
 npm audit
 ```
 
-The latest audit reports two high-severity advisories: a transitive `body-parser` issue and a direct Zod issue whose available remediation is a major-version upgrade. They remain a separate compatibility review rather than an automatic upgrade.
+The latest dependency audit completes with no vulnerabilities at the configured high-severity threshold. Keep the lockfile committed and rerun `npm audit` after dependency changes.
 
 ## Contributing
 
