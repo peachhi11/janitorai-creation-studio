@@ -62,7 +62,9 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 
 The repository also installs a root-level Husky pre-commit hook. It runs lint-staged with Prettier and then the complete test suite from `janitorai-bot-creator/`.
 
-GitHub Actions runs the same test and dependency-audit checks on every pull request and push to `main`. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires both checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+GitHub Actions runs test, dependency-audit, and security checks on every pull request and push to `main`. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires the test and dependency-audit checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+
+The dedicated security workflow runs the full test suite, fails on high or critical dependency advisories, verifies the package lockfile, checks tracked files for common committed-secret patterns, and validates workflow permission boundaries. The OSSAR workflow additionally runs on pull requests, pushes to `main`, and a weekly schedule; it scans the repository on a Windows-hosted runner and uploads SARIF results to the GitHub Code Scanning Security tab. OSSAR requires the repository’s Code Scanning feature and `security-events: write` permission.
 
 ## Architecture
 

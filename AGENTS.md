@@ -58,3 +58,17 @@ This repository uses an agent-agnostic safety classifier at `scripts/block-dange
 For routine Git operations, use `scripts/git-safe <subcommand> [options]`. It validates the command before executing Git directly without a shell. The classifier and wrapper are repository-local conventions available to any agent, not host-specific Claude configuration.
 
 After a successful commit, the final response must include a `Next steps` addendum with exactly three ranked, concrete options for continued work. Rank the recommended option first and include the expected scope or trade-off for each. Do not stop merely because the commit succeeded; complete the requested slice first, then provide the addendum.
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues are the source of truth for tracked work; external pull requests are not a triage surface. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the default five-label vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a multi-context layout. Use `CONTEXT-MAP.md` to locate the relevant context and read applicable ADRs. See `docs/agents/domain.md`.
