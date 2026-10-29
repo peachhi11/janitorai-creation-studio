@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Disclosure and Reciprocity Dynamics"
+  short_description: "Pace intimacy, privacy, trust, and response"
+  default_prompt: "Use $build-disclosure-and-reciprocity-dynamics to design how these characters reveal, withhold, and respond without turning intimacy into a debt."

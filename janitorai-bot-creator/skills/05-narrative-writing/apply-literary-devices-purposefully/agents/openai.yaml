@@ -1,0 +1,4 @@
+interface:
+  display_name: "Purposeful Literary Devices"
+  short_description: "Choose devices by narrative function"
+  default_prompt: "Use $apply-literary-devices-purposefully to strengthen this passage without overcrowding it."

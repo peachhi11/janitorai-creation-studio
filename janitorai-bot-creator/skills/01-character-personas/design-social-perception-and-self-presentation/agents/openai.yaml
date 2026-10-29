@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Social Perception and Self-Presentation"
+  short_description: "Build social inference, masks, and audience shifts"
+  default_prompt: "Use $design-social-perception-and-self-presentation to design how this character reads others and manages the impression they create."

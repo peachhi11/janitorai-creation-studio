@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Visual Reference Datasets"
+  short_description: "Find representation gaps and visual shortcuts"
+  default_prompt: "Use $audit-visual-reference-datasets to audit this visual dataset for representation, leakage, and shortcut learning."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Character Faith and Ethics"
+  short_description: "Turn belief and morality into specific character choices"
+  default_prompt: "Use $build-character-faith-and-ethics to develop this character’s faith, moral reasoning, doubt, and behaviour."

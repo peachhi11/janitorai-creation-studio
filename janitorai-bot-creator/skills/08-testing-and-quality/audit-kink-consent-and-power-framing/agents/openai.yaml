@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Kink, Consent, and Power Framing"
+  short_description: "Find consent, power, safety, and agency framing errors."
+  default_prompt: "Use $audit-kink-consent-and-power-framing to audit this fictional kink material without sanitising its intended darkness."

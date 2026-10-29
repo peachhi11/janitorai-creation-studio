@@ -1,0 +1,4 @@
+interface:
+  display_name: "Export Portable Character Cards"
+  short_description: "Build cards that survive platform transfers"
+  default_prompt: "Use $export-portable-character-cards to prepare this character for a portable, versioned card export."

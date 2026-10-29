@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Sexual Response and Consent Framing"
+  short_description: "Catch sexual-response, consent, and agency errors"
+  default_prompt: "Use $audit-sexual-response-and-consent-framing to audit this material while preserving its intended darkness, natural voice, and player sovereignty."

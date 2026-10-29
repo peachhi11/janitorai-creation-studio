@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Fictional Sexual Cultures"
+  short_description: "Design norms, taboos, institutions, and private practice."
+  default_prompt: "Use $build-fictional-sexual-cultures to design how sexuality is organised, named, regulated, and lived in this setting."

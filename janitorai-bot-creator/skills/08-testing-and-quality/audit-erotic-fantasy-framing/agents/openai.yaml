@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Erotic Fantasy Framing"
+  short_description: "Catch fantasy, causality, consent, and agency errors"
+  default_prompt: "Use $audit-erotic-fantasy-framing to audit this material while preserving intended darkness, natural voice, and player sovereignty."

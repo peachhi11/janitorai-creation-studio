@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Nonverbal Patterns"
+  short_description: "Build distinctive embodied character behaviour"
+  default_prompt: "Use $design-character-nonverbal-patterns to design this character's nonverbal baseline and meaningful variations."

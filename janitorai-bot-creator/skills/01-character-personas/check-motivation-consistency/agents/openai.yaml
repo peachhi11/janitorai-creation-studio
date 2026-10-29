@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Motivation Consistency"
+  short_description: "Audit motives, values, goals, and autonomy across scenes."
+  default_prompt: "Audit this character’s motivations for continuity, context, conflict, and believable change."

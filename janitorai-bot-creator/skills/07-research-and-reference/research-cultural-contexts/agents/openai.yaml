@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Cultural Contexts"
+  short_description: "Research culture without flattening or exoticising"
+  default_prompt: "Use $research-cultural-contexts to research this cultural context and turn it into careful fiction guidance."

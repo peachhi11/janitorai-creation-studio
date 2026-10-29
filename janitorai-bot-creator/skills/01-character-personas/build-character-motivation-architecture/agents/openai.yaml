@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Character Motivation Architecture"
+  short_description: "Map layered motives, needs, incentives, and changing goals."
+  default_prompt: "Build a character motivation architecture with competing motives, context, and costs."

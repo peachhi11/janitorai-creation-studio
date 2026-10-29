@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Traits into Behaviour"
+  short_description: "Turn personality tendencies into specific choices, speech, and social behaviour."
+  default_prompt: "Translate this character's traits into observable behaviour across calm, stress, attraction, conflict, trust, and intimacy."

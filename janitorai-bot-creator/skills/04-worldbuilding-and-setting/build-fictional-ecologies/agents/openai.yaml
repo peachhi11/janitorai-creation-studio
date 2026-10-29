@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Fictional Ecologies"
+  short_description: "Design connected species, habitats, and pressures"
+  default_prompt: "Use $build-fictional-ecologies to design the habitats, species, and ecological consequences of this setting."

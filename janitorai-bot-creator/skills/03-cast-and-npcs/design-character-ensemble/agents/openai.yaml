@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Ensemble"
+  short_description: "Give every recurring character agency, contrast, and consequence."
+  default_prompt: "Design this cast as an interacting ensemble with independent agendas, knowledge, power, voice, friction, and scene-generating choices."

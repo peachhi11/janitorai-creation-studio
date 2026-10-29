@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Culturally Situated Characters"
+  short_description: "Ground individuals in culture without stereotypes"
+  default_prompt: "Use $build-culturally-situated-characters to ground this character in their overlapping cultural contexts."

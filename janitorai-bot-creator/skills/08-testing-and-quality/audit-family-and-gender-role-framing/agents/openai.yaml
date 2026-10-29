@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Family and Gender Role Framing"
+  short_description: "Catch rigid family types and gender destiny"
+  default_prompt: "Use $audit-family-and-gender-role-framing to audit this family material for rigid roles, gender universals, and lost agency."

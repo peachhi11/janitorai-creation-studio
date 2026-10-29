@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Character Developmental Causality"
+  short_description: "Check how backstory supports present behaviour"
+  default_prompt: "Use $audit-character-developmental-causality to audit the causal links between this character's history, present behaviour, and growth."

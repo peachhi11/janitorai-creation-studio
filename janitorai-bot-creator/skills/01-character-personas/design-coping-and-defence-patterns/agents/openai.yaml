@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Coping and Defence Patterns"
+  short_description: "Design coping, defence, regulation, and failure patterns."
+  default_prompt: "Design a character coping pattern with short-term relief, long-term cost, and failure modes."

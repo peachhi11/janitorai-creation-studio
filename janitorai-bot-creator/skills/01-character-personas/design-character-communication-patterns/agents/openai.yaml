@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Communication Patterns"
+  short_description: "Build distinct voices, listening habits, and meaningful subtext."
+  default_prompt: "Design this character’s communication pattern across voice, listening, disclosure, subtext, conflict, and repair."

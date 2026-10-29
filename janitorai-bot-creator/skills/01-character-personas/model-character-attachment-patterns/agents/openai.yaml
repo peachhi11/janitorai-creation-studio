@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Character Attachment Patterns"
+  short_description: "Map closeness, distance, trust, and attachment strategies."
+  default_prompt: "Model this character’s attachment pattern through needs, fears, triggers, strategies, contradictions, and believable exceptions."

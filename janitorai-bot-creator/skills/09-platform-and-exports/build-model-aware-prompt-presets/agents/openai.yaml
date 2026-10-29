@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Model-Aware Prompt Presets"
+  short_description: "Create portable, testable prompt configurations"
+  default_prompt: "Use $build-model-aware-prompt-presets to turn this workflow into a concise, model-aware preset package."
