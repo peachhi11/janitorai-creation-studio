@@ -77,7 +77,7 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 - `lib/reference-library.mjs` provides direct listing, search, and reading.
 - `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance.
 
-The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. The shared fictional narrative lens is applied to both MCP generation and the standalone creator; genre and relationship-intensity presets remain explicit and opt-in.
+The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. Both MCP generation and the standalone creator apply the shared Fictional Genre Logic / Narrative Intention framing: genre-specific causality and internal consistency guide the work, while psychological or erotic material remains contextual fiction rather than a universal law or mechanical checklist. Detailed creative boundaries are documented in [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md); genre and relationship-intensity presets remain explicit and opt-in.
 
 Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
 
