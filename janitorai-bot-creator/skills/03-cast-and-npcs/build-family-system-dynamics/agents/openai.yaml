@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Family System Dynamics"
+  short_description: "Design family roles, rules, alliances, and change"
+  default_prompt: "Use $build-family-system-dynamics to build this family as a changing system of roles, rules, dependencies, and alliances."

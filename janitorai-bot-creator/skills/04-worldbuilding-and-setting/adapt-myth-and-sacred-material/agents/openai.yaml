@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adapt Myth and Sacred Material"
+  short_description: "Adapt traditions with provenance and cultural care"
+  default_prompt: "Use $adapt-myth-and-sacred-material to adapt this mythic or sacred material with clear provenance and purpose."

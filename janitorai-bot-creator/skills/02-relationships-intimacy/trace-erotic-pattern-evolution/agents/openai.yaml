@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trace Erotic Pattern Evolution"
+  short_description: "Track erotic continuity and change without diagnosis"
+  default_prompt: "Use $trace-erotic-pattern-evolution to trace how this character's erotic patterns developed and changed while keeping causes provisional."

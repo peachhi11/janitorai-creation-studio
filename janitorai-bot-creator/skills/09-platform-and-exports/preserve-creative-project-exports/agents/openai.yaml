@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preserve Creative Project Exports"
+  short_description: "Back up, inspect, migrate, and restore projects"
+  default_prompt: "Use $preserve-creative-project-exports to inspect this project export and prepare a privacy-safe, restorable backup."

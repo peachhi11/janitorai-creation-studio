@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Flirting and Conversational Chemistry"
+  short_description: "Create reciprocal banter, subtext, and connection"
+  default_prompt: "Use $write-flirting-and-conversational-chemistry to make this exchange playful, reciprocal, character-specific, and rich in changing subtext."

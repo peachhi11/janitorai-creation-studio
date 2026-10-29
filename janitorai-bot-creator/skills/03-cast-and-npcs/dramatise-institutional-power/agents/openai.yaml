@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dramatise Institutional Power"
+  short_description: "Turn social power into character-level scenes"
+  default_prompt: "Use $dramatise-institutional-power to show how this institution shapes choices, relationships, and consequences."

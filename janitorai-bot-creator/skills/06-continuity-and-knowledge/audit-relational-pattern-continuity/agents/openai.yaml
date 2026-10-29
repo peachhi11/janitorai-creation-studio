@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Relational Pattern Continuity"
+  short_description: "Check attachment cycles, boundaries, and relationship change."
+  default_prompt: "Audit this relationship for continuity across attachment cues, boundaries, recurring cycles, consequences, and changes in trust."

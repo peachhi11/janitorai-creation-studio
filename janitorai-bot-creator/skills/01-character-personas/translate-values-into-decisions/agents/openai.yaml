@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Values into Decisions"
+  short_description: "Turn values and autonomy into observable choices and conflict."
+  default_prompt: "Translate this character’s values into decisions, trade-offs, and behaviour."

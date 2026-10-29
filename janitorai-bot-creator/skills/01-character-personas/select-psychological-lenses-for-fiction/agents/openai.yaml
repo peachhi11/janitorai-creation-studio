@@ -1,0 +1,4 @@
+interface:
+  display_name: "Select Psychological Lenses for Fiction"
+  short_description: "Choose useful psychology without overclaiming"
+  default_prompt: "Use $select-psychological-lenses-for-fiction to choose the most useful perspectives for this character question."

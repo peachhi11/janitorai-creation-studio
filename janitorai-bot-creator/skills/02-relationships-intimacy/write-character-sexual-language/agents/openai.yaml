@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Character Sexual Language"
+  short_description: "Create situated sexual vocabulary and speech patterns."
+  default_prompt: "Use $write-character-sexual-language to develop character-specific sexual vocabulary, euphemism, silence, and dialogue."

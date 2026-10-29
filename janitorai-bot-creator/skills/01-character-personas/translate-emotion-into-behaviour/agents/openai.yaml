@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Emotion into Behaviour"
+  short_description: "Turn emotion into speech, action, body, and relationship change."
+  default_prompt: "Translate this character’s emotion into observable behaviour, voice, and consequences."

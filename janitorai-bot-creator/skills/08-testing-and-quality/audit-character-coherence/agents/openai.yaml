@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Character Coherence"
+  short_description: "Check motives, portrayal, knowledge, and change across scenes."
+  default_prompt: "Audit this character or cast for causal coherence, knowledge boundaries, behavioural evidence, contradictions, and believable change."

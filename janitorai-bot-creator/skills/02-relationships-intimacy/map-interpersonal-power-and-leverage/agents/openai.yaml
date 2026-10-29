@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map Interpersonal Power and Leverage"
+  short_description: "Map options, dependencies, leverage, and counterpower"
+  default_prompt: "Use $map-interpersonal-power-and-leverage to map who can change whose options and what it costs."

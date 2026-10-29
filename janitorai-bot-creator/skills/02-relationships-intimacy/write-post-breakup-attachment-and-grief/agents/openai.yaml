@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Post-Breakup Attachment and Grief"
+  short_description: "Render non-linear aftermath without clinical shorthand"
+  default_prompt: "Use $write-post-breakup-attachment-and-grief to write this character's specific breakup aftermath and changing attachment."

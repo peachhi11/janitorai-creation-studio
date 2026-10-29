@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Attention Patterns"
+  short_description: "Turn attention priorities into scene behaviour"
+  default_prompt: "Use $design-character-attention-patterns to design what this character notices, misses, and tracks across situations."

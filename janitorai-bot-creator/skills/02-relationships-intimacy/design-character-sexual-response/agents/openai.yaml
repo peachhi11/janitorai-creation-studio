@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Sexual Response"
+  short_description: "Build specific, variable sexual-response patterns"
+  default_prompt: "Use $design-character-sexual-response to design this character's sexual-response pattern without collapsing consent, desire, arousal, physiology, pleasure, orgasm, and satisfaction."

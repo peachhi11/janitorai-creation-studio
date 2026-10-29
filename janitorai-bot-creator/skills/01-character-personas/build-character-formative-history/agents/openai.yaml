@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Character Formative History"
+  short_description: "Build a layered history of character change"
+  default_prompt: "Use $build-character-formative-history to build this character's formative history without making childhood deterministic."

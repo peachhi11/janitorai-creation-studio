@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map Pursue Withdraw Cycles"
+  short_description: "Trace repeating relational escalation and repair loops."
+  default_prompt: "Map the repeating relationship cycle between these characters, including each person’s private interpretation, move, payoff, cost, and possible interruption."

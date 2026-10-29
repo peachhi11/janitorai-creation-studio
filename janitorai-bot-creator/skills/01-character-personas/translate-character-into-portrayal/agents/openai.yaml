@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Character Into Portrayal"
+  short_description: "Turn inner traits into specific scene-level behaviour."
+  default_prompt: "Translate this character’s motives, traits, and contradictions into speech, attention, body, decisions, and aftermath."

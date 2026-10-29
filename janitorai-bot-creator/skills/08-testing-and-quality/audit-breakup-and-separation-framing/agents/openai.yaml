@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Breakup and Separation Framing"
+  short_description: "Catch stage, diagnosis, voice, and agency errors"
+  default_prompt: "Use $audit-breakup-and-separation-framing to audit this breakup material while preserving its intended tone and darkness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Story-Useful Geography"
+  short_description: "Build terrain, climate, routes, and settlements"
+  default_prompt: "Use $design-story-useful-geography to build geography that shapes travel, settlement, and story choices."

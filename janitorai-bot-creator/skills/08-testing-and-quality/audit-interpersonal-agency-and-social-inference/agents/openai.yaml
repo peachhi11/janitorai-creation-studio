@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Interpersonal Agency and Social Inference"
+  short_description: "Check mind-reading, agency, pressure, and consent"
+  default_prompt: "Use $audit-interpersonal-agency-and-social-inference to audit this material for unsupported inference, erased agency, coercive disclosure, or consent errors."

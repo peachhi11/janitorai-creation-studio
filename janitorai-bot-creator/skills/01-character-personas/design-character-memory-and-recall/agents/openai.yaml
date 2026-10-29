@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Memory and Recall"
+  short_description: "Build selective, reconstructive fictional memory"
+  default_prompt: "Use $design-character-memory-and-recall to design how this character encodes, changes, and retrieves important memories."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Erotic Scenario Hooks"
+  short_description: "Design playable erotic scenario hooks"
+  default_prompt: "Use $design-erotic-scenario-hooks to create a playable erotic hook with meaningful routes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Boundaries and Coercive Dynamics"
+  short_description: "Make limits, leverage, pressure, and consequences legible."
+  default_prompt: "Map the boundaries, leverage, available choices, pressure tactics, consequences, and power shifts in this relationship."

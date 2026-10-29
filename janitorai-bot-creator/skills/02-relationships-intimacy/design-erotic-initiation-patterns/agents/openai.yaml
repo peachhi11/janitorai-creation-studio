@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Erotic Initiation Patterns"
+  short_description: "Design character-specific erotic invitations"
+  default_prompt: "Use $design-erotic-initiation-patterns to map this character-specific erotic initiation."

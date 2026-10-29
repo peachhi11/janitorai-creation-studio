@@ -1,0 +1,4 @@
+interface:
+  display_name: "Track Power Exchange, Protocol, and Aftermath"
+  short_description: "Maintain rules, rituals, exceptions, and consequences over time."
+  default_prompt: "Use $track-power-exchange-protocol-and-aftermath to maintain continuity in an ongoing power-exchange dynamic."

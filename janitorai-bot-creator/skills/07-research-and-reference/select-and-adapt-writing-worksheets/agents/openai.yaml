@@ -1,0 +1,4 @@
+interface:
+  display_name: "Select Writing Worksheets"
+  short_description: "Choose the smallest useful planning worksheet"
+  default_prompt: "Use $select-and-adapt-writing-worksheets to choose and tailor a worksheet for this writing problem."

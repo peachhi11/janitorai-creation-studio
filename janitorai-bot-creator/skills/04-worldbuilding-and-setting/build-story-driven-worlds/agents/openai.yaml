@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Story-Driven Worlds"
+  short_description: "Create only the worldbuilding the story can use"
+  default_prompt: "Use $build-story-driven-worlds to design a setting around the characters, conflicts, and scenes that need it."

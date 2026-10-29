@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assemble Integrated Character Dossier"
+  short_description: "Turn scattered notes into a causal, usable character core."
+  default_prompt: "Assemble these notes into an integrated character dossier with canon boundaries, motives, behaviour, relationships, contradictions, and scene hooks."

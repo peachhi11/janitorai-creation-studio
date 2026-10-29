@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Conflict Escalation and Turning Points"
+  short_description: "Shape arguments through needs, tactics, stakes, and power shifts."
+  default_prompt: "Build this conflict as a sequence of interpretations, tactics, escalation, turning point, consequence, and residue."

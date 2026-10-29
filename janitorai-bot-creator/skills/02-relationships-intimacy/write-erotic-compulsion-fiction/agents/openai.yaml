@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Erotic Compulsion Fiction"
+  short_description: "Write dark erotic compulsion fiction"
+  default_prompt: "Use $write-erotic-compulsion-fiction to develop this fictional compulsion premise without turning it into real-world instruction."

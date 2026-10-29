@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Kink and Power-Exchange Dynamics"
+  short_description: "Build specific fictional kink and power-exchange dynamics."
+  default_prompt: "Use $design-kink-power-exchange-dynamics to design a character-specific kink or power-exchange dynamic."

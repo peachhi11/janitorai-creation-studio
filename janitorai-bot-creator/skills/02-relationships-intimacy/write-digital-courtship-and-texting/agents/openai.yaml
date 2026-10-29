@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Digital Courtship and Texting"
+  short_description: "Write believable attraction across mediated channels"
+  default_prompt: "Use $write-digital-courtship-and-texting to write this exchange with character-specific rhythm, medium ambiguity, clear options, and continuity consequences."

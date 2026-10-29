@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Rupture Repair and Aftermath"
+  short_description: "Make apology, trust, distance, and repair change the story."
+  default_prompt: "Build the rupture aftermath, repair attempt, response, changed condition, and unresolved residue for these characters."

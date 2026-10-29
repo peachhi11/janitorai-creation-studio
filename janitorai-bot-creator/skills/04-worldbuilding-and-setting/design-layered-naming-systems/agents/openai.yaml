@@ -1,0 +1,4 @@
+interface:
+  display_name: "Layered Naming Systems"
+  short_description: "Design layered cultural naming systems"
+  default_prompt: "Design or audit a layered naming system for this fictional culture and setting."

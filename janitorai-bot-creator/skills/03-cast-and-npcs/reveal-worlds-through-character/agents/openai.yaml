@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reveal Worlds Through Character"
+  short_description: "Show a setting through lived, partial viewpoints"
+  default_prompt: "Use $reveal-worlds-through-character to turn these setting notes into natural character behaviour, dialogue, and scene detail."
