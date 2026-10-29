@@ -60,9 +60,9 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Agent change workflow](workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
-The repository also installs a root-level Husky pre-commit hook. It runs lint-staged with Prettier and then the complete test suite from `janitorai-bot-creator/`.
+The repository also installs a root-level Husky pre-commit hook. It first runs `node scripts/check-readme-impact.mjs` against staged paths, requiring `README.md` whenever runtime, prompt, configuration, security, workflow, skill, or repository-convention files change. It then runs lint-staged with Prettier and the complete test suite from `janitorai-bot-creator/`.
 
-GitHub Actions runs the same test and dependency-audit checks on every pull request and push to `main`. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires both checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+GitHub Actions runs the test, dependency-audit, and README-impact checks on every pull request, plus the test and dependency-audit checks on pushes to `main`. The README-impact check requires `README.md` whenever a pull request changes protected runtime, prompt, configuration, security, workflow, skill, or repository-convention paths. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires all three pull-request checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
 
 ## Architecture
 
