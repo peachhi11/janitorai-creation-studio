@@ -83,7 +83,9 @@ test("standalone and MCP generation paths preserve the same result contract", as
   assert.match(mcpResult.memo, /<scenario memo>/);
   assert.ok(
     requests.every((request) =>
-      request.instructions.includes("FICTIONAL NARRATIVE LENS")
+      request.instructions.includes(
+        "FICTIONAL GENRE LOGIC / NARRATIVE INTENTION"
+      )
     )
   );
 });
