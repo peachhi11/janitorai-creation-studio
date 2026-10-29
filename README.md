@@ -33,19 +33,19 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 
 Copy `janitorai-bot-creator/.env.example` to `janitorai-bot-creator/.env`.
 
-| Variable                | Description                                                    | Default             |
-| ----------------------- | -------------------------------------------------------------- | ------------------- |
-| `OPENAI_API_KEY`        | API key for the OpenAI-compatible generation client.           | None                |
-| `OPENAI_MODEL`          | Model name passed to the Responses API.                        | `gpt-5.5`           |
-| `HOST`                  | Bind address.                                                  | `127.0.0.1`         |
-| `PORT`                  | HTTP port.                                                     | `8787`              |
-| `NODE_ENV`              | Runtime mode. Production requires an API token.                | `development`       |
-| `MCP_API_TOKEN`         | Bearer token for authenticated MCP requests.                   | None in development |
-| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions.         | `./data/characters` |
-| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest. | `./knowledge`       |
-| `MAX_REQUEST_BYTES`     | Maximum accepted MCP request size.                             | `1048576`           |
-| `MCP_RATE_LIMIT`        | Requests allowed per rate-limit window.                        | `60`                |
-| `MCP_RATE_WINDOW_MS`    | Rate-limit window in milliseconds.                             | `60000`             |
+| Variable                | Description                                                           | Default             |
+| ----------------------- | --------------------------------------------------------------------- | ------------------- |
+| `OPENAI_API_KEY`        | API key for the OpenAI-compatible generation client.                  | None                |
+| `OPENAI_MODEL`          | Model name passed to the Responses API.                               | `gpt-5.5`           |
+| `HOST`                  | Bind address.                                                         | `127.0.0.1`         |
+| `PORT`                  | HTTP port.                                                            | `8787`              |
+| `NODE_ENV`              | Runtime mode. Production requires an API token.                       | `development`       |
+| `MCP_API_TOKEN`         | Bearer token for authenticated MCP requests.                          | None in development |
+| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions.                | `./data/characters` |
+| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest.        | `./knowledge`       |
+| `MAX_REQUEST_BYTES`     | Maximum accepted MCP request size, including streamed request bodies. | `1048576`           |
+| `MCP_RATE_LIMIT`        | Requests allowed per rate-limit window.                               | `60`                |
+| `MCP_RATE_WINDOW_MS`    | Rate-limit window in milliseconds.                                    | `60000`             |
 
 Keep the service on loopback unless external exposure is deliberate and protected by a suitable reverse proxy. In production, set `NODE_ENV=production` and `MCP_API_TOKEN`.
 
@@ -60,9 +60,9 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Agent change workflow](workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
-The repository also installs a root-level Husky pre-commit hook. It runs lint-staged with Prettier and then the complete test suite from `janitorai-bot-creator/`.
+The repository also installs a root-level Husky pre-commit hook. It first runs `node scripts/check-readme-impact.mjs` against staged paths, requiring `README.md` whenever runtime, prompt, configuration, security, workflow, skill, or repository-convention files change. It then runs lint-staged with Prettier and the complete test suite from `janitorai-bot-creator/`.
 
-GitHub Actions runs the same test and dependency-audit checks on every pull request and push to `main`. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires both checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+GitHub Actions runs the test, dependency-audit, and README-impact checks on every pull request, plus the test and dependency-audit checks on pushes to `main`. The README-impact check requires `README.md` whenever a pull request changes protected runtime, prompt, configuration, security, workflow, skill, or repository-convention paths. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires all three pull-request checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
 
 ## Architecture
 
@@ -77,7 +77,7 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 - `lib/reference-library.mjs` provides direct listing, search, and reading.
 - `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance.
 
-The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. The shared fictional narrative lens is applied to both MCP generation and the standalone creator; genre and relationship-intensity presets remain explicit and opt-in.
+The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. Both MCP generation and the standalone creator apply the shared Fictional Genre Logic / Narrative Intention framing: genre-specific causality and internal consistency guide the work, while psychological or erotic material remains contextual fiction rather than a universal law or mechanical checklist. Detailed creative boundaries are documented in [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md); genre and relationship-intensity presets remain explicit and opt-in.
 
 Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
 
@@ -105,7 +105,7 @@ For an opt-in live endpoint check, set `OPENAI_API_KEY` and run `npm run smoke:l
 
 ## Contributing
 
-Read [`AGENTS.md`](AGENTS.md) and [`workflows/agent-change.md`](workflows/agent-change.md) before making agent-assisted changes. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
+Read [`AGENTS.md`](AGENTS.md) and [`workflows/agent-change.md`](workflows/agent-change.md) before making agent-assisted changes. Complete the workflow preflight before editing: inspect the relevant context and architecture, record the public seam, classify README impact, and identify focused verification. Prompt, generation-policy, output-framing, API, security, setup, and workflow changes require a same-slice README update; the completion report must state that decision. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
 
 ## License
 
