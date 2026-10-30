@@ -6,7 +6,7 @@ const README = "README.md";
 const IMPACT_PATTERNS = [
   /^AGENTS\.md$/,
   /^\.github\//,
-  /^workflows\//,
+  /^docs\/workflows\//,
   /^scripts\//,
   /^janitorai-bot-creator\/(?:server\.mjs|creator\.mjs|character-schema\.mjs)$/,
   /^janitorai-bot-creator\/(?:lib|prompts|skills)\//,

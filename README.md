@@ -57,7 +57,7 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
 - [Architecture decision records](janitorai-bot-creator/docs/adr/)
 - [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
-- [Agent change workflow](workflows/agent-change.md)
+- [Agent change workflow](docs/workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
 The repository also installs a root-level Husky pre-commit hook. It first runs `node scripts/check-readme-impact.mjs` against staged paths, requiring `README.md` whenever runtime, prompt, configuration, security, workflow, skill, or repository-convention files change. It then runs lint-staged with Prettier and the complete test suite from `janitorai-bot-creator/`.
@@ -105,7 +105,7 @@ For an opt-in live endpoint check, set `OPENAI_API_KEY` and run `npm run smoke:l
 
 ## Contributing
 
-Read [`AGENTS.md`](AGENTS.md) and [`workflows/agent-change.md`](workflows/agent-change.md) before making agent-assisted changes. Complete the workflow preflight before editing: inspect the relevant context and architecture, record the public seam, classify README impact, and identify focused verification. Prompt, generation-policy, output-framing, API, security, setup, and workflow changes require a same-slice README update; the completion report must state that decision. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
+Read [`AGENTS.md`](AGENTS.md) and [`docs/workflows/agent-change.md`](docs/workflows/agent-change.md) before making agent-assisted changes. Complete the workflow preflight before editing: inspect the relevant context and architecture, record the public seam, classify README impact, and identify focused verification. Prompt, generation-policy, output-framing, API, security, setup, and workflow changes require a same-slice README update; the completion report must state that decision. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
 
 ## License
 

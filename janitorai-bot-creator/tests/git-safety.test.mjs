@@ -89,7 +89,7 @@ test("repository hook and formatter resolve from the Git root", () => {
 
 test("agent workflow requires autonomous completion and ranked next steps", () => {
   const workflow = readFileSync(
-    resolve(repositoryRoot, "workflows/agent-change.md"),
+    resolve(repositoryRoot, "docs/workflows/agent-change.md"),
     "utf8"
   );
   const agents = readFileSync(resolve(repositoryRoot, "AGENTS.md"), "utf8");
