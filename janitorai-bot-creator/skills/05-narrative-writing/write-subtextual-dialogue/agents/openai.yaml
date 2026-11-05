@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Subtextual Dialogue"
+  short_description: "Write speakable dialogue with voice, intent, history, and implication."
+  default_prompt: "Draft or revise dialogue for this scene with each speaker’s immediate want, tactic, voice, knowledge, relationship history, and subtext; do not write the player’s lines."

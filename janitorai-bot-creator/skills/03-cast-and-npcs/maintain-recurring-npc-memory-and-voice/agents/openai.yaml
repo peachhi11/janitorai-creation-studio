@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Recurring NPC Memory and Voice"
+  short_description: "Carry an NPC’s selective memory, voice, and changed motives forward."
+  default_prompt: "Update this recurring NPC for the current scene using relevant prior memory, changed incentives, relationships, habits, and a distinct voice without granting omniscience."

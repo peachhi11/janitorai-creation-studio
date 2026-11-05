@@ -1,0 +1,4 @@
+interface:
+  display_name: "Schedule Reveals and Disclosures"
+  short_description: "Plan fair, staged discoveries without forcing disclosure or certainty."
+  default_prompt: "Plan this secret or reveal: audiences, evidence, prerequisites, partial forms, concealment, discovery routes, timing, and consequences without forcing player discovery."

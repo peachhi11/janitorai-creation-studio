@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Scene State and Memory"
+  short_description: "Turn played events into a minimal, auditable continuity delta."
+  default_prompt: "Convert this completed scene into supported state changes for character, relationship, knowledge, objects, locations, and unresolved threads; separate canon, belief, and player-owned choices."

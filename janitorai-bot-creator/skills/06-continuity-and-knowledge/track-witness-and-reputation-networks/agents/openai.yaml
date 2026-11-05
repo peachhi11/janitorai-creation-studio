@@ -1,0 +1,4 @@
+interface:
+  display_name: "Track Witness and Reputation Networks"
+  short_description: "Model how observation becomes rumour, reputation, and changed access."
+  default_prompt: "Trace how this fictional event travels through witnesses, records, inference, reports, rumour, and factions, including gaps, delays, motives, and uncertain reputational effects."

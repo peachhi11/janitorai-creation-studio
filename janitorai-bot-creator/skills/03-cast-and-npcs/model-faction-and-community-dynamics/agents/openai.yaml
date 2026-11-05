@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Faction and Community Dynamics"
+  short_description: "Model group disagreement, information flow, norms, and consequences."
+  default_prompt: "Model this fictional community or faction: members, internal divisions, resources, norms, information routes, dissent, and plausible group responses."

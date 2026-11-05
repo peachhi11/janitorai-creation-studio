@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Platform Compatibility Regression"
+  short_description: "Test exports across named targets, versions, features, and behaviours."
+  default_prompt: "Build a compatibility regression matrix for this character asset across named platforms, versions, and models; separate structural import checks from observed behavioural results."

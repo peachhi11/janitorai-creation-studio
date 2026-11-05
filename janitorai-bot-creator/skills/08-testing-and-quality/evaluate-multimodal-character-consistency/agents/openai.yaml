@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate Multimodal Character Consistency"
+  short_description: "Test whether one character stays causally recognisable across media."
+  default_prompt: "Evaluate this character across text, visuals, audio, and roleplay using stable anchors, intentional variation, paired cases, causal consistency, and drift findings."

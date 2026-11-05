@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Neurodivergent Experience"
+  short_description: "Build a specific, affirming experience without diagnosis-as-personality."
+  default_prompt: "Design this fictional character’s neurodivergent experience across sensory needs, attention, communication, identity, environment, strengths, friction, and accommodations."

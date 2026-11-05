@@ -1,0 +1,4 @@
+interface:
+  display_name: "Catalogue Source Provenance and Evidence"
+  short_description: "Record what each source supports, its limits, and its creative use."
+  default_prompt: "Catalogue these sources with provenance, claim type, evidence tier, scope, limitations, citation details, conflicts, and legitimate creative uses."

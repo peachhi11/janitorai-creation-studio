@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Skill Library Coverage"
+  short_description: "Find taxonomy gaps, trigger overlap, boundary failures, and untested claims."
+  default_prompt: "Audit this skill library for inventory accuracy, taxonomy fit, trigger overlap, negative boundaries, privacy leakage, fictional-genre framing, tests, and unverified claims."

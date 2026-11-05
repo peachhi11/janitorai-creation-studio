@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Plot Architecture and Payoff"
+  short_description: "Build causal story turns, subplots, reversals, and earned endings."
+  default_prompt: "Map this story’s promise, pressure chain, turning points, subplots, reveals, reversals, climax, and payoff without forcing a fixed route or ending."
