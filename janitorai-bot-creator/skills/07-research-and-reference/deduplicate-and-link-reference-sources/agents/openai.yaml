@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deduplicate and Link Reference Sources"
+  short_description: "Identify copies and derivatives while preserving provenance and originals."
+  default_prompt: "Review this reference set for exact duplicates, near matches, editions, derivatives, and conceptual overlap; preserve originals and record every proposed relationship before removal."

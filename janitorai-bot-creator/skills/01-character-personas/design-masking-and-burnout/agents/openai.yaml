@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Masking and Burnout"
+  short_description: "Map masking, depletion, shutdown, recovery, and selective disclosure."
+  default_prompt: "Map this fictional character’s masking and burnout cycle: demands, audience, strategy, gain, energy cost, early signs, recovery, and choice points."

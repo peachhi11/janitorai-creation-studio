@@ -1,0 +1,4 @@
+interface:
+  display_name: "Route Assessment Artefacts as Diegetic Lenses"
+  short_description: "Use assessments as contested fictional lenses rather than character truth."
+  default_prompt: "Route this assessment-like artefact into the fiction as a limited record, opinion, self-story, or administrative object; identify author, audience, limits, and possible contestation."

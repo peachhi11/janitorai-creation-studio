@@ -1,0 +1,4 @@
+interface:
+  display_name: "Control Point of View and Focalisation"
+  short_description: "Set perceptual access, narrative distance, and information boundaries."
+  default_prompt: "Audit or revise this scene’s viewpoint: choose focal character, access range, distance, knowledge limits, and any deliberate shift without writing player interiority."

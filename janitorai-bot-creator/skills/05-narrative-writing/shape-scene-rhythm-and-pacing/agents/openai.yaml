@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shape Scene Rhythm and Pacing"
+  short_description: "Tune pressure, pauses, escalation, compression, and release."
+  default_prompt: "Revise this scene’s pacing by mapping entry state, pressure beats, pauses, escalation, turn, exit state, and paragraph rhythm while preserving player response time."

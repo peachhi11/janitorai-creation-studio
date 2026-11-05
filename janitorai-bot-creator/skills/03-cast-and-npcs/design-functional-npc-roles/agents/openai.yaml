@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Functional NPC Roles"
+  short_description: "Give an NPC an independent scene function, motive, and exit."
+  default_prompt: "Design this NPC’s scene function, independent motive, knowledge limits, relationship pressure, leverage, boundaries, and exit conditions without writing the player."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Budget Context and Prompt Priority"
+  short_description: "Allocate finite prompt context by authority, task value, and risk."
+  default_prompt: "Create a context budget for this prompt stack: rank system rules, canon, persona data, lore, examples, history, tools, and current input; reserve output space and flag risky omissions."

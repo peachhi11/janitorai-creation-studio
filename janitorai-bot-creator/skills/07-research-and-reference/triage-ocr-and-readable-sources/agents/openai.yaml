@@ -1,0 +1,4 @@
+interface:
+  display_name: "Triage OCR and Readable Sources"
+  short_description: "Assess extractability, OCR needs, provenance, and residual uncertainty."
+  default_prompt: "Triage these reference files for extraction quality, OCR need, provenance, verification steps, and safe downstream use without overwriting originals."
