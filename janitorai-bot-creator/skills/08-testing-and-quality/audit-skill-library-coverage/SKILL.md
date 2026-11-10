@@ -72,7 +72,7 @@ consequences, knowledge boundaries, and player sovereignty without making
 characters sound like therapists or turning a craft tool into a real-world
 operational manual.
 
-## Deliverable
+## Completion
 
 Return a coverage matrix, taxonomy reconciliation, overlap and routing findings,
 privacy results, fixture results, explicit genre-logic coverage, untested claims,

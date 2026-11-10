@@ -75,3 +75,7 @@ Return:
 - one or more disclosure loops with relationship consequences;
 - coercion, privacy, or player-agency boundaries;
 - scene beats that show the change without clinical exposition.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

@@ -70,7 +70,7 @@ rules into a ritual with real consequences; surreal fiction may let the game
 alter the world. Preserve the requested erotic, coercive, humiliating, tender,
 competitive, or tragic intention while keeping the game's causal rules clear.
 
-## Deliverable
+## Completion
 
 Return the game premise, motive map, rule and stake ledger, escalation options,
 audience and power map, player-choice openings, likely reversals, and aftermath

@@ -57,7 +57,7 @@ chosen rules and consequences, not a generic realism standard. Preserve darkness
 eroticism, coercion, villainy, and ambiguity without moral sanitisation or
 real-world guidance.
 
-## Deliverable
+## Completion
 
 Return the character contract, paired test matrix, modality evidence, dimension
 scores, intentional-variation notes, failures, uncertainty, and next test.

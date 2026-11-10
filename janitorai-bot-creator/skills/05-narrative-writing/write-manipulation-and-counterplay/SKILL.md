@@ -106,3 +106,7 @@ Return:
 - each actor's options and constraints;
 - partial success, failure, and exposure points;
 - continuity consequences and unresolved risk.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

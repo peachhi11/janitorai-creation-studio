@@ -72,7 +72,7 @@ levels. Make deliberate breaches explicit in cause, perceiver, scope, and
 consequence. Do not replace a chosen ambiguity, taboo, manipulation, or tragic
 misreading with a therapeutic explanation.
 
-## Deliverable
+## Completion
 
 Return a reveal schedule with fact, audience, evidence, prerequisite, readiness,
 form, concealment strategy, discovery routes, failure states, consequence, and

@@ -27,6 +27,8 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 - Browse, search, and read local Markdown, text, JSON, CSV, and PDF references.
 - Attach reference provenance to generated results.
 - Create and constrain editable visual-character models.
+- Use a 257-module agent skill library for character construction, relationships, worldbuilding, continuity, research, evaluation, and platform workflows.
+- Apply normalized `## Completion` criteria to every skill for consistent agent handoffs.
 - Run real MCP-over-HTTP acceptance tests without a live model call.
 
 ## Configuration
@@ -57,6 +59,9 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
 - [Architecture decision records](janitorai-bot-creator/docs/adr/)
 - [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
+- [Source-derived Creation Studio assets](janitorai-bot-creator/docs/source-derived-assets.md)
+- [Skill library status](janitorai-bot-creator/docs/skill-library-status.md)
+- [Skill library coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md)
 - [Agent change workflow](docs/workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
@@ -78,6 +83,8 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 - `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance.
 
 The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. Both MCP generation and the standalone creator apply the shared Fictional Genre Logic / Narrative Intention framing: genre-specific causality and internal consistency guide the work, while psychological or erotic material remains contextual fiction rather than a universal law or mechanical checklist. Detailed creative boundaries are documented in [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md); genre and relationship-intensity presets remain explicit and opt-in.
+
+The agent skill library is complete for the current gathered corpus at the reusable-instruction level. Its remaining maintenance work is explicit source-family provenance mapping, complete machine-readable indexing, and routing/consolidation of intentionally adjacent skill families. See the [skill library status](janitorai-bot-creator/docs/skill-library-status.md) and [coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md).
 
 Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
 

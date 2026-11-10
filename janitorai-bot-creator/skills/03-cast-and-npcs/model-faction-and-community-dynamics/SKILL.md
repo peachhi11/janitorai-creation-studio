@@ -79,7 +79,7 @@ Make the rule, membership boundary, enforcement mechanism, and consequence
 legible. Fictional darkness, coercion, taboo, or collective complicity can remain
 the subject without becoming real-world instruction or moral flattening.
 
-## Deliverable
+## Completion
 
 Return a faction map, subgroup table, information routes, individual variation,
 event-response chain, access changes, dissent, and unresolved social pressure.

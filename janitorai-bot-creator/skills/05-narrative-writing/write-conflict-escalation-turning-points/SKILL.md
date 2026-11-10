@@ -24,7 +24,7 @@ Begin with the concrete issue, then expose the meaning underneath it. Conflict i
 
 Keep the user’s agency open. Separate ordinary disagreement from manipulation, coercion, intimidation, and abuse. If power is unequal, do not force symmetrical blame or call compliance a resolution.
 
-## Deliverable
+## Completion
 
 Return a conflict beat sheet: issue, private meaning, tactic, counter-tactic, escalation, power shift, turning point, immediate outcome, and unresolved residue.
 

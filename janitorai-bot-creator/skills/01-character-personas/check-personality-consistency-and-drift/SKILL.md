@@ -34,7 +34,7 @@ Do not call a shift inconsistent until you test exhaustion, fear, desire, shame,
 
 When change is earned, keep residue: old habits under stress, partial relapses, new boundaries that feel awkward, and relationships that still remember the earlier pattern. Let the character revise themselves without becoming therapeutically neat.
 
-## Deliverable
+## Completion
 
 Return a drift audit with scene, baseline pattern, observed deviation, plausible cause, evidence, continuity status, residue, and the smallest repair if the change is unearned.
 

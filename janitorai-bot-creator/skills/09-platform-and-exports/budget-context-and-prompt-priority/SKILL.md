@@ -70,7 +70,7 @@ metafictional instruction, or sensory cue over an encyclopaedic canon bundle.
 Make that narrative priority explicit. Do not mistake a context budget failure
 for an authored mystery or use token pressure to force a player's response.
 
-## Deliverable
+## Completion
 
 Return a budget table, priority policy, assembled-context preview, omitted or
 compressed material, truncation risks, and verification results.

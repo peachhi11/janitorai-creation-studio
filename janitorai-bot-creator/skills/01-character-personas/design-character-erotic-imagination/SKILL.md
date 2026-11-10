@@ -68,3 +68,7 @@ Return:
 - continuity anchors and legitimate variation.
 
 Do not diagnose, prescribe disclosure or enactment, treat rarity as pathology, or write the player's fantasy, arousal, desire, history, consent, speech, or action.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

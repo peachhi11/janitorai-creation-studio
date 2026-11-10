@@ -84,3 +84,7 @@ Return:
 - continuity anchors for later scenes.
 
 Do not diagnose characters, prescribe a healthy relationship, sanitise intended darkness, or assign the player's desire, role, consent, speech, body, or action.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

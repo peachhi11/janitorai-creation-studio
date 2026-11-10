@@ -56,7 +56,7 @@ may dwell on anticipation, and surreal fiction may break ordinary chronology.
 Keep the governing rule and consequence visible enough that variation feels
 intentional rather than accidental.
 
-## Deliverable
+## Completion
 
 Return a scene-rhythm map with entry and exit states, pressure beats, linger/
 compress decisions, paragraph or sentence interventions, and a continuity check.

@@ -41,3 +41,7 @@ When new places, factions, customs, or events enter the story, classify them as 
 ## Pressure without hidden meters
 
 World pressure can rise as unresolved conflicts, secrets, scarcity, deadlines, and public exposure accumulate. Express pressure through urgency, shorter patience, mistakes, crowd behaviour, limited options, and changed tone. Do not expose numeric pressure axes unless the project explicitly selects a visible game system.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

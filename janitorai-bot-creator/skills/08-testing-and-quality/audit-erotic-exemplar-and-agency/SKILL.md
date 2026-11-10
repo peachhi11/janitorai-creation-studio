@@ -60,3 +60,7 @@ Return a table with: source element, craft value, unsupported claim, agency gap,
 Keep the author's darkness, kink logic, and unresolved consequences unless a
 tonal change is requested. Do not infer the author's beliefs or the player's
 desire from the material.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

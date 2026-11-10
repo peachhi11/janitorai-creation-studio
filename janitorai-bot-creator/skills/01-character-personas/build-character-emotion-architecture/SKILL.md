@@ -80,6 +80,6 @@ threat memory, threat can increase bodily pain, poor sleep can lower tolerance
 for panic, and avoidance can briefly soothe while preserving fear. These are
 story mechanisms, not diagnoses.
 
-## Deliverable
+## Completion
 
 Return an emotion map: cue, meaning, body, competing feelings, urge, regulation attempt, observable behaviour, relationship effect, and delayed aftermath.

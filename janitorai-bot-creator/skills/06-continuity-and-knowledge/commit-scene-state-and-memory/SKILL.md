@@ -67,7 +67,7 @@ metafictional bleed, or deliberately unreliable records. Treat these as
 authored state transitions with a stated cause, affected layer, perceivers, and
 consequence—not as permission for arbitrary runtime mutation.
 
-## Deliverable
+## Completion
 
 Return a state-delta table, rejected or unresolved candidates, updated memory
 records, player-owned boundaries, and a short next-scene continuity checklist.

@@ -77,3 +77,7 @@ Return:
 - intentional in-character framing to retain;
 - the smallest revision for each accidental problem;
 - player-sovereignty constraints and unresolved uncertainties.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

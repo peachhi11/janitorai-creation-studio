@@ -98,3 +98,7 @@ Return:
 - authentic overlap, strategic variation, and maintenance cost;
 - likely misreadings, leaks, and scene consequences;
 - unresolved alternatives and specialist work needed next.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

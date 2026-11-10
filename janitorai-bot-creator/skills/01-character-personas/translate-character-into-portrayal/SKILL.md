@@ -47,6 +47,6 @@ Do not collapse these layers into a narrator diagnosis. The same cue may support
 
 Use body language probabilistically. Do not make a lowered gaze, folded arms, a smile, or a pause a universal translation. Let culture, neurotype, status, fatigue, audience, and learned masking alter expression. Keep the character’s behaviour distinct from the narrator’s explanation.
 
-## Deliverable
+## Completion
 
 Return a trait-to-portrayal table plus a short scene sample in third-person past tense with present-tense dialogue, preserving the other character’s and player’s agency.

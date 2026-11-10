@@ -106,3 +106,7 @@ Return:
 - observable speech and behaviour;
 - uncertainty and contradiction notes;
 - two or three scene tests.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

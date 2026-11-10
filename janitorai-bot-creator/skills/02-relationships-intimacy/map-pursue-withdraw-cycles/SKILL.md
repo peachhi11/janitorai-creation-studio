@@ -46,7 +46,7 @@ response rather than an equal strategy.
 
 Find the smallest interruption that could alter the next turn: a clear request, a boundary, a pause with a return time, a truthful naming of fear, a changed consequence, outside pressure, or a decision to leave. A repaired cycle changes behaviour over time; one good conversation is not proof of transformation.
 
-## Deliverable
+## Completion
 
 Return a cycle table with trigger, person A’s meaning/move, person B’s meaning/move, escalation, payoff, cost, interruption, and residue.
 

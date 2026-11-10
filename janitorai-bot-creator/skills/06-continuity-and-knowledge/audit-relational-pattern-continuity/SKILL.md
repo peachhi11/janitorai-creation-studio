@@ -37,7 +37,7 @@ Flag attachment-style diagnosis from one behaviour, sudden intimacy without chan
 
 Suggest the smallest missing bridge: a prior cue, private interpretation, omitted conversation, boundary consequence, failed repair, changed incentive, or time passage. Do not overwrite the character’s agency or prescribe a happy ending.
 
-## Deliverable
+## Completion
 
 Return a continuity table with scene, prior pattern, cue, interpretation, move, other reading, consequence, residue, and confidence. Mark evidence, inference, and open possibility separately.
 

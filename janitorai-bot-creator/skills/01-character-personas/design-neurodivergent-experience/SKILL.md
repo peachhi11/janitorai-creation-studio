@@ -50,3 +50,7 @@ observable behaviour, social consequence, recovery need and chosen agency.
 | Fill every trait from the label | Specify only supported, character-relevant dimensions.             |
 | Make support a cure             | Show access, mismatch, effort and agency.                          |
 | Write a case report             | Keep the output in observable scenes and the character's language. |
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

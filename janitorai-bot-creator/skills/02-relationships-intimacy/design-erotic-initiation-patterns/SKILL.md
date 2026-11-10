@@ -56,7 +56,7 @@ Possible mechanisms include a remembered pleasure, playful roleplay, humour, a g
 
 Allow erotic darkness, manipulation, obsession, dominance, or morally bad choices when requested, but show whose choice it is, what the target understands, what they can resist, and what exposure or aftermath follows. Never let a character's arousal, prior sex, flirtation, entering a room, laughter, or physical response settle consent by itself. Keep the player or viewpoint character's actions open when they own them.
 
-## Deliverable
+## Completion
 
 Return a compact beat map: intent → setup → invitation → observable response → next option → boundary or stop condition → consequence. Add two alternate readings when the response is ambiguous.
 

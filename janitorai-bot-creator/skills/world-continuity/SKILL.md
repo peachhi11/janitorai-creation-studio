@@ -48,3 +48,7 @@ At each scene transition, verify:
 6. Whether the author has chosen a different historical, speculative, or culturally specific frame.
 
 The world remains autonomous: institutions, friends, coworkers, family, and strangers have activity and priorities beyond the protagonist. They should not appear only when the plot needs an obstacle.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

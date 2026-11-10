@@ -55,14 +55,20 @@ Message count is not evidence of intimacy. A relationship changes when an event 
 ```json
 {
   "relationship": "character-a/character-b",
-  "before": {"trust": "guarded", "trajectory": "uncertain"},
+  "before": { "trust": "guarded", "trajectory": "uncertain" },
   "event": "Character A disclosed the secret in private.",
-  "knowledge_changes": ["B now knows the secret; A does not know whether B believes it."],
-  "after": {"trust": "fragile", "trajectory": "strengthening"},
-  "conflict": {"internal": [], "external": [], "circumstantial": []},
+  "knowledge_changes": [
+    "B now knows the secret; A does not know whether B believes it."
+  ],
+  "after": { "trust": "fragile", "trajectory": "strengthening" },
+  "conflict": { "internal": [], "external": [], "circumstantial": [] },
   "unresolved": ["B has not decided whether to forgive or use the disclosure."],
   "canon_status": "runtime-canon"
 }
 ```
 
 Retrieved guidance remains evidence. The author’s selected route controls whether the result is tender, destructive, ambiguous, coercive, tragic, comic, or unresolved.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

@@ -37,7 +37,7 @@ Filter the emotion through personality, culture, status, neurotype, history, and
 
 Write: **cue → private interpretation → visible behaviour → other person’s reading → adjustment or escalation → residue**. Let the character’s behaviour be an attempt to solve a problem, protect an identity, or avoid a feared meaning.
 
-## Deliverable
+## Completion
 
 Return a behaviour translation with internal state, visible evidence, alternative readings, dialogue texture, and the next emotional consequence.
 

@@ -58,6 +58,6 @@ and consequences decide whether it fits.
 
 Show attachment through initiation, response time, disclosure, requests, boundaries, conflict, touch, sex, repair, and aftermath. Let the same strategy produce different meanings: a delayed reply may be self-protection, punishment, overload, or ordinary busyness. Keep the character capable of choice, concealment, tenderness, and contradiction.
 
-## Deliverable
+## Completion
 
 Return an attachment map: need, fear, working belief, trigger, strategy, observable behaviour, interpretation by each person, payoff, cost, exception, and change pressure.

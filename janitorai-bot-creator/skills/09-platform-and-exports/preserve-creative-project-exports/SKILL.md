@@ -149,3 +149,7 @@ Never claim “backed up” when only a file exists. State when and where restor
 ## Narrative Intention and fictional genre logic
 
 Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Preserve the setting's internal rules, causal consequences, knowledge boundaries, and player sovereignty. Do not turn fictional darkness, eroticism, coercion, obsession, tragedy, comedy, surrealism, or meta-fiction into a real-world manual or an automatic healthy outcome.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

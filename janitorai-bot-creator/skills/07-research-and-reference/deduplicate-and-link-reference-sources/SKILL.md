@@ -54,7 +54,7 @@ archive or a manifest that names the canonical record, duplicate relation,
 reason, reviewer, and date. Update citation links so a synthesis points to the
 canonical source while preserving the intake history.
 
-## Deliverable
+## Completion
 
 Return a deduplication manifest, canonical-source map, derivative and edition
 links, unresolved near-duplicate queue, and privacy-safe audit summary.

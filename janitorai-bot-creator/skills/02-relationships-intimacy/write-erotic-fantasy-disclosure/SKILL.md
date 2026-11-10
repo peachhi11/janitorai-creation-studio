@@ -40,7 +40,7 @@ Shape the exchange as:
 
 If the fantasy is dark, preserve its imaginative charge while making the ethics and consequences legible through character action. Do not make the narrator endorse it merely because the prose is sensual.
 
-## Deliverable
+## Completion
 
 Draft the scene in the requested voice, then provide a private craft note: fantasy content, emotional function, speaker’s risk, listener’s options, explicit boundary, and what remains unresolved.
 

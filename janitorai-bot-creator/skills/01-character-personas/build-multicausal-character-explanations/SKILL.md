@@ -90,3 +90,7 @@ Return:
 - competing hypotheses and discriminating evidence;
 - scene expressions and counterexamples;
 - change conditions and remaining uncertainty.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

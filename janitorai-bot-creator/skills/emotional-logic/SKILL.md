@@ -58,3 +58,7 @@ Dialogue should carry both the literal exchange and the active pressure beneath 
 4. What changes if the other person responds well or badly.
 
 Use voice—vocabulary, rhythm, humour, silence, formality, and emotional shifts—to show the character’s strategy without narrating a diagnosis.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

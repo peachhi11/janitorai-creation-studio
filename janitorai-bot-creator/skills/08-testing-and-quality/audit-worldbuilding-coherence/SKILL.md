@@ -131,3 +131,7 @@ Avoid scoring the setting with a single number. Coherence serves the requested s
 ## Narrative Intention and fictional genre logic
 
 Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

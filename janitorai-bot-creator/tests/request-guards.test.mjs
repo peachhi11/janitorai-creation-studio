@@ -83,6 +83,10 @@ test("request guard rejects chunked bodies after the streaming cap is crossed", 
     destroy() {
       this.destroyed = true;
     },
+    resume() {
+      this.resumed = true;
+      return this;
+    },
   };
   const response = responseDouble();
 
@@ -93,5 +97,5 @@ test("request guard rejects chunked bodies after the streaming cap is crossed", 
 
   assert.equal(response.headers.status, 413);
   assert.equal(response.body, "Request entity too large");
-  assert.equal(request.destroyed, true);
+  assert.equal(request.resumed, true);
 });

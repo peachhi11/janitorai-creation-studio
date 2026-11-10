@@ -112,3 +112,7 @@ Deliver:
 - reproducible outputs linked back to the untouched source.
 
 Write the explanation for human readers. Define technical terms when first used and show a concrete example when a processing choice is not obvious.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

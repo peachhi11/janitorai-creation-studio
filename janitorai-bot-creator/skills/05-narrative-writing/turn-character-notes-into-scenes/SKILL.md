@@ -103,3 +103,7 @@ Create pressures, offers, information, and consequences for non-player character
 Check that the scene would still matter if the reader missed the intended character inference. Remove lines that explain what the action already shows. Confirm that responsibility for harm remains attached to choices and power, not excused by backstory. Ensure the scene reveals this character rather than a generic trait label.
 
 Return a compact set of scene seeds with the tested note, immediate objective, pressure, revealing action, observer effect, and state change.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

@@ -40,6 +40,6 @@ Record:
 
 Prefer a small number of causal links over exhaustive biography. Every included detail should affect perception, choice, conflict, intimacy, or consequence. Mark inference and open possibility instead of silently promoting it to canon.
 
-## Deliverable
+## Completion
 
 Return a dossier with a core summary, causal architecture, behaviour map, relationship map, knowledge boundaries, contradiction list, scene hooks, and unresolved choices.
