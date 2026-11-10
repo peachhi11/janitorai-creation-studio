@@ -17,9 +17,14 @@ npm start
 
 The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `/mcp`; the health endpoint is `/healthz`.
 
+Vercel AI SDK v6 (`ai`) is included as a project dependency and installed by `npm ci`. Its generation and streaming utilities are available through imports from `ai`.
+
+The Mem0 JavaScript SDK (`mem0ai`) is also installed by `npm ci`. Import `MemoryClient` from `mem0ai` and initialize it with `process.env.MEM0_API_KEY` when adding memory features. Set `MEM0_API_KEY` and `MEM0_USER_ID` to enable the memory tools. See [Memory integration](janitorai-bot-creator/docs/memory.md) for usage and scope.
+
 ## Features
 
 - Generate and revise complete Janitor AI character definitions.
+- Store explicitly selected context in Mem0 and optionally retrieve it during generation.
 - Create portable user personas with full and compact exports.
 - Adapt personas to a bot or setting without changing permanent persona canon.
 - Promote selected roleplay discoveries into permanent persona canon.
