@@ -66,6 +66,6 @@ Give each major motive:
 
 Let multiple motives operate at once. A character may want safety and recognition, freedom and belonging, mastery and rest, love and control. Contradiction should create decisions, not disappear into a label.
 
-## Deliverable
+## Completion
 
 Return a motivation map: motive, meaning, expected outcome, context, strategy, conflict, cost, observable behaviour, and conditions for change.

@@ -55,7 +55,7 @@ intended effect without being converted into a healthy communication lesson.
 Keep the consequences and knowledge boundaries legible rather than making a
 line universally persuasive.
 
-## Deliverable
+## Completion
 
 Return a dialogue beat sheet or revised exchange with speaker objective,
 tactic, surface line, subtext, response pressure, voice notes, and the changed

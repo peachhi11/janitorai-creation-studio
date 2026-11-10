@@ -55,7 +55,7 @@ Before synthesis, report whether claims came from a verified page, OCR-derived
 text, metadata, or an unverified lead. Escalate unreadable high-value material
 for a better copy rather than inventing a reconstruction.
 
-## Deliverable
+## Completion
 
 Return a readability table, derived-text inventory, OCR quality notes, uncertain
 spans, privacy check, and a recommendation: usable, usable with limits, needs a

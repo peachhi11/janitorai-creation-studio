@@ -67,7 +67,7 @@ Flag only actual sanitisation, semantic loss, authority confusion, or player-
 agency failure. Preserve the distinction between card content, trusted runtime
 instructions, character knowledge, and player control.
 
-## Deliverable
+## Completion
 
 Return the test matrix, canonical artefact, structural results, preservation and
 loss manifest, paired behavioural results, untested claims, rollback evidence,

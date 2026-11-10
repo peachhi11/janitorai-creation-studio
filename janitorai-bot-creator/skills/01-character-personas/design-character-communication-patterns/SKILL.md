@@ -44,6 +44,6 @@ labour, status, audience, and the cost of being misunderstood. A transactional
 or ego-state model may help an author notice a shift in stance, but it does not
 diagnose a speaker or dictate the next line.
 
-## Deliverable
+## Completion
 
 Return a communication map with channel, voice features, disclosure rule, listening habit, accommodation pattern, subtext, failure mode, and a short sample exchange that leaves the other person room to respond.

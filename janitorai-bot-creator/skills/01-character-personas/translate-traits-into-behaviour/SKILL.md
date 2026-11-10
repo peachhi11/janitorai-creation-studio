@@ -40,6 +40,6 @@ Apply the chain across speech and decisions, behaviour under stress, attraction,
 
 Treat traits as tendencies whose expression depends on state, audience, culture, power, learning, and opportunity. Do not use a clinical association as a diagnosis or make a group-level finding dictate one fictional individual.
 
-## Deliverable
+## Completion
 
 Return a trait-to-behaviour table with tendency, situation, attention, interpretation, visible action, concealed urge, social effect, payoff, contradiction, and failure mode.

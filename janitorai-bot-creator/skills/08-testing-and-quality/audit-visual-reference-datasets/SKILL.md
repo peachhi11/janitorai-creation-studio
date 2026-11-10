@@ -101,3 +101,7 @@ Return:
 - limitations and specific curation actions.
 
 Keep findings readable to creators as well as technical reviewers. Explain what each metric means and why it changes the decision.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

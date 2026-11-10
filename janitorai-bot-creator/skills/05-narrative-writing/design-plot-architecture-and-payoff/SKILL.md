@@ -74,7 +74,7 @@ has an established rule. Preserve dark, erotic, coercive, tragic, comic or
 unresolved intentions. In interactive writing, offer pressures and branches but
 do not write the player's interiority, consent, refusal, speech, or decision.
 
-## Deliverable
+## Completion
 
 Return a plot ledger with promise, pressure chain, major state changes, subplot
 map, planted/payoff evidence, turning points, unresolved questions, ending

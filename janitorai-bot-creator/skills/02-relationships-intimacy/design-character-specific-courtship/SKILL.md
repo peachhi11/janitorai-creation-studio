@@ -106,3 +106,7 @@ Return:
 - continuity consequences and scene hooks.
 
 Preserve intentional darkness. Do not assign the player's attraction, arousal, consent, message, speech, action, relationship goal, or decision.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

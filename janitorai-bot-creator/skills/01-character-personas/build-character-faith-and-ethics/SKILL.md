@@ -96,3 +96,7 @@ Characters should not sound like therapists, theologians, or philosophers unless
 - Conversion, loss of faith, or reform is not treated as compulsory character growth.
 - Medical or psychological claims made by a religious source remain claims, not clinical facts.
 - For player characters, provide background knowledge and consequences without choosing belief, guilt, devotion, attraction, consent, or action.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

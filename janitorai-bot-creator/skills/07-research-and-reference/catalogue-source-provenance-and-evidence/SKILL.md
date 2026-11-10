@@ -74,7 +74,7 @@ language is marked, that paraphrase preserves scope, and that a claim is not
 stronger than its evidence. Record conflicts instead of silently selecting the
 most convenient source.
 
-## Deliverable
+## Completion
 
 Return a source catalogue, evidence-tier table, claim ledger, conflicts and gaps,
 citation-ready records, and a fiction-routing note for each adopted claim.

@@ -85,3 +85,7 @@ Return:
 - continuity anchors and legitimate variations.
 
 Do not diagnose, prescribe treatment, require orgasm, assign a fixed gender pattern, or write the player's desire, arousal, bodily response, pleasure, consent, speech, or action.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

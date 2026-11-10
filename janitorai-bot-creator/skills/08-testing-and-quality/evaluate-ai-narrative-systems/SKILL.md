@@ -135,3 +135,7 @@ Deliver:
 - limitations and the next discriminating test.
 
 Keep the report readable. Use plain craft language for creators and technical detail only where it changes interpretation.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

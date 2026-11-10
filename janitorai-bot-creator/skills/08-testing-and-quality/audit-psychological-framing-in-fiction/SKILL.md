@@ -98,3 +98,7 @@ Return:
 - the smallest correction for each genuine problem;
 - scene-level replacements for clinical exposition;
 - uncertainties requiring specialist evidence.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

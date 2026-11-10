@@ -80,3 +80,7 @@ Return:
 - stable continuity anchors and legitimate variation.
 
 Do not diagnose, guarantee outcomes, impose gender formulas, reproduce health advice, or assign the player's body, preferences, arousal, consent, speech, or action.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

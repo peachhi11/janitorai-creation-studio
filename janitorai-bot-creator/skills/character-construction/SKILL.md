@@ -64,3 +64,7 @@ Run four checks:
 4. **Continuity check:** which facts are canon, which are hypotheses, and which are unknown to the character?
 
 The module supports kind, secure, cruel, manipulative, erotic, tragic, comic, or morally compromised characters. It does not prescribe redemption, approval, or a healthy relationship arc.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

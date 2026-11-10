@@ -95,3 +95,7 @@ stack of labels or assume that one identity explains the others.
 - Check that food, clothing, accent, and ritual are connected to relationships and meaning rather than decorative difference.
 - Include ordinary competence, humour, boredom, taste, work, and private preference.
 - Preserve fictional darkness and conflict without treating prejudice or coercion as the natural essence of a people.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

@@ -128,3 +128,7 @@ Return:
 - claim-status labels;
 - scene-level implications;
 - limitations and specialist skills to invoke next.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

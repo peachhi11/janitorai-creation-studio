@@ -35,7 +35,7 @@ Distinguish compromise from self-erasure, privacy from emotional absence, suppor
 
 Put the pattern in choices, dialogue, omissions, logistics, sex, money, time, and aftermath. Let a character be loving and controlling, independent and frightened, generous and resentful, or unavailable for reasons that do not excuse their impact. Do not force confession, healing, or reconciliation.
 
-## Deliverable
+## Completion
 
 Return a boundary-and-dependence map: need, offer, hidden contract, limit, feared consequence, observable behaviour, other person’s response, cost, and available choice.
 

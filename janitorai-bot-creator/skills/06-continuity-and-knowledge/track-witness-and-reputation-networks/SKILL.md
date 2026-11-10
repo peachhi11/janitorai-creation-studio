@@ -109,7 +109,7 @@ self-serving, or changed by later events.
   believed for the wrong reason without the narrative endorsing harm.
 - The event leaves a continuity trace if it matters later.
 
-## Deliverable
+## Completion
 
 Return an event record, witness table, propagation chain, audience-specific
 reputation changes, current knowledge layers, unresolved contradictions, and

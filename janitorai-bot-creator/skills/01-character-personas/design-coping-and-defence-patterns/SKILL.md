@@ -55,6 +55,6 @@ Do not force a linear recovery arc. A person may move through low, improving,
 increasing, recurrent, or persistently difficult periods, and the same strategy
 may work in one setting while failing in another.
 
-## Deliverable
+## Completion
 
 Return a coping loop: trigger, appraisal, response, payoff, cost, failure mode, observable signs, and possible adaptation.

@@ -90,3 +90,7 @@ Return:
 - protective influences and counterexamples;
 - unresolved questions and competing explanations;
 - the present patterns that require a separate behaviour translation.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

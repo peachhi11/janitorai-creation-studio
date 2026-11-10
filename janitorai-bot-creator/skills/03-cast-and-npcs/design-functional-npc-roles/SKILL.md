@@ -106,7 +106,7 @@ accident.
   real-world instruction.
 - A recurring NPC accumulates memory, reputation, debts, and changed options.
 
-## Deliverable
+## Completion
 
 Return an NPC card containing function, motive, relationship map, knowledge
 boundary, ownership, scene entry, pressure, likely misread, exit condition,

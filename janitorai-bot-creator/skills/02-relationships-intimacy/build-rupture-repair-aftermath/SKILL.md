@@ -31,7 +31,7 @@ Record:
 
 Use specific apologies and changed conduct rather than therapeutic speeches. A successful repair can leave a scar; a failed repair can deepen intimacy for one person while ending it for another. Never write forgiveness, consent, or the user’s emotional response on their behalf.
 
-## Deliverable
+## Completion
 
 Return an aftermath map with incident, realities, responsibility, repair attempt, response, changed condition, unresolved harm, and next-scene pressure.
 

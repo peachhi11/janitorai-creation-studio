@@ -36,7 +36,7 @@ Flag a backstory detail with no present effect, a trait with no behaviour, a fla
 
 Suggest the smallest missing bridge: a prior cue, private belief, resource change, omitted decision, relationship consequence, knowledge boundary, or scene of failed coping. Do not rewrite canon or the player’s reaction without permission.
 
-## Deliverable
+## Completion
 
 Return a coherence table with claim, evidence, gap, impact, confidence, and minimal repair. Separate evidence, inference, and creative option.
 

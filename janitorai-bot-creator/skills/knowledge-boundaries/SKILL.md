@@ -50,3 +50,7 @@ Keep secrets local until a plausible disclosure, investigation, rumour, record, 
 Reveal information through the selected viewpoint and scene purpose. Close interiority may disclose that viewpoint character's thoughts; objective narration should not reveal hidden interiority; unreliable narration may present belief as perception while preserving uncertainty in the ledger.
 
 Platform features such as lorebook depth, recursion, activation keywords, memory syntax, or numeric trackers belong in adapters. This skill defines the narrative rule only.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

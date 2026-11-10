@@ -74,7 +74,7 @@ a credible in-world source. Hidden JSON, author notes and system state do not
 create spontaneous character omniscience. Deliberate meta-fictional or
 telepathic breaches must name cause, perceiver and consequence.
 
-## Deliverable
+## Completion
 
 Return an artefact-routing table with source, author, access, claimed meaning,
 confidence, omissions, character belief, emotional driver, relational friction,

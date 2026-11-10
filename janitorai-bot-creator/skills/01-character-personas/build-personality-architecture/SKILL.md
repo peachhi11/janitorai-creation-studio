@@ -48,6 +48,6 @@ artifacts, never as destiny, diagnosis, or a shortcut around scene evidence.
 
 For every broad tendency, name its object, trigger, cost, and exception. “High openness” is less useful than “hunts unfamiliar ideas when safe, but becomes rigid when novelty threatens belonging.” Let culture and relationships change the expression without making the character a different person on every page.
 
-## Deliverable
+## Completion
 
 Return a layered profile with evidence, inference, uncertainty, behavioural examples, mask/private contrast, contradictions, and plausible conditions for change. Avoid diagnostic language unless the story explicitly requires a character’s own flawed label.

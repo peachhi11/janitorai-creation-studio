@@ -39,7 +39,7 @@ tone, and established rules make possible, what a tactic costs, and what later
 events must remember. Do not moralise the character into redemption, impose a
 healthy-relationship endpoint, or erase impact because intent was affectionate.
 
-## Deliverable
+## Completion
 
 Return a dynamics map with boundary, leverage, knowledge, choice set, tactic, consequence, power shift, and unresolved danger.
 

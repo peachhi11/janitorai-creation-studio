@@ -51,6 +51,6 @@ Then render the choice through action, timing, refusal, compromise, silence, spe
 
 Let pressure expose a value’s boundary. A character may become more autonomous, discover that a supposed value was borrowed, or accept a cost they once considered impossible. Change should follow an event, interpretation, relationship, or repeated consequence; it should not appear because the plot needs a new personality.
 
-## Deliverable
+## Completion
 
 Return a value-to-behaviour table: value, origin, trigger, observable choice, competing value, sacrifice, self-justification, and evidence of change.

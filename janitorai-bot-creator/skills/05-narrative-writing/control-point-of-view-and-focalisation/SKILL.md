@@ -60,7 +60,7 @@ protect a clue, a romance may privilege charged misreading, and surreal or
 meta-fictional work may permit narrative levels to bleed together. Establish
 who can perceive the breach, what permits it, and what consequence follows.
 
-## Deliverable
+## Completion
 
 Return a viewpoint sheet: narrator, focaliser, access limits, distance, tense,
 known unknowns, deliberate shifts, and a short boundary audit of the scene.

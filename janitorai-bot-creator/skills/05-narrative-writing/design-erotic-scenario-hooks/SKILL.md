@@ -46,7 +46,7 @@ Present what the characters can notice before the choice. Let players ask questi
 
 If the hook contains intoxication, magic, restraint, blackmail, bodily risk, non-consensual touch, or predation, classify it in the design notes. Preserve dark fiction when requested, but do not disguise coercion as a sexy puzzle or make a character’s lack of resistance equal agreement.
 
-## Deliverable
+## Completion
 
 Return a compact hook card: premise, observable entry, erotic pressure, bypass, alteration, acceptance, NPC agendas, player-owned choices, and aftermath for each route.
 

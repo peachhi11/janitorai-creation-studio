@@ -114,3 +114,7 @@ Return:
 - observable tells and likely misses;
 - two or three scene tests;
 - any continuity risks or unsupported perceptions.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

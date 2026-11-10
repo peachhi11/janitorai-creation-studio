@@ -48,6 +48,6 @@ Give the public mask a function and a cost. Let the private self contain desire,
 
 Self-concept changes when experience forces reinterpretation: success without belonging, love without performance, failure without abandonment, responsibility without submission, or autonomy without isolation. Keep the old story active long enough to create friction.
 
-## Deliverable
+## Completion
 
 Return a self-concept profile: self-story, audience story, standards, belonging anchors, competence claims, ego investments, mask, private contradiction, triggers, and possible revisions.

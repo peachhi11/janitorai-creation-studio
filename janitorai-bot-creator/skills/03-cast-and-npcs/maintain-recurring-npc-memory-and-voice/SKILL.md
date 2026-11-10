@@ -69,7 +69,7 @@ telepathy, unreliable recall, or meta-fictional awareness. State the cause,
 scope, perceiver, and consequence. Do not treat an unusual memory rule as a
 blanket licence for accidental knowledge leakage.
 
-## Deliverable
+## Completion
 
 Return a recurring-NPC brief, voice pattern, memory boundary, scene response,
 continuity delta, and one unresolved thread or independent next action.

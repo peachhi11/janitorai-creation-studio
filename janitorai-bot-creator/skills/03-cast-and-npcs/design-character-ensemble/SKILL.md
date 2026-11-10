@@ -39,6 +39,6 @@ For each character, record:
 
 Use contrasts and asymmetries. Two characters can both be intelligent, kind, or angry while differing in timing, risk tolerance, evidence standards, or what they protect. Do not make every NPC secretly orbit the protagonist or resolve all relationships into romance.
 
-## Deliverable
+## Completion
 
 Return an ensemble table, relationship graph in prose, knowledge asymmetries, independent NPC actions, and collision points that can generate scenes without stealing the player’s choices.

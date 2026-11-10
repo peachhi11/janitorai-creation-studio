@@ -40,7 +40,7 @@ Let the character experience contradiction: wanting the fantasy, fearing it, usi
 
 Separate objective story truth, character belief, narrator claim, and reader suspicion. If the premise removes agency, make that removal the conflict and show its consequences; do not frame involuntary response as willing consent. Keep player-owned choices open in interactive scenes.
 
-## Deliverable
+## Completion
 
 Return a premise card with mechanism, viewpoint limits, pressure progression, resistance points, affected relationships, risk classification, and recovery or irreversible consequences.
 

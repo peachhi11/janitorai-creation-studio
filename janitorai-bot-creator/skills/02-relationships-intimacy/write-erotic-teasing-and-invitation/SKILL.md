@@ -46,7 +46,7 @@ Insults, sexual jokes, jealousy, possession language, public embarrassment, surp
 
 Keep characters from speaking in therapeutic labels or sourcebook jargon. Let them use their own vocabulary, evasions, jokes, and rhythms. Avoid narrator claims that a gender, body, or “polarity” has one natural response.
 
-## Deliverable
+## Completion
 
 Draft the scene or line set, then add a brief private craft note listing the initiator's aim, the other person's plausible readings, the boundary or exit, and what changes if the invitation lands badly.
 
