@@ -35,6 +35,10 @@ The built-in Mem0 HTTP integration uses Node.js `fetch`; no Mem0 SDK package is 
 - Use a 257-module agent skill library for character construction, relationships, worldbuilding, continuity, research, evaluation, and platform workflows.
 - Apply normalized `## Completion` criteria to every skill for consistent agent handoffs.
 - Run real MCP-over-HTTP acceptance tests without a live model call.
+- Run deterministic memory-layer and agent-evaluation benchmarks before runtime prompt integration.
+- Compare layer-aware memory retrieval with the keyword baseline, including temporal ordering, evidence coverage, authority filtering, and abstention metrics.
+- Score procedural workflows by completeness, assemble active context through explicit related-state links, and require provenance-backed links before promoting events into durable state.
+- Enforce retrieval boundaries and evidence checks again after memory expansion, deduplicate linked candidates, and abstain when the final bounded context is unsupported.
 
 ## Configuration
 
@@ -67,6 +71,7 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Source-derived Creation Studio assets](janitorai-bot-creator/docs/source-derived-assets.md)
 - [Skill library status](janitorai-bot-creator/docs/skill-library-status.md)
 - [Skill library coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md)
+- [Memory-layer and benchmark plan](janitorai-bot-creator/docs/memory-layer-and-benchmark-plan.md)
 - [Agent change workflow](docs/workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
@@ -103,6 +108,16 @@ npm test
 ```
 
 The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.
+
+Benchmark the pre-integration retrieval and evaluation layers with:
+
+```bash
+cd janitorai-bot-creator
+npm run benchmark:memory
+npm run benchmark:agents
+```
+
+These deterministic reports measure memory retrieval, state validity, abstention, skill-bundle consolidation, paired-judge disagreement, world replay, context-conditioned actions, roleplay contracts, evaluation-context divergence, and multimodal identity consistency.
 
 To inspect dependency advisories without changing the lockfile:
 
