@@ -1,9 +1,7 @@
 import { createServer } from "node:http";
 import OpenAI from "openai";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import {
-  StreamableHTTPServerTransport
-} from "@modelcontextprotocol/sdk/server/streamableHttp.js";
+import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createCharacterStore } from "./lib/character-store.mjs";
 import { createReferenceLibrary } from "./lib/reference-library.mjs";
 import { createCharacterApplication } from "./lib/application.mjs";
@@ -15,6 +13,8 @@ import { createPromptPresetLibrary } from "./lib/prompt-presets.mjs";
 import { getKnowledgeContextDetails } from "./lib/knowledge-context.mjs";
 import { createCharacterGeneration } from "./lib/character-generation.mjs";
 
+import { createMemoryStore } from "./lib/memory-store.mjs";
+
 const VERSION = "1.1.0";
 const SHUTDOWN_TIMEOUT_MS = 10_000;
 const config = loadRuntimeConfig();
@@ -24,27 +24,34 @@ const characterStore = createCharacterStore(config.characterLibraryDir);
 const referenceLibrary = createReferenceLibrary(config.referenceLibraryDir);
 const rateLimiter = createRateLimiter({
   limit: config.rateLimit,
-  windowMs: config.rateWindowMs
+  windowMs: config.rateWindowMs,
 });
 const promptPresets = createPromptPresetLibrary();
 
-function authorised(req) { return isAuthorised(req, config); }
+function authorised(req) {
+  return isAuthorised(req, config);
+}
 
 const application = createCharacterApplication({
   ...generation,
+  memoryStore: createMemoryStore({
+    apiKey: process.env.MEM0_API_KEY,
+    userId: config.mem0UserId,
+  }),
   characterStore,
   referenceLibrary,
   promptPresets,
-  knowledgeContext: (query, options = {}) => getKnowledgeContextDetails(query, {
-    directory: config.referenceLibraryDir,
-    ...options
-  })
+  knowledgeContext: (query, options = {}) =>
+    getKnowledgeContextDetails(query, {
+      directory: config.referenceLibraryDir,
+      ...options,
+    }),
 });
 
 function makeServer() {
   const server = new McpServer({
     name: "janitorai-bot-creator",
-    version: VERSION
+    version: VERSION,
   });
   registerMcpTools(server, application);
   return server;
@@ -63,11 +70,13 @@ const httpServer = createServer(async (req, res) => {
 
   if (req.method === "GET" && url.pathname === "/healthz") {
     res.writeHead(200, { "content-type": "application/json" });
-    res.end(JSON.stringify({
-      status: "ok",
-      service: "janitorai-bot-creator",
-      version: VERSION
-    }));
+    res.end(
+      JSON.stringify({
+        status: "ok",
+        service: "janitorai-bot-creator",
+        version: VERSION,
+      })
+    );
     return;
   }
 
@@ -78,7 +87,10 @@ const httpServer = createServer(async (req, res) => {
   }
 
   if (!authorised(req)) {
-    res.writeHead(401, { "content-type": "text/plain", "www-authenticate": "Bearer" });
+    res.writeHead(401, {
+      "content-type": "text/plain",
+      "www-authenticate": "Bearer",
+    });
     res.end("Unauthorised");
     return;
   }
@@ -90,7 +102,7 @@ const httpServer = createServer(async (req, res) => {
   if (!rate.allowed) {
     res.writeHead(429, {
       "content-type": "text/plain",
-      "retry-after": String(Math.ceil(rate.retryAfterMs / 1000))
+      "retry-after": String(Math.ceil(rate.retryAfterMs / 1000)),
     });
     res.end("Too many requests");
     return;
@@ -99,7 +111,7 @@ const httpServer = createServer(async (req, res) => {
   const server = makeServer();
   const transport = new StreamableHTTPServerTransport({
     sessionIdGenerator: undefined,
-    enableJsonResponse: true
+    enableJsonResponse: true,
   });
 
   try {
@@ -127,7 +139,7 @@ function shutdown(signal) {
   setTimeout(() => process.exit(1), SHUTDOWN_TIMEOUT_MS).unref();
 }
 
-httpServer.on("error", error => {
+httpServer.on("error", (error) => {
   console.error("HTTP server error", error);
   if (!httpServer.listening) process.exitCode = 1;
 });

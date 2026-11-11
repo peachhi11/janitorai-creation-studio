@@ -5,7 +5,10 @@ import os from "node:os";
 import path from "node:path";
 import { spawn } from "node:child_process";
 import net from "node:net";
-import { createServer as createHttpServer } from "node:http";
+import {
+  createServer as createHttpServer,
+  request as httpRequest,
+} from "node:http";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
@@ -357,13 +360,31 @@ test("HTTP size guard rejects oversized requests before MCP dispatch", async (t)
     authorization: `Bearer ${token}`,
   };
 
-  const oversized = await fetch(`${baseUrl}/mcp`, {
-    method: "POST",
-    headers: { ...headers, "content-length": String(2_000_000) },
-    body: "x".repeat(2_000_000),
+  // Send headers alone so an early 413 cannot race a large body upload (EPIPE).
+  const oversized = await new Promise((resolve, reject) => {
+    const request = httpRequest(
+      `${baseUrl}/mcp`,
+      {
+        method: "POST",
+        headers: { ...headers, "content-length": String(2_000_000) },
+      },
+      (response) => {
+        let body = "";
+        response.setEncoding("utf8");
+        response.on("data", (chunk) => {
+          body += chunk;
+        });
+        response.on("error", reject);
+        response.on("end", () =>
+          resolve({ status: response.statusCode, body })
+        );
+      }
+    );
+    request.on("error", reject);
+    request.end();
   });
   assert.equal(oversized.status, 413);
-  assert.equal(await oversized.text(), "Request entity too large");
+  assert.equal(oversized.body, "Request entity too large");
 });
 
 test("rate limiting is enforced around the real MCP transport", async (t) => {
