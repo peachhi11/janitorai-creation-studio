@@ -33,6 +33,9 @@ layer without changing project canon.
 - `08-testing-and-quality` — craft, agency, framing, coherence, multimodal evaluation, coverage, and regression audits.
 - `09-platform-and-exports` — prompt stacks, context budgets, character cards, compatibility, workflows, and exports.
 
+The testing and quality collection also includes `review-database-migrations` for
+schema-change and migration safety reviews.
+
 The expanded library applies Fictional Genre Logic and Narrative Intention as
 cross-cutting standards. These preserve genre-specific causality, character
 agency, player sovereignty, and intentional darkness without treating fictional

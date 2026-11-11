@@ -17,7 +17,7 @@ created.
 | `05-narrative-writing`         | Turn architecture into scenes, prose, viewpoint, dialogue, rhythm, escalation, literary technique, and interactive narrative opportunities.                                       |     12 |
 | `06-continuity-and-knowledge`  | Track memory, emotional state, relationship continuity, canon, belief, inference, witness propagation, state commits, reveals, and disclosure boundaries.                         |      8 |
 | `07-research-and-reference`    | Research, historicise, catalogue provenance and evidence, triage OCR/readability, deduplicate sources, prepare corpora, and adapt writing worksheets or reference systems.        |      7 |
-| `08-testing-and-quality`       | Audit, evaluate, validate, and diagnose craft, framing, agency, coherence, multimodal consistency, library coverage, and safety failures.                                         |     22 |
+| `08-testing-and-quality`       | Audit, evaluate, validate, and diagnose craft, framing, agency, coherence, multimodal consistency, library coverage, migration safety, and safety failures.                       |     23 |
 | `09-platform-and-exports`      | Prepare prompt packages, character cards, context budgets, platform workflows, compatibility regressions, model-aware presets, and exports.                                       |      8 |
 
 ## Placement rule
