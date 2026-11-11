@@ -158,20 +158,20 @@ test("requested retrieval failures stop generation", async () => {
   );
 });
 
-test("real Mem0 SDK sends scoped wire payloads to a local API stub", async () => {
+test("Mem0 HTTP adapter sends scoped wire payloads to a local API stub", async () => {
   const { createServer } = await import("node:http");
-  // The local contract check must not contact SDK analytics services.
-  const previous = process.env.MEM0_TELEMETRY;
-  process.env.MEM0_TELEMETRY = "false";
-  const { default: MemoryClient } = await import("mem0ai");
   const requests = [];
   const server = createServer(async (req, res) => {
     let body = "";
     for await (const chunk of req) body += chunk;
-    requests.push({ path: req.url, body: body ? JSON.parse(body) : null });
+    requests.push({
+      method: req.method,
+      path: req.url,
+      authorization: req.headers.authorization,
+      body: body ? JSON.parse(body) : null,
+    });
     res.setHeader("content-type", "application/json");
-    if (req.url === "/v1/ping/") res.end(JSON.stringify({ status: "ok" }));
-    else if (req.url === "/v3/memories/search/")
+    if (req.url === "/v3/memories/search/")
       res.end(
         JSON.stringify({
           results: [{ id: "one", memory: "Slow pacing", score: 0.9 }],
@@ -186,23 +186,29 @@ test("real Mem0 SDK sends scoped wire payloads to a local API stub", async () =>
   });
   await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
   try {
-    const client = new MemoryClient({
+    const localBaseUrl = `http://127.0.0.1:${server.address().port}`;
+    const store = createMemoryStore({
       apiKey: "local-contract-test",
-      host: `http://127.0.0.1:${server.address().port}`,
+      userId: "author",
+      fetchImpl: (url, options) => {
+        const target = new URL(url);
+        assert.equal(target.origin, "https://api.mem0.ai");
+        return fetch(`${localBaseUrl}${target.pathname}`, options);
+      },
     });
-    const store = createMemoryStore({ userId: "author", client });
     await store.add("My pacing preference");
     assert.equal((await store.search("pacing"))[0].memory, "Slow pacing");
-    assert.deepEqual(requests.find((r) => r.path.endsWith("/add/")).body, {
+    const add = requests.find((r) => r.path === "/v3/memories/add/");
+    assert.equal(add.method, "POST");
+    assert.equal(add.authorization, "Token local-contract-test");
+    assert.deepEqual(add.body, {
       messages: [{ role: "user", content: "My pacing preference" }],
       user_id: "author",
     });
-    const search = requests.find((r) => r.path.endsWith("/search/")).body;
+    const search = requests.find((r) => r.path === "/v3/memories/search/").body;
     assert.deepEqual(search.filters, { user_id: "author" });
     assert.equal(search.top_k, 5);
   } finally {
     await new Promise((resolve) => server.close(resolve));
-    if (previous === undefined) delete process.env.MEM0_TELEMETRY;
-    else process.env.MEM0_TELEMETRY = previous;
   }
 });

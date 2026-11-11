@@ -19,7 +19,7 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 
 Vercel AI SDK v6 (`ai`) is included as a project dependency and installed by `npm ci`. Its generation and streaming utilities are available through imports from `ai`.
 
-The Mem0 JavaScript SDK (`mem0ai`) is also installed by `npm ci`. Import `MemoryClient` from `mem0ai` and initialize it with `process.env.MEM0_API_KEY` when adding memory features. Set `MEM0_API_KEY` and `MEM0_USER_ID` to enable the memory tools. See [Memory integration](janitorai-bot-creator/docs/memory.md) for usage and scope.
+The built-in Mem0 HTTP integration uses Node.js `fetch`; no Mem0 SDK package is required. Set `MEM0_API_KEY` and `MEM0_USER_ID` to enable the memory tools. See [Memory integration](janitorai-bot-creator/docs/memory.md) for usage and scope.
 
 ## Features
 

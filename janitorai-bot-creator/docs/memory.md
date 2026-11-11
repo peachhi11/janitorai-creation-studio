@@ -2,9 +2,9 @@
 
 ## Setup and scope
 
-Set `MEM0_API_KEY` and a non-empty `MEM0_USER_ID` in the service environment, then restart the service. The SDK calls `https://api.mem0.ai`; credential and network policy must permit that hostname. No new account or Vercel Marketplace subscription is required.
+Set `MEM0_API_KEY` and a non-empty `MEM0_USER_ID` in the service environment, then restart the service. The built-in HTTP client calls `https://api.mem0.ai`; credential and network policy must permit that hostname. No Mem0 SDK package, new account, or Vercel Marketplace subscription is required.
 
-In the managed cloud environment, set `NODE_USE_ENV_PROXY=1` when using Node.js 24 (24.5 or newer) so the SDK uses the supplied proxy. Authentication and a read-only SDK search have been verified with this configuration. Live writes have not been tested.
+In the managed cloud environment, set `NODE_USE_ENV_PROXY=1` with Node.js 24 (24.5 or newer) when the service needs to use the supplied proxy. Live Mem0 connectivity and writes have not been tested.
 
 The service has one author scope configured by the operator. All clients authorized to use this service share that scope. Use separate service instances and scopes for separate authors; caller-provided user IDs are not accepted.
 

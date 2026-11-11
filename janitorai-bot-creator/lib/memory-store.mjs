@@ -1,16 +1,45 @@
 // This service has one configured author scope; callers cannot select other users.
-export function createMemoryStore({ apiKey, userId, client } = {}) {
-  let sdk = client;
+export function createMemoryStore({
+  apiKey,
+  userId,
+  client,
+  fetchImpl = globalThis.fetch,
+} = {}) {
+  let memoryClient = client;
+  async function request(path, payload) {
+    const response = await fetchImpl(`https://api.mem0.ai${path}`, {
+      method: "POST",
+      headers: {
+        authorization: `Token ${apiKey}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+      redirect: "error",
+    });
+    if (!response.ok) throw new Error("Mem0 request failed.");
+    return response.json();
+  }
   async function configuredClient() {
-    if (!userId || (!apiKey && !sdk))
+    if (!userId || (!apiKey && !memoryClient))
       throw new Error(
         "Mem0 memory is not configured. Set MEM0_API_KEY and MEM0_USER_ID."
       );
-    if (!sdk) {
-      const { default: MemoryClient } = await import("mem0ai");
-      sdk ??= new MemoryClient({ apiKey });
+    if (!memoryClient) {
+      memoryClient = {
+        add: (messages, { userId }) =>
+          request("/v3/memories/add/", {
+            messages,
+            user_id: userId,
+          }),
+        search: (query, { filters, topK }) =>
+          request("/v3/memories/search/", {
+            query,
+            filters,
+            top_k: topK,
+          }),
+      };
     }
-    return sdk;
+    return memoryClient;
   }
   function text(value) {
     if (typeof value !== "string" || !value.trim() || value.length > 4096) {
