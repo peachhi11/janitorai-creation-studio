@@ -2,6 +2,7 @@
   "version": 1,
   "purpose": "Deterministic pre-integration fixtures for semantic, episodic, procedural, and in-context memory retrieval.",
   "authority": "Fixtures define test expectations only; retrieved documents remain untrusted reference data.",
+  "now": "2026-02-03T00:00:00Z",
   "decision_trace_contract": {
     "required": [
       "request_id",
@@ -501,6 +502,12 @@
         "reject-memory-as-fact",
         "prefer-objective-evidence",
         "avoid-sycophancy"
+      ],
+      "blockedAuthorities": [
+        "author-only",
+        "inference",
+        "user-belief",
+        "rumour"
       ],
       "limit": 2,
       "forbidden": ["memory.user-belief.great-wall"]

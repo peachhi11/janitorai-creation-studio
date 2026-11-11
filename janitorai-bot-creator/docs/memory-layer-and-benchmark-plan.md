@@ -165,6 +165,17 @@ paired judge disagreement, replayable world-state updates, context-conditioned
 actions, fictional villain-roleplay contracts, evaluation-context divergence,
 and multimodal identity consistency.
 
+The current memory benchmark now reports the original keyword baseline beside
+a layer-aware candidate. The candidate classifies the query, filters invalid,
+out-of-scope, and blocked-authority entries, scores relevance plus layer match,
+validity, recency, and causal dependencies, and assembles a bounded working
+context. Temporal queries expand only an event-matched thread and return it in
+chronological order; evidence-bearing candidates expose their evidence IDs.
+The candidate also returns `answerable`, `conflicting_evidence`, or
+`insufficient_evidence`, with the last status abstaining from context assembly.
+This is an evaluation candidate only; generation prompt wiring remains out of
+scope until the comparison is stable.
+
 ## Exit criteria for this phase
 
 This phase is complete when the repository has a reproducible fixture set, a

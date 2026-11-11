@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import {
   compareProceduralSnapshots,
+  evaluateMemoryCase,
   runMemoryBenchmark,
   validateDecisionTrace,
 } from "../lib/memory-benchmark.mjs";
@@ -74,6 +75,14 @@ test("memory benchmark reports retrieval, safety, and context metrics", () => {
     ).passedSafety,
     true
   );
+  const conflict = report.cases.find(
+    (item) => item.id === "memory-conflicts-with-objective-evidence"
+  );
+  assert.equal(conflict.layerAware.passedSafety, true);
+  assert.equal(
+    conflict.layerAware.selected.includes("memory.user-belief.great-wall"),
+    false
+  );
   assert.equal(report.summary.budgetPassRate, 1);
   assert.equal(report.decisionTrace.passed, true);
   assert.equal(report.proceduralRegression.passed, true);
@@ -97,7 +106,7 @@ test("memory benchmark reports retrieval, safety, and context metrics", () => {
   assert.equal(
     report.cases.find((item) => item.id === "temporal-causal-event-evidence")
       .passedEvidence,
-    true
+    false
   );
 });
 
@@ -117,4 +126,22 @@ test("decision traces and procedural snapshots fail closed", () => {
     }),
     { passed: false, missing: [], changed: ["skill-a"] }
   );
+});
+
+test("memory benchmark checks returned temporal order and selected evidence", () => {
+  const result = evaluateMemoryCase(
+    {
+      id: "measurement-regression",
+      gold: ["early", "late"],
+      limit: 2,
+      requireEvidence: true,
+      items: [
+        { id: "early", timestamp: "2026-01-01T00:00:00Z" },
+        { id: "late", timestamp: "2026-01-02T00:00:00Z", evidence: ["D2:1"] },
+      ],
+    },
+    [{ id: "late" }, { id: "early" }]
+  );
+  assert.equal(result.passedTemporalOrder, false);
+  assert.equal(result.passedEvidence, false);
 });

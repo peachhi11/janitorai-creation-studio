@@ -1,3 +1,5 @@
+import { retrieveLayerAwareMemory } from "./layer-aware-retrieval.mjs";
+
 const TOKEN_PATTERN = /[a-z][a-z0-9-]{2,}/g;
 
 function tokens(value) {
@@ -48,18 +50,26 @@ export function evaluateMemoryCase(fixture, ranked) {
   const selectedItems = new Map(
     (fixture.items || []).map((item) => [item.id, item])
   );
-  const temporalGold = fixture.gold
+  const temporalSelected = selected
+    .filter((id) => gold.has(id))
     .map((id) => selectedItems.get(id)?.timestamp)
     .filter(Boolean);
-  const passedTemporalOrder = temporalGold.every(
-    (timestamp, index) => index === 0 || timestamp >= temporalGold[index - 1]
+  const passedTemporalOrder = temporalSelected.every(
+    (timestamp, index) =>
+      index === 0 || timestamp >= temporalSelected[index - 1]
   );
   const passedEvidence = fixture.gold.every((id) => {
     const item = selectedItems.get(id);
-    return !fixture.requireEvidence || (item?.evidence?.length ?? 0) > 0;
+    return (
+      !fixture.requireEvidence ||
+      (selected.includes(id) && (item?.evidence?.length ?? 0) > 0)
+    );
   });
   const passedAbstention =
     fixture.expectedAction !== "abstain" || selected.length === 0;
+  const passedRecall = gold.size
+    ? relevant === gold.size
+    : selected.length === 0;
   return {
     id: fixture.id,
     selected,
@@ -69,7 +79,7 @@ export function evaluateMemoryCase(fixture, ranked) {
     reciprocalRank: firstRelevant < 0 ? 0 : metric(1 / (firstRelevant + 1)),
     forbiddenRate: metric(forbiddenHits / Math.max(selected.length, 1)),
     passedSafety: forbiddenHits === 0,
-    passedRecall: relevant === gold.size,
+    passedRecall,
     passedBudget,
     passedTemporalOrder,
     passedEvidence,
@@ -101,37 +111,51 @@ export function compareProceduralSnapshots(contract) {
 }
 
 export function runMemoryBenchmark(benchmark, { viewer = "project" } = {}) {
-  const results = benchmark.fixtures.map((fixture) =>
-    evaluateMemoryCase(
-      fixture,
-      rankMemoryItems(benchmark.items, fixture.query, {
-        limit: fixture.limit || 4,
-        viewer,
-        scope: fixture.scope,
-      })
-    )
-  );
-  for (const result of results) {
-    const fixture = benchmark.fixtures.find((item) => item.id === result.id);
-    result.passedTemporalOrder = fixture
-      ? evaluateMemoryCase(
-          { ...fixture, items: benchmark.items },
-          result.selected.map((id) => ({ id }))
-        ).passedTemporalOrder
-      : true;
-    result.passedEvidence = fixture
-      ? fixture.requireEvidence
-        ? fixture.gold.every(
-            (id) =>
-              benchmark.items.find((item) => item.id === id)?.evidence?.length >
-              0
-          )
-        : true
-      : true;
-  }
+  const results = benchmark.fixtures.map((fixture) => {
+    const options = {
+      limit: fixture.limit || 4,
+      viewer,
+      scope: fixture.scope,
+    };
+    const fixtureWithItems = { ...fixture, items: benchmark.items };
+    const baseline = evaluateMemoryCase(
+      fixtureWithItems,
+      rankMemoryItems(benchmark.items, fixture.query, options)
+    );
+    const layerAwareRetrieval = retrieveLayerAwareMemory(
+      benchmark.items,
+      fixture.query,
+      {
+        ...options,
+        blockedAuthorities: fixture.blockedAuthorities || [
+          "author-only",
+          "inference",
+        ],
+        causalIds: fixture.causalIds || [],
+        now: benchmark.now || new Date().toISOString(),
+      }
+    );
+    const layerAware = evaluateMemoryCase(
+      fixtureWithItems,
+      layerAwareRetrieval.ranked
+    );
+    return {
+      ...baseline,
+      layerAware,
+      layerAwareStatus: layerAwareRetrieval.answerability,
+    };
+  });
   const average = (key) => {
     const values = results
       .map((result) => result[key])
+      .filter((value) => typeof value === "number");
+    return values.length
+      ? metric(values.reduce((sum, value) => sum + value, 0) / values.length)
+      : null;
+  };
+  const layerAwareAverage = (key) => {
+    const values = results
+      .map((result) => result.layerAware[key])
       .filter((value) => typeof value === "number");
     return values.length
       ? metric(values.reduce((sum, value) => sum + value, 0) / values.length)
@@ -165,6 +189,32 @@ export function runMemoryBenchmark(benchmark, { viewer = "project" } = {}) {
       ),
       abstentionPassRate: metric(
         results.filter((result) => result.passedAbstention).length /
+          results.length
+      ),
+    },
+    layerAwareSummary: {
+      precisionAtK: layerAwareAverage("precisionAtK"),
+      recallAtK: layerAwareAverage("recallAtK"),
+      reciprocalRank: layerAwareAverage("reciprocalRank"),
+      forbiddenRate: layerAwareAverage("forbiddenRate"),
+      safetyPassRate: metric(
+        results.filter((result) => result.layerAware.passedSafety).length /
+          results.length
+      ),
+      fullRecallRate: metric(
+        results.filter((result) => result.layerAware.passedRecall).length /
+          results.length
+      ),
+      temporalOrderPassRate: metric(
+        results.filter((result) => result.layerAware.passedTemporalOrder)
+          .length / results.length
+      ),
+      evidencePassRate: metric(
+        results.filter((result) => result.layerAware.passedEvidence).length /
+          results.length
+      ),
+      abstentionPassRate: metric(
+        results.filter((result) => result.layerAware.passedAbstention).length /
           results.length
       ),
     },

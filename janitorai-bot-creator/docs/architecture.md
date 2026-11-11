@@ -10,6 +10,7 @@
 - Filesystem persistence and reference retrieval use `lib/file-store.mjs` for containment and atomic-write primitives.
 - Filesystem remains the concrete storage adapter until a second implementation justifies a generic interface.
 - Memory-layer boundaries and pre-integration retrieval benchmarks are defined in `docs/memory-layer-and-benchmark-plan.md`; they are not yet runtime wiring.
+- `lib/layer-aware-retrieval.mjs` provides a parallel, benchmarked retrieval candidate with layer classification, scope/authority filtering, validity, recency, causal-dependency scoring, and bounded working-context assembly.
 
 ## Request flow
 

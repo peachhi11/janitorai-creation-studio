@@ -31,6 +31,7 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 - Apply normalized `## Completion` criteria to every skill for consistent agent handoffs.
 - Run real MCP-over-HTTP acceptance tests without a live model call.
 - Run deterministic memory-layer and agent-evaluation benchmarks before runtime prompt integration.
+- Compare layer-aware memory retrieval with the keyword baseline, including temporal ordering, evidence coverage, authority filtering, and abstention metrics.
 
 ## Configuration
 
