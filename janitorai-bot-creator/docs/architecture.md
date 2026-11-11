@@ -8,6 +8,7 @@
 - Generation schemas, model calls, shared generation policy, and character renderers are composed through `lib/character-generation.mjs`.
 - Manifest loading, file discovery, format inference, and normalized reference descriptors are shared through `lib/reference-index.mjs`.
 - Filesystem persistence and reference retrieval use `lib/file-store.mjs` for containment and atomic-write primitives.
+- Mem0 context is accessed through `lib/memory-store.mjs`; it never replaces filesystem character canon.
 - Filesystem remains the concrete storage adapter until a second implementation justifies a generic interface.
 
 ## Request flow
