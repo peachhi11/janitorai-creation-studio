@@ -11,6 +11,7 @@
 - Filesystem remains the concrete storage adapter until a second implementation justifies a generic interface.
 - Memory-layer boundaries and pre-integration retrieval benchmarks are defined in `docs/memory-layer-and-benchmark-plan.md`; they are not yet runtime wiring.
 - `lib/layer-aware-retrieval.mjs` provides a parallel, benchmarked retrieval candidate with layer classification, scope/authority filtering, validity, recency, causal-dependency scoring, and bounded working-context assembly.
+- Procedural candidates can carry workflow metadata, in-context records can declare related state, and cross-layer promotions require approved derived-state provenance; these remain evaluation-candidate behavior rather than generation prompt wiring.
 
 ## Request flow
 

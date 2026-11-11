@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   assembleWorkingContext,
   classifyMemoryLayer,
+  promoteCrossLayerEvents,
   rankLayerAwareMemory,
   retrieveLayerAwareMemory,
 } from "../lib/layer-aware-retrieval.mjs";
@@ -148,4 +149,109 @@ test("retrieval abstains when evidence is required but unavailable", () => {
   );
   assert.equal(result.answerability.status, "insufficient_evidence");
   assert.deepEqual(result.ranked, []);
+});
+
+test("procedural retrieval prefers complete workflows", () => {
+  const result = retrieveLayerAwareMemory(
+    [
+      {
+        id: "complete",
+        layer: "procedural",
+        text: "Revise a character using approved references while preserving canon.",
+        task_type: "character-revision",
+        inputs: ["approved references"],
+        outputs: ["revised character"],
+        prerequisites: ["load canon"],
+        steps: ["compare", "revise"],
+        verification: ["preserve canon"],
+        failure_modes: ["unsupported change"],
+        authority: "skill-library",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "adjacent",
+        layer: "procedural",
+        text: "Export a character package after revision.",
+        authority: "skill-library",
+        status: "valid",
+        access: "project",
+      },
+    ],
+    "How do I revise a character using approved references?",
+    { limit: 1 }
+  );
+  assert.deepEqual(
+    result.ranked.map((item) => item.id),
+    ["complete"]
+  );
+});
+
+test("in-context retrieval follows explicit related-state links", () => {
+  const result = retrieveLayerAwareMemory(
+    [
+      {
+        id: "scene",
+        layer: "in-context",
+        text: "Current scene: continue the unresolved confrontation.",
+        related_ids: ["event", "state"],
+        authority: "working-state",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "event",
+        layer: "episodic",
+        text: "The confrontation remains unresolved.",
+        authority: "observed-event",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "state",
+        layer: "semantic",
+        text: "Trust is currently lowered after the confrontation.",
+        authority: "approved-state",
+        status: "valid",
+        access: "project",
+      },
+    ],
+    "Generate the next scene after the unresolved confrontation.",
+    { limit: 3 }
+  );
+  assert.deepEqual(
+    result.ranked.map((item) => item.id),
+    ["scene", "event", "state"]
+  );
+});
+
+test("cross-layer promotion requires an explicit approved source link", () => {
+  const promoted = promoteCrossLayerEvents(
+    [
+      {
+        id: "event",
+        layer: "episodic",
+        status: "valid",
+        authority: "observed-event",
+      },
+      {
+        id: "state",
+        layer: "semantic",
+        status: "valid",
+        authority: "derived-approved-update",
+        derived_from: ["event"],
+      },
+      {
+        id: "unlinked",
+        layer: "semantic",
+        status: "valid",
+        authority: "derived-approved-update",
+      },
+    ],
+    [{ id: "event" }]
+  );
+  assert.deepEqual(
+    promoted.map((item) => item.id),
+    ["state"]
+  );
 });

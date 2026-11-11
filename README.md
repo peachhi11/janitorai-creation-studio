@@ -32,6 +32,7 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 - Run real MCP-over-HTTP acceptance tests without a live model call.
 - Run deterministic memory-layer and agent-evaluation benchmarks before runtime prompt integration.
 - Compare layer-aware memory retrieval with the keyword baseline, including temporal ordering, evidence coverage, authority filtering, and abstention metrics.
+- Score procedural workflows by completeness, assemble active context through explicit related-state links, and require provenance-backed links before promoting events into durable state.
 
 ## Configuration
 

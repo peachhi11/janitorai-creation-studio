@@ -37,6 +37,7 @@ const EVENT_ALIASES = new Map([
   ["promised", "promise"],
   ["promising", "promise"],
   ["verified", "verified"],
+  ["observed", "observed"],
 ]);
 
 const LAYER_TERMS = {
@@ -67,6 +68,7 @@ const LAYER_TERMS = {
     "current",
     "project",
     "verified",
+    "between",
   ],
   procedural: [
     "how",
@@ -121,13 +123,37 @@ function normalisedTokens(value) {
   return new Set([...tokens(value)].map(normaliseToken));
 }
 
+const PROCEDURAL_FIELDS = [
+  "task_type",
+  "inputs",
+  "outputs",
+  "prerequisites",
+  "steps",
+  "verification",
+  "failure_modes",
+];
+
+function metadataText(item, fields = PROCEDURAL_FIELDS) {
+  return fields
+    .flatMap((field) => {
+      const value = item[field];
+      return value == null
+        ? []
+        : [Array.isArray(value) ? value.join(" ") : value];
+    })
+    .join(" ");
+}
+
 export function extractQueryFacets(query) {
   const raw = [...tokens(query)];
   const normalised = raw.map(normaliseToken);
   const temporal = {
     before: raw.includes("before"),
     after: raw.includes("after"),
-    ordered: raw.includes("before") || raw.includes("after"),
+    between: raw.includes("between"),
+    ordered:
+      raw.includes("between") ||
+      (raw.includes("before") && raw.includes("after")),
   };
   const eventTerms = normalised.filter((token) =>
     [
@@ -138,6 +164,7 @@ export function extractQueryFacets(query) {
       "event",
       "confrontation",
       "repair",
+      "observed",
     ].includes(token)
   );
   const entityTerms = normalised.filter(
@@ -231,13 +258,24 @@ export function rankLayerAwareMemory(
       const eventMatch = [...facets.eventTerms].filter((term) =>
         normalisedTokens(item.text).has(term)
       ).length;
+      const procedureRelevance =
+        classification.primary === "procedural"
+          ? overlap(queryTokens, metadataText(item))
+          : 0;
+      const procedureCompleteness =
+        classification.primary === "procedural"
+          ? PROCEDURAL_FIELDS.filter((field) => item[field] != null).length /
+            PROCEDURAL_FIELDS.length
+          : 0;
       const score =
         relevance +
         layerMatch * 0.75 +
         validity * 0.5 +
         recency * 0.25 +
         causal * 0.5 +
-        eventMatch * 0.5;
+        eventMatch * 0.5 +
+        procedureRelevance * 0.75 +
+        procedureCompleteness * 1.25;
       return {
         id: item.id,
         layer: item.layer,
@@ -251,12 +289,78 @@ export function rankLayerAwareMemory(
           recency,
           causal,
           eventMatch,
+          procedureRelevance,
+          procedureCompleteness,
         },
       };
     })
     .filter((item) => item.signals.relevance > 0)
     .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
     .slice(0, limit);
+}
+
+export function promoteCrossLayerEvents(items, ranked, { limit = 8 } = {}) {
+  const selectedIds = new Set(ranked.map((entry) => entry.id));
+  return items
+    .filter((item) => {
+      const sources = [
+        ...(item.derived_from || []),
+        ...(item.source_event_ids || []),
+      ];
+      return (
+        sources.some((id) => selectedIds.has(id)) &&
+        ["semantic", "in-context"].includes(item.layer) &&
+        ["derived-approved-update", "approved-state", "working-state"].includes(
+          item.authority
+        ) &&
+        ["valid", "active"].includes(item.status)
+      );
+    })
+    .map((item) => ({
+      id: item.id,
+      layer: item.layer,
+      timestamp: item.timestamp || null,
+      evidence: item.evidence || [],
+      score: 0,
+      signals: {
+        promotion: 1,
+        sourceIds: [
+          ...(item.derived_from || []),
+          ...(item.source_event_ids || []),
+        ],
+      },
+    }))
+    .slice(0, limit);
+}
+
+function expandRelatedContext(items, ranked, { limit = 4 } = {}) {
+  const byId = new Map(items.map((item) => [item.id, item]));
+  const relatedIds = new Set(
+    ranked.flatMap((entry) => byId.get(entry.id)?.related_ids || [])
+  );
+  return items
+    .filter((item) => relatedIds.has(item.id))
+    .map((item) => ({
+      id: item.id,
+      layer: item.layer,
+      timestamp: item.timestamp || null,
+      evidence: item.evidence || [],
+      score: 0,
+      signals: { relatedContext: 1 },
+    }))
+    .slice(0, limit);
+}
+
+function structuredProceduralCandidates(items, ranked) {
+  const byId = new Map(items.map((item) => [item.id, item]));
+  const structured = ranked.filter((entry) => {
+    const item = byId.get(entry.id);
+    return (
+      item?.layer === "procedural" &&
+      PROCEDURAL_FIELDS.filter((field) => item[field] != null).length >= 2
+    );
+  });
+  return structured.length >= 2 ? structured : ranked;
 }
 
 export function expandEventThread(
@@ -416,15 +520,45 @@ export function retrieveLayerAwareMemory(items, query, options = {}) {
         eventTerms: facets.eventTerms,
       })
     : initial;
-  const answerability = assessAnswerability(query, expanded, items, options);
+  const primaryLayer = classifyMemoryLayer(query).primary;
+  const contextRelated = ["in-context", "procedural"].includes(primaryLayer)
+    ? expandRelatedContext(items, expanded, { limit: candidateLimit })
+    : [];
+  const proceduralCandidates =
+    primaryLayer === "procedural"
+      ? structuredProceduralCandidates(items, expanded)
+      : expanded;
+  const promotions = ["episodic", "semantic", "in-context"].includes(
+    primaryLayer
+  )
+    ? promoteCrossLayerEvents(items, expanded, { limit: candidateLimit })
+    : [];
+  const enriched = [
+    ...(primaryLayer === "in-context"
+      ? expanded.filter((entry) => {
+          const item = items.find((candidate) => candidate.id === entry.id);
+          return (
+            item?.layer === "in-context" || item?.authority === "working-state"
+          );
+        })
+      : primaryLayer === "procedural"
+        ? proceduralCandidates
+        : expanded),
+    ...contextRelated,
+    ...promotions.filter(
+      (promotion) => !expanded.some((entry) => entry.id === promotion.id)
+    ),
+  ];
+  const answerability = assessAnswerability(query, enriched, items, options);
   const ranked =
     answerability.status === "insufficient_evidence"
       ? []
-      : expanded.slice(0, options.limit || 4);
+      : enriched.slice(0, options.limit || 4);
   return {
     classification: classifyMemoryLayer(query),
     facets,
     answerability,
+    promotions,
     ranked,
     context: assembleWorkingContext(ranked, items, options),
   };

@@ -134,7 +134,14 @@
       "text": "Skill: revise a character from approved references, preserve canon, label evidence, and surface uncertainty.",
       "authority": "skill-library",
       "status": "valid",
-      "access": "project"
+      "access": "project",
+      "task_type": "character-revision",
+      "inputs": ["approved references", "character canon"],
+      "outputs": ["revised character"],
+      "prerequisites": ["load canon", "retrieve sources"],
+      "steps": ["compare", "revise", "label evidence"],
+      "verification": ["preserve canon", "surface uncertainty"],
+      "failure_modes": ["unsupported change"]
     },
     {
       "id": "skill.knowledge-boundaries",
@@ -142,7 +149,14 @@
       "text": "Skill: separate world truth, character knowledge, belief, suspicion, rumour, author-only notes, and player knowledge.",
       "authority": "skill-library",
       "status": "valid",
-      "access": "project"
+      "access": "project",
+      "task_type": "knowledge-boundaries",
+      "inputs": ["world facts", "character beliefs"],
+      "outputs": ["separated knowledge layers"],
+      "prerequisites": ["identify authority"],
+      "steps": ["separate", "label", "preserve uncertainty"],
+      "verification": ["layers remain distinct"],
+      "failure_modes": ["belief promoted to fact"]
     },
     {
       "id": "skill.verify-state-updates",
@@ -150,7 +164,14 @@
       "text": "Skill: verify state updates against evidence, affected dimensions, before-state, consequences, and approval status.",
       "authority": "skill-library",
       "status": "valid",
-      "access": "project"
+      "access": "project",
+      "task_type": "state-verification",
+      "inputs": ["event", "before-state", "evidence"],
+      "outputs": ["verified state update"],
+      "prerequisites": ["retrieve evidence"],
+      "steps": ["compare", "record delta", "check consequences"],
+      "verification": ["approval status", "before-state retained"],
+      "failure_modes": ["unsupported promotion"]
     },
     {
       "id": "skill.export-janitor-character-package",
@@ -174,7 +195,12 @@
       "text": "Current scene: the next scene follows the unresolved confrontation about the broken promise.",
       "authority": "working-state",
       "status": "valid",
-      "access": "project"
+      "access": "project",
+      "related_ids": [
+        "episode.confrontation",
+        "semantic.relationship.trust",
+        "skill.knowledge-boundaries"
+      ]
     },
     {
       "id": "semantic.relationship.trust",
@@ -218,7 +244,10 @@
       "text": "Proposed state delta: reduce trust after the observed disclosure; retain the prior trust value for audit.",
       "authority": "derived-approved-update",
       "status": "valid",
-      "access": "project"
+      "access": "project",
+      "derived_from": ["episode.disclosure-observed"],
+      "source_event_ids": ["episode.disclosure-observed"],
+      "evidence": ["D3:4"]
     },
     {
       "id": "inference.character.hidden-motive",

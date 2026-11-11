@@ -176,6 +176,13 @@ The candidate also returns `answerable`, `conflicting_evidence`, or
 This is an evaluation candidate only; generation prompt wiring remains out of
 scope until the comparison is stable.
 
+The candidate now also evaluates procedural workflow completeness, explicit
+related-state links for active context, and provenance-backed cross-layer event
+promotion. Procedural records may declare inputs, outputs, prerequisites, steps,
+verification, and failure modes. Promoted state must link to a valid observed
+event through `derived_from` or `source_event_ids` and use an approved derived
+authority.
+
 ## Exit criteria for this phase
 
 This phase is complete when the repository has a reproducible fixture set, a
