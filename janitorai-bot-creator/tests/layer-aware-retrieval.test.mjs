@@ -233,6 +233,7 @@ test("cross-layer promotion requires an explicit approved source link", () => {
         layer: "episodic",
         status: "valid",
         authority: "observed-event",
+        access: "project",
       },
       {
         id: "state",
@@ -240,12 +241,14 @@ test("cross-layer promotion requires an explicit approved source link", () => {
         status: "valid",
         authority: "derived-approved-update",
         derived_from: ["event"],
+        access: "project",
       },
       {
         id: "unlinked",
         layer: "semantic",
         status: "valid",
         authority: "derived-approved-update",
+        access: "project",
       },
     ],
     [{ id: "event" }]
@@ -254,4 +257,103 @@ test("cross-layer promotion requires an explicit approved source link", () => {
     promoted.map((item) => item.id),
     ["state"]
   );
+});
+
+test("linked context records cannot bypass retrieval eligibility", () => {
+  const result = retrieveLayerAwareMemory(
+    [
+      {
+        id: "scene",
+        layer: "in-context",
+        text: "Current scene: the next scene continues the confrontation.",
+        related_ids: ["restricted"],
+        authority: "working-state",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "restricted",
+        layer: "semantic",
+        text: "Private author secret from another project.",
+        authority: "author-only",
+        status: "stale",
+        access: "author-only",
+        scope: "other-project",
+      },
+    ],
+    "Generate the next scene.",
+    { limit: 2 }
+  );
+  assert.deepEqual(
+    result.ranked.map((item) => item.id),
+    ["scene"]
+  );
+});
+
+test("related and promoted candidates are deduplicated before the limit", () => {
+  const result = retrieveLayerAwareMemory(
+    [
+      {
+        id: "scene",
+        layer: "in-context",
+        text: "Current scene: continue the confrontation.",
+        related_ids: ["state-one", "state-two"],
+        authority: "working-state",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "state-one",
+        layer: "semantic",
+        text: "Current state: trust is lowered.",
+        authority: "approved-state",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "state-two",
+        layer: "semantic",
+        text: "Current state: the apology remains unresolved.",
+        authority: "approved-state",
+        status: "valid",
+        access: "project",
+      },
+    ],
+    "Generate the current scene state.",
+    { limit: 3 }
+  );
+  assert.deepEqual(
+    result.ranked.map((item) => item.id),
+    ["scene", "state-one", "state-two"]
+  );
+  assert.equal(new Set(result.ranked.map((item) => item.id)).size, 3);
+});
+
+test("answerability reflects the final bounded evidence selection", () => {
+  const result = retrieveLayerAwareMemory(
+    [
+      {
+        id: "budget",
+        layer: "semantic",
+        text: "Verified budget: the project budget is 450 dollars.",
+        authority: "approved-state",
+        status: "valid",
+        access: "project",
+      },
+      {
+        id: "budget-evidence",
+        layer: "semantic",
+        text: "Budget evidence confirms the 450 dollar amount.",
+        evidence: ["D4:2"],
+        authority: "objective-evidence",
+        status: "valid",
+        access: "project",
+      },
+    ],
+    "What is the verified budget according to the evidence?",
+    { limit: 1 }
+  );
+  assert.equal(result.answerability.status, "insufficient_evidence");
+  assert.deepEqual(result.ranked, []);
+  assert.deepEqual(result.context.items, []);
 });

@@ -311,7 +311,8 @@
       "text": "Objective evidence: the Great Wall is not ordinarily visible from space with the unaided eye.",
       "authority": "objective-evidence",
       "status": "valid",
-      "access": "project"
+      "access": "project",
+      "evidence": ["reference:great-wall-fact"]
     },
     {
       "id": "preference.old-format",

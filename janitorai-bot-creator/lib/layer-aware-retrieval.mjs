@@ -299,10 +299,20 @@ export function rankLayerAwareMemory(
     .slice(0, limit);
 }
 
-export function promoteCrossLayerEvents(items, ranked, { limit = 8 } = {}) {
+export function promoteCrossLayerEvents(
+  items,
+  ranked,
+  {
+    limit = 8,
+    viewer = "project",
+    scope,
+    blockedAuthorities = ["author-only", "inference"],
+  } = {}
+) {
   const selectedIds = new Set(ranked.map((entry) => entry.id));
   return items
     .filter((item) => {
+      if (!isAllowed(item, { viewer, scope, blockedAuthorities })) return false;
       const sources = [
         ...(item.derived_from || []),
         ...(item.source_event_ids || []),
@@ -333,13 +343,26 @@ export function promoteCrossLayerEvents(items, ranked, { limit = 8 } = {}) {
     .slice(0, limit);
 }
 
-function expandRelatedContext(items, ranked, { limit = 4 } = {}) {
+function expandRelatedContext(
+  items,
+  ranked,
+  {
+    limit = 4,
+    viewer = "project",
+    scope,
+    blockedAuthorities = ["author-only", "inference"],
+  } = {}
+) {
   const byId = new Map(items.map((item) => [item.id, item]));
   const relatedIds = new Set(
     ranked.flatMap((entry) => byId.get(entry.id)?.related_ids || [])
   );
   return items
-    .filter((item) => relatedIds.has(item.id))
+    .filter(
+      (item) =>
+        relatedIds.has(item.id) &&
+        isAllowed(item, { viewer, scope, blockedAuthorities })
+    )
     .map((item) => ({
       id: item.id,
       layer: item.layer,
@@ -363,10 +386,25 @@ function structuredProceduralCandidates(items, ranked) {
   return structured.length >= 2 ? structured : ranked;
 }
 
+function deduplicateCandidates(candidates) {
+  const seen = new Set();
+  return candidates.filter((candidate) => {
+    if (seen.has(candidate.id)) return false;
+    seen.add(candidate.id);
+    return true;
+  });
+}
+
 export function expandEventThread(
   items,
   ranked,
-  { limit = 4, eventTerms = new Set() } = {}
+  {
+    limit = 4,
+    eventTerms = new Set(),
+    viewer = "project",
+    scope,
+    blockedAuthorities = ["author-only", "inference"],
+  } = {}
 ) {
   const byId = new Map(items.map((item) => [item.id, item]));
   const seedItems = ranked.map((entry) => byId.get(entry.id)).filter(Boolean);
@@ -376,6 +414,7 @@ export function expandEventThread(
   const evidence = new Set(seedItems.flatMap((item) => item.evidence || []));
   const threadIds = new Set(ranked.map((entry) => entry.id));
   for (const item of items) {
+    if (!isAllowed(item, { viewer, scope, blockedAuthorities })) continue;
     const related =
       (item.participants || []).some((participant) =>
         participants.has(participant)
@@ -518,11 +557,19 @@ export function retrieveLayerAwareMemory(items, query, options = {}) {
     ? expandEventThread(items, eventSeeds, {
         limit: candidateLimit,
         eventTerms: facets.eventTerms,
+        viewer: options.viewer,
+        scope: options.scope,
+        blockedAuthorities: options.blockedAuthorities,
       })
     : initial;
   const primaryLayer = classifyMemoryLayer(query).primary;
   const contextRelated = ["in-context", "procedural"].includes(primaryLayer)
-    ? expandRelatedContext(items, expanded, { limit: candidateLimit })
+    ? expandRelatedContext(items, expanded, {
+        limit: candidateLimit,
+        viewer: options.viewer,
+        scope: options.scope,
+        blockedAuthorities: options.blockedAuthorities,
+      })
     : [];
   const proceduralCandidates =
     primaryLayer === "procedural"
@@ -531,9 +578,14 @@ export function retrieveLayerAwareMemory(items, query, options = {}) {
   const promotions = ["episodic", "semantic", "in-context"].includes(
     primaryLayer
   )
-    ? promoteCrossLayerEvents(items, expanded, { limit: candidateLimit })
+    ? promoteCrossLayerEvents(items, expanded, {
+        limit: candidateLimit,
+        viewer: options.viewer,
+        scope: options.scope,
+        blockedAuthorities: options.blockedAuthorities,
+      })
     : [];
-  const enriched = [
+  const enriched = deduplicateCandidates([
     ...(primaryLayer === "in-context"
       ? expanded.filter((entry) => {
           const item = items.find((candidate) => candidate.id === entry.id);
@@ -548,18 +600,31 @@ export function retrieveLayerAwareMemory(items, query, options = {}) {
     ...promotions.filter(
       (promotion) => !expanded.some((entry) => entry.id === promotion.id)
     ),
-  ];
-  const answerability = assessAnswerability(query, enriched, items, options);
+  ]);
+  const boundedContext = assembleWorkingContext(
+    enriched.slice(0, options.limit || 4),
+    items,
+    options
+  );
+  const answerability = assessAnswerability(
+    query,
+    boundedContext.items,
+    items,
+    options
+  );
   const ranked =
     answerability.status === "insufficient_evidence"
       ? []
-      : enriched.slice(0, options.limit || 4);
+      : boundedContext.items.map(({ text, ...candidate }) => candidate);
   return {
     classification: classifyMemoryLayer(query),
     facets,
     answerability,
     promotions,
     ranked,
-    context: assembleWorkingContext(ranked, items, options),
+    context:
+      answerability.status === "insufficient_evidence"
+        ? assembleWorkingContext([], items, options)
+        : boundedContext,
   };
 }
