@@ -1,0 +1,10 @@
+{
+  "files": ["AGENTS.md"],
+  "scans": 0,
+  "last": { "t": "read", "path": "AGENTS.md", "ts": "2026-11-14T06:59:19Z" },
+  "recent_events": [
+    ["exec-22da446e-7c5c-4581-ad4b-7d80e9f9501e", "read", "AGENTS.md"],
+    ["exec-03a071da-c85b-4384-bf67-ee57ac0778d3", "test", ""],
+    ["exec-51b193fe-19eb-43ac-ae6f-e593e0d29038", "test", ""]
+  ]
+}

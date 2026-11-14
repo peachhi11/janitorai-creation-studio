@@ -1,0 +1,10 @@
+{"t": "session", "ts": "2026-11-06T12:11:37Z", "session": "01a1b0c5-762a-77f2-bf52-ce43bc232b18", "source": "startup", "git_head": "3b4c36899c563eddfeb01a759f3a9f7a53613242", "client": "codex", "schema_version": 1}
+{"t": "prompt", "ts": "2026-11-06T12:11:37Z", "session": "01a1b0c5-762a-77f2-bf52-ce43bc232b18", "client": "codex", "prompt_hash": "077e255333", "schema_version": 1}
+{"t": "outcome", "ts": "2026-11-06T12:12:01Z", "session": "01a1b0c5-762a-77f2-bf52-ce43bc232b18", "git_commit_landed": false, "test_status": "unknown", "source": "codex-stop", "client": "codex", "schema_version": 1}
+{"t": "session", "ts": "2026-11-14T06:58:41Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "source": "startup", "git_head": "3b4c36899c563eddfeb01a759f3a9f7a53613242", "client": "codex", "schema_version": 1}
+{"t": "prompt", "ts": "2026-11-14T06:58:41Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "client": "codex", "prompt_hash": "27dfc4024c", "schema_version": 1}
+{"t": "outcome", "ts": "2026-11-14T06:58:54Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "git_commit_landed": false, "test_status": "unknown", "source": "codex-stop", "client": "codex", "schema_version": 1}
+{"t": "prompt", "ts": "2026-11-14T06:59:08Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "client": "codex", "prompt_hash": "c26001c351", "schema_version": 1}
+{"t": "read", "ts": "2026-11-14T06:59:19Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "tool": "Bash", "path": "AGENTS.md", "agent": "main", "client": "codex", "tool_use_id": "exec-22da446e-7c5c-4581-ad4b-7d80e9f9501e", "schema_version": 1}
+{"t": "test", "ts": "2026-11-14T06:59:23Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "status": "pass", "client": "codex", "tool_use_id": "exec-03a071da-c85b-4384-bf67-ee57ac0778d3", "schema_version": 1}
+{"t": "test", "ts": "2026-11-14T06:59:35Z", "session": "01a1d8d9-d498-7381-a866-833fa4ba449d", "status": "pass", "client": "codex", "tool_use_id": "exec-51b193fe-19eb-43ac-ae6f-e593e0d29038", "schema_version": 1}
