@@ -44,3 +44,7 @@ Do not stack tropes merely to increase intensity. A single trope with distinct m
 Slow burn is opt-in. It must not override an established relationship or an author-selected fast route. Intimacy is not measured by message count; update it when events alter trust, desire, affection, compatibility, commitment, availability, or knowledge.
 
 Conflict is optional. Cozy, secure, established, tragic, dark, and unresolved routes are all valid when selected. Do not insert redemption, mutuality, therapeutic repair, or a happy ending unless the author’s route requires it.
+
+## Completion
+
+Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Erotic Fantasy Disclosure"
+  short_description: "Write layered erotic fantasy disclosure"
+  default_prompt: "Use $write-erotic-fantasy-disclosure to write this fantasy disclosure with distinct boundaries and reactions."

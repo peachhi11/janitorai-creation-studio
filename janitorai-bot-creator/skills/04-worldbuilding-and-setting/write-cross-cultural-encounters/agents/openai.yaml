@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Cross-Cultural Encounters"
+  short_description: "Write cultural difference through situated interaction"
+  default_prompt: "Use $write-cross-cultural-encounters to write this interaction across differing norms, knowledge, and power."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Sexual Desire and Decision Dynamics"
+  short_description: "Shape desire, temptation, choice, and consequences"
+  default_prompt: "Use $model-sexual-desire-and-decision-dynamics to model this scene's changing desire and choices while preserving consent, responsibility, and the fantasy-reality boundary."

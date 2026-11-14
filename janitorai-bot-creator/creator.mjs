@@ -12,8 +12,6 @@ import {
   buildRevisionInstructions,
 } from "./lib/creator-policy.mjs";
 
-const config = loadRuntimeConfig();
-
 const instructionText = readFileSync(
   new URL("./prompts/creator.md", import.meta.url),
   "utf8"
@@ -117,6 +115,10 @@ export function createStandaloneCreator({
 
 let defaultCreator;
 function getDefaultCreator() {
+  // Validate process configuration only when the default, process-backed creator
+  // is actually used. Injectable creators must remain importable in tests and
+  // library consumers that do not start the standalone runtime.
+  const config = loadRuntimeConfig();
   defaultCreator ??= createStandaloneCreator({
     client: new OpenAI(),
     model: config.model,

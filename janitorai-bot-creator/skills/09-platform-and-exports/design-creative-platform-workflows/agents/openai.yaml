@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Creative Platform Workflows"
+  short_description: "Turn creative work into reusable staged systems"
+  default_prompt: "Use $design-creative-platform-workflows to organise this creative project into a reusable, reviewable workflow."

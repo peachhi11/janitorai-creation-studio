@@ -17,9 +17,14 @@ npm start
 
 The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `/mcp`; the health endpoint is `/healthz`.
 
+Vercel AI SDK v6 (`ai`) is included as a project dependency and installed by `npm ci`. Its generation and streaming utilities are available through imports from `ai`.
+
+The built-in Mem0 HTTP integration uses Node.js `fetch`; no Mem0 SDK package is required. Set `MEM0_API_KEY` and `MEM0_USER_ID` to enable the memory tools. See [Memory integration](janitorai-bot-creator/docs/memory.md) for usage and scope.
+
 ## Features
 
 - Generate and revise complete Janitor AI character definitions.
+- Store explicitly selected context in Mem0 and optionally retrieve it during generation.
 - Create portable user personas with full and compact exports.
 - Adapt personas to a bot or setting without changing permanent persona canon.
 - Promote selected roleplay discoveries into permanent persona canon.
@@ -27,25 +32,31 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 - Browse, search, and read local Markdown, text, JSON, CSV, and PDF references.
 - Attach reference provenance to generated results.
 - Create and constrain editable visual-character models.
+- Use a 257-module agent skill library for character construction, relationships, worldbuilding, continuity, research, evaluation, and platform workflows.
+- Apply normalized `## Completion` criteria to every skill for consistent agent handoffs.
 - Run real MCP-over-HTTP acceptance tests without a live model call.
+- Run deterministic memory-layer and agent-evaluation benchmarks before runtime prompt integration.
+- Compare layer-aware memory retrieval with the keyword baseline, including temporal ordering, evidence coverage, authority filtering, and abstention metrics.
+- Score procedural workflows by completeness, assemble active context through explicit related-state links, and require provenance-backed links before promoting events into durable state.
+- Enforce retrieval boundaries and evidence checks again after memory expansion, deduplicate linked candidates, and abstain when the final bounded context is unsupported.
 
 ## Configuration
 
 Copy `janitorai-bot-creator/.env.example` to `janitorai-bot-creator/.env`.
 
-| Variable                | Description                                                    | Default             |
-| ----------------------- | -------------------------------------------------------------- | ------------------- |
-| `OPENAI_API_KEY`        | API key for the OpenAI-compatible generation client.           | None                |
-| `OPENAI_MODEL`          | Model name passed to the Responses API.                        | `gpt-5.5`           |
-| `HOST`                  | Bind address.                                                  | `127.0.0.1`         |
-| `PORT`                  | HTTP port.                                                     | `8787`              |
-| `NODE_ENV`              | Runtime mode. Production requires an API token.                | `development`       |
-| `MCP_API_TOKEN`         | Bearer token for authenticated MCP requests.                   | None in development |
-| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions.         | `./data/characters` |
-| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest. | `./knowledge`       |
-| `MAX_REQUEST_BYTES`     | Maximum accepted MCP request size.                             | `1048576`           |
-| `MCP_RATE_LIMIT`        | Requests allowed per rate-limit window.                        | `60`                |
-| `MCP_RATE_WINDOW_MS`    | Rate-limit window in milliseconds.                             | `60000`             |
+| Variable                | Description                                                           | Default             |
+| ----------------------- | --------------------------------------------------------------------- | ------------------- |
+| `OPENAI_API_KEY`        | API key for the OpenAI-compatible generation client.                  | None                |
+| `OPENAI_MODEL`          | Model name passed to the Responses API.                               | `gpt-5.5`           |
+| `HOST`                  | Bind address.                                                         | `127.0.0.1`         |
+| `PORT`                  | HTTP port.                                                            | `8787`              |
+| `NODE_ENV`              | Runtime mode. Production requires an API token.                       | `development`       |
+| `MCP_API_TOKEN`         | Bearer token for authenticated MCP requests.                          | None in development |
+| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions.                | `./data/characters` |
+| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest.        | `./knowledge`       |
+| `MAX_REQUEST_BYTES`     | Maximum accepted MCP request size, including streamed request bodies. | `1048576`           |
+| `MCP_RATE_LIMIT`        | Requests allowed per rate-limit window.                               | `60`                |
+| `MCP_RATE_WINDOW_MS`    | Rate-limit window in milliseconds.                                    | `60000`             |
 
 Keep the service on loopback unless external exposure is deliberate and protected by a suitable reverse proxy. In production, set `NODE_ENV=production` and `MCP_API_TOKEN`.
 
@@ -57,14 +68,18 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
 - [Architecture decision records](janitorai-bot-creator/docs/adr/)
 - [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
-- [Agent change workflow](workflows/agent-change.md)
+- [Source-derived Creation Studio assets](janitorai-bot-creator/docs/source-derived-assets.md)
+- [Skill library status](janitorai-bot-creator/docs/skill-library-status.md)
+- [Skill library coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md)
+- [Memory-layer and benchmark plan](janitorai-bot-creator/docs/memory-layer-and-benchmark-plan.md)
+- [Agent change workflow](docs/workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 
-The repository also installs a root-level Husky pre-commit hook. It runs lint-staged with Prettier and then the complete test suite from `janitorai-bot-creator/`.
+The repository also installs a root-level Husky pre-commit hook. It first runs `node scripts/check-readme-impact.mjs` against staged paths, requiring `README.md` whenever runtime, prompt, configuration, security, workflow, skill, or repository-convention files change. It then runs lint-staged with Prettier and the complete test suite from `janitorai-bot-creator/`.
 
-GitHub Actions runs test, dependency-audit, and security checks on every pull request and push to `main`. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires the test and dependency-audit checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+GitHub Actions runs the test, dependency-audit, and README-impact checks on every pull request, plus the test and dependency-audit checks on pushes to `main`. The README-impact check requires `README.md` whenever a pull request changes protected runtime, prompt, configuration, security, workflow, skill, or repository-convention paths. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires all three pull-request checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
 
-The dedicated security workflow runs the full test suite, fails on high or critical dependency advisories, verifies the package lockfile, checks tracked files for common committed-secret patterns, and validates workflow permission boundaries. The OSSAR workflow additionally runs on pull requests, pushes to `main`, and a weekly schedule; it scans the repository on a Windows-hosted runner and uploads SARIF results to the GitHub Code Scanning Security tab. OSSAR requires the repository’s Code Scanning feature and `security-events: write` permission.
+The dedicated security workflow also runs the full test suite, fails on high or critical dependency advisories, verifies the package lockfile, checks tracked files for common committed-secret patterns, and validates workflow permission boundaries. The OSSAR workflow additionally runs on pull requests, pushes to `main`, and a weekly schedule; it scans the repository on a Windows-hosted runner and uploads SARIF results to the GitHub Code Scanning Security tab. OSSAR requires the repository’s Code Scanning feature and `security-events: write` permission.
 
 ## Architecture
 
@@ -79,7 +94,9 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 - `lib/reference-library.mjs` provides direct listing, search, and reading.
 - `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance.
 
-The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. The shared fictional narrative lens is applied to both MCP generation and the standalone creator; genre and relationship-intensity presets remain explicit and opt-in.
+The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. Both MCP generation and the standalone creator apply the shared Fictional Genre Logic / Narrative Intention framing: genre-specific causality and internal consistency guide the work, while psychological or erotic material remains contextual fiction rather than a universal law or mechanical checklist. Detailed creative boundaries are documented in [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md); genre and relationship-intensity presets remain explicit and opt-in.
+
+The agent skill library is complete for the current gathered corpus at the reusable-instruction level. Its remaining maintenance work is explicit source-family provenance mapping, complete machine-readable indexing, and routing/consolidation of intentionally adjacent skill families. See the [skill library status](janitorai-bot-creator/docs/skill-library-status.md) and [coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md).
 
 Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
 
@@ -94,6 +111,16 @@ npm test
 
 The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.
 
+Benchmark the pre-integration retrieval and evaluation layers with:
+
+```bash
+cd janitorai-bot-creator
+npm run benchmark:memory
+npm run benchmark:agents
+```
+
+These deterministic reports measure memory retrieval, state validity, abstention, skill-bundle consolidation, paired-judge disagreement, world replay, context-conditioned actions, roleplay contracts, evaluation-context divergence, and multimodal identity consistency.
+
 To inspect dependency advisories without changing the lockfile:
 
 ```bash
@@ -107,7 +134,7 @@ For an opt-in live endpoint check, set `OPENAI_API_KEY` and run `npm run smoke:l
 
 ## Contributing
 
-Read [`AGENTS.md`](AGENTS.md) and [`workflows/agent-change.md`](workflows/agent-change.md) before making agent-assisted changes. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
+Read [`AGENTS.md`](AGENTS.md) and [`docs/workflows/agent-change.md`](docs/workflows/agent-change.md) before making agent-assisted changes. Complete the workflow preflight before editing: inspect the relevant context and architecture, record the public seam, classify README impact, and identify focused verification. Prompt, generation-policy, output-framing, API, security, setup, and workflow changes require a same-slice README update; the completion report must state that decision. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
 
 ## License
 

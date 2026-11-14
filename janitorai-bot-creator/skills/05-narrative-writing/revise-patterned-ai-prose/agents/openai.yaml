@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revise Patterned AI Prose"
+  short_description: "Detect and revise repetitive AI prose habits"
+  default_prompt: "Use $revise-patterned-ai-prose to edit this draft while preserving its voice and intent."

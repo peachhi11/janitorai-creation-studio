@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Intimate Technique Framing"
+  short_description: "Catch mechanical, unsafe, and coercive framing"
+  default_prompt: "Use $audit-intimate-technique-framing to audit this intimate material while preserving character voice, darkness, and player sovereignty."

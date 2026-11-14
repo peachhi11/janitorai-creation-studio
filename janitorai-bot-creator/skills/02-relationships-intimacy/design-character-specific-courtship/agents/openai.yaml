@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character-Specific Courtship"
+  short_description: "Build attraction and dating through reciprocal choices"
+  default_prompt: "Use $design-character-specific-courtship to build this pursuit as a character-specific sequence of bids, responses, risks, and compatibility discoveries."

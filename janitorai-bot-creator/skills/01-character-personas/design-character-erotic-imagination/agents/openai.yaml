@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Erotic Imagination"
+  short_description: "Build fantasies from roles, meaning, and contradiction"
+  default_prompt: "Use $design-character-erotic-imagination to design this character's fantasy life while separating content, meaning, desired enactment, and actual conduct."

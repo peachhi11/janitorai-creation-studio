@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trace Worldbuilding Consequences"
+  short_description: "Turn setting changes into coherent lived effects"
+  default_prompt: "Use $trace-worldbuilding-consequences to follow this setting premise through institutions, daily life, power, and conflict."

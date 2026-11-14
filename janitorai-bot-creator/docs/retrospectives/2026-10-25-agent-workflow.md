@@ -16,7 +16,7 @@ The pre-commit setup initially assumed the package was the Git root. Husky initi
 ## Improvements now encoded
 
 - `AGENTS.md` points agents to the domain glossary, architecture document, and repeatable change workflow.
-- `workflows/agent-change.md` makes the lifecycle and completion criteria explicit.
+- `docs/workflows/agent-change.md` makes the lifecycle and completion criteria explicit.
 - `scripts/block-dangerous-git.sh` and `scripts/classify_git_command.py` provide an agent-agnostic destructive-Git denial seam.
 - `.husky/pre-commit` runs staged formatting and the full test suite from the correct package directory.
 - `CONTEXT.md` is now glossary and invariant material; implementation architecture lives in `docs/architecture.md`.

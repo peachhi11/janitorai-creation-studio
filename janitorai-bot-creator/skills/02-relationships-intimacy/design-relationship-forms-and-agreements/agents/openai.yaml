@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Relationship Forms and Agreements"
+  short_description: "Define relationship terms, structures, and breach points"
+  default_prompt: "Use $design-relationship-forms-and-agreements to define this relationship's actual membership, terms, power, obligations, and renegotiation points."

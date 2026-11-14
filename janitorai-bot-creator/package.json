@@ -12,11 +12,14 @@
     "start": "node --env-file=.env server.mjs",
     "start:production": "NODE_ENV=production node --env-file=.env server.mjs",
     "security:check": "node scripts/security-check.mjs",
+    "benchmark:agents": "node scripts/run-agent-evaluation-benchmark.mjs",
+    "benchmark:memory": "node scripts/run-memory-layer-benchmark.mjs",
     "smoke:live": "node scripts/live-model-smoke.mjs",
     "test": "node --test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.2",
+    "ai": "^6.0.326",
     "openai": "^6.0.0",
     "zod": "^4.6.7"
   },

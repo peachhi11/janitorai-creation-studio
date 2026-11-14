@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Embodied Intimacy Patterns"
+  short_description: "Build embodied preferences and intimate continuity"
+  default_prompt: "Use $design-embodied-intimacy-patterns to design this character’s giving, receiving, and sensory intimacy patterns."

@@ -4,7 +4,7 @@
 
 Use the repository documentation structure defined in `README.md` and `janitorai-bot-creator/docs/`.
 
-Read `workflows/agent-change.md` for the default change lifecycle. Read `janitorai-bot-creator/CONTEXT.md` for domain terms and invariants; read `janitorai-bot-creator/docs/architecture.md` for implementation boundaries.
+Read `docs/workflows/agent-change.md` for the default change lifecycle. Read `janitorai-bot-creator/CONTEXT.md` for domain terms and invariants; read `janitorai-bot-creator/docs/architecture.md` for implementation boundaries.
 
 Continue autonomously through the complete requested slice. Do not stop at an intermediate milestone or ask the user to say “continue.” Stop only when the slice is complete, a genuine user decision or direction is required, or an external blocker prevents safe progress after available alternatives have been checked.
 

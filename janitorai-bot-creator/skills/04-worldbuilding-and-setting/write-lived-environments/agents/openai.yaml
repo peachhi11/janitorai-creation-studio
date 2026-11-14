@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Lived Environments"
+  short_description: "Render environments through character and action"
+  default_prompt: "Use $write-lived-environments to turn these environmental notes into character-filtered scene detail."

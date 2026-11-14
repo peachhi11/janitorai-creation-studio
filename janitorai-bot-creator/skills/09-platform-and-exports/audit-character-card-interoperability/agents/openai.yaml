@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Character Card Interoperability"
+  short_description: "Find schema, packaging, and data-loss risks"
+  default_prompt: "Use $audit-character-card-interoperability to check this card for compatibility and silent data-loss risks."

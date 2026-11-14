@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Dependency and Boundaries"
+  short_description: "Turn reliance, caretaking, shame, and limits into behaviour."
+  default_prompt: "Translate this character’s dependence and boundaries into specific choices, hidden contracts, dialogue, costs, and consequences."

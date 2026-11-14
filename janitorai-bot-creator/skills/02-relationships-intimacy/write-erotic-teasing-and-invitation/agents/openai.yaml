@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Erotic Teasing and Invitation"
+  short_description: "Write charged teasing and invitations"
+  default_prompt: "Use $write-erotic-teasing-and-invitation to write charged banter that leaves the response open."

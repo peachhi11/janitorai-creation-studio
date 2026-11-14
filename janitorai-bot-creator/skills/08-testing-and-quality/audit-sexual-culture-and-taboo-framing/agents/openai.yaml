@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Sexual Culture and Taboo Framing"
+  short_description: "Find anachronism, stigma, false universals, and source errors."
+  default_prompt: "Use $audit-sexual-culture-and-taboo-framing to audit this material for cultural, historical, language, and taboo framing errors."

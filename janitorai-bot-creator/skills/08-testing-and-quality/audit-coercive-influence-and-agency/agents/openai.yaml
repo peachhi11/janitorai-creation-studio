@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Coercive Influence and Agency"
+  short_description: "Distinguish persuasion, manipulation, coercion, and abuse"
+  default_prompt: "Use $audit-coercive-influence-and-agency to audit this power dynamic for coercion, consent defects, and lost agency."

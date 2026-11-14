@@ -1,0 +1,4 @@
+interface:
+  display_name: "Historicise Sexuality in Fiction"
+  short_description: "Place sexual meanings accurately within time and culture."
+  default_prompt: "Use $historicise-sexuality-in-fiction to situate this character or scene in a historically specific sexual culture."

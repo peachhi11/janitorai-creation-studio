@@ -1,4 +1,5 @@
-repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+repo_root="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 cd "$repo_root"
+node scripts/check-readme-impact.mjs
 janitorai-bot-creator/node_modules/.bin/lint-staged
 npm --prefix janitorai-bot-creator run test

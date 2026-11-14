@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Ex Contact and Reconciliation"
+  short_description: "Build contact, boundaries, intimacy, and reunion evidence"
+  default_prompt: "Use $model-ex-contact-and-reconciliation to model this ex-partner contact and its possible consequences."

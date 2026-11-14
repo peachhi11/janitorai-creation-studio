@@ -1,0 +1,4 @@
+interface:
+  display_name: "Model Relationship Satisfaction and Strain"
+  short_description: "Trace dyadic stress, coping, and satisfaction over time"
+  default_prompt: "Use $model-relationship-satisfaction-and-strain to trace each participant's satisfaction through stress, interpretation, behaviour, feedback, and accumulated residue."

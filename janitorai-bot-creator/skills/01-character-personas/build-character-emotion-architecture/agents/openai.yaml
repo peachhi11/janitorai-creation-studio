@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Character Emotion Architecture"
+  short_description: "Map triggers, appraisals, urges, regulation, and residue."
+  default_prompt: "Build a layered emotion map for this fictional character, including trigger, appraisal, competing urges, visible choice, regulation, and aftermath."

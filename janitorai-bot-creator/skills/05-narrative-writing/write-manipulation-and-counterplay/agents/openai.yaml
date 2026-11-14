@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Manipulation and Counterplay"
+  short_description: "Write power contests with resistance and fallout"
+  default_prompt: "Use $write-manipulation-and-counterplay to turn this influence attempt into a fallible contest with counterplay and consequences."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Character Notes to Scenes"
+  short_description: "Convert character facts into dramatic evidence"
+  default_prompt: "Use $turn-character-notes-into-scenes to turn these character notes into revealing scene opportunities."

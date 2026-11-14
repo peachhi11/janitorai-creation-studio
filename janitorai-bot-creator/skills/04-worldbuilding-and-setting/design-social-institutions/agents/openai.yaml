@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Social Institutions"
+  short_description: "Build institutions from roles, resources, and practice"
+  default_prompt: "Use $design-social-institutions to design the institutions, roles, and working relationships in this society."

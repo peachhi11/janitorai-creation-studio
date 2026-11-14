@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Relationship-Form and Intimacy Framing"
+  short_description: "Catch relationship-form assumptions and lost agency"
+  default_prompt: "Use $audit-relationship-form-and-intimacy-framing to preserve this relationship's intended darkness while correcting deterministic form, intimacy, consent, and agency claims."
