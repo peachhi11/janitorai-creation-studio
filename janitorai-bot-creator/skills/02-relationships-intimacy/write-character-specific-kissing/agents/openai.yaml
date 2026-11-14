@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Character-Specific Kissing"
+  short_description: "Write kisses with individual meaning and response"
+  default_prompt: "Use $write-character-specific-kissing to write this kiss with character-specific pacing, meaning, consent, and escalation."

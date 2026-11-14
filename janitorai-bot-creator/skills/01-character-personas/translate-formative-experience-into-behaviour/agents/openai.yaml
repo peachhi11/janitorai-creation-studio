@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Formative Experience"
+  short_description: "Turn formative history into present behaviour"
+  default_prompt: "Use $translate-formative-experience-into-behaviour to turn this backstory into specific, conditional scene behaviour."

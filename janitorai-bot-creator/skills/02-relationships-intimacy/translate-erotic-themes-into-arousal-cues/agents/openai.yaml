@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Erotic Themes into Arousal Cues"
+  short_description: "Turn erotic meaning into specific scene behaviour"
+  default_prompt: "Use $translate-erotic-themes-into-arousal-cues to turn this character's recurring erotic meanings into individual cues and observable behaviour."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Personality Consistency and Drift"
+  short_description: "Audit change, masking, state effects, and earned personality development."
+  default_prompt: "Audit this character for personality continuity, contextual variation, and earned change."

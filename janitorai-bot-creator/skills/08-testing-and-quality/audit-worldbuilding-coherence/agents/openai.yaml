@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Worldbuilding Coherence"
+  short_description: "Find setting failures and route focused repairs"
+  default_prompt: "Use $audit-worldbuilding-coherence to diagnose this setting and prioritise the smallest repairs that will improve the story."

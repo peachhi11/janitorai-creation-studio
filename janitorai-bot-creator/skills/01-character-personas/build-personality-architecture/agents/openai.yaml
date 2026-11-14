@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Personality Architecture"
+  short_description: "Map traits, temperament, learning, context, masks, and contradictions."
+  default_prompt: "Build a specific, non-diagnostic personality architecture and show how it behaves in context."

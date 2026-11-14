@@ -1,61 +1,139 @@
 # janitorai-creation-studio
-A persona tailored to a bot should still feel like your character, not someone manufactured solely to please {{char}}. The best matches have their own values, flaws, loyalties, and potential to disagree. Sometimes a compatible character is a perfect foil rather than a perfect partner.
 
-Guide 01 — Advanced Creator Master Guide: Use for character structure, exact Janitor AI templates, workflow, behavior design, and character conversion.
-Guide 02 — Character Psychology: Use for attachment tendencies, core beliefs, defense mechanisms, cognitive biases, emotional regulation, contradictions, and development.
-Guide 03 — Sexuality & Intimacy: Use for adult romantic and sexual identity, relationship expectations, consent, boundaries, intimacy preferences, and mature characterization where appropriate.
-Guide 04 — Cross-Cultural English: Use for language background, regional and multilingual expression, communication styles, code-switching, and linguistic authenticity.
-Guide 05 — Portable User Personas: Use for permanent character identity, compact personas, alternate-setting adaptations, relationship overlays, canon tracking, and conversion into standalone bots.
+A local MCP service for creating Janitor AI characters, reusable user personas, reference-backed revisions, visual character models, and persisted character history.
 
-This plugin/MCP server aims to do the following:
+## Quick start
 
-Character Creation Mode
-When asked to create a Janitor AI bot:
-  Establish the concept, setting, and desired relationship dynamics.
-  Develop an individual psychological foundation.
-  Create motivations, contradictions, flaws, and personal history.
-  Establish recognizable dialogue and behavior.
-  Build meaningful interaction possibilities with {{user}}.
-  Complete the exact bot template from Guide 01 without adding, removing, renaming, or rearranging its sections.
-  Check consistency and completeness.
-  Ask whether the user wants expansions or revisions.
-  Offer a copy-ready version after revisions.
-  Never automatically determine {{user}}'s actions, feelings, or decisions.
+Requirements: Node.js 20 or newer, an OpenAI-compatible API key for live generation, and `pdftotext` if PDF references need text extraction.
 
-Portable User Persona Mode
-When asked to create a persona:
-  Treat the persona as an independent fictional individual.
-  Develop permanent core identity before adapting the character to any particular bot.
-  Create a complete character bible using Guide 05.
-  Create a compact Janitor AI persona preserving defining personality and appearance.
-  Respect any requested character limit.
-  Keep setting-specific adaptations separate from permanent identity.
-  Analyze supplied bot definitions before creating relationship chemistry.
-  Maintain the persona's independent goals, values, boundaries, and agency.
-  Never guarantee attraction or trust from the target bot.
-  Preserve the potential to convert the persona into a standalone bot.
-  Produce both a full biography and a compact persona by default unless the user requests otherwise.
+```bash
+cd janitorai-bot-creator
+npm ci
+cp .env.example .env
+# Edit .env and set OPENAI_API_KEY.
+npm test
+npm start
+```
 
-Canon Management
-Maintain a distinction between:
-  Permanent core canon.
-  Individual roleplay canon.
-  Alternate-universe adaptations.
-  Proposed character developments.
-  Never automatically merge incompatible storylines.
-  Only incorporate roleplay developments into permanent canon when explicitly selected by the user.
-  Keep previous character versions accessible where storage permits.
+The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `/mcp`; the health endpoint is `/healthz`.
 
-Persona Adaptation
-When adapting a persona for another setting:
-  Preserve their psychological foundation, core motivations, values, habitual behavior, and recognizable voice.
-  Adjust only the details that depend on the fictional world, such as profession, historical context, social position, local relationships, and setting-appropriate skills.
-  Clearly identify significant alternate-universe changes.
+Vercel AI SDK v6 (`ai`) is included as a project dependency and installed by `npm ci`. Its generation and streaming utilities are available through imports from `ai`.
 
-Persona-to-Bot Conversion
-When promoting a user persona into a full bot:
-  Preserve permanent identity.
-  Expand speech examples, behavior, scenario potential, and interactive characterization.
-  Use the exact Janitor AI bot character-sheet template.
-  Do not replace the original personality simply to make the character more universally appealing.
+The built-in Mem0 HTTP integration uses Node.js `fetch`; no Mem0 SDK package is required. Set `MEM0_API_KEY` and `MEM0_USER_ID` to enable the memory tools. See [Memory integration](janitorai-bot-creator/docs/memory.md) for usage and scope.
 
+## Features
+
+- Generate and revise complete Janitor AI character definitions.
+- Store explicitly selected context in Mem0 and optionally retrieve it during generation.
+- Create portable user personas with full and compact exports.
+- Adapt personas to a bot or setting without changing permanent persona canon.
+- Promote selected roleplay discoveries into permanent persona canon.
+- Save characters locally with revision history and restoration.
+- Browse, search, and read local Markdown, text, JSON, CSV, and PDF references.
+- Attach reference provenance to generated results.
+- Create and constrain editable visual-character models.
+- Use a 257-module agent skill library for character construction, relationships, worldbuilding, continuity, research, evaluation, and platform workflows.
+- Apply normalized `## Completion` criteria to every skill for consistent agent handoffs.
+- Run real MCP-over-HTTP acceptance tests without a live model call.
+- Run deterministic memory-layer and agent-evaluation benchmarks before runtime prompt integration.
+- Compare layer-aware memory retrieval with the keyword baseline, including temporal ordering, evidence coverage, authority filtering, and abstention metrics.
+- Score procedural workflows by completeness, assemble active context through explicit related-state links, and require provenance-backed links before promoting events into durable state.
+- Enforce retrieval boundaries and evidence checks again after memory expansion, deduplicate linked candidates, and abstain when the final bounded context is unsupported.
+
+## Configuration
+
+Copy `janitorai-bot-creator/.env.example` to `janitorai-bot-creator/.env`.
+
+| Variable                | Description                                                           | Default             |
+| ----------------------- | --------------------------------------------------------------------- | ------------------- |
+| `OPENAI_API_KEY`        | API key for the OpenAI-compatible generation client.                  | None                |
+| `OPENAI_MODEL`          | Model name passed to the Responses API.                               | `gpt-5.5`           |
+| `HOST`                  | Bind address.                                                         | `127.0.0.1`         |
+| `PORT`                  | HTTP port.                                                            | `8787`              |
+| `NODE_ENV`              | Runtime mode. Production requires an API token.                       | `development`       |
+| `MCP_API_TOKEN`         | Bearer token for authenticated MCP requests.                          | None in development |
+| `CHARACTER_LIBRARY_DIR` | Directory for current character records and revisions.                | `./data/characters` |
+| `REFERENCE_LIBRARY_DIR` | Directory containing reference files and an optional manifest.        | `./knowledge`       |
+| `MAX_REQUEST_BYTES`     | Maximum accepted MCP request size, including streamed request bodies. | `1048576`           |
+| `MCP_RATE_LIMIT`        | Requests allowed per rate-limit window.                               | `60`                |
+| `MCP_RATE_WINDOW_MS`    | Rate-limit window in milliseconds.                                    | `60000`             |
+
+Keep the service on loopback unless external exposure is deliberate and protected by a suitable reverse proxy. In production, set `NODE_ENV=production` and `MCP_API_TOKEN`.
+
+## Documentation
+
+- [API and MCP tool reference](janitorai-bot-creator/docs/api-reference.md)
+- [Architecture and module boundaries](janitorai-bot-creator/docs/architecture.md)
+- [Release and version guidance](janitorai-bot-creator/docs/release.md)
+- [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
+- [Architecture decision records](janitorai-bot-creator/docs/adr/)
+- [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
+- [Source-derived Creation Studio assets](janitorai-bot-creator/docs/source-derived-assets.md)
+- [Skill library status](janitorai-bot-creator/docs/skill-library-status.md)
+- [Skill library coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md)
+- [Memory-layer and benchmark plan](janitorai-bot-creator/docs/memory-layer-and-benchmark-plan.md)
+- [Agent change workflow](docs/workflows/agent-change.md)
+- [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
+
+The repository also installs a root-level Husky pre-commit hook. It first runs `node scripts/check-readme-impact.mjs` against staged paths, requiring `README.md` whenever runtime, prompt, configuration, security, workflow, skill, or repository-convention files change. It then runs lint-staged with Prettier and the complete test suite from `janitorai-bot-creator/`.
+
+GitHub Actions runs the test, dependency-audit, and README-impact checks on every pull request, plus the test and dependency-audit checks on pushes to `main`. The README-impact check requires `README.md` whenever a pull request changes protected runtime, prompt, configuration, security, workflow, skill, or repository-convention paths. The workflows use Node.js 20 for the project and pin their runner to Ubuntu 24.04 rather than following a moving Ubuntu label. Since this is a solo-maintainer repository, `main` requires all three pull-request checks to pass but does not require a second approving review; conversation resolution, administrator enforcement, and force-push/deletion protections remain enabled.
+
+## Architecture
+
+The runtime keeps transport, application use cases, generation, storage, and reference retrieval behind separate seams:
+
+- `server.mjs` owns HTTP transport, authentication, request limits, rate limiting, and runtime composition.
+- `lib/character-generation.mjs` owns generation schemas, model calls, shared generation policy, and character/persona rendering.
+- `lib/mcp-tools.mjs` adapts MCP calls to application operations.
+- `lib/application.mjs` coordinates use cases and returns structured results.
+- `lib/character-store.mjs` provides local records and revision history.
+- `lib/reference-index.mjs` owns manifest loading, recursive discovery, format inference, and normalized reference descriptors.
+- `lib/reference-library.mjs` provides direct listing, search, and reading.
+- `lib/knowledge-context.mjs` selects bounded excerpts and returns source provenance.
+
+The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. Both MCP generation and the standalone creator apply the shared Fictional Genre Logic / Narrative Intention framing: genre-specific causality and internal consistency guide the work, while psychological or erotic material remains contextual fiction rather than a universal law or mechanical checklist. Detailed creative boundaries are documented in [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md); genre and relationship-intensity presets remain explicit and opt-in.
+
+The agent skill library is complete for the current gathered corpus at the reusable-instruction level. Its remaining maintenance work is explicit source-family provenance mapping, complete machine-readable indexing, and routing/consolidation of intentionally adjacent skill families. See the [skill library status](janitorai-bot-creator/docs/skill-library-status.md) and [coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md).
+
+Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
+
+Routine Git commands should use `scripts/git-safe <subcommand> [options]`, which validates the command and executes it without a shell. The root-level pre-commit hook resolves lint-staged and Prettier from the repository root, so staged documentation and package files share one formatter configuration.
+
+## Verification
+
+```bash
+cd janitorai-bot-creator
+npm test
+```
+
+The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.
+
+Benchmark the pre-integration retrieval and evaluation layers with:
+
+```bash
+cd janitorai-bot-creator
+npm run benchmark:memory
+npm run benchmark:agents
+```
+
+These deterministic reports measure memory retrieval, state validity, abstention, skill-bundle consolidation, paired-judge disagreement, world replay, context-conditioned actions, roleplay contracts, evaluation-context divergence, and multimodal identity consistency.
+
+To inspect dependency advisories without changing the lockfile:
+
+```bash
+cd janitorai-bot-creator
+npm audit
+```
+
+The latest dependency audit completes with no vulnerabilities at the configured high-severity threshold. Keep the lockfile committed and rerun `npm audit` after dependency changes.
+
+For an opt-in live endpoint check, set `OPENAI_API_KEY` and run `npm run smoke:live` from `janitorai-bot-creator/`. This makes one model request, verifies the expected response token, and is intentionally excluded from automated CI.
+
+## Contributing
+
+Read [`AGENTS.md`](AGENTS.md) and [`docs/workflows/agent-change.md`](docs/workflows/agent-change.md) before making agent-assisted changes. Complete the workflow preflight before editing: inspect the relevant context and architecture, record the public seam, classify README impact, and identify focused verification. Prompt, generation-policy, output-framing, API, security, setup, and workflow changes require a same-slice README update; the completion report must state that decision. Preserve existing MCP tool names and payload intent. Keep new capabilities behind the application seam, validate path and identifier inputs before filesystem access, and avoid adding generic interfaces until a second implementation requires one. Add focused tests for new seams; the pre-commit hook will run Prettier and `npm test` before a commit is accepted.
+
+## License
+
+No license file is currently declared in this repository.

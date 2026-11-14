@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Multicausal Character Explanations"
+  short_description: "Explain behaviour without reducing the character"
+  default_prompt: "Use $build-multicausal-character-explanations to build a layered explanation for this character's behaviour."

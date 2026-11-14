@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evaluate AI Narrative Systems"
+  short_description: "Test AI fiction and roleplay with evidence"
+  default_prompt: "Use $evaluate-ai-narrative-systems to design an evidence-grounded evaluation for this narrative system."

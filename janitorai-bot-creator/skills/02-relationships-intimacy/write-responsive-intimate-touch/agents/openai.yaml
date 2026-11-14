@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Responsive Intimate Touch"
+  short_description: "Write touch that adapts through feedback"
+  default_prompt: "Use $write-responsive-intimate-touch to write this intimate interaction through pacing, feedback, adjustment, and natural consent."

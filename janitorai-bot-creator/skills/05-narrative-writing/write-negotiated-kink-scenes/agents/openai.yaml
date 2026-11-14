@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Negotiated Kink Scenes"
+  short_description: "Write responsive kink scenes with legible negotiated bounds."
+  default_prompt: "Use $write-negotiated-kink-scenes to write or revise a kink scene while preserving character voice and player agency."

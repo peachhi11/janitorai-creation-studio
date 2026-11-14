@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Prompt Preset Packages"
+  short_description: "Find prompt conflicts, drift, and unsafe settings"
+  default_prompt: "Use $audit-prompt-preset-packages to inspect this preset for conflicts, unsupported settings, and behavioural drift."

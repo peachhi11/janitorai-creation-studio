@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Lived Belief Systems"
+  short_description: "Build belief through practice, authority, and dispute"
+  default_prompt: "Use $design-lived-belief-systems to build this religion or belief system as a lived and contested part of the world."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Intimacy and Relationship Maintenance"
+  short_description: "Create lived intimacy, upkeep, neglect, and change"
+  default_prompt: "Use $build-intimacy-and-relationship-maintenance to map how this relationship creates and loses closeness through ordinary bids, labour, rituals, and stress."

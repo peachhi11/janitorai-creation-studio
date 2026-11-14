@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Breakup and Separation Arcs"
+  short_description: "Build believable endings and their structural fallout"
+  default_prompt: "Use $design-breakup-and-separation-arcs to design this breakup and its consequences without imposing fixed stages."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Planning Ledgers"
+  short_description: "Track continuity, knowledge, and story change"
+  default_prompt: "Use $maintain-story-planning-ledgers to build a compact tracker for this story or roleplay."

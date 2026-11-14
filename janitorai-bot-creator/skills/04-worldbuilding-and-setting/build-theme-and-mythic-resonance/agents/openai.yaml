@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theme and Mythic Resonance"
+  short_description: "Build culturally situated thematic patterns"
+  default_prompt: "Use $build-theme-and-mythic-resonance to develop this story theme through choices, symbols, and consequences."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Psychological Framing in Fiction"
+  short_description: "Find weak, diagnostic, or stigmatising claims"
+  default_prompt: "Use $audit-psychological-framing-in-fiction to audit this material for unsupported or harmful psychological framing."

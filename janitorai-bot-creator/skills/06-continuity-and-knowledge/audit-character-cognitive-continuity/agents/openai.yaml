@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Character Cognitive Continuity"
+  short_description: "Trace facts from perception to present claims"
+  default_prompt: "Use $audit-character-cognitive-continuity to find unsupported noticing, recall, inference, and knowledge in this material."

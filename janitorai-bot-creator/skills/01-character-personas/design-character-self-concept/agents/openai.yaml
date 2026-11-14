@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Character Self-Concept"
+  short_description: "Build self-image, ego stakes, identity, and belonging."
+  default_prompt: "Design a character self-concept with public identity, private standards, and contradictions."

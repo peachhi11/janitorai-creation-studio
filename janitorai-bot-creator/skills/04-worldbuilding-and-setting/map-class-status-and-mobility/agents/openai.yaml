@@ -1,0 +1,4 @@
+interface:
+  display_name: "Map Class, Status, and Mobility"
+  short_description: "Model unequal access, rank, and social movement"
+  default_prompt: "Use $map-class-status-and-mobility to map status, class, access, and mobility in this fictional society."

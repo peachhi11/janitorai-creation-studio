@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Nonverbal Inference and Consent"
+  short_description: "Catch body-language mind-reading and agency errors"
+  default_prompt: "Use $audit-nonverbal-inference-and-consent to audit this material for unsupported cue-reading and consent errors."

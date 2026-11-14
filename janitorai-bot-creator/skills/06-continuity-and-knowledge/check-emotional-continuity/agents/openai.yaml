@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check Emotional Continuity"
+  short_description: "Audit emotion, regulation, and coping across scenes."
+  default_prompt: "Audit this character’s emotional continuity, regulation, coping, and change."

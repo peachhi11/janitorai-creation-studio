@@ -20,6 +20,6 @@ Positive:
 - Rendering and protocol concerns are no longer required at every call site.
 
 Trade-offs:
-- The application currently still receives the existing generator and renderer functions from the server; a later candidate may deepen those into their own modules.
+- The application receives generation and rendering capabilities composed by `lib/character-generation.mjs`; the server remains responsible for supplying runtime dependencies such as the model client and configured model name.
 - Filesystem storage remains the only concrete adapter; no speculative generic repository interface is introduced.
 - Existing tool names and broad payload shapes remain stable.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Sexual Initiation and Agency"
+  short_description: "Audit sexual initiation and agency"
+  default_prompt: "Use $audit-sexual-initiation-and-agency to check this initiation scene while preserving its intended darkness."

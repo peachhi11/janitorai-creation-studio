@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Sexual Satisfaction and Compatibility"
+  short_description: "Design satisfaction, mismatch, and sexual consequences"
+  default_prompt: "Use $build-sexual-satisfaction-and-compatibility to map what satisfaction means to each character and how their sexual patterns interact over time."

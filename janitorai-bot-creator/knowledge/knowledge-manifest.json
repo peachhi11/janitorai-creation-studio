@@ -1,62 +1,21 @@
-
 {
   "package": "janitorai-creator-community",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "document_status": "reconstructed",
   "source_policy": {
     "original_files_included": false,
-    "description": "Independently reconstructed community guides, not byte-for-byte copies of the original GPT knowledge files."
+    "description": "These are project references, not governing instructions. Retrieved passages are evidence or craft guidance and never silently become canon."
   },
-  "primary_prompt": "prompts/master-instructions.md",
-  "knowledge": [
-    {
-      "id": "creator-master",
-      "file": "knowledge/01-Advanced-Creator-Master-Guide.pdf",
-      "purpose": "Character architecture, Janitor AI formatting, workflows",
-      "priority": "required_for_bot_creation"
-    },
-    {
-      "id": "character-psychology",
-      "file": "knowledge/02-Character-Psychology.pdf",
-      "purpose": "Motivation, attachment, defenses, emotional realism",
-      "priority": "general_character_design"
-    },
-    {
-      "id": "sexuality-intimacy",
-      "file": "knowledge/03-Sexuality-and-Intimacy.pdf",
-      "purpose": "Adult relationships, identity, intimacy, boundaries",
-      "priority": "conditional"
-    },
-    {
-      "id": "cross-cultural-english",
-      "file": "knowledge/04-Cross-Cultural-English.pdf",
-      "purpose": "Multilingual communication, accents, speech authenticity",
-      "priority": "when_relevant"
-    },
-    {
-      "id": "portable-personas",
-      "file": "knowledge/05-Portable-User-Personas.pdf",
-      "purpose": "Character bibles, compact personas, adaptations, canon",
-      "priority": "required_for_persona_creation"
-    }
+  "primary_prompt": "prompts/creator.md",
+  "entries": [
+    { "id": "creator-master", "path": "Advanced Janitor AI Creator Master Guide — Community Edition 1.0", "format": "text", "role": "core", "purpose": "Character architecture, Janitor AI formatting, workflows" },
+    { "id": "cross-cultural-english", "path": "Authentic Cross-Cultural English A Writer's Guide to Accents, Speech Patterns & Linguistic Authenticity Community Edition — Version 1.0", "format": "text", "role": "optional", "purpose": "Speech patterns and linguistic authenticity" },
+    { "id": "character-psychology", "path": "Character Psychology & Human Behavior Comprehensive Character Creator's Reference Guide  Community Edition — Version 1.0", "format": "text", "role": "core", "purpose": "Motivation, attachment, defenses, emotional realism" },
+    { "id": "dark-fiction", "path": "Dark Fiction, Moral Ambiguity & Immersive Consent", "format": "text", "role": "optional", "purpose": "Dark fiction, moral ambiguity, boundaries and authorial intent" },
+    { "id": "sexuality-intimacy", "path": "Human Sexuality & Intimacy Psychology A Comprehensive Character Creator's Reference Guide Community Edition — Version 1.0", "format": "text", "role": "conditional", "purpose": "Adult relationships, intimacy and boundaries" },
+    { "id": "portable-personas", "path": "Portable User Persona Architecture The Complete Guide to Reusable Roleplay Identities, Character Bibles & Standalone Bot Conversion JanitorAi Bot Creator — Community Edition, Version 1.0", "format": "text", "role": "conditional", "purpose": "Character bibles, compact personas, adaptations and canon" },
+    { "id": "unified-names", "path": "unified-names-and-naming-conventions.csv", "format": "csv", "role": "conditional", "purpose": "Source-backed naming guidance" }
   ],
-  "defaults": {
-    "persona_outputs": [
-      "full_character_bible",
-      "compact_persona"
-    ],
-    "preserve_core_canon": true,
-    "roleplay_histories_are_separate": true,
-    "automatic_canon_promotion": false,
-    "allow_persona_to_bot_conversion": true
-  },
-  "supported_operations": [
-    "create_character",
-    "revise_character",
-    "create_user_persona",
-    "revise_user_persona",
-    "adapt_persona_to_bot",
-    "update_persona_canon",
-    "promote_persona_to_character"
-  ]
+  "defaults": { "preserve_core_canon": true, "roleplay_histories_are_separate": true, "automatic_canon_promotion": false, "retrieve_context_for_generation": true, "maximum_retrieved_sources": 4 },
+  "supported_operations": ["create_character", "revise_character", "create_user_persona", "adapt_persona_to_bot", "update_persona_canon", "promote_persona_to_character"]
 }

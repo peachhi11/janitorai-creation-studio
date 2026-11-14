@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare Text Corpora for Analysis"
+  short_description: "Prepare text without erasing linguistic meaning"
+  default_prompt: "Use $prepare-text-corpora-for-analysis to prepare these texts for reliable search and comparison."

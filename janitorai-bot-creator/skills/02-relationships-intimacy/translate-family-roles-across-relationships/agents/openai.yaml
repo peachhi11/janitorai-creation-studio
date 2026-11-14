@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Family Roles Across Relationships"
+  short_description: "Turn learned family jobs into conditional behaviour"
+  default_prompt: "Use $translate-family-roles-across-relationships to show how this character repeats, reverses, or revises a learned family role."

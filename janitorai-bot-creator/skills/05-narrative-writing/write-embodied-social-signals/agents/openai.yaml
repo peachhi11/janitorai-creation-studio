@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Embodied Social Signals"
+  short_description: "Turn body, voice, space, and objects into scene action"
+  default_prompt: "Use $write-embodied-social-signals to revise this interaction through observable, reciprocal nonverbal behaviour."

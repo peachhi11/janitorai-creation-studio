@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enforce Narrative Knowledge Boundaries"
+  short_description: "Control who knows and reveals story facts"
+  default_prompt: "Use $enforce-narrative-knowledge-boundaries to design reliable knowledge and reveal rules for this interactive story."

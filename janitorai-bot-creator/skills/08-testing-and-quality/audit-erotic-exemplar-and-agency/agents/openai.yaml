@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Erotic Exemplars and Agency"
+  short_description: "Audit erotic examples without flattening agency"
+  default_prompt: "Use $audit-erotic-exemplar-and-agency to review this erotic example for framing, agency, and fictional genre-logic issues."
