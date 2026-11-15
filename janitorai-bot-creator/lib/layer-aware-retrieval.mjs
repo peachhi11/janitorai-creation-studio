@@ -20,6 +20,7 @@ const STOP_WORDS = new Set([
   "into",
   "after",
   "before",
+  "between",
   "happened",
   "happen",
   "changed",
@@ -521,7 +522,9 @@ export function assembleWorkingContext(
   for (const candidate of ranked) {
     const item = byId.get(candidate.id);
     if (!item) continue;
-    const nextChars = chars + item.text.length;
+    // Budget the exact rendered context, including labels and separators.
+    const rendered = `[${candidate.layer}] ${item.text}`;
+    const nextChars = chars + rendered.length + (selected.length ? 2 : 0);
     if (selected.length >= maxItems || nextChars > maxChars) continue;
     selected.push({ ...candidate, text: item.text });
     chars = nextChars;
@@ -549,7 +552,10 @@ export function retrieveLayerAwareMemory(items, query, options = {}) {
         const itemTokens = normalisedTokens(item?.text || "");
         return (
           item?.layer === "episodic" &&
-          [...facets.eventTerms].some((term) => itemTokens.has(term))
+          (facets.eventTerms.size
+            ? [...facets.eventTerms].some((term) => itemTokens.has(term))
+            : facets.entityTerms.size === 0 ||
+              [...facets.entityTerms].some((term) => itemTokens.has(term)))
         );
       })
     : initial;

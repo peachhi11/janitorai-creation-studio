@@ -169,8 +169,8 @@ The current memory benchmark now reports the original keyword baseline beside
 a layer-aware candidate. The candidate classifies the query, filters invalid,
 out-of-scope, and blocked-authority entries, scores relevance plus layer match,
 validity, recency, and causal dependencies, and assembles a bounded working
-context. Temporal queries expand only an event-matched thread and return it in
-chronological order; evidence-bearing candidates expose their evidence IDs.
+context. Temporal queries expand an event-matched thread, or an entity-matched thread
+when no event keywords are supplied, and return it in chronological order; evidence-bearing candidates expose their evidence IDs.
 The candidate also returns `answerable`, `conflicting_evidence`, or
 `insufficient_evidence`, with the last status abstaining from context assembly.
 This is an evaluation candidate only; generation prompt wiring remains out of
@@ -190,3 +190,16 @@ baseline report, candidate bundle decisions supported by measurements, and a
 record of unresolved gaps. Provenance manifests and Studio prompt wiring begin
 only after those results identify which skills and memory slots should be
 integrated.
+
+### Action predictions and context budgets
+
+`runAgentEvaluationBenchmark` reads optional `action_predictions`, an array of
+independently recorded action strings in `action_pairs` order. The CLI accepts
+the path to that JSON array as its first argument. Predictions must contain one
+non-empty string per case; invalid arrays raise a `TypeError`. Missing predictions
+produce `status: "not_evaluated"` and `accuracy: null`, never a perfect score.
+Supplied predictions produce `status: "evaluated"` and accuracy against gold
+labels. The bundled fixture contains gold labels only; it does not call a model.
+
+Working-context `maxChars` and reported `chars` include layer labels and
+separators, so the rendered context itself stays within the character budget.

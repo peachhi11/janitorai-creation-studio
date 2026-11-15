@@ -45,14 +45,29 @@ export function replayWorldEvents(replay) {
   return { passed: matches, state, superseded: [...superseded] };
 }
 
-export function evaluateActionPairs(
-  pairs,
-  actions = pairs.map((pair) => pair.expected)
-) {
+export function evaluateActionPairs(pairs, actions) {
+  if (actions === undefined) {
+    return { cases: pairs.length, accuracy: null, status: "not_evaluated" };
+  }
+  if (
+    !Array.isArray(actions) ||
+    actions.length !== pairs.length ||
+    Array.from(actions).some(
+      (action) => typeof action !== "string" || !action.trim()
+    )
+  ) {
+    throw new TypeError(
+      "Action predictions must contain one non-empty string per case"
+    );
+  }
   const correct = pairs.filter(
     (pair, index) => actions[index] === pair.expected
   ).length;
-  return { cases: pairs.length, accuracy: ratio(correct, pairs.length) };
+  return {
+    cases: pairs.length,
+    accuracy: ratio(correct, pairs.length),
+    status: "evaluated",
+  };
 }
 
 function lower(value) {
@@ -113,7 +128,10 @@ export function runAgentEvaluationBenchmark(benchmark) {
     skillBundle: compareSkillBundles(benchmark.skill_bundle),
     judgePairs: evaluateJudgePairs(benchmark.judge_pairs),
     worldReplay: replayWorldEvents(benchmark.world_replay),
-    actionPairs: evaluateActionPairs(benchmark.action_pairs),
+    actionPairs: evaluateActionPairs(
+      benchmark.action_pairs,
+      benchmark.action_predictions
+    ),
     roleplayContract: evaluateRoleplayContract(benchmark.roleplay_contract),
     contextDivergence: evaluateContextDivergence(
       benchmark.evaluation_context_pairs

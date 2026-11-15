@@ -22,7 +22,7 @@ test("agent evaluation benchmark covers consolidation, replay, paired evaluation
   const report = runAgentEvaluationBenchmark(benchmark);
   assert.equal(report.skillBundle.passed, true);
   assert.equal(report.worldReplay.passed, true);
-  assert.equal(report.actionPairs.accuracy, 1);
+  assert.equal(report.actionPairs.accuracy, null);
   assert.equal(report.roleplayContract.passed, true);
   assert.equal(report.contextDivergence.accuracy, 1);
   assert.equal(report.multimodalIdentity.passed, true);
@@ -78,4 +78,52 @@ test("agent evaluation diagnostics detect regressions instead of hiding them", (
     ]).judgeAAccuracy,
     0
   );
+});
+
+test("action evaluation never substitutes gold answers for missing predictions", () => {
+  const benchmark = JSON.parse(readFileSync(fixturePath, "utf8"));
+  assert.equal(evaluateActionPairs(benchmark.action_pairs).accuracy, null);
+  assert.equal(
+    runAgentEvaluationBenchmark(benchmark).actionPairs.status,
+    "not_evaluated"
+  );
+  benchmark.action_predictions = ["wrong", "wrong", "wrong"];
+  assert.equal(runAgentEvaluationBenchmark(benchmark).actionPairs.accuracy, 0);
+  benchmark.action_predictions = ["yield", "wrong", "hold-boundary"];
+  assert.equal(
+    runAgentEvaluationBenchmark(benchmark).actionPairs.accuracy,
+    0.6667
+  );
+});
+
+test("action predictions must be a complete explicit array", () => {
+  const pairs = [{ expected: "yield" }];
+  for (const actions of [[], ["yield", "keep"], [null], {}, new Array(1)]) {
+    assert.throws(() => evaluateActionPairs(pairs, actions), /predictions/i);
+  }
+});
+
+test("benchmark CLI reads recorded predictions separately from gold labels", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const { mkdtempSync, writeFileSync, rmSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const directory = mkdtempSync(join(tmpdir(), "action-predictions-"));
+  const script = fileURLToPath(
+    new URL("../scripts/run-agent-evaluation-benchmark.mjs", import.meta.url)
+  );
+  try {
+    const path = join(directory, "actions.json");
+    writeFileSync(path, JSON.stringify(["wrong", "wrong", "wrong"]));
+    const report = JSON.parse(
+      execFileSync(process.execPath, [script, path], { encoding: "utf8" })
+    );
+    assert.equal(report.actionPairs.accuracy, 0);
+    const missing = JSON.parse(
+      execFileSync(process.execPath, [script], { encoding: "utf8" })
+    );
+    assert.equal(missing.actionPairs.status, "not_evaluated");
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
 });
