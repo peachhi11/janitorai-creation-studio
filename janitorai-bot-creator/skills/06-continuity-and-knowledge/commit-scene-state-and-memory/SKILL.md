@@ -1,73 +1,35 @@
 ---
 name: commit-scene-state-and-memory
-description: Convert a completed fictional scene or roleplay turn into a minimal, auditable state delta for characters, relationships, knowledge, objects, locations, and unresolved threads. Use when runtime memory must carry a scene forward, a parser has extracted events, or continuity breaks because changes are not committed consistently. Do NOT use to invent unplayed actions, overwrite player-owned choices, collapse belief into canon, or store every line as permanent memory.
+description: Use when converting a completed fictional scene or roleplay turn into a minimal state delta for characters, relationships, knowledge, objects, locations, and unresolved threads. Trigger phrases include “commit the scene state,” “update memory,” and “what changed this turn?”
 ---
 
-# Commit scene state and memory
+## Steps
 
-Treat a scene commit as a controlled delta, not a transcript dump or a rewrite
-of the story's truth.
+1. Record scene time, location, participants, viewpoint, and source text.
+2. Extract only played or explicitly established actions, speech, observations, choices, objects, injuries, promises, and relationship changes.
+3. Separate canon fact, character belief, rumour, inference, plan, and unresolved question.
+4. Record knowledge changes separately for {{char}}, {{user}}, NPCs, institutions, and narrator.
+5. Record object, location, access, resource, and relationship deltas with source and consequence.
+6. Preserve player-owned choices and do not infer unplayed action, consent, feeling, memory, or intention.
+7. Remove duplicates and reject unsupported or contradicted entries instead of silently canonising them.
+8. Add unresolved threads and the next dependency without turning the ledger into a rigid plot.
 
-**Action:** Extract consequential events, classify their truth layer and
-confidence, compare them with prior state, commit only supported changes, and
-leave ambiguous or player-owned outcomes unresolved.
+## Decision rules
 
-**Key point:** Memory should preserve what later scenes need, not everything the
-model happened to generate.
+- Yes: Was the event played or explicitly established? Commit it. No: mark it as a possibility or omit it.
+- Yes: Is a belief being stored as fact? Label the belief. No: continue.
+- Yes: Does an entry overwrite {{user}}’s choice or interiority? Remove it. No: continue.
+- Yes: Is the entry permanent when it is temporary or scene-local? Add scope and expiry. No: continue.
 
-**Why:** Small, explicit deltas reduce state drift while protecting uncertainty,
-improvisation, and player agency.
+## Output
 
-## Separate the layers
+- Format: `Scene state delta`
+- Scene: list time, place, participants, viewpoint, and source.
+- Facts: list committed actions, speech, observations, objects, injuries, promises, and changes.
+- Knowledge: list each actor’s new or changed knowledge and belief layers.
+- Threads: list unresolved questions, dependencies, scope, and expiry.
+- Rejected: list unsupported or player-owned events not committed.
 
-For each candidate update, label:
+## Stop when
 
-- world or story canon;
-- character observation, memory, belief, inference, or claim;
-- narrator or author plan;
-- player assertion or player-owned action;
-- runtime eligibility and unresolved possibility.
-
-Never promote a character's belief, an NPC rumour, a generated possibility, or a
-player bluff into world truth without an authored or played basis.
-
-## Extract the delta
-
-Record only changes to:
-
-- location, time, condition, injury, possession, or access;
-- goal, fear, promise, debt, boundary, or relationship state;
-- who witnessed, learned, inferred, forgot, believed, or concealed what;
-- object, faction, reputation, or institutional state;
-- unresolved thread, consequence due, or next pressure.
-
-For each entry include `source_scene`, `subject`, `before`, `after`,
-`truth_layer`, `confidence`, `author`, and `reversal_or_revision_path`. If no
-material state changed, record a deliberate no-op rather than manufacturing
-progress.
-
-## Commit safely
-
-1. Parse events in scene order.
-2. Check physical, temporal, knowledge, and ownership constraints.
-3. Deduplicate updates that describe the same event.
-4. Resolve direct contradictions only when a higher-authority source exists;
-   otherwise retain competing claims with confidence and provenance.
-5. Apply the smallest delta to the relevant records.
-6. Generate a human-readable change summary and regression checks for the next
-   scene.
-
-Make commits idempotent: replaying the same scene must not duplicate a debt,
-injury, reveal, object, or relationship change.
-
-## Preserve fictional genre logic
-
-A genre may permit prophecy, resurrection, retcons, memory alteration,
-metafictional bleed, or deliberately unreliable records. Treat these as
-authored state transitions with a stated cause, affected layer, perceivers, and
-consequence—not as permission for arbitrary runtime mutation.
-
-## Completion
-
-Return a state-delta table, rejected or unresolved candidates, updated memory
-records, player-owned boundaries, and a short next-scene continuity checklist.
+- No completed scene, turn, or state change is supplied: return `No scene-state update` and do not invent an event.

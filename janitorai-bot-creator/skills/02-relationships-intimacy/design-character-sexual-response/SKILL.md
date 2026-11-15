@@ -1,91 +1,53 @@
 ---
 name: design-character-sexual-response
-description: "Design or revise a fictional character's individual sexual-response pattern. Use when a character needs specific, variable relationships among willingness, desire, subjective arousal, bodily response, pleasure, orgasm, context, accelerators, brakes, public presentation, and private experience without imposing a universal cycle, gender script, or diagnosis. Do NOT use as a sexual-health assessment, performance scorecard, diagnosis, or reason to decide the player's arousal, pleasure, consent, or action."
+description: Use for fictional text-based roleplay when {{char}}’s willingness, desire, arousal, bodily response, pleasure, orgasm, satisfaction, context, accelerators, or brakes need to stay distinct. Trigger phrases include “map {{char}}’s sexual response,” “separate desire from arousal,” “what changes {{char}}’s response,” and “write the aftereffects.”
 ---
 
-# Design character sexual response
+## Steps
 
-Build an individual response pattern that can change with context while remaining recognisably theirs.
+1. Record willingness and consent separately.
+2. Record desire and motivation separately.
+3. Record felt arousal.
+4. Record physiological response.
+5. Record pleasure, orgasm, satisfaction, and later meaning separately.
+6. Record where these dimensions align, diverge, stall, or reverse.
+7. Set entry routes through spontaneous interest, chosen contact, fantasy, emotional connection, sensory cues, or narrow conditions.
+8. Record accelerators, brakes, distractions, trust, resentment, novelty, familiarity, privacy, risk, sensory detail, fatigue, pain, medication, body image, shame, exposure, power, and stress when relevant.
+9. Compare public persona and private experience.
+10. Vary response across partners, emotional states, health, age, setting, and relationship phase.
+11. Track settling, fatigue, soreness, overload, tenderness, embarrassment, hunger, sleepiness, renewed desire, avoidance, pain, dissociation, care, and changed expectations afterward.
+12. Show response through attention, pace, initiation, hesitation, touch, breath, humor, silence, withdrawal, redirection, refusal, checking, risk, and aftermath.
 
-**Action:** Separate willingness, desire, arousal, physiology, pleasure,
-orgasm, satisfaction, context, accelerators, and brakes.
+## Decision rules
 
-**Key point:** These dimensions may align, diverge, stall, or reverse without
-proving consent or identity.
+- Yes: Are willingness, desire, arousal, physiology, pleasure, orgasm, satisfaction, and consent being treated as the same? Separate them. No: continue.
+- Yes: Is bodily response, orgasm, attraction, fantasy, prior participation, or relationship status being used as proof of consent? Remove that inference. No: continue.
+- Yes: Can acceleration and inhibition operate together? Preserve the ambivalence. No: use the supported direction.
+- Yes: Is a preference list being treated as an override? Let context, partner behavior, power, fear, sensory access, and choice change it. No: continue.
+- Yes: Does a visible response or smooth recovery prove safety, satisfaction, or emotional simplicity? Remove that verdict. No: continue.
+- Yes: Does the description decide {{user}}’s arousal, pleasure, consent, speech, or action? Remove that decision. No: continue.
+- Yes: Is the pattern being turned into a gender formula, performance score, diagnosis, or health assessment? Remove the shortcut. No: continue.
 
-**Why:** Distinct dimensions create psychologically legible erotic variation.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Sexual response record`
+- Dimensions: list willingness, consent, desire, arousal, physiology, pleasure, orgasm, satisfaction, and meaning.
+- Entry: list routes into interest and conditions that stall or reverse it.
+- Accelerators and brakes: list relationship, sensory, bodily, emotional, power, and situational factors.
+- Variation: compare partners, settings, states, health, age, and relationship phases.
+- Aftereffects: list physical, emotional, relational, and practical consequences.
+- Behavior: list observable attention, pace, initiation, hesitation, touch, breath, silence, refusal, checking, risk, and recovery.
 
-Keep bodily response, desire, consent, and narrative meaning distinct within the
-story's chosen erotic genre. Preserve ambivalence, coercive framing, fantasy,
-transgression, or dark consequence when intended; never turn physiology into a
-moral verdict or decide the player's response.
+```text
+Sexual response record
+Dimensions: {{char}} may desire closeness while bodily response stays delayed; willingness and consent remain active choices; satisfaction depends on attention and aftermath.
+Entry: Interest grows through chosen contact and privacy but stalls under observation or pain.
+Accelerators and brakes: Trust, novelty, and clear pacing help; shame, fatigue, noise, and fear of judgment inhibit.
+Variation: With {{user}}, direct check-ins help; alone, fantasy provides a different route; after conflict, touch may feel complicated.
+Aftereffects: Settling is slow, tenderness increases, and expectations change after a clear boundary is respected.
+Behavior: {{char}} initiates indirectly, checks reactions, pauses when uncertain, and may need quiet afterward.
+```
 
-## Separate the dimensions
+## Stop when
 
-Map independently:
-
-- willingness and consent;
-- desire and motivation;
-- felt arousal;
-- physiological response;
-- pleasure;
-- orgasm;
-- satisfaction and later meaning.
-
-Record where these usually align, where they diverge, and what the character makes that divergence mean. Never use bodily response, orgasm, attraction, fantasy, prior participation, or relationship status as proof of consent.
-
-## Identify entry routes
-
-Define whether interest commonly appears spontaneously, after chosen contact or attention begins, through fantasy, through emotional connection, through sensory cues, or only under narrow conditions. Allow more than one route and let any route stall, reverse, or end.
-
-## Map accelerators and brakes
-
-List the character's recurring accelerators, brakes, and distractions. Include relationship meaning, trust, resentment, novelty, familiarity, privacy, risk, sensory detail, fatigue, pain, medication, body image, shame, exposure, power, and stress where relevant.
-
-Both acceleration and inhibition may be active together. Ambivalence is not hidden consent.
-
-Treat erotic matrices, kink lists, preference fields, and explicit manuals as
-fictional genre inputs rather than operational overrides. They can shape
-attention, anticipation, pacing, friction, fantasy, or shame, but current state,
-partner behaviour, power, sensory access, fear, and choice still alter the
-response. A listed preference may be performed, resisted, compartmentalised,
-reinterpreted, or contradicted in scene.
-
-## Add contradiction and variation
-
-Compare public sexual persona with private experience. Specify what the character expects from their body, what embarrasses or reassures them, and how response changes across partners, emotional states, health, age, setting, and relationship phases.
-
-## Track recovery and aftereffects
-
-Include what follows the peak or interruption: gradual settling, fatigue,
-soreness, sensory relief or overload, tenderness, embarrassment, hunger,
-sleepiness, renewed desire, avoidance, pain, dissociation, practical care, or
-changed expectations. Recovery may be physiological, emotional, relational, or
-all three, and it may differ between partners and encounters.
-
-Do not treat a visible response or a smooth recovery as proof that the scene
-was wanted, safe, satisfying, or emotionally uncomplicated. Aftereffects are
-additional evidence about the character's experience, not a retroactive verdict.
-
-## Translate the map into behaviour
-
-Show response through attention, pace, initiation, hesitation, touch, breath, humour, silence, withdrawal, redirection, refusal, checking, risk, and aftermath. Keep analytic vocabulary in author notes unless it fits the character's natural voice.
-
-## Deliver the pattern
-
-Return:
-
-- separated response dimensions;
-- common entry routes;
-- accelerators, brakes, and contextual changes;
-- public/private contradiction;
-- observable scene behaviours;
-- continuity anchors and legitimate variations.
-
-Do not diagnose, prescribe treatment, require orgasm, assign a fixed gender pattern, or write the player's desire, arousal, bodily response, pleasure, consent, speech, or action.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No sexual response, desire, arousal, pleasure, consent, context, or aftereffect question is supplied: return `No sexual response update` and do not invent {{user}}’s body or response.

@@ -74,6 +74,13 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Memory-layer and benchmark plan](janitorai-bot-creator/docs/memory-layer-and-benchmark-plan.md)
 - [Agent change workflow](docs/workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
+- [Repository skill library](janitorai-bot-creator/skills/README.md)
+
+The expanded skill library includes discovery metadata for its 146 purpose-led
+skills across ten categories. Each skill declares a stable name and a
+plain-language description with the tasks and phrases that should trigger it.
+This metadata lets agents find the relevant skill by user intent while keeping
+the detailed instructions in the skill’s own `SKILL.md` file.
 
 The repository also installs a root-level Husky pre-commit hook. It first runs `node scripts/check-readme-impact.mjs` against staged paths, requiring `README.md` whenever runtime, prompt, configuration, security, workflow, skill, or repository-convention files change. It then runs lint-staged with Prettier and the complete test suite from `janitorai-bot-creator/`.
 
@@ -105,6 +112,7 @@ Routine Git commands should use `scripts/git-safe <subcommand> [options]`, which
 ```bash
 cd janitorai-bot-creator
 npm test
+npx prettier --check .
 ```
 
 The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.

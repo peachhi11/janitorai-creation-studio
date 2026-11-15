@@ -31,15 +31,22 @@ function responseDouble() {
 
 test("request guard rejects malformed and oversized content lengths", () => {
   const tooLarge = responseDouble();
+  let tooLargeResumed = false;
   assert.equal(
     rejectOversizedRequest(
-      { headers: { "content-length": "2048" } },
+      {
+        headers: { "content-length": "2048" },
+        resume() {
+          tooLargeResumed = true;
+        },
+      },
       tooLarge,
       1024
     ),
     true
   );
   assert.equal(tooLarge.headers.status, 413);
+  assert.equal(tooLargeResumed, true);
 
   const malformed = responseDouble();
   assert.equal(
@@ -80,8 +87,8 @@ test("request guard rejects chunked bodies after the streaming cap is crossed", 
       listeners.delete(event);
       return this;
     },
-    destroy() {
-      this.destroyed = true;
+    resume() {
+      this.resumed = true;
     },
     resume() {
       this.resumed = true;

@@ -1,53 +1,55 @@
 ---
 name: design-masking-and-burnout
-description: Design masking, disclosure, camouflaging, burnout, shutdown and recovery cycles for fictional neurodivergent characters. Use when a character performs normality, hides traits, reaches an energy limit, needs to withdraw, or changes how they present, without treating masking or burnout as diagnosis or destiny. Do NOT use to diagnose a real person, prescribe treatment, or declare that concealment or disclosure is universally right.
+description: Use for text-based roleplay when {{char}} performs normality, hides traits, reaches an energy limit, shuts down, withdraws, or changes how they present. Trigger phrases include “show {{char}} masking,” “write the burnout cycle,” “what does {{char}} look like when depleted,” and “make disclosure conditional.”
 ---
 
-# Design masking and burnout
+## Steps
 
-## Map the cycle
+1. Record the demand, audience, and feared consequence.
+2. Record what {{char}} edits, suppresses, copies, rehearses, or discloses.
+3. Record the immediate protection or benefit.
+4. Record the energy cost and delayed residue.
+5. Record early signs of depletion.
+6. Set the cycle from sustained demand to narrowing capacity, withdrawal or shutdown, rest or accommodation, and changed baseline.
+7. Keep pleasure, agency, humor, desire, and specific interests present when capacity is low.
+8. Record how masking protects employment, privacy, safety, status, intimacy, or belonging.
+9. Record how concealment affects processing, irritability, sensory pain, shutdown, and access to regulation.
+10. Set what makes unmasking safe or unsafe.
+11. Record recovery conditions and changed limits or boundaries.
+12. Add scene tests for safe, unsafe, public, private, and high-demand contexts.
 
-**Action:** Record the demand, audience and feared consequence; what the character edits,
-suppresses, copies, rehearses or discloses; the immediate gain; the energy
-cost; delayed residue; early signs of depletion; recovery conditions; and what
-makes unmasking safe or unsafe.
+## Decision rules
 
-**Key point:** Masking may be deliberate, habitual or automatic. Do not make disclosure
-automatically virtuous or concealment automatically deceptive.
+- Yes: Is masking deliberate, habitual, automatic, or mixed? Record the supported combination. No: mark the pattern uncertain.
+- Yes: Does concealment protect {{char}} in one setting and exhaust them in another? Show both effects. No: keep the single supported effect.
+- Yes: Is disclosure being treated as automatically virtuous? Add safety, power, audience, and consequences. No: continue.
+- Yes: Is concealment being treated as automatically deceptive? Record its function and limits. No: continue.
+- Yes: Is burnout being treated as {{char}}’s identity? Model changing capacity, recovery, and residue. No: continue.
+- Yes: Is recovery being forced to restore the old baseline? Allow changed limits and new boundaries. No: continue.
+- Yes: Is {{char}}’s low capacity being used to remove agency, humor, desire, or interests? Restore the remaining behavior. No: continue.
 
-**Why:** The same behaviour can protect safety in one setting and exhaust the
-character in another.
+## Output
 
-## Write burnout without flattening the character
+- Format: `Masking and burnout record`
+- Demand: list pressure, audience, feared consequence, and stakes.
+- Masking: list what {{char}} edits, copies, suppresses, rehearses, or discloses.
+- Protection: state the short-term gain.
+- Cost: state energy cost, delayed residue, and early depletion signs.
+- Cycle: describe sustained demand, narrowing capacity, shutdown or withdrawal, recovery, and changed baseline.
+- Safety: list settings where disclosure or unmasking is safe, risky, or conditional.
+- Scene tests: list observable signs in contrasting contexts.
 
-Use a threshold or cycle: sustained demands, narrowing capacity, withdrawal or
-shutdown, rest and accommodation, then a changed baseline. Burnout is not a
-personality and has no universal timetable. Keep pleasure, agency, humour,
-desire and specific interests present even when capacity is low.
+```text
+Masking and burnout record
+Demand: A crowded workplace requires {{char}} to maintain eye contact, small talk, and rapid responses.
+Masking: {{char}} rehearses phrases, copies coworkers’ timing, and hides sensory pain.
+Protection: The performance protects employment and privacy.
+Cost: Delayed processing, irritability, and loss of access to music that usually helps.
+Cycle: Sustained demand narrows capacity; {{char}} goes quiet after work; rest restores some capacity but leaves a lower baseline.
+Safety: Unmasking is safer with {{user}} in private and unsafe around a supervisor.
+Scene tests: A busy office, a silent train ride, and a private conversation after rest.
+```
 
-Distinguish performance cost from moral deception. A character may camouflage
-to keep employment, privacy, safety, status, intimacy, or belonging, then pay for
-it through delayed processing, irritability, sensory pain, shutdown, or loss of
-access to what normally regulates them. Recovery is not automatically a return
-to the old baseline; it can reveal changed limits, new boundaries, or a decision
-to stop performing for a particular audience.
+## Stop when
 
-Return a masking/burnout loop with observable signs, social misreadings,
-short-term protection, long-term cost, recovery conditions and scene tests for
-safe and unsafe contexts.
-
-## Guardrails
-
-| Temptation                   | Binding rule                                               |
-| ---------------------------- | ---------------------------------------------------------- |
-| Treat burnout as identity    | Model a changing capacity cycle with recovery and residue. |
-| Reward forced authenticity   | Track safety, power, audience and consequences.            |
-| Explain instead of dramatise | Use behaviour, timing, sensory load and aftermath.         |
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No masking, energy limit, shutdown, burnout, disclosure, or recovery problem is supplied: return `No masking and burnout update` and do not invent {{char}}’s state.

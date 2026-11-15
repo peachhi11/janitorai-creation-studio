@@ -1,62 +1,35 @@
 ---
 name: shape-scene-rhythm-and-pacing
-description: Shape fictional scene rhythm, paragraph movement, escalation, compression, and release so prose has momentum without rushing or padding. Use when a scene feels flat, breathless, repetitive, over-dramatised, or stalled; when paragraph and sentence rhythm should carry emotion; or when an intimate or interactive scene needs slow-burn timing. Do NOT use to impose uniform paragraph lengths, turn every moment into a fully dramatised scene, or accelerate a player's character into a reaction.
+description: Use when shaping fictional scene rhythm, paragraph movement, escalation, compression, release, or slow-burn timing around {{char}} and {{user}}. Trigger phrases include “fix the pacing,” “make this less breathless,” and “slow the scene without padding it.”
 ---
 
-# Shape scene rhythm and pacing
+## Steps
 
-Pacing is the reader's experience of time, pressure, attention, and change—not
-just short sentences or more events.
+1. State the scene’s pressure, desired tempo, emotional turn, viewpoint, and endpoint.
+2. Mark action, perception, thought, dialogue, pause, transition, escalation, and release beats.
+3. Compress repeated information and expand moments where attention, choice, or consequence changes.
+4. Vary sentence length, paragraph size, silence, interruption, and sensory focus with the scene’s pressure.
+5. Use delay, interruption, withholding, or acceleration only when it changes tension or knowledge.
+6. Let bodies, setting, dialogue, and relationship shifts carry rhythm together.
+7. Preserve time for {{user}}’s response instead of accelerating {{user}} into a reaction.
+8. End with a changed state, open pressure, pause, or consequence rather than a generic crescendo.
 
-**Action:** Map the scene's entry state, pressure beats, pauses, compression,
-turn, exit state, and sentence or paragraph rhythm; revise only where each
-change serves the intended experience.
+## Decision rules
 
-**Key point:** A scene needs movement or meaningful reorientation, but movement
-can be a changed interpretation, withheld answer, or altered relationship.
+- Yes: Is the scene flat? Add a change in pressure, attention, knowledge, or choice. No: continue.
+- Yes: Is it breathless? Add a pause, concrete beat, or transition. No: continue.
+- Yes: Is it padded? Cut repetition and description without a job. No: continue.
+- Yes: Are paragraph lengths being made uniform? Vary them by function. No: continue.
+- Yes: Does pacing decide {{user}}’s reaction? Leave time and choice open. No: continue.
 
-**Why:** Rhythm lets prose control anticipation, intimacy, dread, relief, and
-emotional aftershock without confusing speed with intensity.
+## Output
 
-## Map the scene
+- Format: `Scene rhythm revision`
+- Diagnosis: state pressure, tempo problem, and desired turn.
+- Beat map: list action, perception, thought, dialogue, pause, escalation, and release.
+- Revision: provide the reshaped scene or passage.
+- Timing: list compression, expansion, pauses, and open player turns.
 
-Record:
+## Stop when
 
-- what each participant wants on entry;
-- the immediate obstacle, uncertainty, or pressure;
-- the beats that change access, knowledge, power, distance, or desire;
-- where to linger for sensory, emotional, or relational significance;
-- what to compress, summarise, or skip;
-- the exit condition and residue.
-
-A scene may be quiet if something changes. A beautiful exchange with no shift
-may be atmosphere or setup rather than a complete scene; decide deliberately.
-
-## Tune the page
-
-Use sentence length, syntax, paragraph breaks, repetition, white space, sound,
-and action-to-reflection ratio to shape attention. Vary them purposefully rather
-than mechanically. A one-word paragraph, long sentence, fragment, or silence is
-effective only when its pressure earns the space.
-
-Apply “show” selectively: dramatise moments whose emotional or dramatic weight
-needs to be experienced, and tell connective material, transitions, or known
-background when summary is clearer. Do not replace every feeling with a bodily
-symptom or every movement with a staged beat.
-
-For slow-burn intimacy, let physical, emotional, informational, and relational
-timelines diverge when the characters' history and the genre support it. Do not
-use pacing as a reason to force a response from the player.
-
-## Fictional genre logic
-
-Tone and genre determine what counts as earned speed, delay, coincidence, and
-release. Horror may prolong uncertainty, comedy may snap into reversal, erotica
-may dwell on anticipation, and surreal fiction may break ordinary chronology.
-Keep the governing rule and consequence visible enough that variation feels
-intentional rather than accidental.
-
-## Completion
-
-Return a scene-rhythm map with entry and exit states, pressure beats, linger/
-compress decisions, paragraph or sentence interventions, and a continuity check.
+- No scene, pacing issue, or rhythm goal is supplied: return `No pacing update` and do not invent {{user}}’s reaction.

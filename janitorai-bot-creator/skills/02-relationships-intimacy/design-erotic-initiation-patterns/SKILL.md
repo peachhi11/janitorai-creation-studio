@@ -1,65 +1,50 @@
 ---
 name: design-erotic-initiation-patterns
-description: Design fictional erotic invitations, first moves, and escalation patterns with character-specific desire, readable uncertainty, negotiated boundaries, and consequences. Use for intimate scenes, roleplay setup, seduction attempts, established-couple reconnection, or translating initiation advice into dark fiction without treating attraction or arousal as consent. Do NOT use as a universal seduction formula, real-world sexual advice, or a demand that fictional relationships become healthy.
+description: Use for fictional text-based roleplay when {{char}} makes an erotic invitation, first move, or escalation attempt and desire, willingness, agreement, uncertainty, boundaries, and aftermath need to stay distinct. Trigger phrases include “write {{char}}’s initiation,” “how does {{char}} make a move,” “show the invitation,” and “what happens after the refusal?”
 ---
 
-# Design erotic initiation patterns
+## Steps
 
-Design an attempt to create an opening, not a guaranteed route to sex. Keep desire, willingness, agreement, and relationship meaning distinct.
+1. Record {{char}}’s immediate want, longer want, fear, and theory of what may work.
+2. Record relationship history, agreements, mood, privacy, time, substance use, and exits.
+3. Record what each person can observe and what remains uncertain.
+4. Classify the beat as mutual play, test, apology, reunion, power move, manipulation, or coercion.
+5. Choose the smallest action being invited.
+6. Build atmosphere or invitation, specific low-stakes contact, active response, confirmation or pause, and only then any accepted escalation.
+7. Show the changed relationship state and residue.
+8. Choose a character-shaped mechanism such as humor, gift, ritual, direct language, proximity, reunion, vulnerability, or established power exchange.
+9. Give the mechanism limits and costs.
 
-**Action:** Map motive, available readings, the smallest invitation, and
-aftermath.
+## Decision rules
 
-**Key point:** Contextual consent beats are scene logic, not a repeated checklist
-or proof that the relationship is morally safe.
+- Yes: Is silence, arousal, prior sex, flirtation, entering a room, laughter, or physical response being treated as agreement? Remove that inference. No: continue.
+- Yes: Is there an active response to the invitation? Use it. No: pause, redirect, or stop.
+- Yes: Is a refusal treated as a puzzle to defeat? Make it an event with consequences. No: continue.
+- Yes: Is escalation within what was accepted? Continue. No: stop or renegotiate.
+- Yes: Are gender rules, polarity claims, or seduction formulas being treated as narrator truth? Reframe them as a character belief or sales pitch. No: continue.
+- Yes: Does the description decide {{user}}’s desire, arousal, consent, speech, action, or response? Remove that decision. No: continue.
+- Yes: Is manipulation, obsession, dominance, or predation intentional? Preserve it while showing choice, understanding, resistance, exposure, and aftermath. No: use the selected tone.
 
-**Why:** Character-specific openings preserve erotic rhythm while keeping
-uncertainty legible.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Erotic initiation record`
+- Intent: list immediate want, longer want, fear, and theory.
+- Context: list history, agreements, mood, privacy, time, substances, exits, and uncertainty.
+- Beat map: list setup, invitation, response, next option, boundary or stop condition, and consequence.
+- Mechanism: state why the invitation fits {{char}} and its limits.
+- Ambiguity: list two alternate readings when the response is unclear.
+- Agency: state what {{user}} may accept, redirect, pause, or refuse.
 
-An invitation can function as seduction, threat, ritual, manipulation, comedy,
-or transgression within the chosen genre. Preserve the intended charge and
-consequences without treating the pattern as real-world seduction advice or
-forcing a healthy outcome.
+```text
+Erotic initiation record
+Intent: {{char}} wants closeness and fears direct rejection.
+Context: The scene is private; an earlier agreement permits flirting but not surprise escalation; {{user}} can leave easily.
+Beat map: A private joke → an offered hand → active response → pause for confirmation → accepted next step or stop → changed trust.
+Mechanism: {{char}} uses a remembered ritual because it feels less exposing than a direct request.
+Ambiguity: The pause may be caution or uncertainty; the smile may be amusement or invitation, so {{char}} waits for a clear response.
+Agency: {{user}}’s next action remains open.
+```
 
-## Map the moment
+## Stop when
 
-Record:
-
-- initiator's immediate want, longer want, fear, and theory of what might work;
-- relationship history, prior agreements, current mood, privacy, time, substance use, and exit routes;
-- what each person can observe and what remains uncertain;
-- whether the beat is mutual play, a test, an apology, a reunion, a power move, manipulation, or a coercive act;
-- the smallest action being invited before any escalation.
-
-Do not import a source's gender rules, polarity claims, or “engine” metaphors as narrator truth. They may belong to a character's worldview, sales pitch, or self-deception.
-
-## Build an escalation ladder
-
-Use observable, interruptible steps:
-
-1. create atmosphere or make an invitation;
-2. offer a specific low-stakes contact or verbal proposition;
-3. wait for an active response rather than reading silence or arousal as agreement;
-4. confirm, redirect, pause, or stop;
-5. escalate only within what was accepted;
-6. show the changed relationship state and residue.
-
-Let a response be enthusiastic, cautious, distracted, strategic, amused, frightened, ambiguous, or absent. A refusal is an event, not a puzzle to defeat.
-
-## Choose a character-shaped mechanism
-
-Possible mechanisms include a remembered pleasure, playful roleplay, humour, a gift or ritual, direct language, charged proximity, a private joke, reunion, vulnerability, or a power-exchange cue already established between them. Give the mechanism costs and limits. Touch, restraint, shock, jealousy, intoxication, surprise, public pressure, and sexual display require explicit context and may be unsafe or unwelcome.
-
-## Preserve fiction and agency
-
-Allow erotic darkness, manipulation, obsession, dominance, or morally bad choices when requested, but show whose choice it is, what the target understands, what they can resist, and what exposure or aftermath follows. Never let a character's arousal, prior sex, flirtation, entering a room, laughter, or physical response settle consent by itself. Keep the player or viewpoint character's actions open when they own them.
-
-## Completion
-
-Return a compact beat map: intent → setup → invitation → observable response → next option → boundary or stop condition → consequence. Add two alternate readings when the response is ambiguous.
-
-Preserve manipulation, obsession, dominance, or predation when authored. Do not
-assign the player's response or convert refusal into an invitation to try
-harder.
+- No erotic invitation, initiation, escalation, boundary, or response problem is supplied: return `No erotic initiation update` and do not invent {{user}}’s desire or consent.

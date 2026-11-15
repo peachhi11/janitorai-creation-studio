@@ -1,81 +1,51 @@
 ---
 name: build-disclosure-and-reciprocity-dynamics
-description: Build or revise fictional relationship dynamics through self-disclosure, privacy, responsiveness, and reciprocity. Use when characters reveal, withhold, deflect, overshare, test trust, match or mismatch intimacy, move from impression management toward being known, or change a relationship through the timing and handling of personal information. Do NOT use to equate disclosure with health, create entitlement to intimacy, or force reciprocal vulnerability in fictional relationships.
+description: Use for text-based roleplay when {{char}} or {{user}} reveals, withholds, deflects, overshares, tests trust, mismatches intimacy, or changes a relationship through personal information. Trigger phrases include “what should {{char}} disclose,” “track the trust boundary,” “write the uneven vulnerability,” and “show the cost of sharing this.”
 ---
 
-## Narrative Intention and fictional genre logic
+## Steps
 
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+1. Set the topic’s breadth and depth.
+2. Set the kind of information, such as fact, preference, judgment, feeling, need, shame, desire, plan, or risk.
+3. Set its valence, recipient, purpose, and cost.
+4. Set each character’s current boundary.
+5. Record what earns movement toward disclosure.
+6. Record what causes retreat.
+7. Choose whether the response matches, acknowledges, helps practically, delays, deflects, declines, sets a boundary, exploits, exposes, minimizes, or weaponizes the disclosure.
+8. Track disclosure or refusal, interpretation, response, immediate consequence, revised trust, and next boundary.
+9. Let breadth and depth change at different rates.
+10. Render the change through diction, timing, omissions, jokes, corrections, euphemisms, practical details, and failed attempts.
 
-# Build disclosure and reciprocity dynamics
+## Decision rules
 
-Make intimacy a changing interaction, not a confession quota.
+- Yes: Is disclosure being treated as automatically healthier, more honest, or more loving? Remove that assumption. No: continue.
+- Yes: Does sharing create entitlement to history, affection, forgiveness, sex, or contact? Remove the entitlement. No: continue.
+- Yes: Is privacy automatically being treated as deception? Record its function and evidence. No: continue.
+- Yes: Is the disclosure strategic, inaccurate, impulsive, coerced, or mistaken? Label the supported state. No: treat it as intentional sharing.
+- Yes: Can {{user}} decline a disclosure prompt? Preserve that choice without punishment. No: continue.
+- Yes: Does the relationship change through information, trust, access, or leverage? Track the change. No: keep the boundary unchanged.
+- Yes: Is the language therapist-like without fitting the speaker? Rewrite it in {{char}}’s or {{user}}’s voice. No: continue.
 
-**Action:** Map what can be shared, the current boundary, the purpose and cost,
-and the response that changes the next boundary.
+## Output
 
-**Key point:** Privacy, strategic disclosure, and asymmetrical reciprocity can
-all be meaningful without becoming a moral lesson.
+- Format: `Disclosure and reciprocity record`
+- Topic map: list breadth, depth, kind, valence, recipient, purpose, and cost.
+- Boundary: state what {{char}} and {{user}} currently share, protect, or refuse.
+- Response: state how each disclosure or refusal is handled.
+- Loop: track disclosure, interpretation, response, consequence, trust, and next boundary.
+- Voice: show timing, wording, omissions, and practical behavior.
+- Agency: state what each person may accept, decline, delay, or keep private.
 
-**Why:** Disclosure becomes dramatic when information changes access, trust, or
-leverage rather than merely filling a checklist.
+```text
+Disclosure and reciprocity record
+Topic map: {{char}} can share the fact of the missing record but not its source; the information is risky and shared to test discretion.
+Boundary: {{user}} may ask one direct question; {{char}} may decline the rest.
+Response: {{user}} acknowledges without matching; {{char}} offers practical help instead of deeper history.
+Loop: Partial disclosure → {{user}} suspects there is more → careful acknowledgment → trust grows slightly but the boundary stays.
+Voice: {{char}} corrects one word, jokes once, and leaves a long pause before the answer.
+Agency: Neither person owes further disclosure, forgiveness, sex, or continued contact.
+```
 
-## Map what can be shared
+## Stop when
 
-For each character, sort possible disclosure by:
-
-- **breadth:** how many parts of life are open;
-- **depth:** how personally consequential the material is;
-- **kind:** fact, preference, judgement, feeling, need, shame, desire, plan, or risk;
-- **valence:** welcome, painful, ambivalent, or threatening;
-- **recipient:** who may know and who must not;
-- **purpose:** connection, support, explanation, warning, testing, control, relief, or necessity;
-- **cost:** embarrassment, danger, obligation, loss of status, or loss of privacy.
-
-Do not assume that more disclosure is always healthier, more honest, or more loving.
-
-## Set the current boundary
-
-Choose the character's present limit for each important topic. Identify what earns movement: time, demonstrated discretion, shared risk, practical care, apology, crisis, similarity, or a direct question. Also identify what causes retreat: ridicule, pressure, gossip, unwanted advice, premature interpretation, betrayal, or a mismatched response.
-
-Privacy is not automatically deception. Disclosure can also be strategic, inaccurate, impulsive, coerced, or sincerely mistaken.
-
-## Design reciprocity without debt
-
-A response may:
-
-- match the depth or topic;
-- acknowledge without matching;
-- offer practical help instead of personal information;
-- delay, deflect, or decline;
-- set a boundary;
-- exploit, expose, minimise, or weaponise what was shared.
-
-Reciprocity can build responsiveness, but it never creates entitlement to another person's history, affection, forgiveness, sex, or continued contact. Never punish a player for declining a disclosure prompt.
-
-## Track relationship movement
-
-Use:
-
-**disclosure or refusal → interpretation → response → immediate consequence → revised trust and next boundary.**
-
-Let breadth and depth change at different rates. Sudden intimacy may create closeness, alarm, obligation, or false familiarity. Long relationships may contain fewer new facts but more consequential judgements and needs. Deteriorating relationships may narrow their topics while making the remaining exchanges sharper.
-
-## Keep voice natural
-
-Render disclosure through the character's diction, timing, omissions, jokes, corrections, euphemisms, practical details, or failed attempts. Characters need not explain why they are opening up. Avoid therapist-like validation scripts unless that language fits the person and setting.
-
-## Deliver the dynamic
-
-Return:
-
-- a topic-by-topic disclosure map for each character;
-- present limits, costs, and trust conditions;
-- likely matching and mismatching responses;
-- one or more disclosure loops with relationship consequences;
-- coercion, privacy, or player-agency boundaries;
-- scene beats that show the change without clinical exposition.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No disclosure, privacy, reciprocity, trust boundary, or personal-information problem is supplied: return `No disclosure and reciprocity update` and do not invent {{char}}’s or {{user}}’s disclosure.

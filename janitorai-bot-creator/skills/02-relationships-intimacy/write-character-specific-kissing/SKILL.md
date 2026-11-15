@@ -1,65 +1,46 @@
 ---
 name: write-character-specific-kissing
-description: "Write or revise fictional kisses as character-specific social and embodied interactions. Use for first kisses, familiar kisses, affectionate or erotic kissing, reconciliation, parting, deception, mismatch, escalation, withdrawal, sensory pacing, hand placement, reciprocal leadership, or roleplay scenes that must preserve consent and player sovereignty. Do NOT use to infer consent from stillness or arousal, write the player's response, or turn kissing into a universal technique list."
+description: Use for fictional text-based roleplay when a kiss between {{char}} and {{user}} needs specific meaning, permission, pacing, sensory detail, leadership, mismatch, withdrawal, escalation, or aftermath. Trigger phrases include “write the kiss,” “make the kiss character-specific,” “show the first kiss,” and “what does the kiss mean?”
 ---
 
-# Write character-specific kissing
+## Steps
 
-Give each kiss a purpose, physical grammar, and consequence rather than assembling named moves.
+1. Record what the kiss means to each character now.
+2. Establish permission through prior agreement, a direct invitation, or unmistakably reciprocal participation.
+3. Set approach, distance, first contact, pressure, duration, breath, moisture, pace, rhythm, head angle, hands, alignment, interruption, sound, taste, scent, temperature, texture, and setting.
+4. Record who leads, follows, pauses, withdraws, returns, or redirects.
+5. Trace contact, response, interpretation, maintain, vary, pause, redirect, or stop.
+6. Let rhythm, nerves, context, mismatch, laughter, distraction, or preference affect the kiss.
+7. Keep touch elsewhere, restraint, biting, marks, and movement under clothing as separate escalation.
+8. Show the interaction through choice, timing, body, sparse dialogue, and aftermath.
 
-**Action:** Establish meaning, permission, viewpoint, physical grammar, response,
-and consequence.
+## Decision rules
 
-**Key point:** A kiss can be affectionate, deceptive, coercive, awkward,
-rejected, or unresolved; contextual permission is not a checklist performance.
+- Yes: Is permission clear from agreement, invitation, or reciprocal participation? Continue. No: pause or ask; do not use stillness, surprise, or lack of resistance as consent.
+- Yes: Does consent to kissing imply consent to sex or further touch? Treat escalation as a new choice. No: continue.
+- Yes: Can a kiss be affectionate, deceptive, coercive, awkward, rejected, or unresolved? Preserve the selected meaning. No: use the supported meaning.
+- Yes: Does one person’s response change the next beat? Show the adjustment. No: add the missing response or pause.
+- Yes: Is a mismatch being treated as one person being objectively bad? Show nerves, context, preference, or incompatibility. No: continue.
+- Yes: Does the description write {{user}}’s touch, response, desire, consent, speech, or action? Remove that decision. No: continue.
 
-**Why:** Purpose and rhythm make the kiss character-specific.
+## Output
 
-## Establish meaning and permission
+- Format: `Character-specific kiss record`
+- Meaning: list stakes and meaning for {{char}} and {{user}} separately.
+- Permission: state the agreement, invitation, reciprocal participation, boundary, and escalation limit.
+- Physical grammar: list approach, contact, pressure, pace, breath, hands, alignment, leadership, senses, and setting.
+- Feedback: trace contact, response, interpretation, adjustment, pause, redirect, stop, and aftermath.
+- Voice: state the sparse dialogue, timing, body, imperfection, contradiction, and continuity.
 
-Define what the kiss means to each character now: affection, curiosity, assessment, reassurance, apology, farewell, claim, distraction, provocation, desire, or something else. Establish permission through prior agreement, a direct invitation, or unmistakably reciprocal participation. Confirm ambiguity instead of treating stillness, surprise, or lack of resistance as consent.
+```text
+Character-specific kiss record
+Meaning: {{char}} wants reassurance; {{user}} may read the kiss as apology, desire, or something else.
+Permission: A direct invitation allows the kiss; further touch remains undecided; either person can pause.
+Physical grammar: {{char}} approaches slowly, waits, begins lightly, and lets {{user}}’s observable response change the rhythm.
+Feedback: A laugh breaks the rhythm; {{char}} pauses rather than treating it as rejection or consent.
+Voice: “Is this still okay?” keeps the scene open; the aftermath changes trust without deciding {{user}}’s feelings.
+```
 
-## Build the physical grammar
+## Stop when
 
-Select only the details the viewpoint character would notice:
-
-- approach, distance, and first point of contact;
-- pressure, duration, breath, moisture, pace, and rhythm;
-- head angle, hands, body alignment, and interrupted contact;
-- who leads, follows, pauses, withdraws, returns, or redirects;
-- sound, taste, scent, temperature, texture, and setting where relevant.
-
-Treat hands elsewhere on the body, restraint, biting, marks, and movement under clothing as separate escalation—not an automatic part of consent to kiss.
-
-## Make response change the kiss
-
-Use a loop:
-
-**contact → response → interpretation → maintain, vary, pause, redirect, or stop.**
-
-Let partners fall out of rhythm, bump teeth, laugh, disagree, become distracted, or prefer different intensity. Do not label one person a bad kisser when the scene shows mismatch, nerves, context, or incompatible preferences.
-
-## Preserve character voice
-
-Express the interaction through choice, timing, body, and sparse dialogue. Keep analytic terms out of the scene unless they belong to the character. A practiced character may still become clumsy when the kiss matters; a shy character may be physically decisive.
-
-## Deliver the scene plan or revision
-
-Return:
-
-- meaning and stakes for each character;
-- permission and escalation boundary;
-- sensory and physical progression;
-- feedback turns and changes in leadership;
-- imperfection or contradiction;
-- immediate aftermath and continuity facts.
-
-Do not impose fixed meanings on kiss types, use body language as a truth detector, turn a kiss into consent for sex, or write the player's touch, response, desire, consent, speech, or action.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No kiss, affection, escalation, permission, physical mismatch, or aftermath problem is supplied: return `No kissing update` and do not write {{user}}’s response or consent.

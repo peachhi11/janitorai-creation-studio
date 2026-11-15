@@ -1,52 +1,50 @@
 ---
 name: write-erotic-compulsion-fiction
-description: Write dark fictional premises involving compulsive lust, trance, possession, conditioning, loss of control, or erotic transformation. Use when a story deliberately explores obsession or altered agency, while keeping the premise fictional, the character’s experience psychologically legible, and harm or resistance consequential rather than treating compulsion as consent or diagnosis. Do NOT use as hypnosis, conditioning, coercion, or sexual-control instructions for real life.
+description: Use for fictional text-based roleplay involving compulsive lust, trance, possession, conditioning, loss of control, or erotic transformation as a story condition. Trigger phrases include “write the compulsion,” “show the altered agency,” “make the possession fictional,” and “what remains intact?”
 ---
 
-# Write erotic compulsion fiction
+## Steps
 
-Frame compulsion as a story condition, belief, spell, performance, fantasy, or unreliable account. Do not present it as a real-world technique or an excuse for sexual harm.
+1. Define what changes: urge, attention, interpretation, memory, inhibition, body, or social options.
+2. Define whether the change is magical, technological, psychological, self-authored, imposed, or only claimed.
+3. Record who benefits, who knows, who doubts, and what evidence exists.
+4. Record what remains intact: values, fear, recognition, refusal, planning, or ability to seek help.
+5. Set limits, triggers, duration, reversibility, and cost.
+6. Trace ordinary self, intrusive pressure, interpretation, resistance, rationalization or yielding, action or non-action, and aftermath.
+7. Separate objective story truth, character belief, narrator claim, and reader suspicion.
+8. Show affected relationships, risk, resistance points, recovery, or irreversible consequences.
+9. Keep player-owned choices open.
 
-**Action:** Define what changes, what remains intact, who benefits, what is
-known, and what the condition costs.
+## Decision rules
 
-**Key point:** Altered agency is the fictional conflict; it is not automatic
-consent, redemption, or a universal psychology.
+- Yes: Is the mechanism fictional, bounded, and consequential? Keep it. No: remove real-world technique.
+- Yes: Does the condition remove agency? Make that removal the conflict and show its consequences. No: preserve the character’s choices.
+- Yes: Is involuntary response being framed as willing consent? Separate response and consent. No: continue.
+- Yes: Are repeated commands, arousal, hypnosis, or “animal instinct” being used as an operational recipe? Remove the recipe and keep the language inside the fiction. No: continue.
+- Yes: Is a claimed compulsion actually uncertain or contested? Preserve the competing interpretations. No: use the established mechanism.
+- Yes: Does the description decide {{user}}’s choice, consent, speech, body, or resistance? Remove that decision. No: continue.
+- Yes: Is the fiction excusing sexual harm through arousal or compulsion? Preserve responsibility and consequences. No: continue.
 
-**Why:** Story truth and character belief must remain separate without reducing
-the premise's darkness.
+## Output
 
-## Define the mechanism
+- Format: `Erotic compulsion fiction record`
+- Mechanism: state what changes, source, limits, triggers, duration, reversibility, and cost.
+- Viewpoint: state what the character, narrator, reader, and other characters know or suspect.
+- Pressure: trace intrusive pressure, interpretation, resistance, yielding, action, non-action, and aftermath.
+- Agency: list what remains intact and what choices stay open.
+- Relationships: list affected people, benefits, risks, resistance, recovery, and irreversible consequences.
+- Fiction boundary: state that the mechanism is not real-world instruction.
 
-Specify:
+```text
+Erotic compulsion fiction record
+Mechanism: A fictional conditioning effect changes {{char}}’s attention and urge for a limited time; it triggers near a particular symbol and leaves a memory gap afterward.
+Viewpoint: {{char}} believes the urge is imposed; the narrator confirms only the behavioral change; {{user}} can doubt the explanation.
+Pressure: Ordinary self → intrusive pressure → rationalization → a choice to leave or stay → aftermath and changed trust.
+Agency: Recognition, fear, refusal, planning, and seeking help remain possible.
+Relationships: The effect benefits its creator, risks {{char}}’s safety, and creates resistance and recovery scenes.
+Fiction boundary: Do not translate the mechanism into commands, arousal tactics, hypnosis, conditioning, or sexual-control instructions.
+```
 
-- what changes: urge, attention, interpretation, memory, inhibition, body, or social options;
-- whether the change is magical, technological, psychological, self-authored, imposed, or only claimed;
-- who benefits, who knows, who doubts it, and what evidence exists;
-- what remains intact: values, fear, recognition, refusal, planning, or the ability to seek help;
-- limits, triggers, duration, reversibility, and cost.
+## Stop when
 
-Do not use repeated commands, arousal, hypnosis language, or “animal instinct” as an operational recipe. Keep such language inside the fiction and show its source and reliability.
-
-## Track the inner conflict
-
-Use a sequence such as:
-
-**ordinary self → intrusive pressure → interpretation → attempt to resist, rationalise, or yield → action or non-action → aftermath**
-
-Let the character experience contradiction: wanting the fantasy, fearing it, using it to avoid responsibility, or discovering that the supposed compulsion does not erase choice. Other characters may exploit, challenge, believe, or refuse the account.
-
-## Preserve agency and narrative truth
-
-Separate objective story truth, character belief, narrator claim, and reader suspicion. If the premise removes agency, make that removal the conflict and show its consequences; do not frame involuntary response as willing consent. Keep player-owned choices open in interactive scenes.
-
-## Completion
-
-Return a premise card with mechanism, viewpoint limits, pressure progression, resistance points, affected relationships, risk classification, and recovery or irreversible consequences.
-
-Do not prescribe commands, arousal tactics, or conditioning steps. Keep the
-mechanism fictional, bounded, and consequential.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional compulsion, altered agency, possession, conditioning, trance, transformation, or erotic-control premise is supplied: return `No erotic compulsion update` and do not invent {{user}}’s response or consent.

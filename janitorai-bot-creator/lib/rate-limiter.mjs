@@ -1,4 +1,8 @@
-export function createRateLimiter({ limit, windowMs, clock = () => Date.now() }) {
+export function createRateLimiter({
+  limit,
+  windowMs,
+  clock = () => Date.now(),
+}) {
   const buckets = new Map();
 
   function check(key) {
@@ -13,7 +17,7 @@ export function createRateLimiter({ limit, windowMs, clock = () => Date.now() })
     if (current.count >= limit) {
       return {
         allowed: false,
-        retryAfterMs: Math.max(0, current.resetAt - now)
+        retryAfterMs: Math.max(0, current.resetAt - now),
       };
     }
 

@@ -1,96 +1,55 @@
 ---
 name: build-character-formative-history
-description: Build or revise a fictional character's formative history across childhood, adolescence, adulthood, relationships, institutions, culture, and historical context. Use when a backstory needs developmental turning points, learned roles, models, opportunities, constraints, identity exploration, protective influences, or plausible links between earlier experience and later characterisation without reducing the character to trauma or a stage theory. Do NOT use to diagnose a character, make one event explain everything, or force a therapeutic growth arc.
+description: Use for text-based roleplay when {{char}} needs a backstory with turning points, learned roles, relationships, opportunities, limits, or believable links to present behavior. Trigger phrases include “build {{char}}’s backstory,” “what shaped {{char}},” “connect the past to the present,” and “give {{char}} a formative history.”
 ---
 
-# Build character formative history
+## Steps
 
-Build a history of change, not a list of childhood wounds or milestones.
+1. Set the body, age, health, capabilities, and changing limits.
+2. Set caregivers, siblings, peers, mentors, rivals, and dependents.
+3. Set household roles, resources, routines, instability, school, work, faith, law, media, and institutions.
+4. Set cultural expectations, identity language, historical events, migration, technology, conflict, and social change.
+5. Choose a small number of episodes that changed what {{char}} could do, expected, valued, or attempted.
+6. Record what happened, what {{char}} understood then, what others modeled or rewarded, and what strategy {{char}} tried.
+7. Record whether the strategy worked and what later experiences reinforced, revised, or contradicted it.
+8. Include ordinary learning, play, competence, friendship, work, discovery, responsibility, and joy.
+9. Combine temperament, interpretation, learning, models, relationships, culture, opportunity, chance, and later choice where supported.
+10. Record how {{char}} shaped the environment through choices, refusals, mentors, skills, and communities.
+11. Mark remembered explanations as incomplete or uncertain when needed.
+12. Connect the history to present behavior without making one event destiny.
 
-**Action:** Map setting, relationships, learned strategies, turning points,
-protective influences, contradictions, and present maintenance.
+## Decision rules
 
-**Key point:** Development creates possibilities and pressures, not destiny.
+- Yes: Does an episode change what {{char}} can do, expects, values, or attempts? Keep it. No: leave it as background.
+- Yes: Is the history focused only on harm? Add ordinary learning, competence, joy, or protection. No: continue.
+- Yes: Is a cultural expectation being treated as destiny? Reframe it as pressure. No: keep the expectation in context.
+- Yes: Is one childhood event being used to explain everything? Add other causes, choices, relationships, or chance. No: continue.
+- Yes: Does {{char}} have agency within the history? Show a choice, refusal, adaptation, or search for help. No: add one.
+- Yes: Is “inner child” being treated as a literal fact or universal healing program? Reframe it as optional story language. No: continue.
+- Yes: Is a developmental theory being used as a verdict? Turn it into a question about this character. No: continue.
 
-**Why:** A history becomes useful when it changes current choices and scenes.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Formative history record`
+- Setting: list the developmental environments and pressures.
+- Timeline: list the selected formative episodes in order.
+- Learning: state what {{char}} learned, copied, resisted, or misunderstood.
+- Relationships: list models, rewards, punishments, protections, and power shifts.
+- Counterexamples: list experiences that challenged the main pattern.
+- Present links: connect history to current behavior and choices.
+- Uncertainties: list competing explanations and unresolved memories.
 
-Build history according to the work's genre, tone, and narrative purpose. Do
-not replace a deliberately dark, manipulative, coercive, erotic, tragic, or
-surreal history with a therapeutic growth arc. Preserve causal consequences and
-uncertainty without deciding the player's feelings, memories, or choices.
+```text
+Formative history record
+Setting: {{char}} grew up between a crowded family home, a strict school, and a changing neighborhood.
+Timeline: A younger sibling’s illness made {{char}} useful early; a mentor later rewarded curiosity; a move separated {{char}} from the first community.
+Learning: {{char}} learned to anticipate needs, copied the mentor’s patience, and resists asking for help.
+Relationships: Responsibility brought praise and protection, but also made others expect competence.
+Counterexamples: A friend once cared for {{char}} without asking for repayment.
+Present links: {{char}} plans carefully, hides fatigue, and becomes defensive when {{user}} offers help.
+Uncertainties: {{char}} remembers the move as abandonment, but the family’s account is incomplete.
+```
 
-## Establish the developmental setting
+## Stop when
 
-Define the conditions in which the character grew:
-
-- body, health, age, and changing capabilities;
-- caregivers, siblings, peers, mentors, rivals, and dependants;
-- household roles, resources, instability, and routines;
-- school, work, faith, law, media, neighbourhood, and institutions;
-- cultural expectations and the available language for identity;
-- historical events, migration, technology, conflict, and social change.
-
-Separate what the culture expected at an age from what this person actually encountered. A social clock is pressure, not destiny.
-
-## Choose formative episodes
-
-Select a small number of episodes that changed what the character could do, expected, valued, or attempted. For each episode, record:
-
-1. the situation and the character's available choices;
-2. what they understood at that age;
-3. what important people modelled, rewarded, punished, ignored, or made possible;
-4. the immediate strategy the character tried;
-5. whether it worked in that setting;
-6. what repeated often enough to become familiar;
-7. what later experience reinforced, revised, or contradicted it.
-
-Include ordinary learning, play, competence, friendship, work, discovery, responsibility, and joy—not only harm.
-
-## Use theories as questions
-
-Use developmental frameworks to generate questions, not verdicts:
-
-- Did the character gain trust, autonomy, initiative, competence, identity, intimacy, contribution, or life coherence—and in which relationships?
-- What did they learn by watching others, and what consequences followed the model?
-- What could they do alone, and what became possible with guidance or collaboration?
-- Which existing understanding absorbed a new event, and which event forced them to revise it?
-- Which changes were gradual, and which reorganised their life quickly?
-
-Do not force every life into fixed stages, assume stages resolve once, or assign an adult trait to one childhood event.
-
-## Track several causal strands
-
-For each enduring pattern, combine more than one strand where the fiction supports it:
-
-- temperament and physical capability;
-- interpretation at the time;
-- repeated learning and consequences;
-- observed models;
-- relationship roles and power;
-- cultural tools and expectations;
-- opportunity, deprivation, chance, and later choice.
-
-Mark uncertainty. A remembered explanation may be meaningful without being complete or factually exact.
-
-## Preserve agency and contradiction
-
-Show how the character also shaped their environment: seeking one mentor, provoking a sibling, hiding a skill, choosing a model, refusing a role, or finding a subculture. Let the same experience produce mixed lessons. Protection and harm can coexist in one relationship.
-
-Treat “inner child” language, if the author wants it, as an optional metaphor for earlier needs, memories, play, or self-states. Do not present a literal hidden child, spiritual claim, or universal healing programme as fact.
-
-## Deliver the history
-
-Return:
-
-- the developmental setting;
-- a compact timeline of formative episodes;
-- learning, modelling, and relationship mechanisms;
-- protective influences and counterexamples;
-- unresolved questions and competing explanations;
-- the present patterns that require a separate behaviour translation.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No backstory, formative episode, developmental question, or present-pattern problem is supplied: return `No formative history update` and do not invent {{char}}’s past.

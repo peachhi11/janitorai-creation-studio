@@ -15,15 +15,13 @@ export function rejectOversizedRequest(req, res, maxBytes) {
 
       rejected = true;
       if (!res.headersSent) {
-        res.writeHead(413, {
-          "content-type": "text/plain",
-        });
+        res.writeHead(413, { "content-type": "text/plain" });
         res.end("Request entity too large");
       }
       cleanup();
-      // Drain the upload instead of destroying the socket while the client is
-      // still writing it. Destroying here can surface as a client-side EPIPE.
-      req.resume();
+      // Drain the upload after responding so clients that are still writing
+      // the request do not receive a premature socket reset.
+      req.resume?.();
     };
 
     // Chunked requests have no trustworthy length header, so count them while
@@ -42,14 +40,11 @@ export function rejectOversizedRequest(req, res, maxBytes) {
   }
 
   if (length > maxBytes) {
-    // The declared length is already enough to reject the request, but the
-    // client may still be uploading the body. Drain it so the response does
-    // not race a socket destroy and turn into a client-side EPIPE.
-    req.resume?.();
-    res.writeHead(413, {
-      "content-type": "text/plain",
-    });
+    res.writeHead(413, { "content-type": "text/plain" });
     res.end("Request entity too large");
+    // The server has rejected the request, but must still consume its body to
+    // let the client finish writing without an EPIPE.
+    req.resume?.();
     return true;
   }
 

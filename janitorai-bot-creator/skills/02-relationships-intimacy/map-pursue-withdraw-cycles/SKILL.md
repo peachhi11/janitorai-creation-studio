@@ -1,55 +1,53 @@
 ---
 name: map-pursue-withdraw-cycles
-description: Map recurring pursue–withdraw, protest–retreat, rescue–resistance, or reassurance–doubt cycles between fictional characters. Use when relationship conflict keeps repeating, when each person’s strategy intensifies the other’s, or when a scene needs escalation and repair without assigning one partner a permanent role. Do NOT use to diagnose attachment, assign blame by default, or force repair or a healthy relationship outcome.
+description: Use for text-based roleplay when {{char}} and {{user}} repeat a pursue–withdraw, protest–retreat, rescue–resistance, or reassurance–doubt cycle. Trigger phrases include “map their repeating conflict,” “why does {{char}} pursue,” “why does {{user}} withdraw,” and “find the interruption point.”
 ---
 
-# Map pursue–withdraw cycles
+## Steps
 
-Model the interaction as a loop, not a villain and a victim by default. Each person’s move should make sense from their private prediction, even when it harms the relationship.
+1. Record the cue or unmet need.
+2. Record {{char}} and {{user}}’s interpretations.
+3. Record the first move and its intended purpose.
+4. Record how the other person reads that move.
+5. Record the counter-move, escalation, or silence.
+6. Record where the original need becomes hidden behind strategy.
+7. Record short-term relief and relational cost.
+8. Record interruption, repair, failed repair, or delayed residue.
+9. Decide whether pursuit is a request that can be refused or a control pattern that narrows options.
+10. Track power, coercion, abuse, incompatibility, surveillance, threats, dependency, isolation, reputation damage, and retaliation.
+11. Find the smallest interruption that can alter the next turn.
+12. Track changed behavior over time instead of treating one good conversation as transformation.
 
-**Action:** Trace cue, interpretations, first move, reading, counter-move,
-hidden need, payoff, cost, interruption, and residue.
+## Decision rules
 
-**Key point:** Symmetry is not required; one person may hold more power even
-when both participate in a repeating loop.
+- Yes: Does each move make sense from the person’s private prediction? Record that meaning. No: identify the unsupported move.
+- Yes: Is the cycle reciprocal? Check power, refusal, options, and retaliation first. No: describe the constrained response.
+- Yes: Is pursuit a request that can be refused? Keep it distinct from control. No: label the narrowed choice set.
+- Yes: Can a clear request, boundary, timed pause, truthful naming, changed consequence, outside pressure, or decision to leave interrupt the loop? Use the smallest supported change. No: preserve the cycle.
+- Yes: Does the repair change later behavior? Record it over time. No: mark the repair as temporary or failed.
+- Yes: Does the description decide {{user}}’s reaction, feelings, speech, or choice? Remove that decision. No: continue.
+- Yes: Is the cycle being used to diagnose attachment or force a healthy outcome? Remove that use. No: continue.
 
-**Why:** Loop mapping shows escalation without excusing coercion or erasing
-asymmetry.
+## Output
 
-## Trace the loop
+- Format: `Pursue and withdraw cycle record`
+- Trigger: state cue or unmet need.
+- {{char}}: list meaning, move, hidden need, payoff, and cost.
+- {{user}}: list meaning, move, hidden need, payoff, and cost without inventing their interiority.
+- Escalation: list counter-move, silence, power, coercion, options, and constrained response.
+- Interruption: list the smallest change that could alter the next turn.
+- Residue: list repair, failed repair, changed behavior, and delayed consequences.
 
-Record in order:
+```text
+Pursue and withdraw cycle record
+Trigger: {{char}} experiences a delayed reply as possible abandonment.
+{{char}}: Sends repeated practical questions to regain contact; short-term relief is information; cost is pressure on {{user}}.
+{{user}}: The next response remains open; the observable option is to answer, pause, set a boundary, or leave.
+Escalation: If {{char}} treats silence as proof and increases monitoring, the cycle becomes control rather than equal pursuit.
+Interruption: A clear request and a stated return time could change the next turn.
+Residue: One pause does not transform the pattern; later behavior must show whether the interruption holds.
+```
 
-1. cue or unmet need;
-2. each person’s interpretation;
-3. first move and its intended purpose;
-4. the other person’s reading of that move;
-5. counter-move, escalation, or silence;
-6. point where the original need becomes hidden behind strategy;
-7. short-term relief and relational cost;
-8. interruption, repair attempt, failed repair, or delayed residue.
+## Stop when
 
-The pursuing move may be a question, joke, demand, gift, accusation, sex, repeated message, or practical rescue. The withdrawing move may be silence, work, logic, physical distance, minimising, counterattack, compliance without presence, or a genuine request for time. Do not make either list universal.
-
-## Keep agency and asymmetry
-
-Cycles can contain unequal power, coercion, abuse, or real incompatibility. Do not flatten those into mutual misunderstanding. Give each character their own choices and accountability; do not write the user’s reaction for them.
-
-Before calling a loop reciprocal, test whether one person's pursuit is a
-request that can be refused or a control pattern that narrows the other's
-options. A demand–withdraw sequence can arise from mismatched change goals or
-conflict habits, but surveillance, threats, dependency, isolation, reputation
-damage, or retaliation may make the apparent “withdrawal” a constrained
-response rather than an equal strategy.
-
-## Design change
-
-Find the smallest interruption that could alter the next turn: a clear request, a boundary, a pause with a return time, a truthful naming of fear, a changed consequence, outside pressure, or a decision to leave. A repaired cycle changes behaviour over time; one good conversation is not proof of transformation.
-
-## Completion
-
-Return a cycle table with trigger, person A’s meaning/move, person B’s meaning/move, escalation, payoff, cost, interruption, and residue.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No repeating relationship conflict, pursuit, withdrawal, reassurance, resistance, or escalation pattern is supplied: return `No pursue-and-withdraw update` and do not invent {{user}}’s reaction.

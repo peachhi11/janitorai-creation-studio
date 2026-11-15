@@ -1,60 +1,53 @@
 ---
 name: design-coping-and-defence-patterns
-description: "Design fictional coping, defence, regulation, avoidance, persistence, and recovery patterns with triggers, short-term relief, long-term cost, and failure modes. Use when characters respond to stress, shame, grief, anger, fear, desire, or conflict in recurring but changeable ways without turning the pattern into a diagnosis. Do NOT use as therapy, diagnosis, or a demand that a fictional character choose the healthiest response."
+description: Use for text-based roleplay when {{char}} responds to stress, shame, grief, anger, fear, desire, or conflict in recurring but changeable ways. Trigger phrases include “how does {{char}} cope,” “show {{char}}’s defense,” “what relief does this behavior give,” and “make the coping pattern conditional.”
 ---
 
-# Design coping and defence patterns
+## Steps
 
-Design a strategy that once made sense, not a label that explains everything.
+1. Record the stressor and what it means to {{char}}.
+2. Record the emotion and action urge.
+3. Record the coping or defense response.
+4. Record immediate relief, protection, control, or connection.
+5. Record the cost to {{char}} and other people.
+6. Record what makes the strategy fail, intensify, or become unnecessary.
+7. Record a possible alternative without making it mandatory.
+8. Add safety behaviors and what danger they are meant to prevent.
+9. Set who is present, what is at stake, how much time exists, whether escape is possible, and what {{char}} has learned.
+10. Show how the pattern changes across public, family, intimate, grieving, and pressured settings.
+11. Let the pattern change through consequences, trust, practice, exhaustion, information, or environment.
+12. Keep setbacks, recurrence, and partial changes visible.
 
-**Action:** Map stressor, meaning, response, immediate payoff, cost, failure
-mode, and possible alternatives.
+## Decision rules
 
-**Key point:** A coping strategy can be damaging, eroticised, coercive, or
-useful without becoming the character's whole identity.
+- Yes: Did the strategy once make sense in {{char}}’s situation? Show its original function. No: add the supported reason it developed.
+- Yes: Does the strategy provide short-term relief and long-term cost? Record both. No: use the single supported effect.
+- Yes: Does the same strategy work differently by setting or relationship? Vary it by context. No: keep the established condition.
+- Yes: Is the behavior being treated as a clinical diagnosis? Rewrite it as a craft description. No: continue.
+- Yes: Is a healthier response being required? Offer it as one possible choice. No: preserve the selected strategy.
+- Yes: Does one setback erase all change? Restore the prior development and record the setback. No: continue.
+- Yes: Is a destructive, eroticized, coercive, obsessive, tragic, or absurd strategy intentional? Preserve it with causes and consequences. No: use the selected tone.
 
-**Why:** Function and consequence make behaviour legible while preserving the
-fiction's intended darkness and agency.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Coping and defense record`
+- Loop: list stressor, meaning, emotion, urge, response, payoff, cost, failure mode, and adaptation.
+- Safety behavior: state what danger {{char}} is trying to prevent and what uncertainty it keeps alive.
+- Conditions: list audience, stakes, time, escape, relationship, and learned context.
+- Signals: list observable speech, timing, body behavior, avoidance, persistence, or recovery.
+- Variation: compare settings where the pattern works, fails, or changes.
+- Open questions: list alternatives or changes {{char}} may choose.
 
-Judge a coping pattern by the story's causal and tonal rules, not by whether it
-resembles a healthy real-world response. Preserve destructive, eroticised,
-coercive, obsessive, tragic, or absurd strategies when intentional; show what
-they change and cost without prescribing repair or sanitising the character.
+```text
+Coping and defense record
+Loop: {{user}} questions {{char}}’s loyalty; {{char}} reads it as possible abandonment; anger rises; {{char}} jokes and changes the subject; tension drops briefly; trust becomes less clear.
+Safety behavior: Humor prevents immediate exposure but keeps {{char}} dependent on avoidance.
+Conditions: In public {{char}} performs confidence; in private with {{user}} they may admit fear; escape is possible but costly.
+Signals: Faster jokes, practical offers, delayed replies, and a later apology without explanation.
+Variation: Direct reassurance may interrupt the loop; public shame may intensify it.
+Open questions: Decide whether {{char}} can ask for reassurance directly.
+```
 
-## Map the loop
+## Stop when
 
-Record:
-
-- stressor and the meaning attached to it;
-- emotion and action urge;
-- coping or defence response;
-- immediate relief, protection, control, or connection gained;
-- cost to the character and other people;
-- what makes the strategy fail, intensify, or become unnecessary;
-- a healthier, riskier, or more honest alternative the character may choose.
-
-Patterns may include problem-solving, seeking information, humour, work, ritual, distraction, suppression, intellectualising, projection, displacement, denial, appeasement, attack, withdrawal, dissociation, substance use, repair, or deliberate reappraisal. Use the term as a craft description, not a clinical verdict.
-
-Add safety behaviours and reciprocal maintenance where useful: checking,
-reassurance-seeking, constant connection, scanning, avoidance, sleep
-compensation, pain monitoring, or carrying a protective object. Ask what
-danger the behaviour is meant to prevent, what relief it gives immediately,
-and what uncertainty or dependence it keeps alive.
-
-## Keep the pattern conditional
-
-Specify who is present, what is at stake, how much time exists, whether escape is possible, and what the character has learned. The same person can fight in public, freeze with family, joke with a lover, and become practical when grief arrives.
-
-## Show change without cure language
-
-Let coping evolve through consequences, trust, practice, exhaustion, new information, or a changed environment. A character can retain a damaging strategy and still make a different choice once; a setback is not proof that development was false.
-
-Do not force a linear recovery arc. A person may move through low, improving,
-increasing, recurrent, or persistently difficult periods, and the same strategy
-may work in one setting while failing in another.
-
-## Completion
-
-Return a coping loop: trigger, appraisal, response, payoff, cost, failure mode, observable signs, and possible adaptation.
+- No stress response, coping strategy, defense, recovery pattern, or conflict reaction is supplied: return `No coping and defense update` and do not invent {{char}}’s pattern.

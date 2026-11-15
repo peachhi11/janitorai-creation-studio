@@ -6,11 +6,14 @@ import {
   renderMemo,
 } from "./character-schema.mjs";
 import { getKnowledgeContext } from "./lib/knowledge-context.mjs";
-import { loadRuntimeConfig } from "./lib/runtime-config.mjs";
 import {
   buildCreateInstructions,
   buildRevisionInstructions,
 } from "./lib/creator-policy.mjs";
+
+// The standalone creator does not open an HTTP listener, so it only needs the
+// model setting. Keep server-only configuration validation in server.mjs.
+const model = process.env.OPENAI_MODEL || "gpt-5.5";
 
 const instructionText = readFileSync(
   new URL("./prompts/creator.md", import.meta.url),
@@ -121,7 +124,7 @@ function getDefaultCreator() {
   const config = loadRuntimeConfig();
   defaultCreator ??= createStandaloneCreator({
     client: new OpenAI(),
-    model: config.model,
+    model,
     instructionText,
   });
   return defaultCreator;

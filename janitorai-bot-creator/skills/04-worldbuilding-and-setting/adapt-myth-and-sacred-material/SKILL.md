@@ -1,99 +1,37 @@
 ---
 name: adapt-myth-and-sacred-material
-description: Research and adapt myths, sacred narratives, deities, spirits, legendary beings, folklore, ritual stories, and culturally meaningful symbols for fiction or roleplay. Use when drawing from a real tradition, separating ancient religion from later literature and popular culture, choosing among conflicting versions, or checking an adaptation for false universals, cultural conflation, exoticism, and unsupported claims. Do NOT use to declare a living tradition's single meaning, flatten sacred material into a monster list, or treat invention as documented fact.
+description: Use when adapting myths, sacred narratives, deities, spirits, legendary beings, folklore, rituals, or culturally meaningful symbols for fictional roleplay. Trigger phrases include “adapt this myth,” “compare the versions,” and “keep the living tradition distinct.”
 ---
 
-# Adapt myth and sacred material
+## Steps
 
-Begin with provenance and present significance. A name and creature description are not enough to establish what a figure meant, who told the story, or whether it remains sacred.
+1. Classify the material as living sacred practice, historical myth, folklore, literature, report, popular adaptation, or new invention.
+2. Record culture, community, language, place, period, sources, translators, collectors, and present significance.
+3. Compare variants, disagreements, insider practice, outsider reports, and later adaptations.
+4. Identify the narrative function: origin, boundary, ritual, authority, virtue, transgression, grief, desire, warning, satire, or memory.
+5. State the adaptation distance: retelling, variant blend, relocation, transformation, literary form, or name-only inspiration.
+6. Preserve local names, relationships, obligations, settings, contradictions, and categories when they matter.
+7. Separate source evidence, interpretation, fictional truth, character belief, and invention.
+8. Show uncertainty and community disagreement without turning sacred material into a monster list.
+9. Keep {{user}}’s belief, fear, reverence, offence, consent, and action open.
 
-**Action:** Classify material, trace provenance, compare variants, and mark
-living significance, adaptation, and invention.
+## Decision rules
 
-**Key point:** Conflicting versions are evidence of transmission and use, not a
-problem to erase for a cleaner bestiary.
+- Yes: Are living traditions being treated as neutral inventory or one fixed meaning? Add present significance and internal variation. No: continue.
+- Yes: Are different cultures being merged under a broad label? Separate them. No: continue.
+- Yes: Is a modern version presented as ancient fact? Label the source and adaptation. No: continue.
+- Yes: Is a scientific, historical, or psychological explanation being stated as proven origin? Mark it as interpretation. No: continue.
+- Yes: Does the draft decide {{user}}’s belief or response? Remove that decision. No: continue.
 
-**Why:** Provenance protects cultural specificity while leaving room for
-deliberate transformation in fiction.
+## Output
 
-## Identify the material
+- Format: `Myth adaptation brief`
+- Provenance: list classification, sources, variants, and present significance.
+- Function: state what the story or figure does in context.
+- Adaptation: state what is retained, changed, invented, or uncertain.
+- Truth layers: separate source fact, fictional fact, belief, and invention.
+- Player space: list discoveries and open responses.
 
-Classify the item provisionally:
+## Stop when
 
-- sacred narrative or living religious being;
-- mythic narrative from a historical religious setting;
-- local legend, folktale, fairy tale, or cautionary story;
-- literary invention or later artistic development;
-- cryptid, reported encounter, hoax, or popular belief;
-- modern franchise, game convention, internet compilation, or blended adaptation.
-
-These categories can overlap and change over time. Do not place everything supernatural into one bestiary.
-
-## Establish provenance
-
-Record:
-
-- culture, community, language, place, and period;
-- earliest available source and later influential versions;
-- teller, collector, translator, scholar, colonial intermediary, or popular adapter;
-- whether the account is insider practice, outsider report, literature, archaeology, speculation, or modern synthesis;
-- variants and disagreements;
-- present-day religious, political, or cultural significance.
-
-Trace distinctive claims back to reliable sources. Treat unsourced compilations as leads only.
-
-## Understand narrative function
-
-Ask what the story or figure does in context:
-
-- explain origin, place, disaster, custom, or authority;
-- mark a boundary or danger;
-- organise ritual, pilgrimage, kinship, season, or political legitimacy;
-- model virtue, transgression, ambiguity, grief, desire, or consequence;
-- entertain, frighten, satirise, teach, or preserve memory;
-- embody a relationship with landscape, ancestors, animals, or the sacred.
-
-Do not reduce the figure to combat abilities and weaknesses when its primary role lies elsewhere.
-
-## Choose the adaptation distance
-
-State whether the work is:
-
-- retelling a specific version;
-- combining documented variants;
-- relocating or transforming a pattern;
-- using a public-domain literary form;
-- inventing new material inspired by a source;
-- borrowing only a familiar name or image.
-
-The farther the adaptation moves, the more clearly it should be framed as invention rather than authentic representation.
-
-## Preserve meaningful difference
-
-Keep local names, relationships, obligations, settings, contradictions, and narrative logic when they matter. Avoid merging beings because they share a surface feature such as wings, shapeshifting, night activity, or association with death.
-
-Distinguish translation choices from original categories. Do not assume terms such as god, demon, fairy, monster, spirit, ghost, race, or species map cleanly across traditions.
-
-## Handle explanation carefully
-
-Scientific, historical, psychoanalytic, structural, and political readings are interpretations. A flood story may preserve memory, justify order, sustain ritual, and change through retelling without being a literal geological report. Do not present a neat natural explanation as the story's proven origin.
-
-Keep fictional truth separate from claims about the real tradition. Within fantasy, a sacred being may be demonstrably real while characters still dispute its nature and demands.
-
-## Audit the adaptation
-
-- Living sacred material has not been treated as neutral monster inventory.
-- Different cultures have not been blended under broad labels such as Asian, Celtic, Native, or African mythology.
-- A modern fantasy or internet version has not been presented as ancient tradition.
-- Harmful historical labels and colonial framings are contextualised rather than repeated as fact.
-- The adaptation retains a story function beyond visual novelty or combat.
-- Uncertainty, variant traditions, and community disagreement remain visible.
-- Players retain control of their characters' belief, fear, reverence, offence, consent, and action.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Preserve the setting's internal rules, causal consequences, knowledge boundaries, and player sovereignty. Do not turn fictional darkness, eroticism, coercion, obsession, tragedy, comedy, surrealism, or meta-fiction into a real-world manual or an automatic healthy outcome.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No myth, sacred material, folklore, or cultural symbol is supplied: return `No myth adaptation update` and do not invent {{user}}’s belief.

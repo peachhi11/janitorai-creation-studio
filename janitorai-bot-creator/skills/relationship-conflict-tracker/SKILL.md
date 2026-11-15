@@ -1,74 +1,67 @@
 ---
 name: relationship-conflict-tracker
-description: Track relationship state and conflict causality across narrative turns without collapsing distinct emotional dimensions or forcing reconciliation.
-sources:
-  - library_file_id: libfile_a3463096f3408191a1df2b8fb0c47b2d
-    title: Relationship and Conflict Tracking Skill
-    use: direct procedural source
+description: Use for text-based roleplay when a relationship changes, conflict starts, someone refuses or reveals something, a boundary is crossed, or the characters try to repair things. Trigger phrases include “update their relationship,” “track this conflict,” “what changed between them,” and “record the aftermath.”
 ---
 
-# Relationship and Conflict Tracker
+## Steps
 
-Use this module when a scene contains a meaningful relational change, conflict, refusal, disclosure, betrayal, boundary crossing, or repair attempt.
+1. Identify which relationship changed.
+2. Write down what actually happened before explaining it.
+3. Record what each character knows, believes, suspects, and does not know.
+4. Record the affected relationship values before the scene or beat.
+5. Change only the values affected by the event.
+6. Keep attraction, desire, affection, trust, compatibility, commitment, availability, and consent separate.
+7. Set the relationship direction to strengthening, weakening, unchanged, or uncertain.
+8. Sort each cause into internal, external, or situational.
+9. Note whether each cause adds pressure, blocks action, changes meaning, or gives someone leverage.
+10. Record what happens immediately afterward and what is still unresolved.
+11. Mark each motive as active, dormant, resolved, or abandoned.
+12. Keep the old state in the event log.
+13. Mark the update as `runtime-canon` when it is established in the current roleplay.
 
-## Relationship state
+## Decision rules
 
-Track each important relationship as a separate record. At minimum, record:
+- Yes: Did the event change a relationship value? Update that value. No: leave it unchanged.
+- Yes: Did emotion, belief, attachment, fear, shame, pride, or desire cause the problem? Label it `internal`. No: check the next cause type.
+- Yes: Did another person, institution, social pressure, resource, deadline, money, or secret cause the problem? Label it `external`. No: check the next cause type.
+- Yes: Did place, time, privacy, witnesses, injury, fatigue, weather, or physical limits cause the problem? Label it `situational`. No: use the clearest supported label.
+- Yes: Did the event establish a new fact in the roleplay? Mark it `runtime-canon`. No: keep it provisional.
+- Yes: Is there no evidence that one relationship value affects another? Keep them separate. No: record the evidence for each value.
+- Yes: Is the outcome unresolved, escalating, dormant, transformed, or irreconcilable? Keep that outcome. No: record the supported resolution.
+- Yes: Is message count the only sign of intimacy? Do not treat it as proof. No: continue.
 
-- `attraction`: pull or interest;
-- `desire`: immediate or embodied wanting;
-- `affection`: warmth and care;
-- `trust`: expectation of reliability;
-- `compatibility`: fit between needs, values, habits, and goals;
-- `commitment`: willingness to preserve or prioritise the relationship;
-- `availability`: practical and emotional capacity;
-- `consent`: current permission for the relevant act or interaction;
-- `trajectory`: strengthening, weakening, static, or uncertain.
+## Output
 
-Do not infer one dimension from another. A character may desire someone without trusting them, love someone without being compatible with them, or consent to one act while refusing another.
-
-## Conflict map
-
-When conflict appears, classify contributing causes into three non-exclusive groups:
-
-1. **Internal:** emotion, shame, pride, fear, attachment strategy, belief, wound, desire, or hesitation.
-2. **External:** rivals, family, institutions, social pressure, deadlines, money, secrets, or another person’s action.
-3. **Circumstantial:** location, privacy, time, witnesses, injury, fatigue, resources, weather, or physical constraint.
-
-For each cause, record whether it increases pressure, blocks action, changes interpretation, or creates leverage. Do not assume that conflict must be resolved; it may escalate, become dormant, transform, or remain irreconcilable.
-
-## Update procedure
-
-After a significant beat:
-
-1. Record what objectively happened.
-2. Record what each relevant character knows, believes, suspects, and does not know.
-3. Update only the relationship dimensions affected by the event.
-4. Record immediate consequence and unresolved pressure.
-5. Mark motives as active, dormant, resolved, or abandoned.
-6. Preserve the prior state in the event log rather than silently rewriting it.
-
-Message count is not evidence of intimacy. A relationship changes when an event changes perception, motive, behaviour, trust, desire, commitment, or availability.
-
-## Output record
+- Format: `Relationship update`
+- Relationship: name the characters.
+- Before: list the affected relationship values before the event.
+- Event: say what happened.
+- Knowledge changes: list what each character now knows, believes, suspects, or still does not know.
+- After: list the affected relationship values after the event.
+- Conflict: group causes under `internal`, `external`, and `situational`.
+- Consequences: list what happens next and what is still unresolved.
+- Motives: list active, dormant, resolved, and abandoned motives.
+- Event log: keep the previous state and add the new update.
+- Canon status: use `runtime-canon`, provisional, or another supported status.
 
 ```json
 {
-  "relationship": "character-a/character-b",
+  "relationship": "{{char}}/{{user}}",
   "before": { "trust": "guarded", "trajectory": "uncertain" },
-  "event": "Character A disclosed the secret in private.",
+  "event": "{{char}} disclosed the secret to {{user}} in private.",
   "knowledge_changes": [
-    "B now knows the secret; A does not know whether B believes it."
+    "{{user}} now knows the secret; {{char}} does not know whether {{user}} believes it."
   ],
   "after": { "trust": "fragile", "trajectory": "strengthening" },
-  "conflict": { "internal": [], "external": [], "circumstantial": [] },
-  "unresolved": ["B has not decided whether to forgive or use the disclosure."],
+  "conflict": { "internal": [], "external": [], "situational": [] },
+  "consequences": [
+    "{{user}} has not decided whether to forgive or use the disclosure."
+  ],
+  "motives": { "active": [], "dormant": [], "resolved": [], "abandoned": [] },
   "canon_status": "runtime-canon"
 }
 ```
 
-Retrieved guidance remains evidence. The author’s selected route controls whether the result is tender, destructive, ambiguous, coercive, tragic, comic, or unresolved.
+## Stop when
 
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No relationship event, change, conflict, or aftermath is supplied: return `No relationship update` and do not invent one.

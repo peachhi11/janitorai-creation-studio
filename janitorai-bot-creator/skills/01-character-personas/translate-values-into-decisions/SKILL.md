@@ -1,56 +1,55 @@
 ---
 name: translate-values-into-decisions
-description: Translate a character’s values, priorities, autonomy, duties, and self-chosen commitments into observable decisions, speech, boundaries, sacrifices, and contradictions. Use when values are written as abstract adjectives or when a character needs believable choices under competing pressures. Do NOT use to declare one value morally correct, erase material constraints, or force the character to act consistently with a stated ideal.
+description: Use for text-based roleplay when {{char}}’s values, priorities, duties, autonomy, or commitments need to become decisions, boundaries, sacrifices, speech, or contradictions. Trigger phrases include “show what {{char}} values,” “make this value affect the choice,” and “write the conflict between {{char}}’s principles.”
 ---
 
-# Translate values into decisions
+## Steps
 
-Treat a value as a rule of significance: it tells the character what matters, what counts as intolerable, and what cost may be worth paying. It does not predict one correct action.
+1. Record {{char}}’s own wording for the value.
+2. Record where it came from and who reinforced or threatened it.
+3. Record behavior that demonstrates the value.
+4. Record behavior that only performs it for an audience.
+5. Record what {{char}} will sacrifice to protect it.
+6. Record conflict with another value or material survival.
+7. Separate autonomous commitment, approval, fear of punishment, habit, and defiance.
+8. Record what {{char}} notices in the situation.
+9. Record the outcome that would feel like self-betrayal.
+10. Record the option that preserves the value at the lowest immediate cost.
+11. Record the other value that may matter more urgently.
+12. Show the decision through action, timing, refusal, compromise, silence, spending, risk, or who receives the benefit.
+13. Record the story {{char}} tells themself afterward.
+14. Show change after an event, interpretation, relationship, or repeated consequence.
 
-**Action:** Define the character's wording, source, demonstration, performance,
-sacrifice, conflict, and survival pressure.
+## Decision rules
 
-**Key point:** A value can be sincere, performed, compromised, or betrayed.
+- Yes: Does the value change what {{char}} notices, refuses, protects, risks, or sacrifices? Show it. No: keep it as background.
+- Yes: Is the value sincere, performed, compromised, or betrayed in this scene? Label the supported state. No: continue.
+- Yes: Does material survival conflict with the value? Show the trade-off. No: preserve the value’s current priority.
+- Yes: Is {{char}} being forced to act consistently with a stated ideal? Allow contradiction. No: continue.
+- Yes: Is the narrator declaring one value morally correct? Replace the verdict with consequences. No: continue.
+- Yes: Did the value change after an event, interpretation, relationship, or repeated consequence? Record the cause. No: do not invent a new personality.
+- Yes: Does the decision write {{user}}’s identity, feelings, consent, speech, or choice? Remove that decision. No: continue.
 
-**Why:** Decisions reveal values through cost and contradiction rather than
-through abstract labels.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Value-to-decision record`
+- Value: state {{char}}’s wording, origin, and current priority.
+- Evidence: list demonstrated, performed, compromised, or betrayed behavior.
+- Decision test: list noticed cue, self-betrayal risk, lowest-cost option, competing value, and material pressure.
+- Choice: state the action, refusal, compromise, silence, spending, risk, or beneficiary.
+- Self-story: state how {{char}} explains the choice afterward.
+- Change: list the event, interpretation, relationship, or consequence that could revise the value.
 
-Values are dramatic forces, not moral instructions. Let the genre and narrative
-intention determine whether loyalty, control, possession, freedom, revenge,
-pleasure, or sacrifice produces tenderness, harm, absurdity, or tragedy. Keep
-the causal consequences visible without correcting the character into virtue.
+```text
+Value-to-decision record
+Value: {{char}} calls loyalty “staying when it costs something”; it came from family duty and now competes with personal safety.
+Evidence: {{char}} keeps a promise in private but performs loyalty in public to protect status.
+Decision test: Notices {{user}}’s fear; self-betrayal would be abandoning them; the lowest-cost option is a partial disclosure; independence is the competing value.
+Choice: {{char}} refuses to lie but withholds one detail.
+Self-story: “I protected them without making the situation worse.”
+Change: A repeated consequence may show {{char}} that silence also creates harm.
+```
 
-## Define the value in context
+## Stop when
 
-For each value, specify:
-
-- the character’s own wording for it;
-- where it came from and who reinforced or threatened it;
-- what behaviour demonstrates it;
-- what behaviour merely performs it for an audience;
-- what the character will sacrifice to protect it;
-- where the value conflicts with another value or with material survival.
-
-Separate autonomous commitment from internalised approval, fear of punishment, habit, and defiance. A character can sincerely value freedom while choosing a duty, or claim loyalty while acting from status anxiety.
-
-## Convert value into a decision test
-
-Ask:
-
-1. What does the character notice in this situation?
-2. What outcome would feel like self-betrayal?
-3. Which option preserves the value at the lowest immediate cost?
-4. Which option protects another value more urgently?
-5. What story will the character tell themselves afterward?
-
-Then render the choice through action, timing, refusal, compromise, silence, spending, risk, or who receives the benefit. Do not explain the value in a therapist’s voice when a concrete choice can show it.
-
-## Write contradiction and change
-
-Let pressure expose a value’s boundary. A character may become more autonomous, discover that a supposed value was borrowed, or accept a cost they once considered impossible. Change should follow an event, interpretation, relationship, or repeated consequence; it should not appear because the plot needs a new personality.
-
-## Completion
-
-Return a value-to-behaviour table: value, origin, trigger, observable choice, competing value, sacrifice, self-justification, and evidence of change.
+- No value, priority, decision, boundary, sacrifice, or moral conflict is supplied: return `No value-to-decision update` and do not invent {{char}}’s values.

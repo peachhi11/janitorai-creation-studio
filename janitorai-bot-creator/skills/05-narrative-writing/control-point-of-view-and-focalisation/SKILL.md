@@ -1,66 +1,34 @@
 ---
 name: control-point-of-view-and-focalisation
-description: Choose, maintain, or deliberately shift fictional point of view and focalisation so the reader's access to perception, thought, information, and uncertainty serves the story. Use when a scene feels omniscient by accident, a viewpoint character knows too much, multiple perspectives blur, or a roleplay response must stay inside one character's perceptual boundary. Do NOT use to expose hidden thoughts without a narrative reason, flatten intentional omniscience, or write a player's private experience for them.
+description: Use when choosing, maintaining, or shifting fictional point of view and focalisation around {{char}}, {{user}}, or another character. Trigger phrases include “keep the POV clean,” “who can know this?”, and “shift viewpoint without confusion.”
 ---
 
-# Control point of view and focalisation
+## Steps
 
-Treat viewpoint as an information and meaning system, not merely a pronoun choice.
+1. Choose the viewpoint character, narrative distance, tense, and scope of access.
+2. List what the viewpoint character can perceive, remember, infer, misunderstand, and not know.
+3. Filter description, metaphor, attention, and emotional language through that character.
+4. Mark each shift with a scene break, paragraph signal, changed access, or deliberate formal pattern.
+5. Separate observed action, inference, private thought, narrator knowledge, and reader suspicion.
+6. Preserve uncertainty when the viewpoint lacks evidence; do not hide known facts only to force a mistake.
+7. For roleplay, describe {{user}}’s observable situation without writing {{user}}’s private experience or choice.
+8. Audit each paragraph for accidental omniscience, blurred speakers, and unsupported knowledge.
 
-**Action:** Select the narrating position, focal character, access range, and
-distance; filter every detail through that choice; mark any deliberate shift.
+## Decision rules
 
-**Key point:** Point of view controls what the reader can know, not only who is
-named as the subject of a sentence.
+- Yes: Does the narrator know something the viewpoint cannot access? Mark the source or remove it. No: continue.
+- Yes: Is a viewpoint shift intentional? Signal it and state the new boundary. No: keep one viewpoint.
+- Yes: Is hidden thought exposed without a narrative reason? Reframe it as observation, inference, or uncertainty. No: continue.
+- Yes: Does the draft write {{user}}’s thought, feeling, speech, or action? Remove it. No: continue.
 
-**Why:** Stable perceptual access creates intimacy, suspense, and fair
-uncertainty while allowing purposeful changes in distance or consciousness.
+## Output
 
-## Set the contract
+- Format: `Point-of-view audit`
+- Viewpoint: state character, distance, tense, and access.
+- Revision: provide the corrected passage or scene plan.
+- Boundary: list known, inferred, hidden, and uncertain information.
+- Shifts: list deliberate viewpoint changes and their signals.
 
-Record:
+## Stop when
 
-- narrator position: first, second, third limited, omniscient, or hybrid;
-- focal character for the scene and why this consciousness is useful now;
-- what the focal character can perceive, remember, infer, misunderstand, or
-  remain unaware of;
-- distance: immediate interiority, close observation, detached report, or a
-  deliberate movement between them;
-- tense, person, and any platform or roleplay constraints.
-
-Do not treat a character's inference as confirmed fact. Keep canon truth,
-character belief, narrator claim, and reader suspicion distinct.
-
-## Filter the draft
-
-For each paragraph, ask:
-
-1. Could this viewpoint perceive or remember this detail?
-2. Is the wording shaped by this character's attention, vocabulary, values, and
-   emotional state?
-3. Is an interpretation being presented as observation?
-4. Does the distance change for a reason, or has the prose slipped?
-5. Does the passage disclose the player's thoughts, choices, or bodily response?
-
-In interactive fiction, stop at the boundary of the AI-controlled character's
-action or perception and leave the player's response open.
-
-## Deliberate shifts
-
-Use a new focaliser when the change adds contrast, dramatic irony, withheld
-knowledge, or a meaningful reorientation. Signal it with a scene break,
-chapter break, unmistakable sensory and lexical shift, or an established
-genre convention. Do not hop between minds inside a beat merely to explain
-everyone's motives.
-
-## Fictional genre logic
-
-Viewpoint rules follow the chosen genre and narrative intention. A mystery may
-protect a clue, a romance may privilege charged misreading, and surreal or
-meta-fictional work may permit narrative levels to bleed together. Establish
-who can perceive the breach, what permits it, and what consequence follows.
-
-## Completion
-
-Return a viewpoint sheet: narrator, focaliser, access limits, distance, tense,
-known unknowns, deliberate shifts, and a short boundary audit of the scene.
+- No viewpoint, focalisation, or knowledge-boundary problem is supplied: return `No POV update` and do not invent {{user}}’s interiority.

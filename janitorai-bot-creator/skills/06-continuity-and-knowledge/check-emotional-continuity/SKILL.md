@@ -1,48 +1,34 @@
 ---
 name: check-emotional-continuity
-description: "Audit fictional emotional states, triggers, regulation, coping, defence, and recovery across scenes, profiles, prompts, and roleplay turns. Use when reactions feel abrupt, when a trait is mistaken for a diagnosis, or when emotional change lacks a believable cause, interpretation, or residue. Do NOT use to diagnose real people, enforce emotional regulation, or make a character's reaction therapeutically neat."
+description: Use when auditing fictional emotion, triggers, regulation, coping, defence, recovery, or residue across scenes and roleplay turns. Trigger phrases include “why did the reaction change?”, “check the emotional continuity,” and “show the trigger instead of diagnosing.”
 ---
 
-# Check emotional continuity
+## Steps
 
-Check causal and relational continuity without requiring emotional neatness.
+1. List the current emotional state, body, attention, need, threat, coping pattern, and social mask.
+2. Trace trigger → meaning → body and emotion → urge → action or restraint → immediate result → later residue.
+3. Separate emotion, interpretation, behaviour, diagnosis, narrator claim, and character belief.
+4. Check whether a reaction has a cause, context, duration, change, and consequence.
+5. Allow mixed emotion, delayed response, suppression, relapse, relief, numbness, pleasure, and unresolved residue.
+6. Preserve coping and defence as context-specific choices or habits rather than fixed moral traits.
+7. Repair abrupt changes with a cue, new evidence, time, pressure, memory, or deliberate fictional rule.
+8. Keep {{user}}’s feeling, body, speech, action, and recovery open.
 
-**Action:** Trace prior state, cue, interpretation, body, urge, behaviour,
-regulation, response, outcome, and delayed consequence.
+## Decision rules
 
-**Key point:** Mixed, delayed, concealed, or destructive emotion can remain
-coherent without becoming healthy.
+- Yes: Is a trait being treated as a diagnosis? Use observable pattern and context. No: continue.
+- Yes: Is calm automatically recovery or numbness automatically trauma? Test the established pattern. No: continue.
+- Yes: Is a later wave treated as failure? Trace its new cue and meaning. No: continue.
+- Yes: Does the draft decide {{user}}’s emotion or response? Remove that decision. No: continue.
 
-**Why:** Residue explains change better than a single emotion label.
+## Output
 
-## Trace the sequence
+- Format: `Emotional continuity audit`
+- State: list emotion, body, need, threat, coping, defence, and mask.
+- Loop: trace trigger, meaning, response, action, result, and residue.
+- Findings: list supported changes, gaps, mixed states, delays, and contradictions.
+- Repairs: list added context, evidence, time, pressure, or deliberate rule.
 
-For each emotional turn, record:
+## Stop when
 
-- prior state and unresolved residue;
-- cue, context, and interpretation;
-- bodily activation and action urge;
-- chosen or inhibited behaviour;
-- other characters’ readings and responses;
-- regulation or defence used;
-- immediate outcome and delayed consequence.
-
-## Flag false certainty
-
-Do not treat neuroticism, anxiety symptoms, a facial cue, silence, tears, anger, numbness, arousal, or a named defence as proof of motive, diagnosis, or consent. Statistical trait associations are population-level context, not character destiny.
-
-## Find the smallest repair
-
-If a reaction feels unearned, add the missing trigger, meaning, remembered pattern, relationship pressure, fatigue, or choice. If a change is intentional, preserve the contradiction and identify what caused the shift. Do not replace a character’s voice with a therapeutic explanation.
-
-## Report
-
-Return a table with: scene, prior state, cue, appraisal, observed response, regulation, continuity status, alternative reading, and smallest repair or consequence.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No emotional continuity problem or scene sequence is supplied: return `No emotional-continuity update` and do not invent {{user}}’s feeling.

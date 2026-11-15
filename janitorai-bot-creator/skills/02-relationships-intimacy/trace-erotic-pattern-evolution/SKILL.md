@@ -1,68 +1,51 @@
 ---
 name: trace-erotic-pattern-evolution
-description: "Trace how a fictional character's fantasies, erotic meanings, and arousal cues persist, reverse, or change across life history, relationships, identity, and context. Use when character design needs plausible origins or evolution without reverse-diagnosing trauma, imposing childhood causality, or treating a current fantasy as proof of past events. Do NOT use to diagnose trauma, infer hidden real-world conduct, or force a redemptive evolution or stable sexual identity."
+description: Use for fictional text-based roleplay when {{char}}’s fantasies, erotic meanings, arousal cues, identity, relationships, or context persist, reverse, or change. Trigger phrases include “where did this fantasy come from,” “trace {{char}}’s erotic pattern,” “how did the meaning change,” and “avoid a trauma explanation.”
 ---
 
-# Trace erotic pattern evolution
+## Steps
 
-Build a history of erotic meaning from evidence and alternatives rather than a single explanatory revelation.
+1. Describe the current fantasy structure, sought experience, cues, contradictions, and actual choices.
+2. Record an earlier experience or social message only when supported.
+3. Record what it meant to {{char}} then.
+4. Record later reinterpretation.
+5. Record the present cue or fantasy.
+6. Record the current choice and consequence.
+7. Add alternatives such as temperament, culture, sensory preference, play, novelty, opportunity, relationship learning, experimentation, or chance.
+8. Separate event, past understanding, current memory, current causal belief, and established narrative fact.
+9. Mark what persists, disappears, reverses, becomes specific, or changes with partner and context.
+10. Translate change into selection, avoidance, fantasy, boundaries, language, timing, confidence, shame, secrecy, and aftermath.
 
-**Action:** Describe the current pattern, propose multiple hypotheses, trace
-reinterpretation, and test present cues against actual choices.
+## Decision rules
 
-**Key point:** Erotic meaning can persist, reverse, coexist, or remain unknown;
-origins are not destiny.
+- Yes: Is the current pattern described before its cause is assigned? Continue. No: remove the premature origin.
+- Yes: Does a proposed origin have plausible alternatives? Include them. No: label the origin as uncertain.
+- Yes: Can a later interpretation change the meaning without changing the event? Keep both layers. No: use the supported history.
+- Yes: Is a fantasy being used to infer abuse, trauma, family dynamics, orientation, diagnosis, moral character, or hidden conduct? Remove that inference. No: continue.
+- Yes: Does the pattern change with partner, context, or identity? Track the variation. No: preserve the stable element.
+- Yes: Is a redemptive or stable sexual identity evolution being forced? Remove the forced outcome. No: continue.
+- Yes: Does the description decide {{user}}’s history, fantasy, arousal, consent, speech, or interpretation? Remove that decision. No: continue.
 
-**Why:** Alternative explanations prevent erotic history becoming a diagnostic
-reveal.
+## Output
 
-## Establish the current pattern
+- Format: `Erotic pattern evolution record`
+- Current pattern: list fantasy, experience, cue, contradiction, and actual choice.
+- Timeline: list earlier meaning, later reinterpretation, present cue, choice, and consequence.
+- Alternatives: list competing origins and confidence.
+- Continuity: list stable, changing, reversed, partner-specific, and context-specific elements.
+- Behavior: list present avoidance, boundaries, language, timing, confidence, shame, secrecy, and aftermath.
+- Unknowns: list what should remain unresolved.
 
-Describe the fantasy structure, sought experience, cues, contradictions, and actual choices visible now. Do not begin by assigning a cause.
+```text
+Erotic pattern evolution record
+Current pattern: {{char}} imagines being chosen while retaining control over disclosure; actual choices stay cautious.
+Timeline: A childhood story praised secrecy; later relationships made secrecy feel protective; now a private invitation brings both desire and caution.
+Alternatives: The pattern may also reflect temperament, novelty, sensory preference, or deliberate experimentation.
+Continuity: The need for control persists; the meaning shifts between safety, play, and intimacy.
+Behavior: {{char}} uses indirect language, tests privacy, and changes boundaries after trust grows.
+Unknowns: No single origin is established.
+```
 
-## Build a hypothesis chain
+## Stop when
 
-Use:
-
-**earlier experience or social message → meaning at the time → later reinterpretation → present cue or fantasy → current choice and consequence.**
-
-For every proposed origin, include plausible alternatives such as temperament, culture, sensory preference, imaginative play, novelty, opportunity, relationship learning, deliberate experimentation, or chance association.
-
-## Preserve historical truth
-
-A later interpretation can change what an old event means without changing what happened. Separate:
-
-- the event;
-- what the character understood then;
-- what they remember now;
-- what they currently believe caused the pattern;
-- what the narrative has actually established.
-
-## Track continuity and change
-
-Mark what persists, disappears, reverses, becomes more specific, or changes with partners and circumstances. The same theme may acquire safer, darker, kinder, riskier, or more conscious expression. Change does not automatically mean healing; stability does not prove damage.
-
-## Translate history into present behaviour
-
-Show evolution through changed selections, avoidance, fantasies, boundaries, language, timing, confidence, shame, secrecy, and aftermath. Keep uncertainty where evidence is incomplete.
-
-## Deliver the trace
-
-Return:
-
-- current pattern;
-- timeline of meanings and revisions;
-- competing origin hypotheses with confidence levels;
-- stable and changing elements;
-- present behavioural consequences;
-- unresolved questions that should remain unresolved.
-
-Never infer abuse, trauma, family dynamics, orientation, diagnosis, or moral character from fantasy. Do not manufacture memories, make characters sound like therapists, or assign the player's history, fantasy, arousal, consent, speech, or interpretation.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No fantasy, erotic cue, meaning, relationship change, or historical pattern is supplied: return `No erotic pattern evolution update` and do not invent {{char}}’s history or {{user}}’s desire.

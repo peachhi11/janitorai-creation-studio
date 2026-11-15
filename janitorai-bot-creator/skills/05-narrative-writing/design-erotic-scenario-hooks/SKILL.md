@@ -1,58 +1,35 @@
 ---
 name: design-erotic-scenario-hooks
-description: Design optional erotic encounter hooks for roleplay, tabletop play, interactive fiction, and romance scenes. Use when a setting needs a charged interruption, invitation, bargain, game, temptation, or obstacle with bypass, alteration, acceptance, player choice, and consequences rather than a railroaded sexual event. Do NOT use to force a player's desire, consent, or erotic route, or to turn fictional danger into real-world instruction.
+description: Use when designing optional fictional erotic encounter hooks, invitations, bargains, games, temptations, interruptions, or obstacles for roleplay involving {{char}} and {{user}}. Trigger phrases include “give me an erotic hook,” “make the route optional,” and “show the bypass and consequence.”
 ---
 
-# Design erotic scenario hooks
+## Steps
 
-Build a small story opportunity, not a forced sex scene. The hook should still work if the characters decline its erotic route.
+1. Define the setting, current relationship, charged premise, and reason the hook appears now.
+2. State who wants what, what is offered, what is at risk, and what each person knows.
+3. Offer at least one bypass, delay, refusal, alteration, or non-erotic route.
+4. Set the boundary, consent point, power imbalance, privacy, and possible danger.
+5. Give the hook a concrete sensory or social entry without deciding arousal.
+6. List how acceptance, refusal, delay, misreading, or interruption changes the scene.
+7. Keep dark, coercive, obsessive, or dangerous fiction legible as fiction with consequences.
+8. Keep {{user}}’s desire, consent, body, speech, and choice open.
 
-**Action:** Create erotic pressure with practical stakes, visible exits, and a
-meaningful alternative.
+## Decision rules
 
-**Key point:** Bypass, alteration, and acceptance are routes, not a requirement
-that every character choose the safest or healthiest one.
+- Yes: Does the hook railroad {{user}} into erotic participation? Add an exit and open response. No: continue.
+- Yes: Is fictional danger being turned into real-world instruction? Keep it scene-bound. No: continue.
+- Yes: Is a physical or emotional cue being treated as consent? Separate cue from permission. No: continue.
+- Yes: Does the hook lack a cost, risk, or consequence? Add one. No: continue.
 
-**Why:** Optional structure protects player sovereignty while leaving room for
-dark, manipulative, or morally compromised fiction.
+## Output
 
-## Define the hook
+- Format: `Optional erotic scenario hook`
+- Premise: state setting, relationship, offer, risk, and knowledge.
+- Entry: write the invitation, interruption, bargain, or charged obstacle.
+- Routes: list acceptance, refusal, bypass, delay, alteration, and interruption.
+- Consequences: list changes for each route.
+- Player space: state what remains open to {{user}}.
 
-Record:
+## Stop when
 
-- location, immediate practical problem, and why the hook appears now;
-- who offers, threatens, tempts, witnesses, or misunderstands what is happening;
-- the erotic element and what it means to each participant;
-- visible signals, hidden stakes, exits, and likely consequences;
-- what changes if the scene is accepted, altered, bypassed, exposed, or abandoned.
-
-Keep erotic charge attached to character, setting, power, ritual, humour, danger, or memory. Do not add sexual material merely because a random table produced it.
-
-## Offer three routes
-
-Every hook needs:
-
-1. **Bypass:** leave, refuse, solve the practical problem another way, or continue past it.
-2. **Alter:** negotiate terms, change the game, expose the trick, recruit a different participant, or turn the offer back.
-3. **Accept:** engage under the characters’ current understanding and chosen limits.
-
-Acceptance should not erase uncertainty or guarantee intimacy. Refusal should not punish the player with an impossible obstacle unless that pressure is the authored conflict and remains legible.
-
-## Make it playable
-
-Present what the characters can notice before the choice. Let players ask questions, test the offer, withdraw, or change their minds. Keep NPC motives and hidden information separate from player knowledge. Give the hook a reward or cost that is social, emotional, practical, or narrative—not only sexual.
-
-## Handle danger honestly
-
-If the hook contains intoxication, magic, restraint, blackmail, bodily risk, non-consensual touch, or predation, classify it in the design notes. Preserve dark fiction when requested, but do not disguise coercion as a sexy puzzle or make a character’s lack of resistance equal agreement.
-
-## Completion
-
-Return a compact hook card: premise, observable entry, erotic pressure, bypass, alteration, acceptance, NPC agendas, player-owned choices, and aftermath for each route.
-
-Keep hidden information with the NPC or narrator layer until discoverable. Do
-not decide the player's arousal, fear, consent, speech, or action.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional erotic premise or encounter is supplied: return `No erotic hook update` and do not invent {{user}}’s desire or consent.

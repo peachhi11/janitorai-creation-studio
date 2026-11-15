@@ -1,82 +1,56 @@
 ---
 name: translate-formative-experience-into-behaviour
-description: Translate a fictional character's formative experiences into specific present-day habits, expectations, decisions, speech, relationships, stress responses, masks, contradictions, and failure modes. Use when backstory exists but its behavioural consequences are vague, repetitive, melodramatic, diagnostic, or explained through therapy language instead of dramatised in scenes. Do NOT use to treat childhood roles as destiny, diagnose real people, or replace a requested dark pattern with a healthy one.
+description: Use for text-based roleplay when {{char}} has a backstory but its effects on present habits, expectations, decisions, speech, relationships, stress, masks, or failures are unclear. Trigger phrases include “connect {{char}}’s past to behavior,” “show what this history taught {{char}},” and “make the backstory visible in scenes.”
 ---
 
-# Translate formative experience into behaviour
+## Steps
 
-Turn history into conditional habits, not destiny.
+1. Record the earlier condition.
+2. Record what the event meant to {{char}} then.
+3. Record the strategy {{char}} tried.
+4. Record the short-term result and repeated reinforcement.
+5. Record the present trigger.
+6. Record current behavior and its cost or benefit.
+7. State what the behavior once accomplished.
+8. Separate learned skill, repeated habit, expectation, imposed role, copied model, and present choice.
+9. Show the pattern through attention, asking, refusal, apology, boasting, concealment, negotiation, trust, praise, error, dependence, play, and uncertainty.
+10. Vary it by status pressure, intimacy, conflict, responsibility, relationship, and audience.
+11. Include a public mask, private effort, exception, contradiction, and protective learning.
+12. Let another person’s behavior calm, provoke, support, control, or confuse the pattern without making every relationship a reenactment.
+13. Keep childhood language or “inner child” imagery as optional story metaphor.
 
-**Action:** Trace earlier condition, meaning, strategy, reinforcement, present
-trigger, behaviour, and current cost or benefit.
+## Decision rules
 
-**Key point:** A strategy may remain intelligent, harmful, useful, or obsolete
-depending on context.
+- Yes: Does each link from past to present have support? Keep the chain. No: weaken the claim or add another influence.
+- Yes: Is a childhood role being treated as destiny? Reframe it as a learned possibility and current choice. No: continue.
+- Yes: Did the strategy make sense in its original setting? Show its usefulness and later cost. No: record the supported origin.
+- Yes: Does the present choice resemble the past but serve a new purpose? Keep the new purpose. No: use the established purpose.
+- Yes: Is {{char}} diagnosing themself or explaining the childhood mechanism in therapist language? Move that analysis to author notes. No: continue.
+- Yes: Does the translation decide {{user}}’s feelings, attraction, consent, memories, motives, speech, or choices? Remove that decision. No: continue.
+- Yes: Is a dark, obsessive, manipulative, coercive, dependent, or loyal pattern intentional? Preserve its consequences without moralizing it. No: use the selected tone.
 
-**Why:** Conditional causality makes backstory visible without flattening the
-character into an origin story.
+## Output
 
-## Trace the adaptation chain
+- Format: `Formative experience translation`
+- Chain: list earlier condition, meaning, strategy, reinforcement, present trigger, behavior, cost, and benefit.
+- Function: state what the pattern once accomplished.
+- Scene behavior: list ordinary, intimate, conflict, and stress expressions.
+- Relationships: list how other people calm, provoke, support, control, or confuse the pattern.
+- Mask: state public performance, private effort, and what sustains them.
+- Exceptions: list contradictions, protective learning, and conditions for change.
+- Scene tests: list two or three scenes that show rather than explain the pattern.
 
-For each important present pattern, write:
+```text
+Formative experience translation
+Chain: Being responsible for a younger sibling → {{char}} learned that usefulness prevents abandonment → plans every detail → receives praise → now panics when {{user}} offers unplanned help → controls the task → loses the chance for mutual care.
+Function: The strategy once protected belonging and reduced uncertainty.
+Scene behavior: Ordinary — prepares early. Intimate — offers practical help instead of vulnerability. Conflict — refuses assistance and apologizes through action.
+Relationships: Consistency calms {{char}}; public correction makes the pattern rigid.
+Mask: Competence looks effortless; private effort includes exhaustion and fear.
+Exceptions: A trusted friend can make asking for help feel possible.
+Scene tests: A missed deadline, a quiet offer from {{user}}, and a crisis where planning fails.
+```
 
-**Earlier condition → meaning then → strategy tried → short-term result → repeated reinforcement → present trigger → current behaviour → current cost or benefit.**
+## Stop when
 
-If a link is unsupported, weaken the claim or add another influence. Do not jump directly from “this happened in childhood” to “therefore this adult always behaves this way.”
-
-## Preserve the original usefulness
-
-Ask what the behaviour once accomplished. It may have won approval, reduced punishment, protected a sibling, preserved belonging, made work predictable, created privacy, or restored a sense of control. A strategy can be intelligent in its original setting and costly elsewhere.
-
-Distinguish:
-
-- a skill the character deliberately learnt;
-- a habit strengthened by repetition;
-- an expectation built from recurring outcomes;
-- a role imposed or rewarded by others;
-- a behaviour copied from a model;
-- a present choice that resembles the past but serves a new purpose.
-
-## Make the result observable
-
-Translate each pattern into scene evidence:
-
-- what the character notices and anticipates;
-- how they ask, refuse, apologise, boast, conceal, or negotiate;
-- what they do before trusting someone;
-- how they handle instruction, praise, error, dependence, play, or uncertainty;
-- what changes under status pressure, intimacy, conflict, or responsibility;
-- what the public mask achieves and what private effort sustains it;
-- which exception reveals that the pattern is conditional.
-
-Keep developmental interpretation in author-facing notes. Characters should not diagnose themselves, announce their childhood mechanism, or sound like therapists unless that language belongs to them.
-
-## Write relationships as live systems
-
-Show how another person's behaviour affects the pattern. Consistency may calm, bore, or provoke the character. Guidance may feel supportive in one domain and controlling in another. Similarity to an earlier figure may matter, but do not turn every relationship into a reenactment.
-
-Allow the character to misread, resist, exploit, repeat, revise, or consciously perform an old role. Preserve tenderness, obsession, manipulation, cruelty, dependency, loyalty, and other authored possibilities without moralising them.
-
-## Use earlier selves carefully
-
-An earlier self can appear through sensory memory, play, shame, a rehearsed rule, an age-linked voice, an old object, or behaviour that returns in a familiar situation. “Inner child” may be a chosen metaphor, not an objective entity or complete explanation.
-
-Do not use formative history to assign the player's feelings, attraction, consent, memories, motives, speech, or choices.
-
-## Deliver the translation
-
-Return:
-
-- each supported adaptation chain;
-- ordinary, intimate, conflict, and stress expressions;
-- public mask and private cost;
-- exceptions, contradictions, and protective learning;
-- two or three scenes that test rather than explain the pattern.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No formative event, backstory pattern, present behavior, or causal translation problem is supplied: return `No formative experience translation` and do not invent {{char}}’s history.

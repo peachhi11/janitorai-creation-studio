@@ -1,109 +1,53 @@
 ---
 name: map-interpersonal-power-and-leverage
-description: "Map interpersonal power, leverage, dependency, and counterpower for fictional characters and relationships. Use when authority, money, shelter, secrets, reputation, networks, force, emotional significance, access, time, or control of options should shape a court, workplace, family, romance, rivalry, criminal arrangement, captivity, negotiation, or roleplay without reducing power to rank or personality. Do NOT use to prescribe real-world manipulation, diagnose abuse, or force equality into an intentionally unequal fictional dynamic."
+description: Use for fictional text-based roleplay when authority, money, shelter, secrets, reputation, networks, force, affection, access, time, or control of options shapes {{char}} and {{user}}’s choices. Trigger phrases include “map who has power,” “what leverage does {{char}} have,” “show the dependency,” and “find the counterpower.”
 ---
 
-# Map interpersonal power and leverage
+## Steps
 
-Show who can change whose options, under what conditions, and at what cost.
+1. Record what each actor wants now and later.
+2. Record what each actor fears and cannot openly admit.
+3. Record what each actor believes the other wants.
+4. Record success, survival, delay, and acceptable loss.
+5. Inventory supported power sources: authority, money, housing, care, transport, work, medicine, information, records, secrets, expertise, surveillance, reputation, allies, networks, physical force, affection, time, place, communication, and access.
+6. Distinguish possession from usability and credibility.
+7. For each resource, record supplier, replaceability, replacement cost, time, awareness, withdrawal effect, exits, witnesses, records, and allies.
+8. Record counterpower such as refusal, delay, information, appeal, coalition, documentation, sabotage, flight, exposure, retaliation, or strategic compliance.
+9. Mark power as public, deniable, secret, illegal, legitimate, or audience-dependent.
+10. Separate descriptive norm, injunctive norm, and personal position.
+11. Separate conformity, compliance, and obedience.
+12. Track how leverage can reverse, fail, or change hands.
 
-**Action:** Define wants, fears, resources, dependencies, alternatives,
-counterpower, visibility, and risk.
+## Decision rules
 
-**Key point:** Power can be unequal, unstable, hidden, or mutually desired
-without becoming a personality trait or a moral verdict.
+- Yes: Does a power source change someone’s available choices or consequences? Track it. No: leave it outside the map.
+- Yes: Is a secret credible and useful to disclose? Treat it as leverage. No: record possession without usable leverage.
+- Yes: Does awareness equal freedom in this situation? Check safe alternatives and costs. No: continue.
+- Yes: Does apparent reciprocity hide unequal options? Preserve the asymmetry. No: use the supported balance.
+- Yes: Is conformity, compliance, or obedience being treated as conversion? Separate visible behavior from private belief. No: continue.
+- Yes: Is {{char}} or {{user}}’s vulnerability, consent, belief, speech, submission, or choice being invented? Remove it. No: continue.
+- Yes: Is the dynamic intentionally calculating, abusive, coercive, criminal, seductive, or morally ambiguous? Preserve the selected fiction and consequences. No: continue.
 
-**Why:** Option structure makes influence concrete and gives scenes meaningful
-leverage and consequence.
+## Output
 
-## Define the contest
+- Format: `Interpersonal power record`
+- Actors: list goals, fears, secrets, success, survival, delay, and acceptable loss.
+- Power sources: list authority, resources, information, reputation, force, affection, time, place, access, and enforceability.
+- Dependencies: list suppliers, alternatives, replacement costs, awareness, withdrawal effects, exits, witnesses, records, and allies.
+- Counterpower: list refusal, delay, appeal, coalition, documentation, sabotage, flight, exposure, retaliation, and compliance.
+- Visibility: state what is public, hidden, deniable, illegal, legitimate, or audience-dependent.
+- Shifts: list where leverage can reverse or fail.
 
-For each actor, state:
+```text
+Interpersonal power record
+Actors: {{char}} wants control of the story; {{user}} wants safe access to information; both fear public exposure.
+Power sources: {{char}} controls the records and has status; {{user}} has a witness, a backup copy, and the option to leave.
+Dependencies: Housing depends on {{char}}; replacement is possible but slow; one ally knows the dependency.
+Counterpower: {{user}} can delay, document, appeal, disclose, or leave, but each option has a different cost.
+Visibility: The formal authority is public; the private threat is deniable; the record is hidden.
+Shifts: A witness or new copy could reverse the leverage.
+```
 
-- what they want now and later;
-- what outcome they fear;
-- what they cannot openly admit;
-- what they believe the other person wants;
-- what would count as success, survival, delay, or acceptable loss.
+## Stop when
 
-Do not assume every relationship is a contest. Map power only where it affects choice or consequence.
-
-## Inventory power sources
-
-Include only sources supported by the fiction:
-
-- formal authority, legitimacy, or role;
-- money, housing, care, transport, work, medicine, or scarce resources;
-- information, records, secrets, expertise, or surveillance;
-- reputation, audience, allies, networks, or gatekeeping;
-- physical capability, weapons, legal force, or credible threat;
-- affection, belonging, attention, loyalty, or emotional dependency;
-- control of time, place, communication, access, and available options.
-
-Distinguish possession from usability. A secret is leverage only if disclosure is credible and useful. Authority fails when orders cannot be enforced.
-
-## Map dependency and alternatives
-
-For every important resource, identify:
-
-- who supplies it;
-- whether it can be replaced;
-- the cost and time required to replace it;
-- who knows about the dependency;
-- what happens if access is withdrawn;
-- what exit routes, witnesses, records, or allies exist.
-
-Awareness does not equal freedom. A character may recognise control and still lack a safe alternative.
-
-## Add counterpower
-
-Give each actor meaningful capacity where canon supports it: refusal, delay, information, performance, appeal, coalition, reputation, documentation, sabotage, flight, exposure, retaliation, or strategic compliance. Counterpower can be dangerous, limited, hidden, or unsuccessful without being irrelevant.
-
-Track asymmetry rather than forcing equality. A powerful character may still depend on someone socially beneath them.
-
-## Track visibility and risk
-
-Mark which power is public, deniable, secret, illegal, culturally legitimate, or dependent on audience belief. Note what evidence survives and what exposure would cost each person. Separate the character's self-justification from the actual option structure.
-
-## Model social influence as a relationship field
-
-Separate three pressures that may point in different directions:
-
-- **descriptive norm:** what the character thinks people usually do;
-- **injunctive norm:** what the character thinks important people approve or demand;
-- **personal position:** what the character privately accepts, rejects, or has not decided.
-
-For a contested issue, map the character's latitude of acceptance,
-non-commitment, and rejection rather than treating an attitude as one fixed
-point. Ego-involvement, identity, history, status, and the source of the
-message can narrow or widen those latitudes. A message close to a person's
-anchor may be assimilated; a message outside their range may be contrasted or
-treated as evidence about the speaker rather than the issue.
-
-Also distinguish conformity to a group, compliance with a request, and
-obedience to an authority. Record the referent group, the visible behaviour,
-the private belief, the anticipated sanction or reward, and whether the act is
-sincere, strategic, fearful, ritualised, or temporary. Social pressure changes
-options; it does not prove conversion or erase agency.
-
-## Deliver the power map
-
-Return:
-
-- actors, goals, and feared losses;
-- power sources and enforceability;
-- dependencies, alternatives, and refusal costs;
-- counterpower and likely coalitions;
-- public role versus private vulnerability;
-- unstable points where leverage can reverse;
-- scene opportunities and continuity facts.
-
-Preserve calculating, abusive, coercive, criminal, seductive, or morally ambiguous dynamics when intended. Do not assign the player's vulnerability, consent, beliefs, choices, speech, or submission.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No power, leverage, dependency, authority, resource, counterpower, or option problem is supplied: return `No interpersonal power update` and do not invent {{user}}’s vulnerability or choice.

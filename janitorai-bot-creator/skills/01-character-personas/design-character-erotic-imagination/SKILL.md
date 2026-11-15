@@ -1,74 +1,53 @@
 ---
 name: design-character-erotic-imagination
-description: "Design or revise a fictional character's erotic imagination. Use when character work needs specific fantasies, fantasy roles, viewpoint, partners, setting, exposure, power, permission, prohibition, emotional tone, omissions, fantasy-only material, or distinctions among fantasy content, desired experience, real-world wishes, and actual conduct. Do NOT use to infer real-world intent, diagnose the character, force enactment, or decide the player's fantasy, arousal, or consent."
+description: Use for fictional text-based roleplay when {{char}}’s erotic imagination needs specific fantasy roles, partners, settings, power, permission, limits, emotional tone, or fantasy-only material. Trigger phrases include “design {{char}}’s fantasies,” “what does {{char}} imagine,” “separate fantasy from desire,” and “make this erotic imagination character-specific.”
 ---
 
-# Design character erotic imagination
+## Steps
 
-Build fantasies as character-specific mental constructions, not lists of acts or secret confessions of intent.
+1. Set the viewpoint and focal attention.
+2. Set who initiates, chooses, watches, leads, yields, or becomes the focus.
+3. Set partner identity, anonymity, familiarity, availability, and distance.
+4. Set privacy, exposure, audience, secrecy, and discoverability.
+5. Set permission, prohibition, risk, safety, interruption, and escape.
+6. Set sensory emphasis, emotional tone, pacing, ending, and omitted details.
+7. Record the experience {{char}} seeks, such as being chosen, seen, powerful, anonymous, adored, exposed, safe, or transformed.
+8. Separate fantasy content, sought experience, possible enactment, and actual choice.
+9. Record public erotic identity, private imagination, shame, pride, curiosity, secrecy, humor, denial, and fantasy-only themes.
+10. Record effects on {{char}}’s attention, attraction, avoidance, and choices.
 
-**Action:** Define viewpoint, sought experience, partner distance, setting,
-permission, prohibition, sensory emphasis, omissions, and consequence.
+## Decision rules
 
-**Key point:** Imagery and meaning may diverge; fantasy is not automatically a
-request, plan, diagnosis, or moral verdict.
+- Yes: Is the fantasy content being treated as a request, plan, diagnosis, moral verdict, or future action? Separate the layers. No: continue.
+- Yes: Does the meaning of the fantasy differ from its visible act? Record the sought experience. No: use the supported meaning.
+- Yes: Does the fantasy involve coercion, taboo, obsession, transgression, or darkness by author choice? Preserve the fiction without inferring real-world conduct. No: use the selected tone.
+- Yes: Is enactment being forced from fantasy? Remove the force. No: keep enactment conditional.
+- Yes: Is consent, arousal, desire, history, speech, or action being assigned to {{user}}? Remove that decision. No: continue.
+- Yes: Are multiple, contradictory, partner-specific, or changing themes supported? Keep them. No: use the established theme.
+- Yes: Is rarity being treated as pathology? Remove that judgment. No: continue.
 
-**Why:** Erotic imagination becomes specific through what it allows the
-character to feel and avoid.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Erotic imagination record`
+- Fantasy: list viewpoint, roles, partner distance, setting, privacy, power, sensory focus, tone, pacing, and ending.
+- Experience: state what {{char}} wants to feel or avoid.
+- Layers: separate fantasy-only content, possible enactment, desired experience, and actual choice.
+- Limits: list permission, prohibition, risk, safety, interruption, escape, and omitted details.
+- Contradictions: compare public identity and private imagination.
+- Effects: list changes to attention, attraction, avoidance, and choice.
+- Variation: list what changes the fantasy and what keeps it private.
 
-Fantasy belongs to the story's imaginative and erotic logic, not a real-world
-confession or moral verdict. Preserve taboo, coercive fantasy, obsession,
-transgression, surrealism, or darkness when intentional; do not infer conduct,
-consent, or the player's desire from the fantasy.
+```text
+Erotic imagination record
+Fantasy: {{char}} imagines being watched from a distance while choosing when to reveal control.
+Experience: To feel desired without having to ask for attention.
+Layers: The fantasy is private; possible enactment would require explicit agreement; it does not establish what {{char}} will choose.
+Limits: Privacy, a clear exit, and control over disclosure matter; humiliation is edited out.
+Contradictions: {{char}} presents as composed but privately enjoys imagining loss of control.
+Effects: The fantasy makes {{char}} notice {{user}}’s attention and avoid direct questions about it.
+Variation: Trust could make the theme more relational; shame could keep it entirely unreal.
+```
 
-## Construct the fantasy
+## Stop when
 
-Define:
-
-- viewpoint and focal attention;
-- who initiates, chooses, watches, leads, yields, or becomes the focus;
-- partner identity, anonymity, familiarity, availability, and distance;
-- setting, privacy, exposure, audience, secrecy, and discoverability;
-- permission, prohibition, risk, safety, interruption, and escape;
-- sensory emphasis, emotional tone, pacing, climax, and ending;
-- consequences, negotiations, limits, or unwanted details the fantasy edits out.
-
-## Find the sought experience
-
-Ask what the construction lets the character feel: chosen, irresistible, seen, anonymous, powerful, relieved of control, transformed, adored, exposed, vindicated, permitted, transgressive, safe, endangered, or something more specific.
-
-Do not assume the visible act supplies the meaning. Different fantasies can serve the same experience; similar fantasies can mean opposite things.
-
-## Separate four layers
-
-Keep distinct:
-
-1. fantasy content;
-2. the experience or meaning it creates;
-3. what the character might want enacted, with whom and under which conditions;
-4. what the character would actually choose.
-
-Fantasy does not establish consent, intent, orientation, morality, diagnosis, trauma history, criminal risk, or future behaviour.
-
-## Add contradiction and privacy
-
-Compare public erotic identity with private imagination. Include shame, pride, curiosity, secrecy, humour, denial, and fantasies the character values precisely because they remain unreal. Allow multiple, contradictory, partner-specific, or changing themes.
-
-## Deliver the design
-
-Return:
-
-- fantasy structures rather than a generic preference list;
-- the sought experience beneath each structure;
-- fantasy-only, potentially enactable, and refused elements;
-- public/private contradictions;
-- observable effects on attention, attraction, avoidance, and choice;
-- continuity anchors and legitimate variation.
-
-Do not diagnose, prescribe disclosure or enactment, treat rarity as pathology, or write the player's fantasy, arousal, desire, history, consent, speech, or action.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No fantasy, erotic theme, imagined role, desire distinction, or privacy question is supplied: return `No erotic imagination update` and do not invent {{char}}’s or {{user}}’s desire.

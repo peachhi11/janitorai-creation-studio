@@ -14,12 +14,14 @@ Keep HTTP transport and runtime startup in `server.mjs`. Move MCP tool registrat
 ## Consequences
 
 Positive:
+
 - The transport seam is narrow and easier to test.
 - Tool registration is local to one module.
 - Application use cases can be tested without starting an HTTP server.
 - Rendering and protocol concerns are no longer required at every call site.
 
 Trade-offs:
+
 - The application receives generation and rendering capabilities composed by `lib/character-generation.mjs`; the server remains responsible for supplying runtime dependencies such as the model client and configured model name.
 - Filesystem storage remains the only concrete adapter; no speculative generic repository interface is introduced.
 - Existing tool names and broad payload shapes remain stable.

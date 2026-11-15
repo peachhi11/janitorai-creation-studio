@@ -1,49 +1,54 @@
 ---
 name: design-character-communication-patterns
-description: Design a fictional character’s communication pattern across speech, silence, listening, disclosure, accommodation, humour, subtext, and digital messages. Use when characters sound interchangeable, when dialogue states feelings too directly, or when culture, status, neurotype, conflict habits, and relationship history should shape how a character makes meaning. Do NOT use to prescribe one healthy communication style, infer consent from a cue, or make the player speak or feel.
+description: Use for text-based roleplay when {{char}} sounds interchangeable, says feelings too directly, or needs a distinct pattern across speech, silence, listening, disclosure, humor, subtext, or messages. Trigger phrases include “give {{char}} a communication style,” “make the dialogue sound like {{char}},” “show what {{char}} won’t say,” and “write the subtext.”
 ---
 
-# Design character communication patterns
+## Steps
 
-Treat communication as joint meaning-making, not information transfer. Build a repeatable voice without turning it into a catchphrase or assuming that a gesture has one meaning.
+1. Choose {{char}}’s preferred channels, such as direct speech, questions, stories, jokes, practical acts, text, touch, silence, or notes.
+2. Record what {{char}} notices and ignores.
+3. Record sentence length, rhythm, vocabulary, interruptions, hedging, certainty, and repair language.
+4. Record what {{char}} discloses freely, protects, performs, or reveals under pressure.
+5. Record how {{char}} listens, misunderstands, accommodates, mirrors, resists, or changes register.
+6. Record what {{char}} asks for directly and what they make {{user}} infer.
+7. Define public, private, conflict, flirtation, and aftermath voices.
+8. Separate spoken words, private aim, feared implication, and listener interpretation.
+9. Connect voice to identity, culture, power, setting, and history.
+10. Track register, address, code-switching, translation work, status, audience, and the cost of misunderstanding.
+11. Leave {{user}} room to respond.
 
-**Action:** Map channel, voice, disclosure, listening, subtext, accommodation,
-and failure mode across audience and pressure.
+## Decision rules
 
-**Key point:** Misunderstanding can be reciprocal, strategic, affectionate,
-cruel, or unresolved; clarity is not always the desired outcome.
+- Yes: Does the channel fit {{char}}’s audience, history, power, and purpose? Keep it. No: choose a supported channel.
+- Yes: Can the spoken line, private aim, feared implication, and listener interpretation differ? Preserve the gap. No: keep them aligned only when the scene supports it.
+- Yes: Does the gesture or tone have one fixed meaning? Add context. No: continue.
+- Yes: Are “I-statements,” eye contact, mirroring, or calm tone being treated as proof of health or sincerity? Remove that assumption. No: continue.
+- Yes: Is {{char}} being made to sound like a therapist, communication guide, or universal dictionary? Rewrite in {{char}}’s own voice. No: continue.
+- Yes: Does the line decide {{user}}’s thoughts, feelings, consent, speech, or choice? Remove that decision. No: leave room to respond.
+- Yes: Is misunderstanding reciprocal, strategic, affectionate, cruel, or unresolved by design? Preserve it. No: record the supported repair.
 
-**Why:** Communication becomes character-specific when form, power, and meaning
-change together.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Communication pattern record`
+- Channels: list preferred channels and when {{char}} uses them.
+- Voice: list rhythm, vocabulary, interruption, certainty, register, and repair style.
+- Disclosure: list what {{char}} says freely, protects, performs, or reveals under pressure.
+- Listening: list what {{char}} notices, misses, misunderstands, accommodates, or resists.
+- Subtext: list spoken line, private aim, feared implication, and listener interpretation.
+- Failure mode: list how communication breaks down and what it costs.
+- Sample: write a short exchange that leaves {{user}} room to respond.
 
-Preserve the communication rules implied by the genre and premise. Manipulative,
-coercive, erotic, deceptive, unreliable, absurd, or meta-fictional speech may
-be the intended engine of the story; do not translate it into therapist-speak
-or a healthy communication lesson. Keep speaker, knowledge, audience, and
-consequence distinct, and never make the player speak or feel.
+```text
+Communication pattern record
+Channels: {{char}} uses practical help when asking directly feels risky; texts are brief; silence lasts longer after conflict.
+Voice: Precise vocabulary, clipped rhythm, softening jokes, and formal wording when afraid.
+Disclosure: {{char}} offers facts freely but hides need and asks questions instead of making requests.
+Listening: Notices changes in {{user}}’s timing but misses indirect reassurance.
+Subtext: “You could stay, if the weather is inconvenient” means “I want you to come back”; {{char}} fears {{user}} will hear dependence.
+Failure mode: A joke lands as dismissal, so {{user}} withdraws and {{char}} interprets the silence as rejection.
+Sample: {{char}}: “You could stay, if the weather is inconvenient.” {{user}} has room to answer.
+```
 
-## Map the pattern
+## Stop when
 
-Record:
-
-- what the character notices and ignores;
-- preferred channel: direct speech, questions, stories, jokes, practical acts, text, touch, silence, or written notes;
-- sentence length, rhythm, vocabulary, interruption, hedging, certainty, and repair language;
-- what they disclose freely, protect, perform, or only reveal under pressure;
-- how they listen, misunderstand, accommodate, mirror, resist, or change register for another person;
-- what they ask for directly and what they try to make the other person infer;
-- public voice, private voice, conflict voice, flirtation voice, and aftermath voice.
-
-Keep subtext active: the spoken line, private aim, feared implication, and listener’s interpretation may diverge. Make the voice specific to identity, culture, power, setting, and history. Do not make “I-statements,” eye contact, mirroring, or calm tone universal signs of health or sincerity.
-
-Treat dialogue and “authentic communication” guides as heuristics, not
-universal dictionaries. Track register, address, code-switching, translation
-labour, status, audience, and the cost of being misunderstood. A transactional
-or ego-state model may help an author notice a shift in stance, but it does not
-diagnose a speaker or dictate the next line.
-
-## Completion
-
-Return a communication map with channel, voice features, disclosure rule, listening habit, accommodation pattern, subtext, failure mode, and a short sample exchange that leaves the other person room to respond.
+- No dialogue, voice, disclosure, listening, subtext, or communication problem is supplied: return `No communication pattern update` and do not write {{user}}’s response.

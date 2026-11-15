@@ -14,11 +14,13 @@ Use `lib/runtime-config.mjs` as the runtime configuration seam. It validates num
 ## Consequences
 
 Positive:
+
 - Startup invariants are explicit and unit-testable.
 - Server and creator use the same model and environment semantics.
 - Authentication comparison is centralised and timing-safe for equal-length tokens.
 - Deployment configuration is visible as one module.
 
 Trade-offs:
+
 - TLS, rate limiting, and request-size limits remain deployment concerns for the next production-hardening pass.
 - OpenAI client construction remains in each runtime entrypoint until a second AI adapter justifies a deeper seam.

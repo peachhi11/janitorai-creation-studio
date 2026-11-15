@@ -1,92 +1,49 @@
 ---
 name: model-relationship-satisfaction-and-strain
-description: "Model or revise fictional relationship satisfaction, dissatisfaction, stability, and strain as viewpoint-specific processes unfolding over time. Use when personality, stress, attribution, emotion regulation, communication, disclosure, sexual compatibility, respect, coping, comparison standards, or unequal investment must produce believable actor and partner effects without making traits or relationship labels deterministic. Do NOT use to score real relationships, diagnose partners, or treat satisfaction as proof of safety or moral health."
+description: Use for text-based roleplay when {{char}} and {{user}} experience a relationship differently across emotional, sexual, practical, social, or power domains. Trigger phrases include “why are they satisfied differently,” “map the relationship strain,” “what is wearing the relationship down,” and “track the change over time.”
 ---
 
-# Model relationship satisfaction and strain
+## Steps
 
-Treat satisfaction as a changing judgment from each participant, not an objective health score.
+1. Record what each person expected and what they compare the relationship with.
+2. Record rewards, costs, alternatives, investments, constraints, and what each person notices, minimizes, conceals, or misattributes.
+3. Record satisfaction in sexual, emotional, practical, social, and power domains.
+4. Record whether stability feels safe, empty, prestigious, entrapping, or necessary.
+5. Translate traits into conditional stress, planning, expression, disclosure, criticism, reassurance, repair, flexibility, novelty, or routine mechanisms.
+6. Trace vulnerability or resource, stressor, perception, emotion and regulation, behavior, partner response, coping, residue, and changed satisfaction.
+7. Track desire, intimacy, time, care, risk, privacy, and commitment separately.
+8. Classify mismatch as temporary, chronic, situational, concealed, bargained, or eroticized.
+9. Record whether each person experiences the mismatch as deprivation, pressure, freedom, proof, rejection, duty, opportunity, or relief.
+10. Track stress, intimacy, comparison standards, alternatives, investment, agreement, turning points, divergence, recovery, and decline over time.
 
-**Action:** Separate each participant's expectations, rewards, costs, constraints,
-domains, and trajectory.
+## Decision rules
 
-**Key point:** Satisfaction can coexist with dependency, inequality, danger,
-love, or deliberate compromise.
+- Yes: Do {{char}} and {{user}} judge the same relationship differently? Keep both viewpoints. No: use the shared judgment.
+- Yes: Does satisfaction prove safety, fairness, quality, or moral health? Remove that conclusion. No: continue.
+- Yes: Does a trait or relationship label determine the outcome? Replace it with a conditional mechanism. No: continue.
+- Yes: Does mismatch create a duty to provide sex, care, access, or agreement? Remove the duty. No: continue.
+- Yes: Can a mismatch be temporary, chronic, concealed, bargained, or meaningful in the selected fiction? Preserve the supported form. No: use the established form.
+- Yes: Does the description decide {{user}}’s satisfaction, loyalty, forgiveness, speech, action, or relationship choice? Remove that decision. No: continue.
+- Yes: Is a temporary state being treated as permanent decline or recovery? Track time and turning points. No: continue.
 
-**Why:** Viewpoint-specific strain creates believable relational divergence
-without turning a model into a verdict.
+## Output
 
-## Establish separate viewpoints
+- Format: `Relationship satisfaction and strain record`
+- Viewpoints: list expectations, comparisons, rewards, costs, alternatives, investment, constraints, and domains for each person.
+- Process: trace vulnerability, stressor, perception, emotion, behavior, response, coping, residue, and changed satisfaction.
+- Mismatch: classify domain, duration, meaning, response, and cost.
+- Trajectory: list time points, stress, intimacy, standards, alternatives, investment, agreement, turning points, and divergence.
+- Scenes: list observable behavior and continuity implications.
 
-For each participant, record:
+```text
+Relationship satisfaction and strain record
+Viewpoints: {{char}} values privacy and practical reliability; {{user}} values emotional responsiveness; both rate sexual trust highly but compare it to different pasts.
+Process: Work stress narrows {{char}}’s patience; {{user}} reads the silence as withdrawal; {{char}} reads repeated questions as pressure; both avoid the topic; satisfaction drops unevenly.
+Mismatch: Emotional responsiveness is situational and currently felt as deprivation by {{user}} and necessary recovery by {{char}}.
+Trajectory: A clear pause agreement could improve the next week; repeated silence could create persistent strain.
+Scenes: Missed messages, a practical repair, and a conversation about what each person expected.
+```
 
-- what they expected and what they compare the relationship with;
-- rewards, costs, alternatives, investments, and constraints;
-- satisfaction in sexual, emotional, practical, social, and power domains;
-- what they notice, minimise, conceal, or misattribute;
-- whether stability feels safe, empty, prestigious, entrapping, or necessary.
+## Stop when
 
-Partners may rate the same relationship differently. High satisfaction can coexist with dependency, inequality, or harm.
-
-## Separate trait from process
-
-Translate dispositions into conditional mechanisms such as:
-
-- stress sensitivity, rumination, or hostile attribution;
-- reliability, planning, and follow-through;
-- emotional expression, suppression, or externalisation;
-- disclosure, avoidance, criticism, reassurance, or repair;
-- flexibility, novelty seeking, or tolerance for routine.
-
-Do not jump from neuroticism, conscientiousness, attachment, love style, gender, or relationship form to an outcome.
-
-## Build the adaptation loop
-
-Use:
-
-**Vulnerability or resource + stressor → perception → emotion and regulation → behaviour → partner interpretation and response → joint or separate coping → residue → changed satisfaction.**
-
-Include actor effects, partner effects, and feedback. One person's pattern can affect their own judgment more strongly than the partner's.
-
-## Model mismatch without turning it into a verdict
-
-Track desire, intimacy, time, care, risk, privacy, and commitment as separate
-domains. A mismatch may be temporary, chronic, situational, concealed, openly
-bargained, or eroticised as part of the relationship's meaning. Record who
-experiences it as deprivation, pressure, freedom, proof, rejection, duty,
-opportunity, or relief. Then show the available responses: ask, wait, adapt,
-seek another outlet, renegotiate, conceal, retaliate, leave, or remain despite
-the cost.
-
-Do not convert discrepancy into a diagnosis, a duty to provide sex, or evidence
-that either partner is objectively the healthier one. In dark or erotic fiction,
-the mismatch may be a source of tenderness, leverage, resentment, obsession,
-humiliation, bargaining, or rupture; keep the narrative's chosen meaning while
-showing its consequences and each person's agency.
-
-## Track trajectory
-
-Choose meaningful time points and note changes in stress, intimacy, comparison standards, alternatives, investment, and agreement. Distinguish a temporary state from persistent decline, necessary disruption, habituation, or recovery.
-
-Similarity is not automatically compatibility. Stability is not automatically quality. A satisfying arrangement is not automatically safe or fair.
-
-## Deliver the process model
-
-Return:
-
-- satisfaction by participant and domain;
-- comparison standards and constraints;
-- trait-to-process translations;
-- adaptation loops and feedback;
-- trajectory, turning points, and likely divergence;
-- scene-level behaviours and continuity implications.
-
-Keep the analysis non-diagnostic and author-facing. Do not decide the player's satisfaction, loyalty, forgiveness, speech, action, or relationship choice.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No relationship satisfaction, strain, mismatch, viewpoint difference, or time-based change is supplied: return `No relationship satisfaction update` and do not invent {{user}}’s judgment.

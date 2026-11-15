@@ -1,76 +1,33 @@
 ---
 name: budget-context-and-prompt-priority
-description: Allocate limited context and output budgets across system rules, character or persona data, lore, examples, history, tools, and current user input without silently dropping high-value information. Use when a prompt stack truncates, a card becomes inconsistent in long chats, lore competes with character instructions, or a preset needs a model-specific context plan. Do NOT use to invent model limits, guarantee recall, or discard canon, player agency, or privacy-sensitive data without an explicit policy.
+description: Use when allocating limited context or output budgets across system rules, character data, lore, examples, history, tools, and current user input. Trigger phrases include “fix context truncation,” “prioritise the prompt,” and “stop lore from drowning out the character.”
 ---
 
-# Budget context and prompt priority
+## Steps
 
-Treat context as a finite working surface. More text is not automatically more
-control.
+1. Identify model, provider, context limit, output limit, tokenizer assumptions, platform, and current prompt stack.
+2. Measure each segment: system rules, safety, character, lore, examples, history, tools, user input, and output reserve.
+3. Mark each segment as required, high-value, compressible, deferrable, duplicated, private, or removable.
+4. Set priority by current task, continuity, character identity, knowledge boundaries, player agency, and immediate choice.
+5. Compress or route low-priority material without silently dropping canon, privacy-sensitive data, or player-owned state.
+6. Allocate output budget for the requested scene, analysis, or open response.
+7. Test long-chat, lore-heavy, conflict, intimate, and failure cases and record what was lost.
 
-**Action:** Establish the target budget, classify context by authority and task
-value, reserve output space, select the smallest sufficient bundle, and verify
-what actually reached the model.
+## Decision rules
 
-**Key point:** Priority is not the same as recency. A late block can still be
-lower authority, irrelevant, or too large to survive truncation.
+- Yes: Is a model limit unknown? Mark it `Unknown`; do not infer it. No: use the documented limit.
+- Yes: Does compression remove canon, privacy, or player agency? Preserve it or ask for an explicit policy. No: continue.
+- Yes: Is lore competing with current character or user input? Route or summarize lore. No: continue.
+- Yes: Does the plan guarantee recall beyond the tested context? Remove the guarantee. No: continue.
 
-**Why:** Explicit budgeting reduces silent loss, contradictory instructions,
-voice drift, and lore overload.
+## Output
 
-## Define the budget
+- Format: `Context and prompt budget plan`
+- Limits: list model, provider, context, output, tokenizer, and unknowns.
+- Budget: table segments with tokens, priority, action, and rationale-free decision.
+- Risks: list truncation, drift, privacy, canon, and agency risks.
+- Tests: list cases, losses, and next adjustment.
 
-Record model/provider, context limit, requested output, tool or media overhead,
-history window, tokeniser or estimate method, and safety margin. If limits are
-unknown, label the plan provisional rather than guessing.
+## Stop when
 
-Reserve output and tool space first. Do not spend the entire context on static
-instructions when the task needs a long scene or conversation history.
-
-## Classify and rank context
-
-For each block, record source, authority, scope, size, freshness, and failure cost.
-Typical classes are:
-
-- trusted operating rules and platform wiring;
-- current task and player request;
-- character/persona and active scene state;
-- relevant canon, knowledge, and relationship records;
-- conditional lore or examples;
-- recent history and summaries;
-- optional style, research, or background material.
-
-Keep one authoritative copy of each rule. Prefer a compact state record over a
-repeated prose biography. Exclude material that cannot change this response.
-
-## Handle pressure
-
-When the bundle is too large, reduce in this order unless the project specifies
-otherwise: stale or duplicated material, irrelevant examples, broad background,
-older history that has a validated summary, then optional style notes. Never
-silently remove a player-controlled fact, an active boundary, a required
-knowledge restriction, or a canon change; report the conflict and ask or stop at
-the smallest necessary decision.
-
-Dynamic lore activation means available context, not character knowledge or
-guaranteed mention. Keep insertion position, recursion, filters, and budget
-separate from canon.
-
-## Verify the assembled request
-
-Inspect the final expanded messages, estimated tokens, truncation point, roles,
-order, and omitted blocks. Test a normal, long-context, sparse, and adversarial
-request. Check character voice, knowledge boundaries, player agency, and whether
-the intended state actually survived.
-
-## Fictional genre logic
-
-Genre may intentionally privilege a fragment, dream, unreliable record,
-metafictional instruction, or sensory cue over an encyclopaedic canon bundle.
-Make that narrative priority explicit. Do not mistake a context budget failure
-for an authored mystery or use token pressure to force a player's response.
-
-## Completion
-
-Return a budget table, priority policy, assembled-context preview, omitted or
-compressed material, truncation risks, and verification results.
+- No prompt stack, context limit, model, or budgeting problem is supplied: return `No context-budget update` and do not delete prompt content.

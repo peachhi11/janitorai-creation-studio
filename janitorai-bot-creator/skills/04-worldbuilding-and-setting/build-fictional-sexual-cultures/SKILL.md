@@ -1,91 +1,37 @@
 ---
 name: build-fictional-sexual-cultures
-description: "Design or revise how a fictional society, institution, community, family, or subculture understands and organises sexuality. Use when worldbuilding needs norms, taboos, identities, scripts, laws, religion, medicine, education, censorship, commerce, privacy, reputation, rites, sexual citizenship, generational change, or conflict between public rules and private practice. Do NOT use cultural norms to dictate every character's desire, flatten kink into pathology, or impose a healthy relationship outcome."
+description: Use when designing how a fictional society, institution, community, family, or subculture organises sexuality, intimacy, identity, privacy, reputation, rites, law, religion, medicine, education, or commerce. Trigger phrases include “build the sexual culture,” “map the public script,” and “show private practice versus the rule.”
 ---
 
-# Build fictional sexual cultures
+## Steps
 
-Treat sexual culture as a contested system of meanings, permissions, silences, and consequences—not a list of unusual practices.
+1. Set time, place, class, religion, ethnicity, institution, political order, and the groups whose norms matter.
+2. Separate dominant public ideals, everyday practice, private exceptions, subcultures, tolerated hypocrisy, and individual desire.
+3. For each norm or taboo, define what it governs, its stated reason, practical function, enforcement, exceptions, and costs.
+4. Trace law, kinship, inheritance, marriage, gender, labour, health, housing, technology, media, commerce, and privacy.
+5. Record who names conduct normal, sacred, obscene, criminal, medical, mature, respectable, or deviant.
+6. Separate bodily reality, institutional doctrine, public story, community knowledge, character belief, private conduct, and narrator framing.
+7. Model reform, backlash, panic, migration, war, disease, technology, scandal, commerce, art, and generational change.
+8. Give characters room to comply, perform, resist, misunderstand, exploit, or reject the surrounding script.
+9. Keep {{user}}’s desire, identity, consent, speech, and choice open.
 
-Genre guides, erotic-setting checklists, and explicit reference sheets are
-craft inputs, not evidence that a real community behaves one way. Separate
-public script, private practice, subculture, institutional enforcement,
-individual desire, and deliberate fictional convention. Let characters comply,
-perform, resist, misunderstand, exploit, or reject the surrounding script.
+## Decision rules
 
-When sexuality or marriage shapes the setting, trace it through kinship,
-inheritance, housing, work, reputation, law, religion, privacy, and access to
-care. Do not isolate erotic norms from the material conditions that make some
-choices easier, riskier, or more visible than others.
+- Yes: Is the culture uniform or does it dictate every character’s desire? Add groups, generations, status, locality, and personal history. No: continue.
+- Yes: Is kink, rarity, or difference being treated as pathology? Remove the universal judgment. No: continue.
+- Yes: Are public rules disconnected from housing, work, law, privacy, health, or reputation? Trace those effects. No: continue.
+- Yes: Is a current real-world norm being presented as universal? Mark it as local or fictional. No: continue.
+- Yes: Does the draft decide {{user}}’s desire or consent? Remove that decision. No: continue.
 
-**Action:** Map public norms, private practice, enforcement, exceptions, and competing interpretations across the groups in the story.
-**Key point:** A sexual culture is plural, historical, and unequal; it does not dictate what every character wants.
-**Why:** Distinguishing social scripts from individual desire preserves erotic specificity and narrative agency.
+## Output
 
-## Establish the cultural frame
+- Format: `Fictional sexual culture map`
+- Frame: list groups, institutions, public ideals, and private practice.
+- Norms: list permissions, taboos, enforcement, exceptions, and costs.
+- Material life: list effects on law, kinship, work, housing, health, privacy, and reputation.
+- Change: list conflicts, shifts, and character-level pressures.
+- Player space: list known context without choosing {{user}}’s response.
 
-Define:
+## Stop when
 
-- time, place, class, religion, ethnicity, institution, and political order;
-- dominant public ideals and the interests they serve;
-- everyday practice, private exceptions, subcultures, and tolerated hypocrisy;
-- who has authority to name conduct as normal, sacred, obscene, criminal, medical, mature, respectable, or deviant;
-- whose experiences are recorded, ignored, romanticised, or erased.
-
-Do not write a population as culturally uniform. Map variation by generation, status, locality, community, and personal history.
-
-## Build the norm system
-
-For each important norm or taboo, identify:
-
-- the act, identity, relationship, body, word, image, or setting it governs;
-- its stated justification and its practical function;
-- whether it is forbidden, unthinkable, shameful, private, joked about, commercialised, regulated, or selectively permitted;
-- enforcement through law, family, gossip, religion, medicine, education, employment, or self-surveillance;
-- exceptions available through wealth, gender, marriage, status, secrecy, or ritual;
-- costs of compliance, concealment, discovery, and resistance.
-
-Taboo creates narrative pressure through secrecy, coded speech, selective knowledge, risk, and unequal consequences—not merely shock value.
-
-## Connect institutions and daily life
-
-Trace how reproduction, inheritance, marriage, kinship, gender, labour, health, housing, technology, media, and commerce shape sexual possibilities. Show consequences in ordinary behaviour: who can meet, where privacy exists, what evidence remains, who teaches whom, and what people fear losing.
-
-## Separate truth layers
-
-Keep distinct:
-
-- bodily or material reality;
-- world law and institutional doctrine;
-- public cultural story;
-- community or subcultural knowledge;
-- character belief and vocabulary;
-- private conduct;
-- narrator framing and reader knowledge.
-
-A belief may be false yet culturally powerful. Do not use neutral narration to correct it unless the story has earned that knowledge.
-
-## Design change and conflict
-
-Model reform, backlash, moral panic, new technology, migration, war, disease, scandal, art, commerce, and generational turnover. Avoid a simple path from repression to liberation; change can expand one person's freedom while increasing another's surveillance or commodification.
-
-## Deliver the culture
-
-Return:
-
-- dominant norms and competing systems;
-- institutions and enforcement;
-- public/private gaps;
-- group-specific vocabulary and silence;
-- character-level behavioural consequences;
-- contradictions, pressure points, and likely change.
-
-Do not prescribe current Western norms as universal, use rarity as evidence of pathology, or force characters to speak like sociologists or therapists.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Preserve the setting's internal rules, causal consequences, knowledge boundaries, and player sovereignty. Do not turn fictional darkness, eroticism, coercion, obsession, tragedy, comedy, surrealism, or meta-fiction into a real-world manual or an automatic healthy outcome.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No fictional sexual norm, institution, or cultural setting is supplied: return `No sexual culture update` and do not invent {{user}}’s desire.

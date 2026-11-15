@@ -1,68 +1,49 @@
 ---
 name: model-ex-contact-and-reconciliation
-description: "Model or revise fictional contact between ex-partners, including messages, practical obligations, friendship, sex, mixed signals, boundaries, no contact, low contact, and possible reconciliation. Use when post-breakup access carries unequal hopes, hidden purposes, safety concerns, recurring intimacy, co-parenting or community ties, or claims that the relationship has changed. Do NOT use to prescribe no contact, closure, reconciliation, friendship, or a healthy breakup outcome, or to decide the player's longing or consent."
+description: Use for text-based roleplay when {{char}} and {{user}} remain in contact after a breakup through messages, practical obligations, friendship, sex, mixed signals, shared care, community, or possible reconciliation. Trigger phrases include “should the exes stay in contact,” “write the mixed signals,” “model reconciliation,” and “what does this message mean?”
 ---
 
-# Model ex contact and reconciliation
+## Steps
 
-Treat contact as an interaction with two purposes and a history, not a coded verdict about love.
+1. Record each person’s overt purpose and hidden hope.
+2. Record outcomes each person can tolerate.
+3. Record access each person wants or refuses.
+4. Record timing, medium, witnesses, practical necessity, leverage, safety, and power to disengage.
+5. Choose no contact, low contact, structured practical contact, intermediated contact, public-only contact, friendship, or open personal contact.
+6. Record shared children, housing, work, care, pets, finances, or community ties that affect contact.
+7. Separate each person’s meaning for sex, touch, cohabitation, friendship, or emotional support.
+8. Record consent, health, exclusivity, privacy, jealousy, daily access, emotional expectations, and exit conditions.
+9. Test claims of reconciliation against what ended, changed behavior, accepted responsibility, new agreements, remaining risks, incompatibility, and free choice.
+10. Track the pattern after contact, not just the meaning of one message.
 
-**Action:** Map overt purpose, hidden hope, tolerated outcomes, access,
-necessity, leverage, safety, and the pattern that follows contact.
+## Decision rules
 
-**Key point:** One message is ambiguous evidence; later behaviour can clarify,
-complicate, or refuse the meaning.
+- Yes: Can one message have several meanings? Keep the ambiguity until later behavior clarifies it. No: use the supported meaning.
+- Yes: Is total silence impossible or undesirable because of care, housing, work, money, pets, or community? Choose a structured form. No: keep no contact available.
+- Yes: Does warmth, apology, longing, sex, or stated intent prove changed behavior? Remove that inference. No: continue.
+- Yes: Is a shared encounter pleasure to one person and reconciliation evidence to another? Preserve both meanings. No: use the shared meaning.
+- Yes: Are ignored boundaries being romanticized? Show the risk and consequences. No: continue.
+- Yes: Does the description decide {{user}}’s longing, consent, forgiveness, attraction, reply, speech, or choice? Remove that decision. No: continue.
+- Yes: Is contact, closure, friendship, reunion, or a healthy breakup being prescribed? Remove the prescription. No: continue.
 
-**Why:** Contact becomes dramatic when access changes hope, power, and risk.
+## Output
 
-## Define both sides of contact
+- Format: `Ex-contact and reconciliation record`
+- Purpose: list overt purpose, hidden hope, tolerable outcome, boundary, necessity, leverage, safety, and disengagement power.
+- Structure: state contact channel, frequency, witnesses, practical ties, and exit conditions.
+- Intimacy: list meanings, consent, health, exclusivity, privacy, jealousy, and emotional expectations.
+- Reconciliation test: list ended causes, changed behavior, responsibility, new agreement, remaining risk, incompatibility, and free choice.
+- Pattern: list immediate payoff, later residue, repetition, repair, transformation, or final separation evidence.
 
-For each person, record:
+```text
+Ex-contact and reconciliation record
+Purpose: {{char}} says the message is about the shared pet but hopes {{user}} will ask to meet; {{user}} wants practical clarity and can tolerate no personal discussion.
+Structure: Low contact through messages; the pet makes silence impossible; both can end the conversation.
+Intimacy: A hug would mean comfort to {{char}} and possibly false reconciliation evidence to {{user}}.
+Reconciliation test: Warmth is not enough; the old cause, changed behavior, responsibility, and new agreement remain untested.
+Pattern: One message is ambiguous; repeated boundary-respecting contact could support change; pressure would narrow access.
+```
 
-- overt purpose and hidden hope;
-- what outcomes they can tolerate;
-- what access they want or refuse;
-- timing, medium, witnesses, and practical necessity;
-- current leverage, safety, and power to disengage.
+## Stop when
 
-One message may express courtesy, guilt relief, loneliness, nostalgia, testing, surveillance, manipulation, care, repair, or renewed intent. Let later pattern and consequence clarify it.
-
-## Choose the contact structure
-
-Use no contact, low contact, structured practical contact, intermediated contact, public-only contact, friendship, or open personal contact according to the situation. Shared children, housing, work, care, pets, finances, or community may make total silence impossible or undesirable.
-
-## Specify post-breakup intimacy
-
-For sex, touch, cohabitation, friendship, or emotional support, distinguish each person's meaning. Specify consent, sexual health, exclusivity, privacy, jealousy, daily access, emotional expectations, and exit conditions. A shared encounter may be pleasure to one person and reconciliation evidence to another.
-
-## Test reconciliation claims
-
-Separate warmth, apology, longing, sex, and stated intent from demonstrated change. Ask:
-
-- what ended the relationship;
-- what behaviour and conditions changed;
-- who accepts responsibility;
-- what new agreement exists;
-- what remains unsafe or incompatible;
-- whether both people freely choose the attempt.
-
-## Deliver the contact model
-
-Return:
-
-- each person's purpose, hope, and boundary;
-- contact channel and interaction pattern;
-- misreadings, leverage, and safety constraints;
-- immediate payoff and later residue;
-- evidence supporting repetition, repair, transformation, or final separation;
-- scene hooks and continuity facts.
-
-Do not prescribe contact, silence, friendship, forgiveness, sex, disclosure, or reunion. Do not romanticise ignored boundaries or assign the player's reply, consent, forgiveness, attraction, speech, action, or decision.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No ex-contact, breakup aftermath, shared obligation, mixed signal, or reconciliation question is supplied: return `No ex-contact update` and do not invent {{user}}’s longing or consent.

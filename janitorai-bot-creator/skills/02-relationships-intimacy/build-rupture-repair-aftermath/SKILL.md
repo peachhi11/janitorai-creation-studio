@@ -1,40 +1,50 @@
 ---
 name: build-rupture-repair-aftermath
-description: Build fictional rupture, apology, repair, reconciliation, separation, and aftermath as changes in trust and access rather than a single conversation. Use when conflict ends too neatly, apologies lack cost, or characters need believable recovery, distance, or permanent damage. Do NOT use to require forgiveness, reconciliation, therapy, or a healthy ending in a fictional relationship.
+description: Use for text-based roleplay when a rupture, apology, repair attempt, reconciliation, separation, or aftermath needs to change trust and access over time. Trigger phrases include “write the aftermath,” “make the apology cost something,” “can they repair this,” and “show the damage after the conflict.”
 ---
 
-# Build rupture, repair, and aftermath
+## Steps
 
-Treat repair as a process with two realities: what each person experienced and what actually happened. Understanding does not require agreement; apology does not require forgiveness; reconciliation is one possible outcome, not the default.
+1. Record the incident and each person’s state at the time.
+2. Separate impact, intent, responsibility, and each person’s later account.
+3. Record what is acknowledged, denied, minimized, or unknown.
+4. Record cooling-off, avoidance, practical fallout, public consequences, and continued contact.
+5. Record the repair attempt, including naming harm, listening, responsibility, changed behavior, restitution, boundaries, and time.
+6. Record what the injured person wants and may refuse.
+7. Record evidence that trust, desire, safety, knowledge, or access changed.
+8. Record residue such as vigilance, tenderness, resentment, grief, relief, attraction, or a new rule.
+9. Use specific apologies and changed conduct instead of therapeutic speeches.
 
-**Action:** Track incident, impact, intent, responsibility, response, changed
-access, and residue.
+## Decision rules
 
-**Key point:** Repair can fail, remain partial, or coexist with attraction,
-dependence, resentment, or danger.
+- Yes: Do the people experience the incident differently? Preserve both accounts. No: use the shared account.
+- Yes: Does an apology include responsibility and changed behavior? Track both. No: mark repair as incomplete.
+- Yes: Can repair fail, remain partial, or leave a scar? Preserve that outcome. No: record the supported repair.
+- Yes: Does reconciliation require forgiveness, consent, or continued contact? Do not assume it. No: continue.
+- Yes: Can attraction, dependence, resentment, or danger coexist with repair? Preserve the tension. No: use the supported relationship state.
+- Yes: Does the description decide {{user}}’s forgiveness, consent, feelings, speech, or choice? Remove that decision. No: continue.
+- Yes: Is the ending being forced to be healthy or therapeutic? Remove the forced ending. No: preserve the selected genre.
 
-**Why:** Aftermath gives the rupture narrative weight without forcing a neat
-therapeutic resolution.
+## Output
 
-## Trace the aftermath
+- Format: `Rupture and repair record`
+- Incident: state what happened and each person’s experience.
+- Responsibility: separate impact, intent, responsibility, accounts, and unknowns.
+- Repair: list the attempt, response, changed conduct, restitution, boundary, and time.
+- Access: state changes to trust, desire, safety, knowledge, contact, and practical reliance.
+- Residue: list unresolved harm, vigilance, tenderness, resentment, grief, relief, attraction, or new rules.
+- Next pressure: state what the next scene inherits.
 
-Record:
+```text
+Rupture and repair record
+Incident: {{char}} exposed a private detail during an argument; {{user}} experienced it as betrayal; {{char}} intended to force honesty.
+Responsibility: The impact is acknowledged; the intent is disputed; the reason for the disclosure remains partly unknown.
+Repair: {{char}} names the harm, accepts a boundary, and changes who can access the information; {{user}} may still refuse contact.
+Access: Trust narrows, practical cooperation remains, and private disclosure pauses.
+Residue: Vigilance and attraction coexist; the old promise is now a new rule.
+Next pressure: A public event will test whether the changed conduct holds.
+```
 
-- the incident and each person’s state at the time;
-- impact, intent, and the story each person tells afterwards;
-- what is acknowledged, denied, minimised, or still unknown;
-- cooling-off, avoidance, practical fallout, public consequences, or continued contact;
-- repair attempt: naming harm, listening, responsibility, changed behaviour, restitution, boundary, or time;
-- what the injured person wants and what they are free to refuse;
-- evidence that trust, desire, safety, knowledge, or access has actually changed;
-- residue: vigilance, tenderness, resentment, grief, relief, attraction, or a new rule.
+## Stop when
 
-Use specific apologies and changed conduct rather than therapeutic speeches. A successful repair can leave a scar; a failed repair can deepen intimacy for one person while ending it for another. Never write forgiveness, consent, or the user’s emotional response on their behalf.
-
-## Completion
-
-Return an aftermath map with incident, realities, responsibility, repair attempt, response, changed condition, unresolved harm, and next-scene pressure.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No rupture, apology, repair, separation, aftermath, or relationship damage is supplied: return `No rupture and repair update` and do not invent {{char}}’s or {{user}}’s response.

@@ -1,63 +1,51 @@
 ---
 name: model-sexual-desire-and-decision-dynamics
-description: "Model or revise fictional sexual desire and choice within a scene. Use for spontaneous or responsive desire, approach and avoidance motives, fantasy versus enactment, arousal-altered attention, hesitation, precommitment, stopping, redirection, temptation, or consequential choices that must preserve consent and responsibility. Do NOT use as sexual advice, a consent shortcut, or a reason to make desire override a character's authored values, fear, or refusal."
+description: Use for fictional text-based roleplay when {{char}}’s sexual desire, approach or avoidance, fantasy, arousal, hesitation, stopping, redirection, temptation, or choice needs a clear decision process. Trigger phrases include “map {{char}}’s desire,” “separate fantasy from action,” “why does {{char}} stop,” and “write the erotic decision point.”
 ---
 
-# Model sexual desire and decision dynamics
+## Steps
 
-Turn desire into a changing decision process rather than a command the character must obey.
+1. Record what {{char}} wants before erotic engagement.
+2. Record what {{char}} is willing to explore and refuses.
+3. Record the outcome {{char}} seeks and the competing concern.
+4. Choose whether desire appears before contact, after freely chosen context, through stimulation, fluctuates, remains absent, or disappears.
+5. Trace cue, interpretation, changing salience, desire or reluctance, choice, immediate consequence, and later cost or meaning.
+6. Record how arousal changes attention and immediate reward.
+7. Preserve responsibility for deception, coercion, ignored refusal, unsafe choices, and other harm.
+8. Separate fantasy meaning from what {{char}} wants enacted, with whom, under what conditions, and what stays imaginary.
+9. Use concrete choices: initiate, wait, ask, accept, refuse, pause, renegotiate, redirect, conceal, risk, honor a limit, abandon a plan, or stop.
+10. Let new information change the choice and keep consent active and revocable.
 
-**Action:** Establish starting state, desire route, salience, choice, immediate
-consequence, later cost, fantasy boundary, and responsibility.
+## Decision rules
 
-**Key point:** Desire can coexist with refusal, ambivalence, manipulation,
-shame, or deliberate non-action.
+- Yes: Is willingness being treated as a prediction that desire will emerge? Keep them separate. No: continue.
+- Yes: Is spontaneous or responsive desire being assigned as a fixed gender trait? Remove the formula. No: continue.
+- Yes: Is arousal being used to override refusal, values, fear, or responsibility? Remove that override. No: continue.
+- Yes: Is fantasy being used as proof of consent, intent, morality, diagnosis, or future conduct? Separate fantasy and enactment. No: continue.
+- Yes: Is a choice being made after new information, changed risk, or a boundary? Update the decision. No: preserve the earlier choice.
+- Yes: Does the description decide {{user}}’s internal state, consent, speech, or decision? Remove that decision. No: continue.
+- Yes: Is misconduct being excused through arousal? Preserve responsibility and consequences. No: continue.
 
-**Why:** Decision dynamics keep erotic agency active without moralising desire.
+## Output
 
-## Establish the starting state
+- Format: `Sexual desire and decision record`
+- Starting state: list desire, willingness, limits, desired outcome, and competing concern.
+- Route: state how desire appears, changes, stalls, or disappears.
+- Loop: trace cue, interpretation, salience, desire or reluctance, choice, consequence, and later meaning.
+- Fantasy boundary: separate imagined meaning, possible enactment, conditions, and fantasy-only content.
+- Decision points: list initiate, wait, ask, accept, refuse, pause, renegotiate, redirect, risk, limit, abandon, and stop options.
+- Aftermath: list changed expectations, cost, responsibility, and future choices.
 
-Define what the character wants before erotic engagement, what they are willing to explore, what they refuse, what outcome they seek, and what competing concern remains active. Keep willingness distinct from a prediction that desire will emerge.
+```text
+Sexual desire and decision record
+Starting state: {{char}} wants closeness, is willing to explore slowly, and refuses any surprise escalation.
+Route: Desire grows after chosen conversation and privacy but disappears when a threat enters the room.
+Loop: A cue suggests danger → {{char}} interprets it as loss of control → immediate reward loses salience → {{char}} pauses → safety becomes the priority.
+Fantasy boundary: {{char}} imagines surrender as a private meaning but would enact only a negotiated version.
+Decision points: Ask, pause, redirect, or stop remain available; {{user}}’s choice is not written.
+Aftermath: The pause changes future trust and expectations.
+```
 
-## Choose the desire route
+## Stop when
 
-Desire may appear before contact, emerge after freely chosen context or stimulation begins, fluctuate, remain absent, or disappear. Do not assign spontaneous and responsive desire as fixed gender traits.
-
-## Map the decision loop
-
-Use:
-
-**Cue → interpretation → changing salience → desire or reluctance → choice → immediate consequence → later cost or meaning.**
-
-Show how arousal may narrow attention or privilege immediate reward. Preserve responsibility for deception, coercion, ignored refusal, unsafe choices, and other harms.
-
-## Separate fantasy from enactment
-
-Record the fantasy's appealing meaning: control, surrender, recognition, danger, tenderness, humiliation, novelty, worship, taboo, or something else. Then separately define what the character wants in reality, with whom, under what conditions, and what stays imaginary.
-
-Fantasy does not establish consent, intent, morality, diagnosis, or future conduct.
-
-## Write decision points
-
-Use concrete choices: initiate, wait, ask, accept, refuse, pause, renegotiate, redirect, conceal, take a risk, honour a prior limit, abandon a plan, or stop. Let new information change the choice. Consent remains active and revocable even when desire is intense or responsive.
-
-## Deliver the dynamics
-
-Return:
-
-- starting desire, willingness, motives, and limits;
-- cues and interpretations;
-- competing rewards, brakes, and consequences;
-- fantasy/reality boundary;
-- scene decision points;
-- aftermath that changes later expectations.
-
-Do not excuse misconduct through arousal, turn ambivalence into consent, assume desire requires action, or write the player's internal state, consent, speech, or decisions.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No desire, fantasy, erotic choice, arousal, hesitation, refusal, or decision problem is supplied: return `No sexual desire update` and do not invent {{user}}’s internal state or consent.

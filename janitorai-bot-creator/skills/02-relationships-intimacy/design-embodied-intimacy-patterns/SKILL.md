@@ -1,86 +1,53 @@
 ---
 name: design-embodied-intimacy-patterns
-description: "Design or revise a fictional character's embodied intimacy patterns. Use when character work needs distinct giving and receiving styles, sensory preferences, pace, pressure, rhythm, focus, leadership, feedback habits, performance meanings, body constraints, fatigue, accessibility, public confidence, private competence, or continuity across intimate encounters. Do NOT use as a real-world sexual technique or accessibility manual, universal preference profile, or reason to write the player's body or response."
+description: Use for fictional text-based roleplay when {{char}}’s giving and receiving style, sensory preferences, pace, pressure, rhythm, focus, leadership, feedback, body limits, fatigue, accessibility, or encounter continuity need to be specific. Trigger phrases include “how does {{char}} give or receive touch,” “design the intimacy pattern,” “show the sensory preference,” and “write the aftercare difference.”
 ---
 
-# Design embodied intimacy patterns
+## Steps
 
-Create a reusable character pattern without reducing intimacy to a preference list or universal technique.
+1. Separate how {{char}} gives intimacy from how they receive it.
+2. Record what {{char}} treats as care, craft, proof, competition, control, service, play, or exposure.
+3. Record pace, pressure, rhythm, focus, texture, moisture, temperature, breath, sound, eye contact, and language.
+4. Record leading, following, alternating, directing, and being guided.
+5. Record private, hurried, ritualized, playful, risky, and domestic settings.
+6. Record fatigue, pain, disability, medication, clothing, furniture, privacy, hygiene, interruptions, temperature, and physical sustainability.
+7. Record what {{char}} notices, misses, asks, assumes, repeats, changes, misreads, or ignores.
+8. Record how {{char}} responds to correction and how pride, shame, tenderness, resentment, fear, or competition interferes.
+9. Record private measures of success.
+10. Separate physical sensation from relational meaning.
+11. Track changes to access, trust, shame, confidence, expectation, avoidance, tenderness, leverage, and future desire afterward.
+12. Preserve adaptation and variation across partners, mood, health, relationship state, and context.
 
-**Action:** Separate giving and receiving, sensory variables, feedback habits,
-body constraints, context, partner, and relationship state.
+## Decision rules
 
-**Key point:** Tendencies can shift, conflict, or fail; the pattern is not a
-fixed menu or performance score.
+- Yes: Can giving and receiving differ? Keep them separate. No: use the supported similarity.
+- Yes: Do sensory tendencies change with partner, mood, health, relationship, or context? Show the change. No: continue.
+- Yes: Does a bodily response prove consent, satisfaction, or emotional meaning? Remove that inference. No: continue.
+- Yes: Is a preference list being treated as a fixed menu or technique manual? Reframe it as a tendency with context. No: continue.
+- Yes: Do power, discomfort, obsession, coercion, or contradiction shape the scene? Keep leverage and consequences visible. No: use the selected tone.
+- Yes: Does the description assign {{user}}’s body, preferences, arousal, consent, speech, or action? Remove that decision. No: continue.
+- Yes: Is accessibility being treated as failure? Show adaptation as continuity. No: continue.
 
-**Why:** Embodied specificity creates continuity without mechanical intimacy.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Embodied intimacy record`
+- Giving and receiving: state how {{char}} behaves in each role.
+- Sensory map: list pace, pressure, rhythm, focus, texture, temperature, breath, sound, gaze, language, leadership, and setting.
+- Constraints: list body, fatigue, pain, disability, medication, furniture, privacy, interruptions, and access.
+- Feedback: list what {{char}} notices, asks, changes, misreads, and how they respond to correction.
+- Meaning: state what the encounter means to {{char}} and {{user}} separately.
+- Aftereffects: list physical, emotional, relational, and continuity changes.
 
-Let intimacy obey the story's erotic, relational, and tonal rules. Tenderness,
-cruelty, power, ritual, discomfort, obsession, or contradiction may be the
-intended meaning; preserve it through observable consequence without turning the
-scene into a real-world technique or healthy-relationship lesson.
+```text
+Embodied intimacy record
+Giving and receiving: {{char}} gives patiently but receives instructions defensively; practical care feels safer than praise.
+Sensory map: Gradual pace, steady pressure, predictable rhythm, low light, quiet language, and alternating leadership work best in private.
+Constraints: Fatigue and a crowded room shorten attention; a pause is easy to request when the exit remains clear.
+Feedback: {{char}} notices changes in {{user}}’s breathing, asks one direct question, and adjusts slowly after correction.
+Meaning: {{char}} reads the encounter as trust; {{user}} may assign a different meaning.
+Aftereffects: Quiet recovery, changed confidence, and a new expectation about check-ins.
+```
 
-## Separate giving and receiving
+## Stop when
 
-Define how the character behaves in each role. They may give patiently but receive impatiently, lead confidently but struggle to guide, notice minute reactions but hide their own, or treat pleasure as care, craft, proof, competition, control, service, play, or exposure.
-
-## Map sensory variables
-
-Record preferences and aversions across:
-
-- gradual, immediate, sustained, interrupted, or teasing pace;
-- light, soft, firm, or changing pressure;
-- steady, building, uneven, or deliberately broken rhythm;
-- broad contact versus precise focus;
-- texture, moisture, temperature, breath, sound, eye contact, and language;
-- leading, following, alternating, directing, or being guided;
-- private, hurried, ritualised, playful, risky, or domestic settings;
-- abrupt, orgasm-centred, lingering, humorous, distant, or affectionate endings.
-
-Treat these as tendencies that change with partner, mood, relationship state, health, and context.
-
-## Add body and situation
-
-Include fatigue, pain, disability, medication, clothing, furniture, privacy, hygiene, interruptions, temperature, and the physical sustainability of a position. Adaptation is continuity, not failure.
-
-## Define feedback behaviour
-
-Specify what the character notices, misses, asks, assumes, repeats, changes, misreads, or ignores. Note how they respond to correction and whether pride, shame, tenderness, resentment, fear, or competitiveness interferes.
-
-## Define private measures of success
-
-Record whether the character seeks mutual absorption, a specific reaction, orgasm, endurance, surrender, praise, control, emotional closeness, or visible loss of composure. Treat this as their belief, not an objective score. Show consequences when they prioritise proof over the other person's experience.
-
-## Track relational meaning and aftereffects
-
-An intimate act can carry different meanings for each participant: invitation,
-proof, surrender, defiance, reassurance, performance, possession, play, escape,
-or a test that neither person names. Keep the meaning separate from the
-physical sensation. After the encounter, track what changes in access, trust,
-shame, confidence, expectation, avoidance, tenderness, leverage, or future
-desire. A satisfying body response does not settle the emotional meaning, and
-an emotionally significant encounter does not require a tidy relationship
-outcome.
-
-When the dynamic is dark, unequal, obsessive, or coercive in the fiction, show
-the leverage and consequences without laundering the scene into mutuality or
-turning the aftermath into a therapeutic checklist.
-
-## Deliver the pattern
-
-Return:
-
-- giving and receiving styles;
-- sensory map and aversions;
-- leadership and feedback habits;
-- bodily and situational constraints;
-- technique-linked meanings and contradictions;
-- stable continuity anchors and legitimate variation.
-
-Do not diagnose, guarantee outcomes, impose gender formulas, reproduce health advice, or assign the player's body, preferences, arousal, consent, speech, or action.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No embodied intimacy, sensory preference, giving or receiving, accessibility, feedback, or encounter-continuity problem is supplied: return `No embodied intimacy update` and do not invent {{user}}’s body or response.

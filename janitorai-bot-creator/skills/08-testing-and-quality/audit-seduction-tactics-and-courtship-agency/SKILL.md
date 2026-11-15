@@ -1,86 +1,33 @@
 ---
 name: audit-seduction-tactics-and-courtship-agency
-description: "Audit fictional seduction, flirting, dating, and courtship material for coercive scripts, consent errors, pickup jargon used as truth, gender universals, sexual-market hierarchy, pseudoscientific mind control, vulnerability targeting, guaranteed attraction cues, therapist-like dialogue, or overwritten player agency. Use when preserving dark or manipulative fiction while restoring believable uncertainty, resistance, responsibility, voice, and consequences. Do NOT use as pickup advice, a manipulation manual, or a reason to sanitise intentional fictional predation or obsession."
+description: Use when reviewing fictional seduction, flirting, dating, or courtship for coercive scripts, consent errors, pickup jargon, gender universals, vulnerability targeting, guaranteed attraction, or player-agency loss. Trigger phrases include “audit the seduction,” “remove the pickup science,” and “keep the predation fictional.”
 ---
 
-# Audit seduction tactics and courtship agency
+## Steps
 
-Preserve intentional darkness while separating character action from narrator endorsement.
+1. Identify the initiator’s goal, private want, target’s situation, power, context, boundaries, and exits.
+2. Check pickup jargon, sexual-market hierarchy, pseudoscientific mind control, guaranteed cues, gender rules, and vulnerability targeting.
+3. Trace offer → interpretation → response → adjustment, refusal, counterplay, or withdrawal.
+4. Separate flirtation, persuasion, manipulation, pressure, threat, coercion, and assault.
+5. Check whether the scene turns refusal into flirtation or persistence into cleverness.
+6. Check whether it writes {{user}}’s attraction, body, consent, speech, or action.
+7. Preserve predation, obsession, manipulation, danger, and dark genre logic with uncertainty and consequences.
 
-**Action:** Identify claimed mechanism, actor belief, target options, evidence,
-cost, and possible failure or exposure.
+## Decision rules
 
-**Key point:** A tactic may remain coercive or manipulative in fiction without
-being presented as guaranteed psychology.
+- Yes: Is the material pickup advice or a manipulation manual? Keep it fictional and remove procedure. No: continue.
+- Yes: Is attraction or consent guaranteed by a cue? Restore uncertainty and explicit permission. No: continue.
+- Yes: Is refusal reinterpreted as interest? Keep refusal clear. No: continue.
+- Yes: Does the draft decide {{user}}’s response? Remove it. No: continue.
 
-**Why:** Fallibility and consequences preserve both agency and dramatic danger.
+## Output
 
-## Identify the claimed mechanism
+- Format: `Seduction and courtship agency audit`
+- Context: list goals, power, history, boundaries, exits, and audience.
+- Findings: list scripts, universals, consent errors, targeting, guarantees, and agency loss.
+- Repairs: provide character-specific, uncertain, consequence-aware revisions.
+- Preserve: list intentional manipulation, predation, obsession, and open player choices.
 
-For each tactic or attraction claim, state:
+## Stop when
 
-- the observable action;
-- the actor's goal and belief about why it works;
-- the other person's options, knowledge, and constraints;
-- plausible alternative interpretations;
-- what evidence would reveal success, failure, or performance;
-- costs if the attempt is exposed.
-
-Flag techniques that function only because another person is treated as programmable.
-
-## Audit coercive and deceptive tactics
-
-Look for:
-
-- negging, humiliation, strategic insecurity, or plausible-deniability insults;
-- false scarcity, calculated silence, intermittent reward, jealousy, or triangulation;
-- persistence after refusal or treating resistance as a test;
-- isolation, intoxication, vulnerability targeting, or compliance ladders;
-- covert sexualisation, embedded commands, hypnotic claims, or objection defeat;
-- cold reads presented as certain access to another mind.
-
-These may remain as fictional behaviour. Add uncertainty, resistance, self-justification, exposure risk, and aftermath rather than converting them into reusable scripts.
-
-## Audit attraction and consent inference
-
-Flag gaze, touch, mirroring, nervousness, arousal, clothing, politeness, silence, prior sex, flirtation, entering private space, or accepting a date when used as automatic consent. Distinguish attraction, willingness, agreement, and relationship intent.
-
-Consent to one action does not imply another and may change.
-
-## Audit hierarchy and gender ideology
-
-Flag narrator claims based on alpha/beta ranking, sexual-market value, hypergamy, male or female nature, polarity, archetypes, provider/lover binaries, or universal initiation rules. Decide whether each belongs to:
-
-- an individual tendency;
-- a character's prejudice or self-help framework;
-- a subculture or institution;
-- a historical courtship script;
-- an unsupported authorial generalisation.
-
-Preserve ideological language when it reveals character or world.
-
-## Audit voice and player sovereignty
-
-Replace dating-coach, pickup, or therapeutic explanations in ordinary dialogue with setting-appropriate observation, desire, status, joke, denial, or accusation unless jargon is intentional.
-
-Do not assign the player's attraction, arousal, consent, body response, message, speech, action, relationship goal, submission, or refusal.
-
-## Deliver the audit
-
-Return:
-
-- coercive, deceptive, or pseudoscientific mechanisms;
-- consent and inference errors;
-- gender and hierarchy assumptions;
-- intentional in-character beliefs to retain;
-- missing resistance, failure, exposure, and consequence;
-- voice and player-agency defects;
-- the smallest revisions that preserve the intended tension and darkness.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No fictional seduction, flirting, dating, or courtship material is supplied: return `No seduction-agency findings`.

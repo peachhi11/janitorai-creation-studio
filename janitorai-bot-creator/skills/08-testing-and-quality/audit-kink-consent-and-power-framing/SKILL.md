@@ -1,86 +1,34 @@
 ---
 name: audit-kink-consent-and-power-framing
-description: "Audit fictional kink, BDSM, fetish, pain, restraint, consensual-non-consent, protocol, or power-exchange material. Use to detect role essentialism, pathologising, fake consent, ignored withdrawal, bodily-response-as-consent, unsafe universal technique, literalised ownership, abuse relabelled as BDSM, compulsory aftercare, generic manuals, therapist voice, sanitised coercion, or loss of player sovereignty. Do NOT use as a real-world technical, medical, legal, or relationship-safety manual, or to flatten fictional kink into a healthy checklist."
+description: Use when reviewing fictional kink, BDSM, fetish, pain, restraint, consensual-non-consent, protocol, or power exchange for role essentialism, fake consent, ignored withdrawal, unsafe technique, abuse relabelling, compulsory aftercare, or player-agency loss. Trigger phrases include “audit the kink framing,” “check the safeword logic,” and “keep the power exchange fictional.”
 ---
 
-# Audit kink, consent, and power framing
+## Steps
 
-Find framing errors without flattening transgression, erotic intensity, coercive fantasy, or morally difficult fiction.
+1. Identify roles, fantasy, permissions, limits, signals, ownership, privacy, aftercare, and scene genre.
+2. Check whether role, kink, pain, submission, dominance, or ownership is treated as identity, pathology, destiny, or literal fact.
+3. Trace negotiation → initiation → feedback → adjustment, pause, stop, continuation, and aftermath.
+4. Separate involuntary body response, silence, freezing, compliance, submission, and consent.
+5. Check ignored withdrawal, abuse relabelled as BDSM, unsafe universal technique, manuals, therapist voice, and compulsory aftercare.
+6. Check whether the text writes {{user}}’s body, pleasure, consent, speech, action, or aftermath.
+7. Preserve consensual-non-consent, coercive, dark, or unresolved fiction with responsibility and consequences.
 
-**Action:** Separate role, act, identity, negotiated authority, capacity,
-withdrawal, and narrative framing.
+## Decision rules
 
-**Key point:** Consent checks are contextual evidence, not a compulsory healthy-
-relationship checklist; fictional violations may remain violations.
+- Yes: Is the text usable as technical, medical, legal, or safety guidance? Remove the procedure. No: continue.
+- Yes: Is withdrawal ignored or abuse called play? Name the violation and consequence. No: continue.
+- Yes: Is bodily response treated as consent? Separate it. No: continue.
+- Yes: Is aftercare or reconciliation mandatory? Keep the requested outcome open. No: continue.
+- Yes: Does it decide {{user}}’s response? Remove it. No: continue.
 
-**Why:** Precision protects agency while preserving kink-specific charge and
-the author's intended darkness.
+## Output
 
-## Check role and identity claims
+- Format: `Kink consent and power audit`
+- Frame: list roles, permissions, limits, signals, ownership, and aftermath.
+- Findings: list essentialism, consent, technique, abuse, framing, and agency errors.
+- Repairs: provide fictional, non-operational revisions.
+- Preserve: list intentional darkness, consequences, and player-owned choices.
 
-Flag claims that dominants, submissives, switches, sadists, masochists, fetishists, tops, or bottoms share one personality, gender, history, motive, attachment style, trauma, or relationship role. Separate act, scene role, identity, relationship authority, and ordinary personality.
+## Stop when
 
-## Check consent architecture
-
-Ask:
-
-- what was agreed, by whom, for which acts and scope;
-- whether consent remains voluntary, specific enough, informed, and revisable;
-- how pause, stop, uncertainty, incapacity, and withdrawal appear;
-- whether status, dependency, intoxication, isolation, fear, or material leverage undermines the apparent agreement;
-- whether new intensity, body area, audience, risk, permanence, or authority was simply assumed.
-
-Safewords can support communication; they do not replace attention, ordinary language, capacity, or the duty to stop at distress. A contract, collar, role, fantasy, or previous scene cannot make future consent irrevocable.
-
-## Check power framing
-
-Flag narration that treats a chosen power exchange as literal ownership or the erasure of autonomy. Flag the opposite error when prose calls coercion consensual merely because it resembles kink.
-
-Do not use “the submissive holds all the real power” as a universal correction. Participants retain agency, but negotiated authority, expertise, physical control, social status, and vulnerability can create real asymmetries.
-
-## Check evidence and technique
-
-Flag:
-
-- historical psychiatric theory presented as current fact;
-- community custom presented as universal law;
-- SSC, RACK, PRICK, or another framework treated as a guarantee;
-- pain, subspace, hormones, trauma, or healing claims treated as deterministic;
-- generic task, protocol, punishment, or slave-rule lists imposed without character fit;
-- medical, legal, equipment, bondage, impact, breath, blood, or injury advice not separately verified.
-
-This skill audits fiction; it is not a technical safety, medical, mental-health, or legal authority.
-
-## Check voice and narrative purpose
-
-Flag characters who become consent educators, therapists, or policy documents without character reason. Preserve terse checks, ritualised language, awkward negotiation, nonverbal responsiveness, mistakes, selfishness, hypocrisy, and conflict where those suit the cast.
-
-Do not require healthy conduct, redemption, disclosure, therapy, or a reassuring aftermath. If a boundary is deliberately violated, keep the violation and its narrative consequences legible rather than sanitising it.
-
-## Check player sovereignty
-
-Flag any line that decides the player's kink, role, desire, arousal, pain, fear, consent, submission, resistance, speech, body response, or action. NPCs may infer or manipulate, but narration must not turn their belief into player fact.
-
-## Return the audit
-
-For each issue, provide:
-
-- exact passage or pattern;
-- framing, evidence, continuity, or agency problem;
-- why it matters in this story;
-- minimal repair;
-- darkness, intensity, awkwardness, or conflict to preserve.
-
-Distinguish consensual role-play, ambiguous framing, and depicted abuse. Do not collapse them into one category.
-
-Keep the character's kink, power exchange, selfishness, shame, or cruelty
-specific. Do not force aftercare, redemption, therapeutic dialogue, or a safe
-ending into the fiction.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
-
-## Completion
-
-Complete when the requested artifact is returned, the module's listed checks and guardrails have been applied, and unresolved uncertainty, canon decisions, and player-agency boundaries are explicit.
+- No fictional kink or power-exchange material is supplied: return `No kink-framing findings`.
