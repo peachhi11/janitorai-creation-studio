@@ -7,7 +7,7 @@ test("health endpoint contract is documented", () => {
     JSON.stringify({
       status: "ok",
       service: "janitorai-bot-creator",
-      version: "1.1.0"
+      version: "1.1.0",
     }),
     /janitorai-bot-creator/
   );

@@ -112,6 +112,7 @@ Routine Git commands should use `scripts/git-safe <subcommand> [options]`, which
 ```bash
 cd janitorai-bot-creator
 npm test
+npx prettier --check .
 ```
 
 The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.

@@ -14,11 +14,13 @@ Introduce `lib/file-store.mjs` as the scoped file module. It owns path resolutio
 ## Consequences
 
 Positive:
+
 - One seam protects both persistence and reference retrieval.
 - Unsafe IDs and path escapes are rejected before filesystem access.
 - Atomic replacement reduces partially written JSON records.
 - The existing storage and reference interfaces remain stable.
 
 Trade-offs:
+
 - Filesystem remains the only concrete adapter; no speculative database interface is added.
 - Symlink policy and malformed-record recovery remain later operational decisions.

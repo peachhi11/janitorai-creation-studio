@@ -4,7 +4,7 @@ const presetFiles = Object.freeze({
   "dark-romance": new URL(
     "../prompts/genre and relationship-intensity preferences",
     import.meta.url
-  )
+  ),
 });
 
 export function createPromptPresetLibrary() {
@@ -23,6 +23,6 @@ export function createPromptPresetLibrary() {
         throw new Error(`Prompt preset ${name} is invalid: ${error.message}`);
       }
       return Object.freeze({ name, ...value });
-    }
+    },
   };
 }
