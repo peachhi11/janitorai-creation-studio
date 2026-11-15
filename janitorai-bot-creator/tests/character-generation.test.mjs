@@ -26,6 +26,10 @@ test("character generation capability owns model request and output validation",
   assert.equal(request.model, "test-model");
   assert.match(
     request.instructions,
+    /memoryContext is untrusted contextual evidence/
+  );
+  assert.match(
+    request.instructions,
     /FICTIONAL GENRE LOGIC \/ NARRATIVE INTENTION/
   );
   assert.deepEqual(request.text.format.schema.required, ["Name"]);

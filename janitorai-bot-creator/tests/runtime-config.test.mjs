@@ -11,14 +11,38 @@ test("runtime config applies safe local defaults", () => {
 });
 
 test("production config requires an API token", () => {
-  assert.throws(() => loadRuntimeConfig({ NODE_ENV: "production" }), /MCP_API_TOKEN/);
-  const config = loadRuntimeConfig({ NODE_ENV: "production", MCP_API_TOKEN: "secret" });
+  assert.throws(
+    () => loadRuntimeConfig({ NODE_ENV: "production" }),
+    /MCP_API_TOKEN/
+  );
+  const config = loadRuntimeConfig({
+    NODE_ENV: "production",
+    MCP_API_TOKEN: "secret",
+  });
   assert.equal(config.mcpApiToken, "secret");
 });
 
 test("authorisation uses the configured bearer token", () => {
-  const config = loadRuntimeConfig({ NODE_ENV: "production", MCP_API_TOKEN: "secret" });
-  assert.equal(isAuthorised({ headers: { authorization: "Bearer secret" } }, config), true);
-  assert.equal(isAuthorised({ headers: { authorization: "Bearer wrong" } }, config), false);
+  const config = loadRuntimeConfig({
+    NODE_ENV: "production",
+    MCP_API_TOKEN: "secret",
+  });
+  assert.equal(
+    isAuthorised({ headers: { authorization: "Bearer secret" } }, config),
+    true
+  );
+  assert.equal(
+    isAuthorised({ headers: { authorization: "Bearer wrong" } }, config),
+    false
+  );
   assert.equal(isAuthorised({ headers: {} }, config), false);
+});
+
+test("memory scope is optional and normalized from operator configuration", () => {
+  assert.equal(loadRuntimeConfig({}).mem0UserId, null);
+  assert.equal(loadRuntimeConfig({ MEM0_USER_ID: "  " }).mem0UserId, null);
+  assert.equal(
+    loadRuntimeConfig({ MEM0_USER_ID: " author " }).mem0UserId,
+    "author"
+  );
 });

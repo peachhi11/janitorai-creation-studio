@@ -29,6 +29,8 @@ description and index.
 
 ## Cross-cutting standards
 
+The purpose-led folders contain 250 modules. Seven compact backwards-compatible modules remain at the root of `skills/` and are included in the repository-wide total.
+
 The following principles apply across folders rather than receiving duplicate
 copies of every skill:
 

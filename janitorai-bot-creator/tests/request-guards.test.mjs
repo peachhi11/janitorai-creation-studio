@@ -90,6 +90,10 @@ test("request guard rejects chunked bodies after the streaming cap is crossed", 
     resume() {
       this.resumed = true;
     },
+    resume() {
+      this.resumed = true;
+      return this;
+    },
   };
   const response = responseDouble();
 

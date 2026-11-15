@@ -16,6 +16,7 @@ export function loadRuntimeConfig(env = process.env) {
   }
   return Object.freeze({
     nodeEnv,
+    mem0UserId: env.MEM0_USER_ID?.trim() || null,
     model: env.OPENAI_MODEL || "gpt-5.5",
     port: integer(env.PORT, 8787, "PORT"),
     host: env.HOST || "127.0.0.1",
@@ -28,18 +29,13 @@ export function loadRuntimeConfig(env = process.env) {
       "MAX_REQUEST_BYTES",
       50 * 1024 * 1024
     ),
-    rateLimit: integer(
-      env.MCP_RATE_LIMIT,
-      60,
-      "MCP_RATE_LIMIT",
-      10_000
-    ),
+    rateLimit: integer(env.MCP_RATE_LIMIT, 60, "MCP_RATE_LIMIT", 10_000),
     rateWindowMs: integer(
       env.MCP_RATE_WINDOW_MS,
       60_000,
       "MCP_RATE_WINDOW_MS",
       86_400_000
-    )
+    ),
   });
 }
 

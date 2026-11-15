@@ -118,6 +118,10 @@ export function createStandaloneCreator({
 
 let defaultCreator;
 function getDefaultCreator() {
+  // Validate process configuration only when the default, process-backed creator
+  // is actually used. Injectable creators must remain importable in tests and
+  // library consumers that do not start the standalone runtime.
+  const config = loadRuntimeConfig();
   defaultCreator ??= createStandaloneCreator({
     client: new OpenAI(),
     model,

@@ -17,9 +17,14 @@ npm start
 
 The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `/mcp`; the health endpoint is `/healthz`.
 
+Vercel AI SDK v6 (`ai`) is included as a project dependency and installed by `npm ci`. Its generation and streaming utilities are available through imports from `ai`.
+
+The built-in Mem0 HTTP integration uses Node.js `fetch`; no Mem0 SDK package is required. Set `MEM0_API_KEY` and `MEM0_USER_ID` to enable the memory tools. See [Memory integration](janitorai-bot-creator/docs/memory.md) for usage and scope.
+
 ## Features
 
 - Generate and revise complete Janitor AI character definitions.
+- Store explicitly selected context in Mem0 and optionally retrieve it during generation.
 - Create portable user personas with full and compact exports.
 - Adapt personas to a bot or setting without changing permanent persona canon.
 - Promote selected roleplay discoveries into permanent persona canon.
@@ -27,7 +32,13 @@ The development server listens at `http://127.0.0.1:8787`. The MCP endpoint is `
 - Browse, search, and read local Markdown, text, JSON, CSV, and PDF references.
 - Attach reference provenance to generated results.
 - Create and constrain editable visual-character models.
+- Use a 257-module agent skill library for character construction, relationships, worldbuilding, continuity, research, evaluation, and platform workflows.
+- Apply normalized `## Completion` criteria to every skill for consistent agent handoffs.
 - Run real MCP-over-HTTP acceptance tests without a live model call.
+- Run deterministic memory-layer and agent-evaluation benchmarks before runtime prompt integration.
+- Compare layer-aware memory retrieval with the keyword baseline, including temporal ordering, evidence coverage, authority filtering, and abstention metrics.
+- Score procedural workflows by completeness, assemble active context through explicit related-state links, and require provenance-backed links before promoting events into durable state.
+- Enforce retrieval boundaries and evidence checks again after memory expansion, deduplicate linked candidates, and abstain when the final bounded context is unsupported.
 
 ## Configuration
 
@@ -57,6 +68,10 @@ Keep the service on loopback unless external exposure is deliberate and protecte
 - [Domain glossary and invariants](janitorai-bot-creator/CONTEXT.md)
 - [Architecture decision records](janitorai-bot-creator/docs/adr/)
 - [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md)
+- [Source-derived Creation Studio assets](janitorai-bot-creator/docs/source-derived-assets.md)
+- [Skill library status](janitorai-bot-creator/docs/skill-library-status.md)
+- [Skill library coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md)
+- [Memory-layer and benchmark plan](janitorai-bot-creator/docs/memory-layer-and-benchmark-plan.md)
 - [Agent change workflow](docs/workflows/agent-change.md)
 - [Engineering retrospective](janitorai-bot-creator/docs/retrospectives/2026-10-25-agent-workflow.md)
 - [Repository skill library](janitorai-bot-creator/skills/README.md)
@@ -86,6 +101,8 @@ The runtime keeps transport, application use cases, generation, storage, and ref
 
 The application treats retrieved references as evidence and craft guidance, not as canon or universal policy. Both MCP generation and the standalone creator apply the shared Fictional Genre Logic / Narrative Intention framing: genre-specific causality and internal consistency guide the work, while psychological or erotic material remains contextual fiction rather than a universal law or mechanical checklist. Detailed creative boundaries are documented in [Creative principles and narrative boundaries](janitorai-bot-creator/docs/creative-principles.md); genre and relationship-intensity presets remain explicit and opt-in.
 
+The agent skill library is complete for the current gathered corpus at the reusable-instruction level. Its remaining maintenance work is explicit source-family provenance mapping, complete machine-readable indexing, and routing/consolidation of intentionally adjacent skill families. See the [skill library status](janitorai-bot-creator/docs/skill-library-status.md) and [coverage audit](janitorai-bot-creator/docs/skill-library-coverage-audit.md).
+
 Destructive and history-rewriting Git commands are checked by the repository-local, agent-agnostic guard in `scripts/block-dangerous-git.sh`.
 
 Routine Git commands should use `scripts/git-safe <subcommand> [options]`, which validates the command and executes it without a shell. The root-level pre-commit hook resolves lint-staged and Prettier from the repository root, so staged documentation and package files share one formatter configuration.
@@ -98,6 +115,16 @@ npm test
 ```
 
 The suite covers unit seams and real local MCP-over-HTTP paths, including health checks, authentication, tool discovery, character persistence, revision restoration, reference listing/search/reading, deterministic generation, source provenance, request-size limits, and rate limiting.
+
+Benchmark the pre-integration retrieval and evaluation layers with:
+
+```bash
+cd janitorai-bot-creator
+npm run benchmark:memory
+npm run benchmark:agents
+```
+
+These deterministic reports measure memory retrieval, state validity, abstention, skill-bundle consolidation, paired-judge disagreement, world replay, context-conditioned actions, roleplay contracts, evaluation-context divergence, and multimodal identity consistency.
 
 To inspect dependency advisories without changing the lockfile:
 
