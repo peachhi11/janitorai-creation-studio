@@ -119,6 +119,8 @@ npm run benchmark:agents
 
 These deterministic reports measure memory retrieval, state validity, abstention, skill-bundle consolidation, paired-judge disagreement, world replay, context-conditioned actions, roleplay contracts, evaluation-context divergence, and multimodal identity consistency.
 
+Action accuracy is `not_evaluated` (`accuracy: null`) unless independently recorded predictions are supplied. Run `npm run benchmark:agents -- /path/to/actions.json` with a JSON array containing one action string per fixture case, in fixture order. These fixtures test evaluation mechanics, not live model quality.
+
 To inspect dependency advisories without changing the lockfile:
 
 ```bash
