@@ -1,80 +1,37 @@
 ---
 name: audit-skill-library-coverage
-description: Audit a local narrative-skill library for taxonomy integrity, duplicate or overlapping triggers, missing negative boundaries, privacy leaks, Fictional Genre Logic coverage, and untested claims. Use when a skill collection has grown across folders, after a synthesis batch, or before a local release. Do NOT use to rewrite every skill mechanically, treat keyword coverage as behavioural proof, or publish private source paths and reports.
+description: Use when auditing a local narrative-skill library for taxonomy, duplicate triggers, missing boundaries, privacy leaks, coverage, and untested claims. Trigger phrases include “audit the skill library,” “check coverage,” and “find overlapping skills before release.”
 ---
 
-# Audit skill-library coverage
+## Steps
 
-Review the library as a system. A clean individual skill can still be misplaced,
-untriggerable, redundant, or missing a critical cross-cutting boundary.
+1. Inventory every skill’s path, name, description, line count, sections, references, and declared purpose.
+2. Compare names, folders, counts, and taxonomy against the repository’s source list.
+3. Extract positive triggers, negative boundaries, output formats, stop conditions, and cross-cutting agency or fictional-genre markers.
+4. Find duplicate names, indistinguishable triggers, broad skills absorbing narrow jobs, missing workflow seams, and stale references.
+5. Scan for private absolute paths, secrets, stale names, unsupported capabilities, and missing provenance.
+6. Run structural validators, trigger fixtures, privacy scans, source checks, and available runtime tests.
+7. Separate syntax pass, fixture pass, source-backed synthesis, model behaviour, unavailable checks, and untested claims.
+8. Inspect representative new and old skills manually; do not call keyword coverage behavioural proof.
+9. Report the smallest remediation and keep {{user}}’s creative choices outside the audit’s assumptions.
 
-**Action:** Inventory skills, reconcile taxonomy, inspect trigger boundaries and
-cross-cutting standards, detect overlap, run available fixtures, and report
-verified versus untested behaviour.
+## Decision rules
 
-**Key point:** Structural coverage is necessary but does not prove that a model
-will choose the right skill or follow it in a live task.
+- Yes: Do names, folders, and taxonomy disagree? Report the exact mismatch. No: continue.
+- Yes: Are triggers overlapping but inputs or outputs differ? Add routing distinctions; do not merge mechanically. No: continue.
+- Yes: Is a marker present only as a keyword? Require behavioural or fixture evidence. No: continue.
+- Yes: Is a private path or secret exposed? Remove it from reports. No: continue.
+- Yes: Is a known high-priority seam untested or structurally inconsistent? Do not call the library complete. No: continue.
 
-**Why:** System-level review catches gaps that individual file validation cannot.
+## Output
 
-## Inventory the library
+- Format: `Skill library coverage audit`
+- Inventory: list counts, taxonomy, sections, references, and purposes.
+- Routing: list duplicate, overlapping, missing, and stale triggers.
+- Privacy: list path, secret, and metadata results.
+- Tests: list each command, fixture, representative review, result, and limitation.
+- Remediation: list priority, file, evidence, fix, and remaining unknowns.
 
-Record for every skill:
+## Stop when
 
-- folder, name, description, line count, references, and declared purpose;
-- positive trigger and negative trigger;
-- Action/Key point/Why structure and relevant risk checklist;
-- privacy-sensitive strings, absolute paths, secrets, and stale names;
-- cross-cutting markers such as Fictional Genre Logic, narrative intention,
-  player sovereignty, truth-layer separation, and non-diagnostic framing.
-
-Compare the inventory with the taxonomy. Counts, names, and folder placement
-must agree. A skill may have one primary home while its description names its
-cross-domain use.
-
-## Find overlap and gaps
-
-Group skills by failure mode rather than matching keywords alone. Flag:
-
-- duplicate names or descriptions;
-- adjacent skills with indistinguishable triggers and no routing distinction;
-- broad skills that absorb several narrower jobs;
-- folders with a missing workflow seam;
-- skills that claim a platform, model, source, or runtime capability without a
-  test path;
-- character, relationship, scene, cast, and testing skills lacking the compact
-  fictional genre and agency framing required by the project.
-
-Do not “fix” overlap by merging skills that have different inputs, failure
-conditions, or deliverables. Prefer a routing note or a narrower description.
-
-## Run evidence checks
-
-Run structural validators, blind trigger fixtures, privacy scans, and any
-available source or runtime tests. Separate:
-
-- syntax and frontmatter pass;
-- fixture or trigger pass;
-- source-backed synthesis;
-- structural export or round-trip pass;
-- model-generated paired behavioural result;
-- untested or unavailable capability.
-
-Never describe a keyword scan as proof of compliance. Inspect representative
-skills manually, including newly added and historically edited files.
-
-## Preserve narrative intent
-
-Fictional Genre Logic is a framing standard, not a command to sanitise, approve,
-or moralise fictional darkness, eroticism, coercion, obsession, tragedy, or
-surrealism. Check that the skill preserves intended genre rules, causal
-consequences, knowledge boundaries, and player sovereignty without making
-characters sound like therapists or turning a craft tool into a real-world
-operational manual.
-
-## Deliverable
-
-Return a coverage matrix, taxonomy reconciliation, overlap and routing findings,
-privacy results, fixture results, explicit genre-logic coverage, untested claims,
-and a prioritised remediation list. Do not call the library complete while a
-known high-priority seam remains untested or structurally inconsistent.
+- No skill library or repository path is supplied: return `No skill-library findings` and do not invent coverage results.

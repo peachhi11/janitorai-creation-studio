@@ -1,94 +1,52 @@
 ---
 name: track-power-exchange-protocol-and-aftermath
-description: "Track continuity in fictional BDSM, kink, service, Master/slave, D/s, caregiver-role, or other power-exchange relationships. Use when rules, rituals, titles, permissions, limits, safewords, correction, rewards, collars, contracts, scene history, injuries, drop, aftercare, renegotiation, breaches, or changing authority must remain consistent across scenes. Do NOT use as a real-world safety, medical, legal, or consent manual, or to force aftercare, equality, or a healthy outcome into the fiction."
+description: Use for fictional text-based roleplay when BDSM, kink, service, D/s, caregiver, or other power-exchange rules, rituals, titles, permissions, limits, signals, corrections, rewards, injuries, aftercare, breaches, or changing authority need continuity. Trigger phrases include “track the protocol,” “what changed after the scene,” “update the power exchange,” and “remember their limits.”
 ---
 
-# Track power exchange, protocol, and aftermath
+## Steps
 
-Treat protocol as a relationship-specific system that changes through use.
+1. Record participants, roles, and whether roles switch.
+2. Set scene-only, contextual, bedroom, public, household, or ongoing scope.
+3. Record active permissions, rules, rituals, titles, symbols, and service duties.
+4. Record hard boundaries, conditional boundaries, preferences, unknowns, and expired agreements.
+5. Record stop, pause, check-in, emergency, revision, and exit signals.
+6. Record exclusions involving health, privacy, work, money, family, law, and social life.
+7. Record breaches, misunderstandings, injuries, repairs, and unresolved conflict.
+8. Separate explicit agreement, assumption, habit, fantasy, narration, and another person’s claim.
+9. For each rule, record trigger, setting, expected behavior, observer, enforcer, exception, suspension, purpose, and consequence.
+10. Update signals used, missed, or ignored; physical and emotional aftermath; practical care; distance; debrief; conflict; trust; and changed agreements.
+11. Separate author canon, character belief, negotiated fact, scene-local fiction, unresolved interpretation, and player choice not yet made.
 
-**Action:** Maintain scope, roles, permissions, limits, signals, exclusions,
-breaches, beliefs, and aftermath in a compact continuity ledger.
+## Decision rules
 
-**Key point:** Protocol can be intimate, coercive, ritualised, contradictory,
-or deliberately violated; continuity is not moral approval.
+- Yes: Is the protocol specific to this relationship and scene? Keep it. No: remove generic rules.
+- Yes: Is a rule explicit or only assumed? Label the difference. No: continue.
+- Yes: Does a warm aftermath prove consent or an upset aftermath prove the encounter was unwanted? Remove that verdict. No: continue.
+- Yes: Can a role or agreement be paused, revised, suspended, or ended? Preserve that option. No: mark the constraint and power.
+- Yes: Is a breach caused by disobedience, incapacity, misunderstanding, changed consent, or ordinary error? Distinguish the cause. No: use the supported cause.
+- Yes: Does the description decide {{user}}’s action, role, body, consent, speech, or choice? Remove that decision. No: continue.
+- Yes: Is the ledger becoming a real-world medical, legal, safety, or lifestyle manual? Keep it fictional and continuity-focused. No: continue.
 
-**Why:** A ledger keeps power exchange specific across scenes without turning it
-into a generic rulebook.
+## Output
 
-## Maintain a compact ledger
+- Format: `Power-exchange protocol record`
+- Snapshot: list roles, scope, permissions, rules, rituals, titles, symbols, service, limits, signals, and exclusions.
+- Changes: list what occurred, what was expected, signals used, missed, or ignored, and changed authority.
+- Aftermath: list bodily, emotional, practical, relational, and delayed effects.
+- Agreement state: separate confirmed, narrowed, expanded, suspended, ended, assumed, disputed, and unresolved terms.
+- Continuity: list what each character believes and what the player has actually chosen.
+- Pressure points: list likely future conflicts without deciding {{user}}’s action.
 
-Record:
+```text
+Power-exchange protocol record
+Snapshot: {{char}} leads for one scene; {{user}} chooses the offered authority; public behavior, money, and health remain outside scope.
+Changes: A pause signal was used and respected; one title felt different after a vulnerable conversation.
+Aftermath: Quiet recovery, practical care, changed trust, and a question about whether the ritual continues.
+Agreement state: Scene scope confirmed; one rule narrowed; the public title remains unresolved.
+Continuity: {{char}} believes the pause showed trust; {{user}}’s interpretation remains open.
+Pressure points: Role fatigue, public discovery, or a changed boundary could alter the next scene.
+```
 
-- participants, roles, and whether roles switch;
-- scene-only, contextual, bedroom, public, household, or ongoing scope;
-- active permissions, rules, rituals, titles, symbols, and service duties;
-- hard boundaries, conditional boundaries, preferences, unknowns, and expired agreements;
-- stop, pause, check-in, and emergency signals;
-- health, privacy, work, money, family, legal, and social exclusions;
-- breaches, misunderstandings, injuries, repairs, and unresolved conflict;
-- what each character believes the arrangement means.
+## Stop when
 
-Separate explicit agreement from assumption, habit, fantasy, narration, and another character's claim.
-
-## Track protocol as behaviour
-
-For each rule, note:
-
-- trigger and setting;
-- expected behaviour;
-- who notices and enforces it;
-- exception and suspension conditions;
-- emotional or symbolic purpose;
-- consequence of success, failure, refusal, or forgetting.
-
-Do not copy generic rule lists into a character. Keep only practices the specific relationship can sustain and that affect story, character, or atmosphere.
-
-## Preserve living variation
-
-Characters may perform protocol differently when rushed, ill, jealous, ashamed, observed, angry, exhausted, playful, or unsure. Distinguish intentional disobedience from incapacity, misunderstanding, changed consent, and ordinary error.
-
-Let rituals accrue history. A title, collar, posture, cup of tea, locked door, or command can change meaning after tenderness, humiliation, betrayal, public discovery, or repair.
-
-## Update after every consequential scene
-
-Track:
-
-- what occurred versus what was expected;
-- signals used, missed, or ignored;
-- physical and emotional aftermath for all participants;
-- practical care, distance, debrief, conflict, or delayed reaction;
-- trust gained, damaged, performed, or withdrawn;
-- agreements confirmed, narrowed, expanded, suspended, or ended.
-
-Do not make aftercare mandatory or identical. Do not treat a warm aftermath as retroactive consent or an upset aftermath as proof the encounter was unwanted.
-
-## Distinguish fiction states
-
-Keep separate:
-
-- author-approved canon;
-- character belief;
-- negotiated relationship fact;
-- scene-local role-play fiction;
-- unresolved interpretation;
-- player-controlled choice not yet made.
-
-In interactive work, record only player actions and choices that have actually occurred.
-
-## Report continuity
-
-Return:
-
-- current protocol snapshot;
-- changes since the previous scene;
-- contradictions or ambiguous authority;
-- bodily and emotional carry-over;
-- unresolved consequences;
-- likely pressure points without deciding future player action.
-
-Do not turn the ledger into a clinical case file, legal contract, universal lifestyle code, or mandate for healthy conduct.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No power-exchange protocol, role, limit, signal, breach, aftermath, or agreement change is supplied: return `No power-exchange protocol update` and do not invent {{user}}’s role or consent.

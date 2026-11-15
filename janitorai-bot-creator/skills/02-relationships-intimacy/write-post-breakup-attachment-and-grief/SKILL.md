@@ -1,68 +1,38 @@
 ---
 name: write-post-breakup-attachment-and-grief
-description: "Write or revise character-specific post-breakup attachment, grief, longing, relief, anger, numbness, rumination, and detachment. Use when a fictional character misses an ex, feels unfinished, idealises the past, struggles with changed routines, experiences delayed or recurring emotion, or moves forward without erasing what the relationship meant. Do NOT use to impose a grief timetable, compulsory closure, no-contact rule, forgiveness, or reconciliation."
+description: Use when writing fictional post-breakup attachment, grief, longing, relief, anger, numbness, rumination, detachment, or changed routines for {{char}} or {{user}}. Trigger phrases include “write the breakup aftermath,” “show delayed grief,” and “keep reconciliation optional.”
 ---
 
-# Write post-breakup attachment and grief
+## Steps
 
-Translate aftermath into observable, changing experience without diagnosing the character or forcing a recovery timetable.
+1. List what {{char}} misses or rejects: the person, witness, routine, home, status, touch, sex, reassurance, future, identity, support, or conflict.
+2. Mark which losses can coexist, such as missing touch while rejecting reunion.
+3. Build a cue loop: cue → meaning → body and emotion → urge → action or restraint → immediate result → later residue.
+4. Use rooms, objects, dates, silence, messages, mutual friends, public news, and bodily memory as cues.
+5. Vary grief, relief, anger, desire, numbness, shame, fear, and ordinary pleasure without a fixed timetable.
+6. Show whether calm is acceptance, shock, exhaustion, concealment, distance, or temporary relief.
+7. Track changing meanings, wider identity, weaker urges, new associations, or recurring waves.
+8. Write through routine, attention, objects, avoidance, voice, choices, and private or spoken language.
+9. Keep {{user}}’s grief, memory, desire, speech, action, and recovery open.
 
-**Action:** Separate losses, map cues and activation loops, vary timing, and
-track changed meaning.
+## Decision rules
 
-**Key point:** Longing, relief, obsession, detachment, or reunion can remain
-unresolved without proving compatibility or pathology.
+- Yes: Does the draft impose stages, a deadline, no contact, forgiveness, closure, or reconciliation? Remove the requirement. No: continue.
+- Yes: Does longing prove compatibility or reunion? Keep those claims separate. No: continue.
+- Yes: Does numbness prove trauma or indifference? Show the established cause and pattern. No: continue.
+- Yes: Does a later wave equal failure or regression? Treat it as a new cue and context. No: continue.
+- Yes: Are trauma, memory, sleep, pain, and identity being collapsed into one label? Separate them before linking them. No: continue.
+- Yes: Does the draft decide {{user}}’s grief or recovery? Remove that decision. No: continue.
 
-**Why:** Asymmetric emotional clocks make aftermath specific rather than
-formulaic.
+## Output
 
-## Separate the losses
+- Format: `Post-breakup aftermath map`
+- Losses: list what is missed, rejected, or still useful.
+- Loops: list recurring cues, meanings, urges, actions, and residues.
+- Mask: contrast public presentation with private experience.
+- Trajectory: list possible changes without a required timetable.
+- Scene hooks: list concrete moments and continuity facts.
 
-Identify what the character misses: the person, witness, rival, routine, home, status, touch, sex, reassurance, future, identity, practical support, uncertainty, or familiar conflict. They may want one component back while rejecting another.
+## Stop when
 
-## Build the activation loop
-
-Use:
-
-**Cue → meaning → bodily and emotional state → urge → action or restraint → immediate consequence → later residue.**
-
-Cues may be rooms, objects, dates, silence, messages, public news, mutual friends, or bodily memory. Actions may include checking, contacting, avoiding, performing indifference, bargaining, retaliating, dating, working, drinking, writing, or doing nothing.
-
-## Vary the form and timing
-
-Allow grief, relief, anger, desire, numbness, shame, fear, and ordinary pleasure to overlap. A later wave is not automatically regression. Calm may be peace, shock, exhaustion, concealment, distance, or genuine acceptance; establish which through pattern and context.
-
-Use more than one plausible trajectory: low-level ache, gradual easing,
-delayed activation, recurring waves, sharp improvement followed by a setback, or
-durable unresolved grief. Do not use a universal stage timetable or imply that
-a late wave means the character has failed.
-
-## Show changed meaning
-
-Track whether memories become more complete, urges lose command, identity widens, or old cues acquire new associations. Detachment need not mean forgetting, indifference, forgiveness, or lack of love.
-
-When grief is entangled with trauma, memory, pain, sleep, or identity, keep
-those strands distinct before showing how they reinforce one another. A
-character may miss a person while avoiding the place, lose sleep without
-wanting reunion, or feel relief that coexists with love.
-
-## Write in character
-
-Use routine, attention, body, objects, choices, avoidance, private narration, and voice-specific dialogue. Keep terms such as attachment activation, rumination, and emotional regulation in author analysis unless the character would naturally use them.
-
-## Deliver the aftermath map
-
-Return:
-
-- bundled losses and reliefs;
-- recurrent cues and activation loops;
-- public mask and private experience;
-- coping, reinforcement, and failure modes;
-- changing meaning and possible trajectories;
-- scene hooks and continuity facts.
-
-Do not turn longing into proof of compatibility or numbness into proof of trauma or indifference. Preserve obsessive, destructive, stalled, or unresolved outcomes when intended. Do not assign the player's grief, desire, memory, speech, action, or recovery.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional breakup, separation, attachment, grief, or aftermath is supplied: return `No breakup aftermath update` and do not invent {{user}}’s recovery.

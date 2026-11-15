@@ -1,77 +1,51 @@
 ---
 name: translate-family-roles-across-relationships
-description: "Translate a fictional character's learned family roles into conditional present-day behaviour across romance, friendship, work, authority, caregiving, conflict, and chosen family. Use when formative family patterns should produce specific repetition, reversal, overcorrection, compartmentalisation, stress reactivation, resistance, or change without treating childhood roles as permanent identities or destiny. Do NOT use to diagnose real families, assign permanent childhood identities, or force reconciliation or healing into the fiction."
+description: Use for text-based roleplay when {{char}}’s learned family role should affect romance, friendship, work, authority, caregiving, conflict, or chosen family without becoming a permanent identity. Trigger phrases include “how does {{char}}’s family role carry over,” “show the old role,” “write the overcorrection,” and “why does {{char}} take responsibility?”
 ---
 
-# Translate family roles across relationships
+## Steps
 
-Carry forward learned expectations, not fixed labels.
+1. Record what {{char}} actually did in the family.
+2. Record the pressure, immediate benefit, private cost, skill, and behavior others expected.
+3. Translate any role label into observable tasks and interactions.
+4. Write the learned rule in {{char}}’s own conditional language.
+5. Choose repetition, reversal, overcorrection, compartmentalization, stress reactivation, or revision.
+6. Record what {{char}} notices, speaks for, interrupts, protects, rescues, entertains, competes with, avoids, blames, obeys, or distrusts.
+7. Vary the pattern across authority, intimacy, peers, strangers, public scrutiny, and solitude.
+8. Record how others reward, exploit, resist, misunderstand, or interrupt it.
+9. Track who takes up the old function when {{char}} stops performing it.
+10. Route attachment, belief, emotion, communication, or power questions to their specialist skills.
 
-**Action:** Describe earlier function, learned rule, transfer pattern, present
-behaviour, relational feedback, and revision pressure.
+## Decision rules
 
-**Key point:** A family role can be repeated, exploited, refused, reversed, or
-left unresolved without becoming destiny.
+- Yes: Does the family role describe a learned function? Use it. No: replace the label with behavior.
+- Yes: Can the old rule be repeated, reversed, overcorrected, compartmentalized, reactivated, or revised? Choose the supported pattern. No: continue.
+- Yes: Does the role appear identically in every relationship? Add context, audience, power, and choice. No: continue.
+- Yes: Does {{char}} stop performing the role? Track who takes it up and what conflict follows. No: continue.
+- Yes: Is childhood role being treated as destiny or diagnosis? Reframe it as learned and revisable. No: continue.
+- Yes: Does the description decide {{user}}’s family history, role, loyalty, speech, or choice? Remove that decision. No: continue.
+- Yes: Is forgiveness, reconciliation, therapy, or redemption being forced? Remove the requirement. No: continue.
 
-**Why:** Conditional transfer preserves history while giving the character
-choice and contradiction.
+## Output
 
-## Describe the earlier function
+- Format: `Family role translation`
+- Earlier function: state what {{char}} did, under what pressure, with what benefit, cost, skill, and expectation.
+- Learned rule: write the conditional expectation in {{char}}’s voice.
+- Transfer: state repetition, reversal, overcorrection, compartmentalization, reactivation, or revision.
+- Behavior: list observable tasks, speech, care, money, time, privacy, decision-making, conflict, and response to care.
+- Feedback: list who rewards, exploits, resists, misunderstands, or interrupts the pattern.
+- Change: list counterexamples and conditions for revision.
 
-State what the character actually did in the family, under which pressures, and how others responded. Identify the immediate benefit, private cost, skill developed, and behaviour that others came to expect.
+```text
+Family role translation
+Earlier function: {{char}} kept a younger sibling calm during arguments; the benefit was safety, the cost was hidden fear, and competence became expected.
+Learned rule: “If I fix the problem, nobody leaves.”
+Transfer: Repetition at work, overcorrection with {{user}}, and reactivation during conflict.
+Behavior: {{char}} answers for others, pays first, avoids asking for care, and becomes sharp when {{user}} interrupts the rescue.
+Feedback: Some people reward the usefulness; {{user}} may resist it; a friend offers a counterexample.
+Change: Letting {{user}} solve one problem without taking over could revise the rule.
+```
 
-Avoid using “hero”, “scapegoat”, “lost child”, “mascot”, or “enabler” as complete explanations. Translate the label into observable tasks and interaction.
+## Stop when
 
-## Identify the learned rule
-
-Write the conditional expectation in character-specific language, such as:
-
-- if I succeed, people stop fighting;
-- if I need nothing, I cannot burden anyone;
-- if I make them laugh, danger passes;
-- if I fix the problem, I remain necessary;
-- if I accept blame first, the punishment stays predictable.
-
-Treat the rule as learned and revisable, not universal truth.
-
-## Select the transfer pattern
-
-Choose what the present context supports:
-
-- **repetition:** performing a similar function again;
-- **reversal:** refusing the old role and adopting its opposite;
-- **overcorrection:** avoiding the old danger so strongly that new problems appear;
-- **compartmentalisation:** using the pattern in one relationship but not another;
-- **stress reactivation:** returning to it when stakes resemble the old system;
-- **revision:** trying a new action after trust, practice, loss, or changed conditions.
-
-Later models, culture, temperament, power, and deliberate choice can alter the result.
-
-## Translate into behaviour
-
-Show who the character notices, speaks for, interrupts, protects, rescues, entertains, competes with, avoids, blames, obeys, or distrusts. Include labour, money, time, touch, privacy, decision-making, conflict timing, and response to care.
-
-Build variation across authority, intimacy, peers, strangers, public scrutiny, and solitude. A former family pattern should not appear identically everywhere.
-
-## Write relational feedback
-
-Show how others reward, exploit, resist, misunderstand, or interrupt the behaviour. Change emerges through repeated interaction, not instant insight. If the character stops performing an old function, track who takes it up and what conflict follows.
-
-Route underlying attachment, belief, emotion, communication, or power work to the relevant specialist skill rather than restating it.
-
-## Deliver the translation
-
-Return:
-
-- earlier role function and maintenance loop;
-- learned conditional rule;
-- present repetition, reversal, or revision patterns;
-- context and relationship variations;
-- behavioural scene expressions;
-- feedback, costs, counterexamples, and change conditions.
-
-Do not force therapy language, forgiveness, reconciliation, or redemption. Do not assign the player's family history, role, loyalty, speech, or choices.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No family role, learned rule, relationship transfer, repetition, reversal, or change problem is supplied: return `No family-role translation update` and do not invent {{char}}’s or {{user}}’s family history.

@@ -1,79 +1,35 @@
 ---
 name: schedule-reveals-and-disclosures
-description: Design and audit staged fictional revelations, secrets, evidence, confessions, partial disclosures, lies, and discovery routes across scenes or interactive roleplay. Use when a mystery, romance secret, identity reveal, lore disclosure, betrayal, or meta-fictional breach needs timing, audience control, and fair alternatives without premature exposition. Do NOT use to force a player discovery, spoil the intended mystery, treat eligibility as mandatory disclosure, or erase deliberate deception and ambiguity.
+description: Use when staging fictional revelations, secrets, evidence, confessions, partial disclosures, lies, or discoveries across scenes and interactive roleplay. Trigger phrases include “schedule the reveal,” “make the mystery fair,” and “keep the confession optional.”
 ---
 
-# Schedule reveals and disclosures
+## Steps
 
-Plan revelation as a change in access, belief, and consequence rather than a
-single information dump.
+1. Define the hidden fact, truth status, holders, stakes, emotional cost, and why it matters now.
+2. List evidence, witnesses, documents, behaviour, rumours, lies, and routes that can reveal or obscure it.
+3. Assign each disclosure an audience, source, timing, motive, confidence, and consequence.
+4. Stage partial knowledge, misreading, confession, confrontation, silence, or discovery through concrete scenes.
+5. Give {{char}}, {{user}}, NPCs, and the reader different access without making the difference arbitrary.
+6. Reveal reasonable knowledge before a consequential player choice.
+7. Preserve deception, ambiguity, false leads, refusal to disclose, and alternate discovery routes.
+8. Track changed trust, reputation, relationship, options, and unresolved questions.
+9. Keep {{user}}’s discovery, belief, speech, and choice open.
 
-**Action:** Define the secret, audiences, evidence, prerequisites, readiness,
-partial forms, delay, concealment behaviour, discovery routes, and aftermath.
+## Decision rules
 
-**Key point:** A fact can be eligible for disclosure without being believable,
-relevant, safe, or chosen in the current exchange.
+- Yes: Is the reveal being forced on {{user}}? Add refusal, delay, or alternate route. No: continue.
+- Yes: Is the mystery unfair because relevant knowledge is withheld from a character who should have it? Reveal it. No: continue.
+- Yes: Is a lie being erased because it conflicts with canon? Keep it as a character claim. No: continue.
+- Yes: Does the draft decide {{user}}’s discovery or interpretation? Remove that decision. No: continue.
 
-**Why:** Staged information preserves suspense, character agency, and the
-meaning of how a truth is learned.
+## Output
 
-## Model the reveal
+- Format: `Reveal schedule`
+- Secret: state fact, holders, stakes, cost, and current pressure.
+- Route: list evidence, witnesses, lies, partial disclosures, and discovery paths.
+- Timing: list audience, source, motive, confidence, and consequence for each reveal.
+- Branches: list refusal, delay, false lead, alternate route, and open player choices.
 
-For each consequential secret or fact, record:
+## Stop when
 
-- canon content and who currently knows it;
-- who suspects, believes, denies, or has no access;
-- evidence available to each audience and its reliability;
-- prerequisite actions, relationships, locations, time, or emotional pressure;
-- possible forms: clue, implication, rumour, lie, partial truth, confession,
-  intercepted record, witnessed act, or direct confirmation;
-- what the speaker wants to gain, avoid, protect, or provoke;
-- what changes if the fact is missed, misunderstood, believed, or challenged.
-
-Separate **eligible** (logical prerequisites met) from **ready** (the present
-scene makes this form of disclosure plausible). A character may deflect, lie,
-stall, reveal only a safer fragment, or remain silent.
-
-## Build fair routes
-
-Provide enough evidence and more than one reasonable route where the design
-allows it. Track whether the player can:
-
-- notice the clue;
-- ask the right or wrong question;
-- test a claim against another source;
-- pursue an indirect route after missing a line;
-- recognise a deliberate lie without receiving narrator confirmation;
-- face consequences without being forced to accept the interpretation.
-
-Do not use a failed parser match or one missed sentence to permanently remove a
-discovery path unless that loss is an explicit story consequence.
-
-## Control the handoff
-
-Before generation, pass only the smallest fact bundle needed for the scene. After
-generation, verify whether the response:
-
-- disclosed only permitted content;
-- distinguished observation, inference, claim, and canon;
-- kept the speaker's motive and voice;
-- changed the intended audience state;
-- accidentally revealed adjacent secrets;
-- wrote a player's discovery, reaction, consent, or decision.
-
-Commit a reveal only after this check. A selected reveal that never became
-legible in the prose has not yet changed player knowledge.
-
-## Preserve fictional genre logic
-
-Mystery, romance, horror, dark fiction, fantasy prophecy, surrealism, and
-metafiction may use different rules for certainty, revelation, and narrative
-levels. Make deliberate breaches explicit in cause, perceiver, scope, and
-consequence. Do not replace a chosen ambiguity, taboo, manipulation, or tragic
-misreading with a therapeutic explanation.
-
-## Deliverable
-
-Return a reveal schedule with fact, audience, evidence, prerequisite, readiness,
-form, concealment strategy, discovery routes, failure states, consequence, and
-post-scene knowledge updates.
+- No secret, revelation, disclosure, or discovery problem is supplied: return `No reveal update` and do not invent {{user}}’s discovery.

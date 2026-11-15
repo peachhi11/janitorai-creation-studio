@@ -1,92 +1,55 @@
 ---
 name: build-multicausal-character-explanations
-description: Build or revise a layered explanation for a fictional character's behaviour without reducing it to one cause. Use when actions need plausible links among situation, learning history, interpretation, goals, relationships, culture, bodily state, temperament, opportunity, and choice, or when a backstory currently relies on a single trauma, diagnosis, instinct, gene, unconscious motive, or reward. Do NOT use to diagnose a real person, excuse harm, or force a redemptive explanation onto a dark fictional character.
+description: Use for text-based roleplay when {{char}}’s behavior needs more than one cause or a backstory relies on a single trauma, diagnosis, instinct, gene, hidden motive, or reward. Trigger phrases include “why does {{char}} behave this way,” “find the causes,” “make this behavior make sense,” and “avoid reducing {{char}} to one explanation.”
 ---
 
-# Build multicausal character explanations
+## Steps
 
-Explain behaviour at several compatible levels while keeping the character capable of choice, surprise, and change.
+1. Describe the behavior in observable terms.
+2. Record its form, frequency, intensity, duration, location, audience, and change over time.
+3. Record what happens immediately before and after it.
+4. Record what {{char}} says it means and what observers infer.
+5. Map immediate conditions such as cues, demands, opportunities, fatigue, pain, audience, and stakes.
+6. Map learning history such as practice, imitation, rewards, punishment, avoidance, and consequences.
+7. Map interpretation, goals, relationships, power, body, temperament, culture, institutions, choice, and chance when supported.
+8. Trace the maintenance loop from trigger to interpretation or body shift, action, consequence, response, expectation, and next trigger.
+9. Record benefits, costs, and situations where {{char}} behaves differently.
+10. Keep two or three plausible explanations when the evidence is unclear.
+11. Record what scene evidence would distinguish those explanations.
+12. Translate the causes into choices, speech, timing, gestures, feedback, failure, escalation, adaptation, or refusal.
 
-**Action:** Describe the observable pattern, map only supported causal layers,
-and trace what maintains it now.
+## Decision rules
 
-**Key point:** Explanation is neither excuse nor sanitisation; competing causes
-and uncertainty should remain visible.
+- Yes: Is the behavior described as something observable? Explain it. No: replace labels such as toxic, broken, abnormal, or psychopathic with actions.
+- Yes: Does the fiction support a causal layer? Include it. No: leave it as an unknown.
+- Yes: Does an origin explain why the pattern continues now? Trace the current payoff, cost, or response. No: do not treat origin as maintenance.
+- Yes: Could several explanations produce the same behavior? Keep them as competing hypotheses. No: use the supported explanation.
+- Yes: Is the narrator claiming access to {{char}}’s unconscious? Mark it as inference unless canon establishes it. No: continue.
+- Yes: Is a single diagnosis, gene, instinct, or childhood event doing all the explanatory work? Add context, learning, relationships, body, choice, or chance. No: continue.
+- Yes: Does the explanation excuse harm or force redemption? Separate cause from consequence and remove the forced outcome. No: continue.
 
-**Why:** A multicausal model gives scenes leverage without pretending to access
-the character's unconscious as fact.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Multicausal character explanation`
+- Target: describe the observable behavior.
+- Causes: list supported immediate, learned, interpretive, motivational, relational, bodily, cultural, institutional, chosen, and chance factors.
+- Maintenance loop: show what keeps the pattern going now.
+- Alternatives: list competing explanations and evidence that would distinguish them.
+- Scenes: list visible choices, speech, timing, gestures, feedback, failures, and counterexamples.
+- Change conditions: list what could escalate, adapt, interrupt, or redirect the pattern.
+- Unknowns: list unsupported inferences.
 
-Choose causes that fit the story's genre and authorial intention. Multiple
-causes should clarify how a dark, coercive, erotic, tragic, or surreal pattern
-operates, not excuse it or force a healthy interpretation. Preserve established
-consequences and do not invent the player's inner state.
+```text
+Multicausal character explanation
+Target: {{char}} becomes evasive when {{user}} asks about the missing record.
+Causes: A past punishment taught {{char}} that disclosure is risky; current fatigue narrows attention; {{char}} expects rejection; the power difference gives {{user}} access to the record.
+Maintenance loop: Question → threat interpretation → partial answer → short-term safety → {{user}}’s suspicion → greater secrecy next time.
+Alternatives: {{char}} may be protecting someone else or may be lying about the record; a private confrontation would distinguish the motives.
+Scenes: Short answers, delayed replies, careful hand placement, and a sudden offer of practical help.
+Change conditions: Evidence that {{user}} will protect the source could make {{char}} disclose.
+Unknowns: The hidden motive is not established.
+```
 
-## Describe before explaining
+## Stop when
 
-State the target behaviour in observable terms:
-
-- its form, frequency, intensity, and duration;
-- where it occurs and where it does not;
-- who is present;
-- what happens immediately before and after;
-- what the character says it means;
-- what observers infer;
-- how the pattern has changed over time.
-
-Avoid vague targets such as “toxic”, “abnormal”, “broken”, or “psychopathic”.
-
-## Build the causal stack
-
-Use only layers supported by the fiction:
-
-1. **Immediate conditions:** cue, demand, opportunity, fatigue, intoxication, pain, audience, and stakes.
-2. **Learning history:** practice, imitation, reinforcement, punishment, avoidance, and consequences.
-3. **Interpretation:** what the character notices, expects, remembers, and believes is happening.
-4. **Goals and meaning:** what they seek, protect, prove, conceal, or refuse.
-5. **Relationships and power:** roles, dependency, leverage, trust, status, and recurring interaction.
-6. **Body and temperament:** capability, arousal, sensory needs, illness, and broad predispositions.
-7. **Culture and institutions:** norms, law, class, community, language, incentives, and available roles.
-8. **Choice and chance:** deliberate action, improvisation, coincidence, and paths not taken.
-
-Do not force every layer into every explanation.
-
-## Trace maintenance, not only origin
-
-An origin story does not explain why a pattern continues. Map the present loop:
-
-**Trigger → interpretation or bodily shift → action → immediate consequence → response from others → changed expectation → next trigger.**
-
-Include benefits, costs, and the situations in which a different behaviour appears. Distinguish what started the pattern from what now maintains it.
-
-## Keep competing hypotheses alive
-
-Offer two or three plausible explanations when the text is ambiguous. State what scene evidence would distinguish them. A concealed motive, learnt habit, bodily limitation, and strategic lie may produce similar outward behaviour.
-
-Do not claim access to a character's unconscious as narrator fact unless canon establishes it. Do not use evolutionary function, genetics, brain language, or childhood symbolism as a substitute for evidence.
-
-## Write the explanation through scenes
-
-Convert the stack into:
-
-- repeated but conditional choices;
-- attention and memory differences;
-- speech, timing, gesture, and task behaviour;
-- interpersonal feedback loops;
-- public competence and private cost;
-- failure under changed conditions;
-- believable routes to escalation, adaptation, or refusal.
-
-Keep analysis in author notes. Preserve cruel, coercive, obsessive, criminal, self-destructive, or morally compromised characterisation when intended; explanation is neither sanitisation nor excuse. Do not assign the player's internal state or decisions.
-
-## Deliver the explanation
-
-Return:
-
-- the observable target;
-- supported causal layers;
-- the present maintenance loop;
-- competing hypotheses and discriminating evidence;
-- scene expressions and counterexamples;
-- change conditions and remaining uncertainty.
+- No behavior, reaction, backstory, or causal question is supplied: return `No multicausal explanation update` and do not invent {{char}}’s causes.

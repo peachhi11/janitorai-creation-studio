@@ -1,52 +1,50 @@
 ---
 name: translate-character-into-portrayal
-description: "Translate a fictional character’s internal architecture into observable portrayal: speech, attention, movement, appearance, habits, decisions, relationships, and scene-level subtext. Use when a profile tells the reader who someone is but does not show how that person behaves. Do NOT use to write the player's reactions, infer consent from body language, or replace a character's authored darkness with generic emotional safety."
+description: Use for text-based roleplay when {{char}}’s profile says who they are but does not show how they behave in a scene. Trigger phrases include “show {{char}} instead of telling,” “turn this profile into behavior,” “write the scene-level subtext,” and “portray {{char}} under pressure.”
 ---
 
-# Translate character into portrayal
+## Steps
 
-Start with pressure in a specific scene. Traits become useful when they alter what the character notices, expects, says, avoids, chooses, or leaves behind.
+1. Choose the scene pressure and context.
+2. Record the trigger, private appraisal, and competing urge.
+3. Record what {{char}} notices and misses.
+4. Record speech, silence, rhythm, word choice, and subtext.
+5. Record posture, movement, touch, clothing, objects, and sensory detail.
+6. Record the decision, action, refusal, or delay.
+7. Record how another character reads the behavior.
+8. Record short-term payoff, cost, and aftermath.
+9. Separate observable cue, character appraisal, tactic, and reader-facing consequence.
+10. Keep appraisal bounded by the viewpoint character’s knowledge.
+11. Let culture, neurotype, status, fatigue, audience, and masking change expression.
+12. Write a short scene that leaves {{user}}’s agency open.
 
-**Action:** Map trigger, appraisal, attention, voice, embodiment, decision,
-other-person reading, payoff, cost, and aftermath.
+## Decision rules
 
-**Key point:** Portrayal shows a pattern; it does not convert one cue into a
-universal emotional truth.
+- Yes: Is the behavior observable to another character? Show it. No: label it as private appraisal or inference.
+- Yes: Can the same cue support different readings? Preserve the ambiguity. No: use the supported reading.
+- Yes: Does body language alone prove attraction, consent, motive, or truth? Remove that conclusion. No: continue.
+- Yes: Does the scene explain {{user}}’s interiority, consent, or choice? Remove it. No: continue.
+- Yes: Does the portrayal fit the selected genre and tone? Keep it. No: restore the intended darkness, erotic charge, comedy, tragedy, or surreal rule.
+- Yes: Does the trait change what {{char}} notices, expects, says, avoids, chooses, or leaves behind? Keep the portrayal. No: add a scene consequence.
 
-**Why:** Scene-level consequences make internal architecture visible without
-clinical explanation.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Character portrayal record`
+- Scene: state pressure, context, and viewpoint.
+- Translation: map trait, trigger, appraisal, attention, voice, body, decision, reading, payoff, cost, and aftermath.
+- Subtext: separate cue, appraisal, tactic, and reader-facing consequence.
+- Sample: write a short third-person past-tense scene with present-tense dialogue.
+- Agency: leave {{user}} and other characters room to respond.
 
-Translate the character into the story's chosen genre and tonal register. Keep
-darkness, manipulation, coercion, erotic charge, tragedy, comedy, or surreal
-rule-breaking legible through behaviour and consequence rather than sanitising
-it. Do not narrate the player's interiority, consent, or choice.
+```text
+Character portrayal record
+Scene: {{user}} asks {{char}} why the door is locked.
+Translation: The question triggers fear of exposure; {{char}} focuses on the key, says “It was easier this way,” and delays the explanation; {{user}} may read the delay as distrust; {{char}} gains time but loses openness.
+Subtext: Cue — {{char}} hides the key. Appraisal — disclosure would surrender control. Tactic — practical explanation. Consequence — access and trust become uncertain.
+Sample: {{char}} kept one hand on the lock. “You could wait outside.” The answer left {{user}} room to decide what to do next.
+Agency: Do not write {{user}}’s reaction or choice.
+```
 
-## Build the translation
+## Stop when
 
-For each important trait, belief, motive, wound, or value, map:
-
-- trigger and context;
-- private appraisal and competing urge;
-- attention: what enters focus and what is missed;
-- speech, silence, rhythm, word choice, and subtext;
-- posture, movement, touch, clothing, object use, and sensory detail;
-- decision, action, refusal, or delay;
-- how another person reads it;
-- short-term payoff, cost, and aftermath.
-
-Keep four layers distinct when building subtext:
-
-1. **Observable cue:** what another person could actually see, hear, or verify.
-2. **Character appraisal:** what this character thinks the cue means, including competing interpretations.
-3. **Tactic:** what the character says, withholds, performs, redirects, or does because of that appraisal.
-4. **Reader-facing consequence:** what changes in access, tension, knowledge, trust, danger, or choice.
-
-Do not collapse these layers into a narrator diagnosis. The same cue may support different readings, and the character may misread it. Keep the private appraisal bounded by the POV character's knowledge; preserve ambiguity when the scene benefits from it.
-
-Use body language probabilistically. Do not make a lowered gaze, folded arms, a smile, or a pause a universal translation. Let culture, neurotype, status, fatigue, audience, and learned masking alter expression. Keep the character’s behaviour distinct from the narrator’s explanation.
-
-## Deliverable
-
-Return a trait-to-portrayal table plus a short scene sample in third-person past tense with present-tense dialogue, preserving the other character’s and player’s agency.
+- No character profile, trait, scene pressure, or portrayal problem is supplied: return `No character portrayal update` and do not invent {{char}}’s or {{user}}’s interiority.

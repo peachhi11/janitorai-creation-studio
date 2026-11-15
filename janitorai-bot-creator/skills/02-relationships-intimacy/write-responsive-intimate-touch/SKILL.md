@@ -1,64 +1,37 @@
 ---
 name: write-responsive-intimate-touch
-description: "Write or revise consensual adult fictional intimacy through responsive touch rather than mechanical technique. Use for kissing, oral intimacy, massage, manual touch, foreplay, sensory escalation, changing pace or pressure, guiding, direct feedback, overstimulation, fatigue, mistakes, pauses, redirection, stopping, or dark scenes where ignored feedback must be depicted accurately. Do NOT use as a real-world sexual technique, medical, or safety manual, or to force the player's bodily response or a healthy relationship outcome."
+description: Use when writing fictional adult intimacy through responsive touch, kissing, massage, foreplay, sensory escalation, pauses, redirection, stopping, or imperfect feedback between {{char}} and {{user}}. Trigger phrases include “write the touch response,” “show the adjustment,” and “keep the player’s body open.”
 ---
 
-# Write responsive intimate touch
+## Steps
 
-Build the interaction through permission, perception, adjustment, and consequence.
+1. State the current permission and what would change the encounter: intensity, body area, pain, restraint, penetration, exposure, risk, or visibility.
+2. Establish permission through dialogue, agreements, offered choices, guidance, or pauses that allow withdrawal.
+3. Run the loop: contact → perceived response → interpretation → maintain, vary, intensify, redirect, pause, or stop → new response.
+4. Use words, deliberate guidance, returning contact, movement, stillness, tension, laughter, flinching, withdrawal, or requests as feedback.
+5. Change one meaningful variable: pace, pressure, rhythm, focus, texture, temperature, breath, distance, leadership, or language.
+6. Keep breath, posture, pain, disability, clothing, furniture, fatigue, temperature, and interruptions physically present.
+7. Filter a few changing sensations through viewpoint instead of cataloguing anatomy or writing a technique manual.
+8. Show mistakes, overstimulation, breaks, laughter, redirection, stopping, or ignored cues and their consequences.
+9. Keep {{user}}’s touch, body, pleasure, orgasm, consent, speech, action, and willingness open.
 
-**Action:** Establish the current boundary, run a contact-response loop, vary
-one meaningful variable, and filter sensation through viewpoint.
+## Decision rules
 
-**Key point:** Responsive touch can be awkward, selfish, overwhelming,
-manipulative, or interrupted; it need not become a polished lesson.
+- Yes: Is a physical response, arousal, orgasm, lubrication, noise, freezing, or lack of resistance being treated as consent? Separate response from consent. No: continue.
+- Yes: Is the scene providing real-world sexual technique or safety instruction? Keep the detail fictional and viewpoint-based. No: continue.
+- Yes: Does a position change break support, balance, reach, leverage, mobility, or fatigue continuity? Adjust the scene. No: continue.
+- Yes: Is the fiction coercive? Show ignored cues and consequences without relabelling violation as mutuality. No: continue.
+- Yes: Does the draft decide {{user}}’s bodily response or willingness? Remove that decision. No: continue.
 
-**Why:** Adjustment and consequence make intimacy embodied and specific.
+## Output
 
-## Establish the current boundary
+- Format: `Responsive intimacy scene`
+- Boundary: state current permission and the escalation limit.
+- Sensation: write the viewpoint-filtered sensory progression.
+- Feedback: list response, interpretation, adjustment, and consequence turns.
+- Body: list physical constraints, imperfect moments, and transitions.
+- Ending: state the pause, stop, continuation, aftermath, and open player choice.
 
-Clarify what contact is wanted now and what would materially change the encounter: a new body area, greater intensity, pain, restraint, penetration, exposure, risk, or public visibility. Use dialogue that fits the characters, established agreements, offered choices, guiding hands, and pauses that make withdrawal possible.
+## Stop when
 
-## Run the feedback loop
-
-Use:
-
-**contact → perceived response → interpretation → maintain, vary, intensify, redirect, pause, or stop → new response.**
-
-Useful feedback includes words, deliberate guidance, returning contact, changing angle, moving closer, slowing, stilling, tension, flinching, pulling away, loss of focus, laughter, or a request. Arousal, orgasm, erection, lubrication, noise, freezing, and lack of resistance do not prove consent.
-
-## Change one meaningful variable
-
-Vary pace, pressure, rhythm, focus, texture, temperature, breath, distance, leadership, or language intentionally. When something works, maintain it long enough to become a pattern instead of cycling through tricks to demonstrate skill.
-
-## Keep the body present
-
-Account for breath, jaw, tongue, hands, neck, knees, back, pain, disability, position, clothing, furniture, fatigue, temperature, and interruptions. Let characters adjust, take breaks, laugh, lose rhythm, become overstimulated, or discover that an anticipated act is not enjoyable.
-
-For every substantial position change, preserve a simple constraint chain:
-support point → weight and balance → reach and leverage → available angle or
-range → effort and fatigue → transition or adjustment. If furniture, clothing,
-height, strength, mobility, pain, or access changes, let the movement and the
-character's attention change with it. Physical continuity is not a universal
-technique prescription; it is what keeps the scene's chosen action possible.
-
-## Filter sensation through viewpoint
-
-Choose a few changing sensations rather than cataloguing anatomy. Show what the viewpoint character notices, what it means to them, and how it changes their next choice. Keep the prose a scene, not a manual.
-
-## Deliver the interaction
-
-Return:
-
-- current permission and escalation boundary;
-- sensory progression;
-- feedback and adjustment turns;
-- body constraints and imperfect moments;
-- character-specific dialogue or silence;
-- ending, aftermath, and continuity updates.
-
-For intentionally coercive fiction, show ignored cues and consequences accurately without relabelling violation as mutuality. Never assign the player's touch, bodily response, pleasure, orgasm, consent, speech, action, or willingness to continue.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional intimate touch, kissing, massage, foreplay, or sensory interaction is supplied: return `No intimate touch update` and do not invent {{user}}’s response.

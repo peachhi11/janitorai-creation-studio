@@ -1,44 +1,36 @@
 ---
 name: design-character-ensemble
-description: "Design a fictional cast as an interacting ensemble with distinct functions, desires, relationships, knowledge, power, voice, and points of friction. Use when supporting characters blur together, a relationship map lacks consequences, or the story needs NPCs who act rather than decorate the protagonist. Do NOT use to make NPCs secretly orbit the protagonist, erase player sovereignty, or force every connection into romance or healthy cooperation."
+description: Use when designing a fictional cast whose members need distinct wants, fears, relationships, knowledge, power, voices, and independent actions. Trigger phrases include “make the NPCs distinct,” “build the ensemble,” and “what do they do if {{user}} waits?”
 ---
 
-# Design a character ensemble
+## Steps
 
-Treat every recurring character as a person with an agenda, not a tool waiting for the protagonist. A role in the plot is not the whole character.
+1. List each recurring character’s independent want, fear, value, resource, constraint, and failure mode.
+2. Map each relationship with history, disposition, knowledge, leverage, desire, boundary, and misunderstanding.
+3. Define what each character does when {{user}} or the protagonist does nothing.
+4. Give each character distinct attention, habits, competence, voice, status, public mask, and private pressure.
+5. Mark what each character knows, believes, misreads, hides, and can discover.
+6. Define what makes each character leave, change sides, persist, escalate, or change.
+7. Use asymmetry and collision to create scenes without making every NPC orbit the protagonist.
+8. Keep romance, cooperation, rivalry, predation, tragedy, and deliberate imbalance available when the genre calls for them.
+9. Keep {{user}}’s beliefs, attraction, consent, speech, and choices open.
 
-**Action:** Map each character's independent want, fear, resources, knowledge,
-voice, relationship leverage, and likely action when the protagonist does
-nothing.
+## Decision rules
 
-**Key point:** Ensemble coherence comes from collision and asymmetry, not
-uniform agreement or equal narrative importance.
+- Yes: Are NPCs only plot tools or secret satellites of {{user}}? Give them independent motives and actions. No: continue.
+- Yes: Are all characters equally important or agreeable? Keep unequal focus and disagreement. No: continue.
+- Yes: Does a relationship lack knowledge, leverage, or consequence? Add a concrete asymmetry. No: continue.
+- Yes: Does the draft decide {{user}}’s reaction? Remove that decision. No: continue.
 
-**Why:** Independent NPC agency generates scenes without stealing the player's
-choices.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Character ensemble map`
+- Cast: list each character’s motive, fear, resource, voice, and failure mode.
+- Relationships: list history, leverage, knowledge, boundaries, and misunderstandings.
+- Agency: list independent actions if {{user}} waits.
+- Collisions: list scene-generating conflicts and likely changes.
+- Continuity: list facts to carry forward.
 
-Design ensemble behaviour within the work's chosen genre logic. Rivalry,
-predation, coercion, obsession, erotic asymmetry, tragedy, comedy, or deliberate
-meta-fictional rule-breaking may be central rather than defects. Preserve each
-character's causal position and consequences without forcing harmony or a
-healthy relationship outcome.
+## Stop when
 
-## Map the ensemble
-
-For each character, record:
-
-- independent want, fear, value, resource, and constraint;
-- relationship to every central character: disposition, history, knowledge, leverage, desire, and boundary;
-- what they misunderstand about one another;
-- what they do when the protagonist does nothing;
-- distinctive voice, attention, habits, competence, and failure mode;
-- social role, status, audience, public mask, and private pressure;
-- function in the current arc and what would make them leave, change sides, persist, or escalate.
-
-Use contrasts and asymmetries. Two characters can both be intelligent, kind, or angry while differing in timing, risk tolerance, evidence standards, or what they protect. Do not make every NPC secretly orbit the protagonist or resolve all relationships into romance.
-
-## Deliverable
-
-Return an ensemble table, relationship graph in prose, knowledge asymmetries, independent NPC actions, and collision points that can generate scenes without stealing the player’s choices.
+- No fictional cast or ensemble problem is supplied: return `No ensemble update` and do not invent {{user}}’s response.

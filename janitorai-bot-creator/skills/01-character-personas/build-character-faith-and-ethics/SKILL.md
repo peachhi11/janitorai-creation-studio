@@ -1,98 +1,60 @@
 ---
 name: build-character-faith-and-ethics
-description: Develop a fictional character's faith, doubt, moral reasoning, ritual life, conscience, responsibility, and response to fate or uncertainty. Use when beliefs need to become observable choices and speech; when a character belongs to, leaves, converts between, or resists a tradition; or when moral conflict must remain specific without diagnosis, sermonising, or treating one ethical theory as the author's verdict. Do NOT use to preach a single correct morality, diagnose belief, or force redemption, conversion, or ethical consistency.
+description: Use for text-based roleplay when {{char}}’s faith, doubt, moral reasoning, rituals, conscience, responsibility, or ideas about fate need to shape behavior. Trigger phrases include “build {{char}}’s beliefs,” “show {{char}}’s faith,” “write this moral conflict,” and “make the ethics specific.”
 ---
 
-# Build character faith and ethics
+## Steps
 
-Treat belief as a relationship among inherited language, lived practice, personal interpretation, community, experience, and present stakes. A label such as devout, atheist, fatalist, honourable, or corrupt is only a starting point.
+1. Record who taught {{char}} and which stories, rituals, rules, and examples shaped them.
+2. Record what {{char}} practiced before they could explain it.
+3. Record experiences that confirmed, complicated, or damaged {{char}}’s trust.
+4. Record which authorities {{char}} respects, fears, resents, imitates, or ignores.
+5. Record what belonging gives {{char}} and what it costs.
+6. Separate inherited identity, current conviction, public affiliation, and private practice.
+7. Record what {{char}} notices first in a difficult choice.
+8. Show beliefs through ordinary choices, speech, rituals, limits, exceptions, apologies, and responses to temptation.
+9. Separate foreknowledge, causation, constraint, luck, divine permission, destiny, and fatalism.
+10. Put two genuine commitments under pressure.
+11. Record what {{char}} owes, what each option protects or harms, and what information is uncertain.
+12. Record the consequences {{char}} expects and what they acknowledge, hide, repair, harden, or rethink afterward.
+13. Use family sayings, prayers, jokes, remembered teachings, ritual language, silence, and disagreement in {{char}}’s voice.
+14. Check that faith or unbelief does not determine {{char}}’s intelligence, kindness, cruelty, sexuality, or personality.
 
-**Action:** Map teaching, practice, authority, belonging, doubt, moral attention,
-and present stakes.
+## Decision rules
 
-**Key point:** Belief can be sincere, strategic, contradictory, inherited,
-private, or changing without the narrator settling its truth for the character.
+- Yes: Is the belief inherited, practiced, interpreted, or personally chosen? Record which one. No: mark the belief as uncertain.
+- Yes: Does {{char}}’s belief change a choice, obligation, relationship, or consequence? Show that change. No: keep it as background identity.
+- Yes: Are two commitments in conflict? Preserve both pressures. No: do not manufacture a moral dilemma.
+- Yes: Does {{char}} use fate or destiny to avoid responsibility? Show that strategy without proving the theology false. No: keep responsibility and belief separate.
+- Yes: Is the narrator settling a live theological dispute? Remove the verdict unless the fictional canon establishes it. No: preserve the dispute.
+- Yes: Is an inconsistency caused by fatigue, danger, love, shame, status, audience, or access? Show the condition. No: do not label it hypocrisy automatically.
+- Yes: Does the writing force conversion, redemption, reform, or ethical consistency? Remove the force. No: preserve the selected outcome.
+- Yes: Is a religious or ethical claim being presented as a clinical fact? Mark it as a character or source claim. No: continue.
 
-**Why:** Ethical conflict becomes dramatic when it alters choices, obligations,
-and relationships rather than delivering a sermon.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Faith and ethics record`
+- History: list teaching, practice, authority, belonging, doubt, and present conviction.
+- Moral attention: list what {{char}} notices first and what they overlook.
+- Practice: list ordinary behaviors, rituals, limits, exceptions, and language.
+- Conflict: list the competing commitments, uncertain information, expected consequences, and choice.
+- Responsibility: state how {{char}} understands fate, causation, constraint, luck, permission, or responsibility.
+- Aftermath: list repair, concealment, punishment, hardening, doubt, or changed practice.
+- Voice: list phrases, silences, jokes, teachings, and disagreements that sound like {{char}}.
+- Open questions: list belief or ethical details that still need an author decision.
 
-Treat belief and moral conflict as forces inside the story's chosen genre, not
-as an instruction to make the character virtuous. Preserve fanaticism, doubt,
-hypocrisy, coercion, transgression, tragedy, absurdity, or redemption only when
-the narrative earns it; do not impose a mainstream moral ending.
+```text
+Faith and ethics record
+History: {{char}} learned the tradition from a grandmother, practiced its hospitality rules early, and now doubts its authority while keeping its rituals.
+Moral attention: {{char}} notices loyalty and preventable harm before law or abstract fairness.
+Practice: {{char}} shares food, avoids one oath, and uses an old prayer when afraid.
+Conflict: Protecting {{user}} would require hiding a betrayal; {{char}} expects social exile but does not know whether the betrayal was intentional.
+Responsibility: {{char}} believes fate sets conditions but choices remain accountable.
+Aftermath: {{char}} confesses part of the truth and treats the silence afterward as a new moral burden.
+Voice: Family sayings appear as fragments, not lectures; doubt comes out as a joke when {{char}} is afraid.
+Open questions: Decide whether {{char}} seeks forgiveness, restitution, or only recognition of the harm.
+```
 
-## Build the character's belief history
+## Stop when
 
-Identify:
-
-- who taught them and through which stories, rituals, rules, and examples;
-- what they practised before they could explain it;
-- which experiences confirmed, complicated, or wounded their trust;
-- which authorities they respect, fear, resent, imitate, or ignore;
-- what belonging gives them and what it costs;
-- what they know well, know vaguely, misunderstand, or have never encountered.
-
-Distinguish inherited identity, current conviction, public affiliation, and private practice.
-
-## Map moral attention
-
-Ask what the character notices first in a difficult choice:
-
-- consequences and preventable harm;
-- duties, promises, law, or command;
-- loyalty, relationship, care, and dependence;
-- virtue, honour, integrity, purity, or self-mastery;
-- rights, fairness, reciprocity, or consent;
-- sacred order, communal survival, freedom, or resistance;
-- intention, action, outcome, repentance, and repair.
-
-Use these as competing considerations, not a quiz that assigns one permanent moral type.
-
-## Translate belief into ordinary behaviour
-
-Show faith and ethics through what the character does when nobody is asking for a speech:
-
-- timing, food, dress, money, work, sex, hospitality, care, burial, oath, and apology;
-- the phrases they reach for under fear, gratitude, anger, grief, or temptation;
-- what they cannot bring themselves to do and what exception they can justify;
-- whom they consult and what evidence they accept;
-- whether they seek forgiveness, restitution, punishment, concealment, or reinterpretation.
-
-Let practice be uneven. Fatigue, danger, love, shame, status, audience, and access can change behaviour without making every inconsistency hypocrisy.
-
-## Handle fate, providence, and responsibility
-
-Separate foreknowledge, causation, constraint, luck, divine permission, destiny, and fatalism. A character may believe events are known or decreed while still treating choices as responsible; another may use destiny to avoid responsibility; a third may reject the entire frame.
-
-Do not let the narration settle a live theological dispute unless the fictional canon explicitly does so. Even then, characters may misunderstand or resist what is true.
-
-## Create moral conflict
-
-Put two genuine commitments under pressure. Decide:
-
-1. what the character owes;
-2. what each option protects and harms;
-3. what information is uncertain;
-4. what social or spiritual consequences they expect;
-5. what they choose to acknowledge or hide;
-6. how they explain the act before and after;
-7. what repair, hardening, doubt, or changed practice follows.
-
-Dark, cruel, fanatical, self-serving, tragic, or compromised decisions remain available. Belief can explain a choice without excusing its effects.
-
-## Write a human voice
-
-Use family sayings, prayers, jokes, fragments of teaching, remembered examples, ritual language, practical rules, silence, and disagreement. Most people do not name an ethical school while making an urgent decision.
-
-Characters should not sound like therapists, theologians, or philosophers unless their education, purpose, and voice support it. Do not turn doubt into a clinical symptom or faith into automatic mental health.
-
-## Audit the character
-
-- The character differs from at least one sincere peer in the same tradition.
-- Faith or unbelief does not determine intelligence, kindness, cruelty, sexuality, or personality.
-- Belief affects more than crisis scenes and ideological arguments.
-- Conversion, loss of faith, or reform is not treated as compulsory character growth.
-- Medical or psychological claims made by a religious source remain claims, not clinical facts.
-- For player characters, provide background knowledge and consequences without choosing belief, guilt, devotion, attraction, consent, or action.
+- No belief, ritual, moral conflict, ethical choice, or fate question is supplied: return `No faith and ethics update` and do not invent {{char}}’s beliefs.

@@ -1,47 +1,50 @@
 ---
 name: design-boundaries-and-coercive-dynamics
-description: Design fictional boundaries, negotiation, emotional blackmail, coercive control, and unequal power with clear behaviour and consequences. Use when a relationship needs limits, leverage, manipulation, consent pressure, or morally difficult intimacy without disguising harm as ordinary communication trouble. Do NOT use to diagnose real relationships, prescribe intervention, or replace the author's intended toxic or dark dynamic with a healthy model.
+description: Use for fictional text-based roleplay when boundaries, negotiation, emotional blackmail, coercive control, unequal power, leverage, manipulation, or consent pressure need clear behavior and consequences. Trigger phrases include “map the boundary,” “show the coercion,” “what leverage does {{char}} have,” and “make the power dynamic concrete.”
 ---
 
-# Design boundaries and coercive dynamics
+## Steps
 
-Make the boundary concrete: who may do what, under which conditions, what happens when it is crossed, and who has the practical power to enforce the consequence. A boundary is not a demand that another person feel, agree, or stay.
+1. Record the stated, implied, hidden, or missing boundary.
+2. Record requests, refusals, pressure, threats, guilt, punishment, monitoring, isolation, financial leverage, sexual leverage, and public exposure.
+3. Record what each person knows and believes about the available choice.
+4. Record exits, dependencies, witnesses, resources, and risks.
+5. Record immediate compliance, resistance, avoidance, or negotiation.
+6. Record retaliation, repair, changed access, and power shifts.
+7. Record each character’s rationalization separately from the narrator’s evidence.
+8. Distinguish persuasion, pressure, hurt, punishment, apology, repair, compromise, surrender, desire, and consent.
+9. Keep cause, tactic, impact, and later consequence visible.
 
-**Action:** Map the stated or hidden limit, leverage, choice set, tactic, and
-consequence.
+## Decision rules
 
-**Key point:** Fictional genre logic can preserve coercion, dependency, or toxic
-intimacy while keeping the story's power rules, consequences, and reader
-promise legible.
+- Yes: Is the boundary concrete about who may do what, when, and with what consequence? Use it. No: specify the limit and enforcement power.
+- Yes: Does a tactic reduce another person’s meaningful choice? Label the pressure or coercion. No: keep it as persuasion or negotiation.
+- Yes: Does intent erase impact? Preserve the impact. No: record both separately.
+- Yes: Is hurt being treated as punishment, or apology as repair? Separate the terms. No: continue.
+- Yes: Does communication advice make coercion symmetrical? Remove the symmetry. No: continue.
+- Yes: Does the dynamic preserve its selected dark, erotic, toxic, or ambiguous genre? Keep the consequences visible. No: restore the intended power rules.
+- Yes: Does the description decide {{user}}’s consent, feelings, speech, or choices? Remove that decision. No: continue.
 
-**Why:** Concrete behaviour is more useful than replacing a difficult dynamic
-with generic communication advice.
+## Output
 
-## Map the dynamic
+- Format: `Boundary and coercive dynamics record`
+- Boundary: state the limit, condition, and enforcement power.
+- Leverage: list dependencies, resources, secrets, status, threats, monitoring, isolation, and exits.
+- Knowledge: state what each person knows, believes, suspects, or misunderstands.
+- Choice set: list available choices, risks, and what is removed by pressure.
+- Tactic: state request, refusal, persuasion, pressure, punishment, retaliation, repair, or resistance.
+- Consequences: list impact, power shifts, changed access, and unresolved danger.
 
-Record:
+```text
+Boundary and coercive dynamics record
+Boundary: {{user}} may refuse contact; {{char}} controls access to the shared account and knows refusal could cost {{user}} housing.
+Leverage: Money, housing, a secret, and limited exits create pressure; a friend can provide temporary support.
+Knowledge: {{char}} knows the dependency; {{user}} knows the request is not freely made; the friend does not know the full risk.
+Choice set: Compliance, refusal, delay, outside help, or leaving; each has different costs.
+Tactic: {{char}} calls the pressure a favor and threatens to withdraw access.
+Consequences: The boundary is crossed, trust narrows, and the housing risk remains unresolved.
+```
 
-- stated limit, implied limit, hidden contract, or missing negotiation;
-- request, refusal, pressure, threat, guilt, punishment, monitoring, isolation, financial leverage, sexual leverage, or public exposure;
-- what each person knows and believes about the choice;
-- available exits, dependencies, witnesses, resources, and risks;
-- immediate compliance or resistance;
-- consequence, retaliation, repair attempt, or changed access;
-- the character’s rationalisation and the narrator’s evidence.
+## Stop when
 
-Distinguish persuasion from pressure, hurt from punishment, apology from repair, compromise from surrender, and intense desire from consent. Do not use communication advice to make coercion symmetrical or to require the harmed character to educate the person exerting control.
-
-## Fictional genre logic
-
-Preserve dark, erotic, ambiguous, or morally compromised material when
-requested, but keep its internal cause-and-effect legible. Ask what the genre,
-tone, and established rules make possible, what a tactic costs, and what later
-events must remember. Do not moralise the character into redemption, impose a
-healthy-relationship endpoint, or erase impact because intent was affectionate.
-
-## Deliverable
-
-Return a dynamics map with boundary, leverage, knowledge, choice set, tactic, consequence, power shift, and unresolved danger.
-
-Do not diagnose real relationships or require redemption, therapy, forgiveness,
-or symmetry unless the story asks for them.
+- No boundary, leverage, unequal power, manipulation, coercion, consent pressure, or relationship limit is supplied: return `No boundary dynamics update` and do not invent {{user}}’s consent or response.

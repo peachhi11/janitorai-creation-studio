@@ -1,70 +1,52 @@
 ---
 name: design-relationship-forms-and-agreements
-description: "Design or revise fictional relationship structures and agreements across monogamy, consensual non-monogamy, marriage, casual partnerships, long-distance bonds, power exchange, female-led relationships, chosen commitments, and other forms. Use when membership, exclusivity, authority, disclosure, privacy, care, labour, resources, outside partners, breach, renegotiation, or exit must be made concrete without ranking one form as universally healthiest. Do NOT use to prescribe real relationship arrangements, erase toxic dynamics, or force every agreement to be healthy or symmetrical."
+description: Use for fictional text-based roleplay when a relationship’s membership, exclusivity, authority, disclosure, privacy, care, labor, resources, outside partners, breach, renegotiation, or exit needs to be concrete. Trigger phrases include “define their relationship,” “write the agreement,” “what are {{char}} and {{user}} allowed to do,” and “map the relationship rules.”
 ---
 
-# Design relationship forms and agreements
+## Steps
 
-Build the operating relationship rather than relying on its label.
+1. List current, prospective, former, secret, contested, and publicly recognized participants.
+2. Record what each person believes the relationship is for.
+3. Set romantic, sexual, domestic, financial, social, legal, care, labor, and power commitments.
+4. Set exclusivity, openness, disclosure, privacy, secrecy, records, authority, delegation, vetoes, service, and decision rights.
+5. Set care, money, housing, health, dependency, outside partners, family, community, and institutional ties.
+6. Separate explicit terms, tacit expectations, misunderstandings, and deliberate concealment.
+7. Record how each consequential term was agreed and what refusing costs.
+8. Record fear, isolation, status, money, housing, law, intoxication, disability, blackmail, and emotional dependency where relevant.
+9. Show the agreement through schedules, introductions, money, sex, messages, chores, rituals, privacy, care, permission, and outside contact.
+10. Record breaches, who knows, who suspects, who benefits, and what evidence exists.
+11. Design proposals, bargaining, resistance, experimentation, partial compliance, concealed deviation, renegotiation, and exit.
 
-**Action:** Map membership, purpose, agreement domains, practical freedom,
-breach, renegotiation, and exit.
+## Decision rules
 
-**Key point:** A relationship can be negotiated, unequal, secret, coercive,
-loving, or contradictory without the label settling its meaning.
+- Yes: Do participants use different labels or believe different agreements exist? Record each version. No: use the shared label.
+- Yes: Is a relationship term explicit, tacit, disputed, or secret? Label it. No: continue.
+- Yes: Does refusal carry fear, isolation, status, money, housing, legal, health, blackmail, or dependency costs? Record the constrained choice. No: continue.
+- Yes: Does a label, safeword, marriage, previous consent, or signed rule validate every later action? Remove that assumption. No: continue.
+- Yes: Is hierarchy automatically being called abuse or equality automatically being called freedom? Check the actual options and consequences. No: continue.
+- Yes: Is coercion or betrayal being called consensual by default? Preserve the impact and power structure. No: continue.
+- Yes: Does the description decide {{user}}’s relationship form, consent, loyalty, speech, action, or choice? Remove that decision. No: continue.
 
-**Why:** Operating terms turn a relationship form into scenes, choices, and
-consequences rather than a category shortcut.
+## Output
 
-## Identify membership and purpose
+- Format: `Relationship form and agreement record`
+- Membership: list participants, labels, purposes, and public story.
+- Terms: list explicit, tacit, disputed, secret, romantic, sexual, domestic, financial, social, legal, care, labor, and power terms.
+- Freedom: list alternatives, refusal costs, dependencies, exits, and revision rights.
+- Enactment: list how the agreement appears in ordinary scenes.
+- Breach: list what changed, who knows, evidence, benefit, harm, and response.
+- Change: list renegotiation, repair, concealed deviation, exit, and consequences.
 
-List current, prospective, former, secret, contested, and publicly recognised participants. Establish what each person believes the relationship is for: companionship, sex, romance, family, care, status, safety, resources, power exchange, experimentation, or another purpose.
+```text
+Relationship form and agreement record
+Membership: {{char}} and {{user}} call the relationship private and exclusive sexually, but not socially; a former partner remains a contested participant.
+Terms: They share care and some expenses; disclosure is required about new sexual partners; public recognition is limited.
+Freedom: {{user}} can refuse a request, but housing dependence raises the cost; both can revise the terms.
+Enactment: Schedules, messages, privacy, and introductions show the agreement.
+Breach: {{char}} hid a disclosure; {{user}} suspects it from a record; trust and access narrow.
+Change: A proposal, refusal, outside support, or exit can change the arrangement.
+```
 
-Do not assume every participant uses the same label or believes the same agreement exists.
+## Stop when
 
-## Map agreement domains
-
-Specify:
-
-- romantic, sexual, domestic, financial, social, and legal commitments;
-- exclusivity, openness, and disclosure in each domain;
-- public recognition, privacy, secrecy, and records;
-- authority, delegation, vetoes, service, and decision rights;
-- care, labour, money, housing, health, and dependency;
-- outside partners, metamours, family, community, and institutions;
-- review, renegotiation, breach, repair, and exit.
-
-Separate explicit terms, tacit expectations, misunderstandings, and deliberate concealment.
-
-## Test consent and practical freedom
-
-For every consequential term, ask how agreement was obtained, what alternatives existed, what refusing would cost, and whether consent remains current. Account for fear, isolation, status, money, housing, law, intoxication, disability, blackmail, and emotional dependency.
-
-A label, safeword, marriage, previous consent, or signed rule does not validate every later action. Hierarchy is not automatically abuse; stated equality is not automatically freedom.
-
-## Write enactment and breach
-
-Show the agreement through schedules, introductions, money, sex, messages, chores, rituals, privacy, care, permission, and outside contact. A breach may concern information, time, risk, loyalty, resources, sex, romance, authority, or public humiliation.
-
-Track who knows, who suspects, who benefits, and what evidence exists.
-
-## Design change
-
-When needs or circumstances change, show proposals, bargaining, resistance, experimentation, partial compliance, concealed deviation, and exit. Renegotiation may strengthen, destabilise, expose, or end the relationship.
-
-## Deliver the agreement map
-
-Return:
-
-- membership and competing labels;
-- explicit, tacit, disputed, and secret terms;
-- authority, resources, care, and exit options;
-- outside relationships and public story;
-- consent constraints and breach points;
-- likely renegotiation paths and consequences.
-
-Preserve intentional coercion and betrayal when requested without calling them consensual by default. Do not assign the player's relationship form, consent, loyalty, speech, action, or decision.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No relationship form, membership, agreement, boundary, breach, renegotiation, or exit problem is supplied: return `No relationship form update` and do not invent {{char}}’s or {{user}}’s agreement.

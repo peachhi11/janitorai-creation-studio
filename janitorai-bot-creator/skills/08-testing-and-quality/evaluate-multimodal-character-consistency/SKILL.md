@@ -1,63 +1,34 @@
 ---
 name: evaluate-multimodal-character-consistency
-description: Evaluate whether a fictional character remains recognisable and causally consistent across text, image, audio, roleplay turns, and other modalities. Use when a persona has visual references, multimodal outputs, avatar customisation, image-plus-dialogue examples, or a platform conversion that may preserve one identity channel while drifting in another. Do NOT use to infer a real person's identity or psychology from media, treat visual resemblance as character truth, or force every modality into identical surface detail.
+description: Use when evaluating whether a fictional character remains recognisable and causally consistent across text, image, audio, roleplay turns, avatars, and platform conversions. Trigger phrases include “check cross-modal consistency,” “compare the avatar and dialogue,” and “separate intentional variation from drift.”
 ---
 
-# Evaluate multimodal character consistency
+## Steps
 
-Test identity across modalities as a relationship between stable anchors and
-intentional variation, not as pixel matching or identical wording.
+1. Define the character contract: stable anchors, values, motives, fears, boundaries, contradictions, voice, attention, gestures, visuals, variation, state, and knowledge.
+2. Mark player-owned, unresolved, transformed, unreliable, dream, avatar, and genre-specific material.
+3. Build paired cases that hold character and scenario constant while changing one modality, context, or wording.
+4. Include neutral, stressed, intimate, public, adversarial, off-target, contradictory, and relevant dark or erotic cases.
+5. Record identity anchors, voice, motives, decisions, state response, knowledge, genre intention, agency, modality quality, and useful variation.
+6. Classify each difference as authored, plausible state change, unsupported drift, or unresolved.
+7. Use blind paired review where possible and record prompt, generator, version, sample, disagreement, and failure evidence.
+8. Do not infer a real person’s identity or psychology, treat visual resemblance as character truth, or force identical surface detail.
 
-**Action:** Define the character contract, identify modality-specific anchors,
-run paired crossmodal cases, score causal and stylistic consistency, and report
-intentional variation separately from drift.
+## Decision rules
 
-**Key point:** A character can change pose, medium, mood, or wording while
-remaining recognisably the same person; visual resemblance alone cannot prove
-matching motives, knowledge, or voice.
+- Yes: Is a difference an authored transformation or genre rule? Preserve it and record the condition. No: continue.
+- Yes: Does a modality contradict stable motives, knowledge, or boundaries without cause? Flag drift. No: continue.
+- Yes: Is pixel, voice, or wording similarity being treated as causal consistency? Add behavioural evidence. No: continue.
+- Yes: Does the evaluation decide {{user}}’s response or character choice? Remove that claim. No: continue.
 
-**Why:** Multimodal evaluation catches identity splits that text-only or image-
-only checks miss.
+## Output
 
-## Define the character contract
+- Format: `Multimodal character consistency report`
+- Contract: list stable anchors, permitted variation, current state, and open material.
+- Matrix: list paired cases, modalities, prompts, generators, and evidence.
+- Findings: classify authored variation, plausible change, drift, uncertainty, and agency impact.
+- Next test: list failures, sample limits, disagreement, and the next discriminating case.
 
-Separate stable identity and body facts, values, motives, fears, boundaries,
-contradictions, voice, attention, gestures, visual anchors, permitted variation,
-current state, relationship context, knowledge boundary, and player-owned or
-unresolved material. Do not treat a prompt, style reference, trait label, or
-generated caption as independent canon without an authored basis.
+## Stop when
 
-## Build paired cases
-
-Hold the character and scenario constant while changing one modality, context,
-or wording. Include neutral, stressed, intimate, public, and adversarial scenes;
-recurring objects or presentation where relevant; deliberate contradictions; a
-player boundary; and dark, erotic, manipulative, tragic, or villainous material
-when that belongs to the fictional contract.
-
-Include off-target cases where a feature should not appear. Constant repetition
-can look consistent while being wrong.
-
-## Score and report
-
-Record evidence for identity anchors, voice, motives and decisions, current-state
-responsiveness, knowledge boundaries, genre intention, player sovereignty,
-modality-specific quality, and useful variation. Mark each difference as
-authored, plausible state change, unsupported drift, or unresolved.
-
-Use blind paired review where practical. Report pair accuracy, failure examples,
-reviewer disagreement, modality, generator, prompt version, and sample limits.
-Separate structural fixture checks from model-generated behaviour.
-
-## Fictional genre logic
-
-Stylisation, unreliable images, dream states, avatars, body transformation, and
-deliberate identity fracture may be part of the fiction. Evaluate against the
-chosen rules and consequences, not a generic realism standard. Preserve darkness,
-eroticism, coercion, villainy, and ambiguity without moral sanitisation or
-real-world guidance.
-
-## Deliverable
-
-Return the character contract, paired test matrix, modality evidence, dimension
-scores, intentional-variation notes, failures, uncertainty, and next test.
+- No character contract, multimodal output, or paired test is supplied: return `No multimodal-consistency update` and do not invent a result.

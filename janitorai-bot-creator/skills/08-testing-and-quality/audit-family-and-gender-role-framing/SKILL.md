@@ -1,73 +1,34 @@
 ---
 name: audit-family-and-gender-role-framing
-description: "Audit fictional families, character notes, relationship scenes, roleplay prompts, or writing guidance for rigid family-role and gender framing. Use to find fixed hero/scapegoat/enabler types, birth-order destiny, binary male/female psychology, hypergamy or sexual-market claims, compulsory family reconciliation, victim-blaming, heteronormative assumptions, therapist-like dialogue, or family narratives that overwrite character and player agency. Do NOT use to prescribe real family behaviour, diagnose relatives, or force conventional reconciliation or gender roles onto fictional characters."
+description: Use when reviewing fictional family, gender, relationship, or roleplay material for fixed roles, birth-order destiny, binary psychology, sexual-market claims, compulsory reconciliation, victim-blaming, or player-agency errors. Trigger phrases include “audit the family roles,” “remove gender determinism,” and “keep reconciliation optional.”
 ---
 
-# Audit family and gender role framing
+## Steps
 
-Protect character specificity without sanitising family conflict.
+1. List family structure, roles, histories, resources, gender assumptions, relationships, and current pressures.
+2. Check hero, scapegoat, enabler, birth-order, gender, hypergamy, sexual-market, and heteronormative claims against individual evidence.
+3. Separate role expectation, behaviour, identity, culture, institution, character belief, and narrator claim.
+4. Check for victim-blaming, compulsory reconciliation, fixed family destiny, and therapist-like dialogue.
+5. Give each character alternative motives, boundaries, resistance, cooperation, and routes to leave or change.
+6. Check whether the text writes {{user}}’s family history, identity, feeling, consent, speech, or choice.
+7. Preserve conflict, prejudice, coercion, estrangement, darkness, and non-reconciliation when intended.
 
-**Action:** Separate behaviour, function, label, causal evidence, gender or
-cultural script, and possible endings.
+## Decision rules
 
-**Key point:** Rejecting a stereotype does not require making every family
-loving, egalitarian, reconciled, or safe.
+- Yes: Is a family or gender role fixed across contexts? Add limits and variation. No: continue.
+- Yes: Is identity or birth order treated as destiny? Replace with evidence and conditions. No: continue.
+- Yes: Is reconciliation or forgiveness mandatory? Leave outcomes open. No: continue.
+- Yes: Does the draft blame a target for coercion or harm? Restore responsibility to the actor. No: continue.
+- Yes: Does it decide {{user}}’s identity or response? Remove it. No: continue.
 
-**Why:** Fictional genre logic preserves conflict while preventing labels from
-becoming destiny or player fact. Test whether role changes follow the story's
-established social rules, pressures, and consequences rather than importing a
-single real-world norm.
+## Output
 
-## Separate behaviour, function, and label
+- Format: `Family and gender-role framing audit`
+- Baseline: list family structure, roles, identity, resources, and pressures.
+- Findings: list fixed roles, determinism, stereotypes, blame, reconciliation, and agency errors.
+- Repairs: provide context-specific, non-prescriptive revisions.
+- Open: list boundaries, conflict, and player-owned outcomes.
 
-For every family-role claim, identify:
+## Stop when
 
-- the observable behaviour;
-- the conditions in which it occurs;
-- what immediate function it serves;
-- how other members reinforce or punish it;
-- who applies the label and why;
-- counterexamples and role changes.
-
-Flag a role name used as identity, diagnosis, motive, or adult destiny. A character may use several functions or reject the family's assignment.
-
-## Audit causal overreach
-
-Flag claims that sibling position or a family role predicts addiction, criminality, sexuality, diagnosis, career, partner choice, or inevitable adult dysfunction. Require story-specific pathways, later experience, context, and current maintenance.
-
-Do not blame a child, dependent member, or visibly struggling person for organising the whole family's distress. Preserve each member's actions and responsibility.
-
-## Audit gender scripts
-
-Flag narrator claims that men naturally provide, withdraw, solve, seek status, or resist emotion while women naturally nurture, communicate, select upward, preserve relationships, or manage men's behaviour. Ask whether the pattern is:
-
-- this individual's tendency;
-- a family, cultural, religious, class, or period script;
-- an institutional arrangement;
-- a character's belief or stereotype;
-- unsupported authorial generalisation.
-
-Treat hypergamy and sexual-market language as ideology or metaphor unless the fictional setting literally creates such a system. Do not convert attraction and commitment into biological inevitability.
-
-## Audit family diversity and endings
-
-Check assumptions about biological kinship, marriage, heterosexuality, monogamy, co-residence, parenthood, inheritance, gendered labour, and permanent reconciliation. Preserve adoptive, blended, chosen, queer, communal, estranged, and culturally specific family structures.
-
-Do not force forgiveness, disclosure, contact, therapy, reunion, conventional partnership, or “healing” as the correct resolution. Estrangement, ambiguity, repetition, partial change, and tragedy may fit the story.
-
-## Audit voice and player sovereignty
-
-Flag ordinary characters who explain everyone through polished family-systems terminology unless that expertise or overconfidence is intentional. Replace labels with history, action, expectation, conflict, and consequence.
-
-Do not assign the player's family history, assigned role, gendered desire, attraction, loyalty, forgiveness, boundaries, speech, actions, or choices.
-
-## Deliver the audit
-
-Return:
-
-- role claims separated into behaviour, function, and label;
-- deterministic family or gender claims;
-- missing cultural, structural, and individual alternatives;
-- responsibility and blame errors;
-- intentional in-character beliefs to retain;
-- the smallest corrections that preserve conflict and darkness.
+- No family, gender, or role-framing material is supplied: return `No family-role findings`.

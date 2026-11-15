@@ -1,86 +1,34 @@
 ---
 name: design-plot-architecture-and-payoff
-description: "Design or revise a fictional plot architecture across scenes, acts, chapters, subplots, reveals, reversals, climaxes, endings, or genre promises. Use when a story has events but no causal shape, a middle sags, a subplot drifts, a twist feels arbitrary, or the ending does not pay off what the narrative established. Do NOT use to force a universal beat sheet, mandatory redemption, a fixed romance outcome, or player-owned choices."
+description: Use when designing or revising fictional plot shape across scenes, acts, chapters, subplots, reveals, reversals, climaxes, endings, or genre promises. Trigger phrases include “fix the sagging middle,” “make the twist pay off,” and “map the plot.”
 ---
 
-# Design plot architecture and payoff
+## Steps
 
-Treat structure as a network of changed conditions rather than a template to
-fill. A beat earns its place when it changes what someone knows, wants, can do,
-owes, risks, controls, or believes is possible.
+1. State the central change, question, promise, conflict, and ending pressure.
+2. List the important characters, goals, constraints, relationships, and choices.
+3. Order events by cause, consequence, escalation, discovery, reversal, decision, and aftermath.
+4. Give each scene a goal, obstacle, turn, changed information, and next pressure.
+5. Track subplots, motifs, promises, planted details, reveals, and payoffs.
+6. Check that reversals grow from established character action or world rules.
+7. Keep multiple routes, unresolved outcomes, and player-owned choices where the format requires them.
+8. Remove beats that repeat without changing pressure, knowledge, relationship, or options.
 
-**Action:** Map the story promise, pressure chain, turning points, subplot
-relations, planted evidence, reversals, climax choice, and aftermath.
+## Decision rules
 
-**Key point:** Three-act, five-act, Freytag, Save the Cat, Hero's Journey and
-other models are lenses. Keep, bend, combine, or reject them according to the
-chosen genre and story intention.
+- Yes: Is the plot using a universal beat sheet or mandatory redemption/romance? Replace it with causal pressure. No: continue.
+- Yes: Is a twist unsupported by earlier evidence? Plant or revise the twist. No: continue.
+- Yes: Does a subplot never affect the main pressure or ending? Connect, defer, or cut it. No: continue.
+- Yes: Does the architecture decide {{user}}’s choice or relationship outcome? Leave the branch open. No: continue.
 
-**Why:** Causal architecture creates momentum without making the narrative
-predictable or morally tidy.
+## Output
 
-## Establish the promise and pressure
+- Format: `Plot architecture map`
+- Promise: state central question, genre promise, conflict, and ending pressure.
+- Structure: list scenes or acts with goal, obstacle, turn, information, and consequence.
+- Payoff: map planted details, reveals, reversals, subplots, and outcomes.
+- Branches: list open routes, unresolved pressure, and player-owned choices.
 
-Record:
+## Stop when
 
-- genre and subgenre promise;
-- protagonist and opposing forces' current goals;
-- the value, relationship, mystery, danger, or identity at stake;
-- the pressure that makes inaction costly;
-- the knowledge, resource, access, or status that changes after each major beat.
-
-Use a chain such as:
-
-`want → pressure → choice/refusal → consequence → changed options → next pressure`
-
-The next pressure should grow from what happened, not from an arbitrary need to
-raise the volume.
-
-## Design turns and reveals
-
-For each turning point, name the new condition and why it could not be ignored.
-Distinguish:
-
-- **foreshadowing:** a fair pattern or detail that gains meaning later;
-- **reveal:** information becoming accessible to a character, reader, or both;
-- **twist:** a reclassification of earlier information, not a random reversal;
-- **cliffhanger:** a live unresolved question or immediate consequence;
-- **climax:** a costly choice that tests the central promise;
-- **aftermath:** the new social, emotional, material, or thematic state.
-
-Do not use withheld information to fake complexity. Keep narrator knowledge,
-character belief, reader suspicion, and canon truth distinct.
-
-For relics, MacGuffins, quests, or signature objects, give the object a
-story-specific network: who wants it, who interprets it differently, what
-access or history it represents, and what changes when it moves or is exposed.
-An impressive object without competing stakes is scenery, not plot pressure.
-
-## Weave subplots
-
-Give each subplot a distinct pressure and relation to the main plot: echo it,
-complicate it, oppose it, expose its cost, or provide a contrasting answer.
-Track entry, escalation, intersection, payoff or deliberate abandonment. A
-subplot can remain unresolved when that is the chosen ending, but the absence of
-closure should carry meaning rather than look forgotten.
-
-## Preserve genre logic and agency
-
-Fantasy may use rule-consistent impossibility; mystery needs fair clues; romance
-needs meaningful relational choice; horror needs consequential threat; comedy
-may convert danger into reversal; tragedy may make insight arrive too late;
-surreal or meta-fictional work may let narrative levels bleed when the breach
-has an established rule. Preserve dark, erotic, coercive, tragic, comic or
-unresolved intentions. In interactive writing, offer pressures and branches but
-do not write the player's interiority, consent, refusal, speech, or decision.
-
-## Deliverable
-
-Return a plot ledger with promise, pressure chain, major state changes, subplot
-map, planted/payoff evidence, turning points, unresolved questions, ending
-options, and continuity risks. Mark which elements are canon, planned,
-conditional, or player-controlled.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No plot, premise, arc, or payoff problem is supplied: return `No plot update` and do not invent {{user}}’s choice.

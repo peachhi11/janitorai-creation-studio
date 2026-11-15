@@ -1,94 +1,51 @@
 ---
 name: build-intimacy-and-relationship-maintenance
-description: "Build or revise fictional intimacy and ongoing relationship maintenance across emotional, sexual, sensual, practical, intellectual, spiritual, playful, social, creative, ritual, and power-exchange channels. Use when a relationship needs believable daily bids, care, labour, privacy, disclosure, shared rituals, erotic renewal, independent life, community support, accumulated neglect, or adaptation to changing circumstances. Do NOT use to prescribe monogamy, sex, disclosure, forgiveness, or a healthy maintenance model, or to decide the player's intimacy or consent."
+description: Use for text-based roleplay when a relationship needs believable daily bids, care, labor, privacy, shared rituals, erotic renewal, outside life, accumulated neglect, or adaptation to change. Trigger phrases include “maintain this relationship,” “show the daily intimacy,” “what keeps them together,” and “track the neglected work.”
 ---
 
-# Build intimacy and relationship maintenance
+## Steps
 
-Show how closeness is made, refused, spent, renewed, and changed through repeated interaction.
+1. Choose the intimacy channels that matter: emotional, sexual, sensual, practical, intellectual, creative, spiritual, playful, social, ritual, power, or informational.
+2. Record who initiates, what is shared, what stays private, and how the other person responds.
+3. Set ordinary rhythms such as greetings, meals, chores, schedules, money, messages, touch, humor, celebrations, solitude, and outside friendships.
+4. Record invisible planning, care, repair, and what happens when a task stops.
+5. Trace need or wish, bid, interpretation, response, immediate effect, and residue.
+6. Track trust separately by domain, such as discretion, truthfulness, sexual safety, reliability, responsiveness, finance, privacy, fidelity, competence, or power protocol.
+7. Record what evidence changes access, disclosure, desire, or practical reliance.
+8. Test the relationship under work, illness, parenting, age, disability, migration, grief, money, danger, secrecy, new partners, community loss, or status change.
+9. Set sensory and communication details by modality, intensity, timing, setting, and cumulative load.
+10. Keep relationships loving, stagnant, exploitative, dangerous, changing, or unresolved as selected.
 
-**Action:** Map active channels, bids, responses, rituals, labour, privacy,
-stress adaptations, and accumulated residue.
+## Decision rules
 
-**Key point:** Durability is not proof of health, and closeness in one channel
-does not settle another.
+- Yes: Does an intimacy channel affect the relationship? Track it. No: leave it outside the current map.
+- Yes: Does closeness in one channel prove closeness in another? Do not transfer the conclusion. No: keep the channels separate.
+- Yes: Is a bid welcomed, missed, deferred, exploited, resented, misunderstood, or partly met? Record that response. No: use the supported response.
+- Yes: Does durability get treated as proof of health? Remove that assumption. No: continue.
+- Yes: Does withdrawal regulate sensory or communication load? Show that possibility and the other person’s interpretation. No: use the supported meaning.
+- Yes: Is sex, disclosure, forgiveness, monogamy, or preservation being required? Remove the requirement. No: continue.
+- Yes: Does the description decide {{user}}’s intimacy, attraction, consent, speech, or choice? Remove that decision. No: continue.
 
-**Why:** Repeated ordinary choices make intimacy specific and consequential.
+## Output
 
-## Map intimacy channels
+- Format: `Intimacy maintenance record`
+- Channels: list active, neglected, private, and changing channels.
+- Rhythm: list rituals, bids, responses, labor, solitude, and outside life.
+- Trust: list domain-specific expectations and evidence of change.
+- Stress: list adaptations, load, failure points, and redistributed care or privacy.
+- Residue: list accumulated neglect, repair, resentment, tenderness, access, and desire.
+- Possibilities: list renewal, deterioration, transformation, or separation paths.
 
-Select the channels relevant to the relationship:
+```text
+Intimacy maintenance record
+Channels: Emotional disclosure is cautious; practical care is strong; sensual touch is changing; outside friendships remain active.
+Rhythm: {{char}} cooks after work; {{user}} handles transport; their nightly message is sometimes missed.
+Trust: {{char}} trusts {{user}} with private information but not yet with money; recent follow-through improved practical reliance.
+Stress: Illness reduces touch and increases the need for explicit check-ins; withdrawal may be regulation, not rejection.
+Residue: Missed messages create a small expectation of disappointment.
+Possibilities: A new ritual could renew closeness, or repeated neglect could narrow the relationship.
+```
 
-- emotional disclosure and being understood;
-- sexual desire, communication, and activity;
-- sensual touch and embodied comfort;
-- practical reliance, care, and shared labour;
-- intellectual, creative, spiritual, or playful connection;
-- social belonging and public recognition;
-- ritual, protocol, service, or power exchange;
-- informational access, privacy, and secrets.
+## Stop when
 
-For each channel, record who initiates, what is shared, what remains private, and how the other person responds. Closeness in one channel does not prove closeness in another.
-
-## Build the maintenance rhythm
-
-Use ordinary actions: greetings, departures, meals, chores, schedules, money, messages, sex, favours, touch, humour, celebrations, check-ins, solitude, and outside friendships. Choose a few recognisable rituals rather than making every interaction emotionally explicit.
-
-Track who performs invisible planning and repair work, who notices absence, and what happens when a task stops.
-
-## Write bids and responses
-
-Model small turns as:
-
-**Need or wish → bid → interpretation → response → immediate effect → residue.**
-
-A response may welcome, miss, defer, exploit, resent, misunderstand, or partially meet the bid. Repeated residue changes later expectations.
-
-## Keep trust domain-specific
-
-Do not treat trust as one global meter. Track separate expectations such as
-discretion, truthfulness, sexual safety, reliability, emotional responsiveness,
-financial handling, privacy, fidelity, competence, or power-exchange protocol.
-Evidence in one domain may not transfer to another: a character can trust a
-partner with a secret but not with money, or trust their sexual attention while
-doubting their follow-through.
-
-For each breach or repair, record what evidence changed, who noticed it, what
-remains uncertain, and whether access, disclosure, desire, or practical reliance
-changed. Responsiveness can increase closeness without creating entitlement to
-unlimited access or agreement.
-
-## Apply changing conditions
-
-Test the relationship under work, illness, parenting, ageing, disability, migration, grief, financial strain, danger, secrecy, new partners, community loss, or status change. Redistribute care, autonomy, privacy, erotic energy, and practical labour.
-
-When sensory or communication differences matter, specify the modality,
-intensity, timing, setting, and cumulative load rather than writing a global
-“touch aversion” or “lack of affection.” Pacing, spacing, predictability,
-explicit check-ins, environmental changes, and permission to pause can make
-closeness more sustainable. Withdrawal may be regulation, not rejection; a
-partner may still misread it, and that misreading can become part of the
-relationship's conflict.
-
-Maintenance can preserve loving, stagnant, exploitative, or dangerous relationships. Do not equate durability with health.
-
-## Keep dialogue natural
-
-Let characters ask, hint, avoid, joke, bargain, perform a ritual, offer care, complain, withdraw, or act. Keep intimacy-channel and maintenance terminology in author analysis unless the speaker plausibly knows it.
-
-## Deliver the maintenance map
-
-Return:
-
-- active and neglected intimacy channels;
-- ordinary rituals, bids, labour, and privacy;
-- current asymmetries and accumulated residue;
-- stress adaptations and failure points;
-- renewal, deterioration, or transformation possibilities;
-- scene hooks and continuity facts.
-
-Do not require sex, disclosure, forgiveness, therapy, monogamy, or preservation. Do not assign the player's intimacy, attraction, consent, speech, action, or choice.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No relationship, intimacy channel, daily rhythm, bid, maintenance problem, or changing condition is supplied: return `No intimacy maintenance update` and do not invent {{char}}’s or {{user}}’s intimacy.

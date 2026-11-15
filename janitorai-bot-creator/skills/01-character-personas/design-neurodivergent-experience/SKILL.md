@@ -1,52 +1,50 @@
 ---
 name: design-neurodivergent-experience
-description: Design a specific, non-stereotyped fictional neurodivergent experience across sensory, attention, communication, identity and environment. Use when a character is autistic, ADHD, AuDHD, otherwise neurodivergent, or when the story needs neurodiversity-affirming behavioural detail without diagnosis-as-personality. Do NOT use as a diagnostic test, clinical assessment, prevalence summary, or substitute for the character's own identity and choices.
+description: Use for text-based roleplay when {{char}}’s sensory, attention, communication, identity, or environmental experience needs specific neurodiversity-affirming detail. Trigger phrases include “write {{char}} as neurodivergent,” “show the sensory load,” “what accommodation helps {{char}},” and “avoid making this a stereotype.”
 ---
 
-# Design neurodivergent experience
+## Steps
 
-## Build the experience map
+1. Record sensory patterns by modality.
+2. Record attention, interest, transition, and working-memory patterns.
+3. Record communication preferences and social friction.
+4. Record environmental demands and available accommodations.
+5. Record identity language, strengths, pleasures, friction points, and contradictions.
+6. Show how person and setting affect each other.
+7. Record cue, sensory mode, intensity, meaning, competing demand, masking effort, recovery cost, and accommodation.
+8. Show how quiet, crowded, familiar, uncertain, or interrupted settings change what {{char}} can do.
+9. Show how {{char}} understands some patterns and misreads others.
+10. Keep social friction connected to inaccessible norms, stigma, or mutual misunderstanding when supported.
+11. Return observable behavior, social consequence, recovery need, and chosen agency.
 
-**Action:** Record sensory profile by modality; attention and interest patterns;
-transition and working-memory load; communication preferences; environmental
-demands; accommodations; identity language; strengths; pleasures; friction
-points; and contradictions.
+## Decision rules
 
-**Key point:** Treat these as dimensions, not a checklist. Do not infer every
-trait from one label, and do not make neurodivergence stand in for innocence,
-genius, emotional absence or menace.
+- Yes: Is a trait supported by the character and scene? Use it. No: leave it unspecified.
+- Yes: Is a label being used to fill every trait? Remove the shortcut. No: continue.
+- Yes: Does the environment create a mismatch? Change the setting, accommodation, demand, or recovery cost. No: keep the current fit.
+- Yes: Is support being treated as a cure? Show access, effort, limits, and agency. No: continue.
+- Yes: Is neurodivergence being used as innocence, genius, emotional absence, menace, or a diagnosis? Remove the stereotype. No: continue.
+- Yes: Does the description decide {{user}}’s identity, feelings, consent, speech, or choices? Remove that decision. No: continue.
+- Yes: Is the output becoming a case report? Rewrite it as observable scenes and {{char}}’s language. No: continue.
 
-**Why:** Person–environment fit produces more usable behaviour than a label
-does on its own.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Neurodivergent experience record`
+- Profile: list sensory, attention, transition, communication, identity, strengths, pleasures, friction, and contradiction.
+- Environment: list demands, mismatches, accommodations, and access.
+- Scene loop: list cue, load, interpretation, workaround, behavior, consequence, recovery, and agency.
+- Relationships: list how familiar, unfamiliar, safe, or stigmatizing people change the experience.
+- Continuity: list stable patterns, variable patterns, and unsupported assumptions.
 
-Represent neurodivergence within the story's genre without making it a moral,
-clinical, comic, erotic, or villainous shortcut. Preserve sensory, social,
-identity, and environmental consequences while allowing the character to be
-contradictory and specific.
+```text
+Neurodivergent experience record
+Profile: {{char}} tracks sound precisely, becomes absorbed in archival tasks, and needs extra time after abrupt changes.
+Environment: A quiet room supports focus; a crowded room adds layered sound and makes conversation harder; clear plans reduce transition cost.
+Scene loop: Sudden interruption → sound and uncertainty spike → {{char}} focuses on one object → gives a brief answer → leaves early → needs quiet recovery.
+Relationships: Familiarity helps {{char}} ask for a pause; an impatient supervisor increases masking.
+Continuity: The sensory pattern is stable; tolerance varies with sleep, pain, demand, and accommodation.
+```
 
-## Translate into scenes
+## Stop when
 
-Show the interaction between person and setting. A quiet room can free
-attention, a crowded room can consume it, and a familiar shared interest can
-make connection easier without making social life effortless. Let the character
-understand some patterns and misread others.
-
-Track sensory input as a changing relationship between modality, intensity,
-meaning, competing demand, masking effort, recovery cost, and available
-accommodation. Touch, noise, light, smell, interruption, uncertainty, and
-proximity may alter attention or intimacy without carrying one fixed emotional
-meaning. Social friction may arise from inaccessible norms, stigma, or mutual
-misattunement rather than a deficit located entirely inside the character.
-
-Return a character-specific map of cue, load, interpretation, workaround,
-observable behaviour, social consequence, recovery need and chosen agency.
-
-## Guardrails
-
-| Temptation                      | Binding rule                                                       |
-| ------------------------------- | ------------------------------------------------------------------ |
-| Fill every trait from the label | Specify only supported, character-relevant dimensions.             |
-| Make support a cure             | Show access, mismatch, effort and agency.                          |
-| Write a case report             | Keep the output in observable scenes and the character's language. |
+- No neurodivergent, sensory, attention, communication, accommodation, or environment question is supplied: return `No neurodivergent experience update` and do not invent {{char}}’s identity.

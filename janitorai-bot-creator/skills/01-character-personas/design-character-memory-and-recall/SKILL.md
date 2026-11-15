@@ -1,108 +1,57 @@
 ---
 name: design-character-memory-and-recall
-description: Design or revise how a fictional character encodes, retains, reconstructs, retrieves, and acts on memories. Use for remembered scenes, unreliable recall, knowledge gaps, expertise, habits, testimony, secrets, trauma-adjacent fiction, relationship history, or differences between what happened and what the character later remembers, without diagnosing or clinically scoring the character. Do NOT use as a memory test, trauma diagnosis, or reason to decide the player's memories, feelings, or truth.
+description: Use for text-based roleplay when {{char}}’s memories, knowledge gaps, unreliable recall, expertise, habits, testimony, secrets, or relationship history need a clear shape. Trigger phrases include “design {{char}}’s memory,” “what does {{char}} remember,” “make this recollection unreliable,” and “separate what happened from what {{char}} recalls.”
 ---
 
-# Design character memory and recall
+## Steps
 
-Write memory as selective reconstruction, not a perfect recording and not arbitrary fog.
+1. Record what actually happened.
+2. Record what {{char}} could perceive.
+3. Record what received enough attention to be encoded.
+4. Record the meaning {{char}} gave the event at the time.
+5. Record what was repeated, retold, avoided, or revised.
+6. Record the cue that prompts the current recollection.
+7. Record what {{char}} retrieves now and how confident they feel.
+8. Record how the recollection changes current action.
+9. Choose whether the story needs working, episodic, semantic, procedural, or association memory.
+10. Define whether {{char}} keeps gist, sensory detail, sequence, emotional peak, faces, names, places, words, movement, or spatial relations.
+11. Choose a traceable failure mode such as omission, gist compression, blended episodes, misplaced source, inserted expectation, wrong timing, false familiarity, or blocked retrieval.
+12. Connect memory to promises, injuries, rituals, preferences, debts, touch, status, and prior conflict.
+13. Show recall through changed anecdotes, withheld names, rushed details, old routes, and indirect speech.
 
-**Action:** Separate event, perception, encoding, meaning, cue, retrieval,
-confidence, and present consequence.
+## Decision rules
 
-**Key point:** Uncertainty should have a traceable mechanism rather than appear
-only when the plot needs it.
+- Yes: Are event, encoded detail, and present claim different? Keep them separate. No: align them only when the story supports it.
+- Yes: Does the memory change through attention, delay, interference, retelling, later information, expectation, mood, source confusion, or a cue? Show that mechanism. No: do not add convenient fog.
+- Yes: Is confidence being treated as proof? Remove that certainty. No: continue.
+- Yes: Does a vivid sensory fragment lack a clean timeline? Show what {{char}} infers without declaring a clinical mechanism. No: preserve the available sequence.
+- Yes: Do two characters remember different slices of the encounter? Keep both accounts without calling one automatically deceitful. No: use the shared account.
+- Yes: Is ordinary forgetting, distraction, inconsistent testimony, or unusual skill being used as a diagnosis? Remove the diagnosis. No: continue.
+- Yes: Does the memory design decide {{user}}’s memories, feelings, consent, motives, speech, or choices? Remove that decision. No: continue.
+- Yes: Is manipulation, obsession, coercion, grief, dissociation, or unreliable testimony part of the fiction? Preserve it with clear rules and consequences. No: use the selected tone.
 
-**Why:** Specific reconstruction creates unreliable memory without arbitrary
-confusion or clinical overreach.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Memory and recall record`
+- Event chain: list event, perception, encoding, meaning, rehearsal, cue, retrieval, confidence, and consequence.
+- Memory type: state the forms of memory involved.
+- Recall shape: list what {{char}} preserves and loses.
+- Failure mode: state how recall changes and what evidence supports it.
+- Relationship memory: list promises, injuries, rituals, preferences, debts, touch, status, and conflict recalled.
+- Scene tests: list two or three cues or situations that reveal the pattern.
+- Unknowns: list contradictions and unconfirmed memories.
 
-Memory may be unreliable, manipulated, symbolic, supernatural, or meta-fictional
-when the story establishes that possibility. Keep the relevant truth, belief,
-narrator, and reader layers distinct; any breach between them should follow an
-intentional rule and leave consequences rather than becoming a convenient reset.
+```text
+Memory and recall record
+Event chain: {{char}} heard {{user}} promise to return; low attention captured the words but not the time; the promise was rehearsed during the wait; a train announcement triggers the memory now.
+Memory type: Episodic feeling with weak sequence and strong procedural knowledge of the route.
+Recall shape: {{char}} keeps {{user}}’s tone and the station layout but loses the exact wording.
+Failure mode: Later retelling blends two promises; confidence rises because the version feels familiar.
+Relationship memory: {{char}} remembers the promise as tender, while {{user}} remembers it as conditional.
+Scene tests: The same train announcement, a photo of the station, and a direct question about the time.
+Unknowns: Whether the blended detail was ever spoken.
+```
 
-## Separate the event from the memory
+## Stop when
 
-For each consequential event, record:
-
-1. what actually happened;
-2. what the character could perceive;
-3. what received enough attention to be encoded;
-4. the meaning they gave it at the time;
-5. what was rehearsed, retold, avoided, or revised afterwards;
-6. which cue prompts the present recollection;
-7. what is retrieved now, with what confidence;
-8. how that recollection affects current action.
-
-A canonically true event, an encoded detail, and a confident present claim are three different things.
-
-## Choose the useful kind of memory
-
-Distinguish only what the story needs:
-
-- **working memory:** information actively held while thinking or acting;
-- **episodic memory:** personally situated events;
-- **semantic memory:** general knowledge and meanings;
-- **procedural memory:** practised ways of doing things;
-- **learned associations:** cues that make related ideas or responses easier to access.
-
-These forms can diverge. A character may know a fact without remembering when they learnt it, perform a skill they cannot explain, or remember an episode's feeling while losing its sequence.
-
-## Give recall a stable shape
-
-Decide whether this character usually preserves:
-
-- gist or sensory detail;
-- sequence or emotional peak;
-- faces, names, places, words, movements, or spatial relations;
-- humiliations, promises, threats, kindnesses, unfinished tasks, or practical instructions;
-- self-serving, self-punishing, loyal, suspicious, or role-based interpretations.
-
-Specificity matters more than a global “good memory” or “bad memory.” Expertise may create fine-grained distinctions in one domain while leaving ordinary details coarse.
-
-## Use plausible changes, not convenient ones
-
-Memory can change through weak initial attention, delay, interference, repeated retelling, later information, expectation, current goals, mood, source confusion, or a cue that restores access. Schemas help organise experience and fill gaps, but can also import expected details.
-
-Choose a traceable failure mode:
-
-- omission;
-- compression into gist;
-- blended episodes;
-- misplaced source;
-- expected detail inserted;
-- correct detail attached to the wrong time;
-- fluent familiarity mistaken for certainty;
-- retrieval blocked until a fitting cue appears.
-
-Do not make every mismatch a false memory, and do not treat confidence as proof of accuracy.
-
-For trauma-adjacent material, distinguish sensory intensity from narrative
-context. A cue may bring a vivid smell, body sensation, image, or fragment
-without a clean timeline. Show what the character infers from that fragment and
-how it shapes present identity; do not declare a clinical mechanism.
-
-## Connect memory to relationships
-
-Track what the character remembers about promises, injuries, rituals, preferences, debts, touch, status, and prior conflict. Their recall may be tender, strategic, resentful, avoidant, possessive, or weaponised. Let two characters retain different slices of the same encounter without making one automatically deceitful.
-
-Memory should shape speech indirectly: a changed anecdote, a name withheld, a detail offered too quickly, an old route taken without thought. Keep clinical interpretation out of dialogue unless the character would genuinely use it.
-
-## Respect boundaries
-
-Do not administer, imitate, or score a clinical memory test to create a character. Do not infer a diagnosis from ordinary forgetting, distraction, inconsistent testimony, or unusual strengths. If the story explicitly involves impairment, use appropriate specialist sources and mark what remains uncertain.
-
-Fiction may include manipulation, obsession, coercion, grief, dissociation, or deliberately unreliable testimony. Preserve the intended darkness while never deciding the player's memories, feelings, consent, motives, speech, or choices for them.
-
-## Deliver the memory design
-
-Return:
-
-- the event-to-recall chain for consequential memories;
-- the character's domain-specific recall shape;
-- cue, interference, and reconstruction rules;
-- observable speech and behaviour;
-- uncertainty and contradiction notes;
-- two or three scene tests.
+- No memory, recall, testimony, knowledge gap, or relationship-history problem is supplied: return `No memory and recall update` and do not invent {{char}}’s memories.

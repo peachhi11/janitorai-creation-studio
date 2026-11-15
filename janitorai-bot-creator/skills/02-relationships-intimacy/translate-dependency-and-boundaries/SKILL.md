@@ -1,44 +1,50 @@
 ---
 name: translate-dependency-and-boundaries
-description: Translate fictional dependence, caretaking, self-abandonment, emotional unavailability, shame, and boundaries into specific relationship behaviour. Use when a character confuses being needed with being loved, over-functions for others, retreats from intimacy, or needs boundaries that remain dramatic rather than therapeutic. Do NOT use to diagnose real relationships, prescribe boundary-setting, or force a fictional character toward independence or reconciliation.
+description: Use for fictional text-based roleplay when {{char}} confuses being needed with being loved, over-functions, retreats from intimacy, hides needs, or needs boundaries that remain dramatic rather than therapeutic. Trigger phrases include “map {{char}}’s dependency,” “what does {{char}} give up,” “show the hidden contract,” and “write the boundary conflict.”
 ---
 
-# Translate dependency and boundaries
+## Steps
 
-Describe a strategy and its history, not a clinical label. Caretaking, need, privacy, compromise, and dependence are not automatically unhealthy; the question is what the character gives up, expects, controls, or refuses.
+1. Record what {{char}} believes connection requires.
+2. Record what {{char}} gives, monitors, fixes, hides, tolerates, or demands.
+3. Record what {{char}} needs but cannot ask for directly.
+4. Record the boundary {{char}} states, keeps, or fears enforcing.
+5. Record immediate reward such as safety, usefulness, closeness, control, relief, or certainty.
+6. Record delayed cost such as resentment, exhaustion, debt, lost self, exposure, loneliness, or retaliation.
+7. Record how {{user}} benefits, resists, exploits, misunderstands, or reciprocates without inventing their interiority.
+8. Distinguish compromise, self-erasure, privacy, emotional absence, support, rescue, and mutual reliance.
+9. Show the pattern through choices, dialogue, omissions, logistics, sex, money, time, and aftermath.
+10. Record the moment {{char}} chooses a different response.
 
-**Action:** Map exchange, hidden contract, stated and kept limits, reward, cost,
-other person's response, and the moment of choice.
+## Decision rules
 
-**Key point:** A character can be loving and controlling, generous and
-resentful, or dependent and powerful at the same time.
+- Yes: Is caretaking, need, privacy, compromise, or dependence being labeled automatically unhealthy? Remove that assumption. No: continue.
+- Yes: Can {{char}} be loving and controlling, generous and resentful, or dependent and powerful? Preserve the contradiction. No: use the supported pattern.
+- Yes: Is one body cue being used as proof of shame, need, or consent? Remove that inference. No: continue.
+- Yes: Does support become making one person responsible for another’s feelings? Record the boundary and cost. No: continue.
+- Yes: Is {{char}} being forced to confess, heal, become independent, or reconcile? Remove the forced outcome. No: continue.
+- Yes: Does the description decide {{user}}’s feelings, attraction, consent, speech, action, or choice? Remove that decision. No: continue.
 
-**Why:** Contradiction keeps dependency dramatic rather than therapeutic or
-morally flattened.
+## Output
 
-## Map the exchange
+- Format: `Dependency and boundaries record`
+- Exchange: list what {{char}} gives, monitors, fixes, hides, tolerates, demands, and needs.
+- Contract: state the hidden expectation between {{char}} and {{user}}.
+- Boundary: list stated, kept, broken, feared, and enforceable limits.
+- Reward and cost: list immediate benefit and delayed consequence.
+- Behavior: show choices, dialogue, omissions, logistics, sex, money, time, and aftermath.
+- Choice point: state the different response {{char}} could choose and what it risks.
 
-Record:
+```text
+Dependency and boundaries record
+Exchange: {{char}} plans everything, offers care, and monitors {{user}}’s mood; {{char}} needs reassurance but asks through practical help.
+Contract: “If I remain useful, you will not leave.” Neither person has said it aloud.
+Boundary: {{char}} says they need one evening alone but keeps answering messages; the feared consequence is being forgotten.
+Reward and cost: Closeness and control now; exhaustion and resentment later.
+Behavior: A missed meal, a paid bill, a joke, and a delayed request expose the pattern.
+Choice point: {{char}} can state the need directly and risk hearing no.
+```
 
-- what the character believes connection requires;
-- what they give, monitor, fix, hide, tolerate, or demand;
-- what they need but cannot ask for directly;
-- the boundary they state, the boundary they keep, and the consequence they fear;
-- immediate reward: safety, usefulness, closeness, control, relief, or moral certainty;
-- delayed cost: resentment, exhaustion, debt, loss of self, exposure, loneliness, or retaliation;
-- how the other person benefits, resists, exploits, misunderstands, or reciprocates;
-- the moment the character chooses a different response.
+## Stop when
 
-Distinguish compromise from self-erasure, privacy from emotional absence, support from rescue, and mutual reliance from making one person responsible for another’s feelings. Shame can produce collapse, concealment, anger, perfectionism, or attack; never use a single body cue as proof.
-
-## Write it without therapist voice
-
-Put the pattern in choices, dialogue, omissions, logistics, sex, money, time, and aftermath. Let a character be loving and controlling, independent and frightened, generous and resentful, or unavailable for reasons that do not excuse their impact. Do not force confession, healing, or reconciliation.
-
-## Deliverable
-
-Return a boundary-and-dependence map: need, offer, hidden contract, limit, feared consequence, observable behaviour, other person’s response, cost, and available choice.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No dependency, caretaking, hidden contract, boundary, need, or relationship exchange is supplied: return `No dependency and boundaries update` and do not invent {{user}}’s feelings or choice.

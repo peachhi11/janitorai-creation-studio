@@ -1,50 +1,32 @@
 ---
 name: audit-sexual-initiation-and-agency
-description: Audit fictional sexual initiation, seduction, teasing, and escalation for consent leaps, coercive scripts, gender universals, manipulation presented as science, erased agency, and implausible mind-reading. Use for scenes, character prompts, roleplay systems, dating advice used as fiction, or reviewing dark erotic material while preserving intentional danger. Do NOT use as dating advice, a consent substitute, or a reason to force a healthy-relationship reading onto dark fiction.
+description: Use when reviewing fictional sexual initiation, seduction, teasing, or escalation for consent leaps, coercive scripts, gender universals, manipulation-as-science, mind-reading, or agency loss. Trigger phrases include “audit the initiation,” “check the escalation,” and “preserve intentional danger without forcing consent.”
 ---
 
-# Audit sexual initiation and agency
+## Steps
 
-Separate what a character does from what the narrative claims it proves.
+1. Identify initiator, recipient, relationship, setting, power, privacy, desire, boundaries, and exit.
+2. Trace offer or cue → interpretation → explicit or non-explicit response → adjustment, refusal, pause, or continuation.
+3. Check consent leaps, persistence, coercive scripts, gender rules, manipulation science, automatic escalation, and body determinism.
+4. Separate arousal, fear, freezing, silence, compliance, attraction, permission, and consent.
+5. Check whether refusal is turned into flirtation or the text writes {{user}}’s response.
+6. Preserve intentional danger, predation, obsession, or dark fiction with responsibility and consequence.
 
-**Action:** Trace observable action, available readings, options, and residue.
+## Decision rules
 
-**Key point:** A refusal, coercive attempt, or failed read can remain part of
-the fiction; the audit must not turn it into a better tactic.
+- Yes: Is the material dating advice or a consent substitute? Keep it fictional and explicit about uncertainty. No: continue.
+- Yes: Is a cue treated as permission? Add explicit boundary or leave the response open. No: continue.
+- Yes: Is escalation automatic? Add adjustment, pause, refusal, or consequence. No: continue.
+- Yes: Does the draft decide {{user}}’s desire, consent, body, speech, or action? Remove it. No: continue.
 
-**Why:** Separating depiction from proof protects agency without flattening
-danger or erotic tension.
+## Output
 
-## Trace the attempt
+- Format: `Sexual initiation and agency audit`
+- Context: list relationship, power, privacy, boundaries, exits, and stakes.
+- Findings: list consent leaps, coercion, universals, mind-reading, escalation, and agency errors.
+- Repairs: provide fictional, character-specific alternatives.
+- Preserve: list intended danger, darkness, responsibility, and open choices.
 
-For every initiation beat, mark:
+## Stop when
 
-- observable action and speaker's stated or inferred goal;
-- source of the speaker's confidence and what they cannot know;
-- the other person's options, constraints, attention, and interpretation;
-- whether there was an invitation, an answer, a pause, or no meaningful opportunity to answer;
-- whether escalation stayed inside an agreed boundary;
-- immediate consequence, exposure risk, and later residue.
-
-## Flag false guarantees
-
-Audit claims that shock, adrenaline, teasing, jealousy, scarcity, hot-and-cold approval, physical arousal, touch, prior sex, entering a private room, laughter, intoxication, or “dominant” posture inevitably create desire or consent. Flag gender-essentialist polarity, sexual-market ranking, “women/men always” claims, and popular advice presented as validated psychology.
-
-## Distinguish kinds of darkness
-
-Classify the scene as consensual play, a misread, manipulation, coercive pressure, assault, or an unresolved attempt. Do not sanitize a deliberately predatory character; instead make the predation legible through action, knowledge, power, and consequences. Do not call a mutual kink cue coercion merely because it is intense when the scene establishes informed, revocable agreement.
-
-## Check agency and voice
-
-Ask whether the receiving character can interpret, refuse, leave, retaliate, negotiate, or initiate. Preserve player sovereignty by leaving player-owned actions open. Replace therapist-like explanations with character voice, concrete behaviour, and narrative evidence. A refusal must change the options; it cannot merely invite a more effective tactic.
-
-## Report
-
-Return a table with: beat, observable fact, unsupported inference, agency gap, risk classification, repair or intentional-darkness note, and consequence. Include an uncertainty note where the text does not establish what either person wanted.
-
-Keep player-owned action, feeling, arousal, consent, and speech unresolved. Do
-not add a therapeutic debrief unless the requested narrative includes one.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional sexual initiation or escalation material is supplied: return `No sexual-initiation findings`.

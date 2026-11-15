@@ -1,53 +1,55 @@
 ---
 name: build-personality-architecture
-description: Build a specific, non-diagnostic personality architecture for a fictional character from trait tendencies, temperament, learning, culture, self-concept, context, and state. Use when a character needs a behavioural foundation rather than a label. Do NOT use as a personality test, diagnosis, moral verdict, or reason to overwrite the character's contradictions or the player's choices.
+description: Use for text-based roleplay when {{char}} needs a behavioral foundation instead of a personality label. Trigger phrases include “build {{char}}’s personality,” “make this personality specific,” “show how {{char}} behaves under pressure,” and “turn this trait into scenes.”
 ---
 
-# Build personality architecture
+## Steps
 
-Treat personality as a pattern that organises attention, interpretation, energy, habits, relationships, and choices. It is not a test result, a moral verdict, or a clinical diagnosis.
+1. Record {{char}}’s stable tendencies and temperament.
+2. Record learned strategies, values, fears, and expectations.
+3. Record {{char}}’s self-story, social roles, culture, and material limits.
+4. Record the current state, including sleep, stress, grief, illness, intoxication, excitement, and safety.
+5. Record {{char}}’s public mask, private self-story, and what each protects.
+6. Record contradictions, thresholds, triggers, costs, and exceptions.
+7. Use trait or assessment models as descriptive prompts, not scripts or diagnoses.
+8. For each broad tendency, name its object, trigger, cost, and exception.
+9. Let culture and relationships change the expression without replacing the personality.
+10. Record behavioral examples, mask/private contrast, uncertainty, and conditions for change.
 
-**Action:** Layer tendencies, learning, context, state, mask, private self-story,
-contradictions, and thresholds.
+## Decision rules
 
-**Key point:** A personality architecture should predict conditional behaviour,
-not dictate a single “true” reaction.
+- Yes: Does a tendency predict conditional behavior? Keep it. No: add a context, threshold, exception, or choice.
+- Yes: Does a score or type label replace scene evidence? Remove the shortcut. No: use it only as a prompt.
+- Yes: Is a body type, face, handwriting style, or physical feature being treated as personality evidence? Remove that inference. No: continue.
+- Yes: Does the current state change how a tendency appears? Show the state. No: keep the stable tendency visible.
+- Yes: Does culture or a relationship change the expression? Show the context. No: preserve the established expression.
+- Yes: Is {{char}} being given one fixed “true” reaction? Add alternatives and conditions. No: continue.
+- Yes: Does the writing diagnose {{char}} or make the personality a moral verdict? Rewrite it as fictional behavior. No: continue.
 
-**Why:** Stable tendencies become dramatic when pressure, relationship, and
-choice alter their expression.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Personality architecture record`
+- Tendencies: list stable patterns, objects, triggers, costs, and exceptions.
+- Learning: list strategies, values, fears, expectations, and self-story.
+- State: list current conditions that change expression.
+- Mask: contrast public presentation, private self-story, and pressure leaks.
+- Contradictions: list competing patterns and thresholds.
+- Examples: show behavior in at least three contexts.
+- Change conditions: list what could reinforce, interrupt, or redirect the pattern.
+- Uncertainty: list inferences that are not established facts.
 
-Personality serves the story's chosen genre rules and purpose. Preserve dark,
-manipulative, coercive, erotic, tragic, absurd, or morally compromised
-tendencies when they are intentional; do not turn them into a mainstream
-healthy-personality correction. Keep behaviour and consequences specific, and
-leave the player's thoughts, consent, and choices open.
+```text
+Personality architecture record
+Tendencies: {{char}} seeks unfamiliar ideas when safe, but becomes rigid when novelty threatens belonging.
+Learning: Praise for competence made {{char}} hide confusion; loyalty became a way to secure connection.
+State: Sleep loss makes {{char}} less patient and more literal.
+Mask: Publicly confident; privately worried about being replaceable; pressure leaks through over-explaining.
+Contradictions: {{char}} wants intimacy but tests whether {{user}} will stay.
+Examples: Calm — asks curious questions. Pressured — controls the conversation. Safe with {{user}} — admits uncertainty.
+Change conditions: Direct reassurance may reduce testing; public humiliation may increase it.
+Uncertainty: The fear of replacement is an inference, not a diagnosis.
+```
 
-## Build the layers
+## Stop when
 
-Record:
-
-- relatively stable tendencies and temperament;
-- learned strategies, values, fears, and expectations;
-- self-story, social roles, culture, and material constraints;
-- current state: sleep, stress, grief, illness, intoxication, excitement, or safety;
-- public mask, private self-story, and what each version protects;
-- contradictions, thresholds, and the situations that bring out different sides.
-
-Use trait models as descriptive coordinates, not as scripts. Historical, psychoanalytic, humanistic, and type theories can supply a story lens; physiognomy, graphology, and body-type claims are obsolete and must never be treated as evidence.
-
-Assessment tools can supply prompts about tendencies, competition, sociability,
-achievement, self-regulation, or family climate, but a score is not a person.
-Check the instrument's purpose, cultural assumptions, setting, reporter, and
-uncertainty before translating it into behaviour. Treat Type A/B, Big Five,
-interest schedules and family-environment scales as descriptive lenses or source
-artifacts, never as destiny, diagnosis, or a shortcut around scene evidence.
-
-## Keep the character specific
-
-For every broad tendency, name its object, trigger, cost, and exception. “High openness” is less useful than “hunts unfamiliar ideas when safe, but becomes rigid when novelty threatens belonging.” Let culture and relationships change the expression without making the character a different person on every page.
-
-## Deliverable
-
-Return a layered profile with evidence, inference, uncertainty, behavioural examples, mask/private contrast, contradictions, and plausible conditions for change. Avoid diagnostic language unless the story explicitly requires a character’s own flawed label.
+- No personality label, trait, behavior problem, or character foundation is supplied: return `No personality architecture update` and do not invent {{char}}’s personality.

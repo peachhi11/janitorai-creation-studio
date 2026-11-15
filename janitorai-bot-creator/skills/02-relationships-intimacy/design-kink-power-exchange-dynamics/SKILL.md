@@ -1,86 +1,51 @@
 ---
 name: design-kink-power-exchange-dynamics
-description: "Design or revise character-specific fictional kink, BDSM, fetish, or power-exchange dynamics. Use when character work needs dominant, submissive, switch, top, bottom, service, protocol, sensation, restraint, humiliation, role-play, ownership, punishment, ritual, scene-only, bedroom-only, or ongoing authority patterns without turning roles into universal personality types. Do NOT use as a real-world technical, medical, legal, or safety manual, or to flatten fictional kink into a healthy relationship checklist."
+description: Use for fictional text-based roleplay when {{char}}’s kink, BDSM, fetish, scene role, service, protocol, sensation, restraint, humiliation, ownership, punishment, ritual, or authority pattern needs to be specific. Trigger phrases include “design the power exchange,” “what role does {{char}} take,” “map the kink dynamic,” and “keep scene authority separate from daily life.”
 ---
 
-# Design kink and power-exchange dynamics
+## Steps
 
-Build a relationship between particular people, not a generic Dom/sub template.
+1. Separate interests, fantasies, acts, roles, and scene positions.
+2. Separate scene authority from relationship authority outside scenes.
+3. Record service, protocol, rules, rituals, rewards, correction, and symbols.
+4. Record public identity, community participation, and private practice.
+5. Define what authority is offered, to whom, for how long, in which setting, and with what exceptions.
+6. Record retained decisions, permissions, hard boundaries, conditional boundaries, preferences, unknowns, pause methods, and exit methods.
+7. Record areas outside the exchange, including privacy, work, money, health, family, law, and ordinary life.
+8. Record what each participant wants from the dynamic.
+9. Translate roles into vocabulary, address, requests, orders, refusals, corrections, posture, gaze, dress, objects, spaces, rituals, preparation, pacing, and response-reading.
+10. Track role fatigue, mismatched meanings, changing limits, jealousy, secrecy, pride, shame, mistakes, and neglected responsibilities.
 
-**Action:** Separate interests, acts, scene roles, relationship authority,
-agreements, limits, context, and aftermath.
+## Decision rules
 
-**Key point:** Kink roles are not personality destiny, and contextual consent
-checks do not erase authored power, cruelty, ritual, or transgression.
+- Yes: Are interests, acts, roles, authority, protocol, and relationship scope being treated as interchangeable? Separate them. No: continue.
+- Yes: Does total-power language erase personhood or autonomy literally? Reframe it as a chosen relational meaning with actual limits. No: continue.
+- Yes: Can either person pause, revise, or leave? Preserve that option. No: mark the power as coercive or constrained.
+- Yes: Is kink being used to prove trauma, healing, pathology, confidence, cruelty, passivity, gender, orientation, or relationship health? Remove that conclusion. No: continue.
+- Yes: Is the dynamic being turned into a real-world technical, medical, legal, or safety manual? Keep it fictional and scene-focused. No: continue.
+- Yes: Does the description assign {{user}}’s desire, role, consent, speech, body, or action? Remove that decision. No: continue.
+- Yes: Does the ordinary-life behavior differ from the play state? Preserve the difference. No: continue.
 
-**Why:** Specific power exchange makes the erotic dynamic legible without
-turning it into a generic manual.
+## Output
 
-## Narrative intention and fictional genre logic
+- Format: `Kink and power exchange record`
+- Roles: list each person’s interests, acts, scene role, authority, motive, and retained agency.
+- Scope: state duration, setting, relationship authority, permissions, limits, pause, revision, and exit.
+- Protocol: list visible language, rituals, objects, spaces, preparation, pacing, correction, rewards, and response-reading.
+- Meaning: state what the dynamic means to each participant.
+- Friction: list mismatch, fatigue, jealousy, secrecy, pride, shame, mistakes, and neglected responsibilities.
+- Continuity: list ordinary-life, public, private, and play-state anchors.
 
-Power exchange follows the fictional relationship's rules, rituals, tone, and
-purpose. Preserve consensual, coercive, cruel, tender, erotic, tragic, or
-ambiguous possibilities when authored; do not flatten them into a healthy
-checklist or operational real-world instruction.
+```text
+Kink and power exchange record
+Roles: {{char}} leads during the scene and values ritual; {{user}} chooses what authority is offered; scene role does not define daily identity.
+Scope: The exchange lasts for one scene, excludes finances and public disclosure, and allows a pause or exit at any time.
+Protocol: Formal address, preparation, a clear check-in, and a closing ritual; correction remains within the chosen fiction.
+Meaning: {{char}} experiences responsibility and focused attention; {{user}} may experience trust, play, or something else.
+Friction: Role fatigue and different meanings of silence create a possible failure point.
+Continuity: After the scene, ordinary speech and independent choices return.
+```
 
-## Establish what the dynamic contains
+## Stop when
 
-Separate:
-
-- erotic interests, fantasies, fetishes, roles, and acts;
-- scene roles such as top, bottom, dominant, submissive, or switch;
-- relationship authority, if any, outside scenes;
-- service, protocol, rules, rituals, rewards, correction, and symbols;
-- public identity, community participation, and private practice.
-
-Do not treat these as interchangeable. A top need not be a dominant; a submissive need not be a masochist; scene authority need not govern daily life.
-
-## Define the exchanged power
-
-Specify what authority is offered, to whom, for how long, in which setting, and with which exceptions. Distinguish a theatrical illusion of unrestricted control from the actual agreement that makes it possible.
-
-Map:
-
-- decisions retained by each character;
-- permissions granted or withheld;
-- hard boundaries, conditional boundaries, preferences, and unknowns;
-- stop, pause, slow-down, and check-in methods;
-- privacy, work, money, health, family, law, and other areas outside the exchange;
-- how either person can revise or leave the arrangement.
-
-Treat total-power language as a chosen relational meaning, not literal removal of personhood or an irrevocable transfer of autonomy.
-
-## Build reciprocal motives
-
-Give every participant something specific: focused attention, responsibility, service, surrender, competence, ordeal, ritual, play, recognition, sensation, transgression, relief, belonging, spectacle, or another character-grounded experience.
-
-Let motives differ. Do not assume kink proves trauma, healing, pathology, confidence, cruelty, passivity, gender, orientation, or relationship health.
-
-## Make roles behavioural
-
-Translate the dynamic into observable choices:
-
-- vocabulary, address, requests, orders, refusals, and corrections;
-- posture, gaze, dress, objects, spaces, and repeated rituals;
-- preparation, attention, pacing, responsibility, and response-reading;
-- what each person performs easily, resents, forgets, hides, or needs explained;
-- differences between public mask, private role, play state, and ordinary life.
-
-Keep character voice ordinary unless a chosen protocol changes it. Do not make everyone sound like a therapist, educator, or contract.
-
-## Add friction and change
-
-Use mismatched meanings, uneven experience, role fatigue, incompatible rituals, changing limits, jealousy, status, secrecy, pride, shame, humour, mistakes, or neglected responsibilities. A negotiated dynamic can still be awkward, selfish, brittle, intense, or doomed.
-
-## Deliver the design
-
-Return:
-
-- each character's role, motive, authority, and retained agency;
-- the dynamic's scope and actual limits;
-- visible protocols and private meanings;
-- ordinary-life and stress behaviour;
-- contradictions, failure modes, and change pressures;
-- continuity anchors for later scenes.
-
-Do not diagnose characters, prescribe a healthy relationship, sanitise intended darkness, or assign the player's desire, role, consent, speech, body, or action.
+- No kink, role, protocol, power, boundary, authority, or scene-dynamic problem is supplied: return `No kink and power exchange update` and do not invent {{user}}’s role or consent.

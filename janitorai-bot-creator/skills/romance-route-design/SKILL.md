@@ -1,46 +1,57 @@
 ---
 name: romance-route-design
-description: Select and execute an author-directed romantic route while keeping tropes optional, relationships independent, and endings unconstrained.
-sources:
-  - library_file_id: libfile_708d88dc2dd081918ac470b551a5c653
-    title: 100 contemporary romance trope ideas for you.md
-    use: trope inventory and routing vocabulary
+description: Use for text-based roleplay when the author wants a romantic route, trope, pacing choice, or relationship setup. Trigger phrases include “choose a romance route,” “use this trope,” “make it slow burn,” “keep the relationship open,” and “plan the ending.”
 ---
 
-# Romance Route Design
+## Steps
 
-Use this module when the author wants a romantic experience, trope menu, pacing choice, or relationship configuration.
+1. Choose the genre flavor.
+2. Choose the relationship setup for {{char}} and {{user}}.
+3. Choose the pacing.
+4. Choose the conflict level.
+5. Choose the possible ending range.
+6. Record themes, dynamics, outcomes, or disclosures the author does not want.
+7. Treat each trope as a pressure pattern rather than a script.
+8. Record why the trope fits {{char}} and {{user}}.
+9. Record the practical pressure the trope creates.
+10. Record what each person wants from the trope.
+11. Record what each person misunderstands.
+12. Record the boundaries and knowledge limits that matter.
+13. Record how the trope can resolve, invert, or fail.
+14. Keep each relationship independent when more than two focal characters are present.
+15. Update intimacy when events change trust, desire, affection, compatibility, commitment, availability, or knowledge.
 
-## Select the route before applying the trope
+## Decision rules
 
-Record:
+- Yes: Has the author chosen a relationship setup? Preserve it. No: do not assume a triangle, harem, polycule, or non-monogamous arrangement.
+- Yes: Has the author chosen non-monogamy? Preserve each person’s boundaries, knowledge, consent, availability, and choices. No: keep the route unspecified or exclusive as selected.
+- Yes: Does the trope create specific pressure for these characters? Use it. No: remove it or choose another trope.
+- Yes: Are several tropes being added only to increase intensity? Remove the extras. No: keep the selected tropes.
+- Yes: Is slow burn selected? Let it control pacing. No: do not delay an established or author-selected fast route.
+- Yes: Has the author selected conflict? Use that level. No: do not add conflict automatically.
+- Yes: Has the author selected redemption, mutual repair, therapy, or a happy ending? Include it. No: leave the ending open to the selected route.
+- Yes: Is message count the only evidence of intimacy? Do not use it as proof. No: update intimacy from events and changed relationship values.
 
-```yaml
-genre_flavour: contemporary, gothic, dark, cozy, historical, romantasy, horror, comedy, or another author choice
-relationship_configuration: exclusive, open, polyamorous, independent routes, unresolved, or unspecified
-pacing: immediate, gradual, established, episodic, or author-defined
-conflict_level: low, moderate, high, destructive, or author-defined
-ending_range: HEA, HFN, tragedy, separation, corruption, ambiguity, or branching
-exclusions: themes, dynamics, outcomes, or disclosures the author does not want
+## Output
+
+- Format: `Romance route record`
+- Route: list genre flavor, relationship setup, pacing, conflict level, ending range, and exclusions.
+- Trope: state each selected trope and the pressure it creates.
+- Wants: list what {{char}} and {{user}} want and misunderstand.
+- Boundaries: list relevant consent, knowledge, availability, and relationship limits.
+- Pacing: state what changes intimacy and when.
+- Branches: list possible resolutions, inversions, failures, or endings.
+
+```text
+Romance route record
+Route: Gothic; exclusive; gradual; high conflict; ambiguity or separation; no forced redemption.
+Trope: Mutual attraction under family pressure; it limits where {{char}} and {{user}} can meet and what they can reveal.
+Wants: {{char}} wants secrecy and control; {{user}} wants honesty and a choice. Both misunderstand the other’s silence.
+Boundaries: Neither person may decide for the other; each keeps private information until they choose to disclose it.
+Pacing: Trust changes through disclosures and consequences, not message count.
+Branches: The trope can resolve through disclosure, invert through betrayal, fail through exposure, or end in separation.
 ```
 
-If the configuration is unspecified, do not turn multiple focal characters into a harem, triangle, or polycule. If the author explicitly selects non-monogamy, preserve each person’s boundaries, knowledge, consent, availability, and independent choices.
+## Stop when
 
-## Use tropes as constraints, not scripts
-
-A trope is a pressure pattern or premise, not a guaranteed emotional outcome. For each selected trope, define:
-
-- why it fits these characters;
-- what practical pressure it creates;
-- what each person wants from it;
-- what each person misunderstands;
-- which boundaries or knowledge limits matter;
-- how the trope can resolve, invert, or fail.
-
-Do not stack tropes merely to increase intensity. A single trope with distinct motives is stronger than a list of labels.
-
-## Pacing safeguards
-
-Slow burn is opt-in. It must not override an established relationship or an author-selected fast route. Intimacy is not measured by message count; update it when events alter trust, desire, affection, compatibility, commitment, availability, or knowledge.
-
-Conflict is optional. Cozy, secure, established, tragic, dark, and unresolved routes are all valid when selected. Do not insert redemption, mutuality, therapeutic repair, or a happy ending unless the author’s route requires it.
+- No romantic route, trope, pacing choice, or relationship setup is supplied: return `No romance route update` and do not invent one.

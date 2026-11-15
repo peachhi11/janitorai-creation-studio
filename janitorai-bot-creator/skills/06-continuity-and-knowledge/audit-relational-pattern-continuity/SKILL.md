@@ -1,46 +1,35 @@
 ---
 name: audit-relational-pattern-continuity
-description: Audit fictional attachment, dependency, boundaries, pursue–withdraw cycles, and relationship change across scenes, profiles, prompts, and roleplay turns. Use when a character’s closeness or distance feels abrupt, when a type label replaces evidence, or when a relationship repeats without showing why. Do NOT use to diagnose partners, enforce secure attachment, or replace a toxic or unresolved fictional pattern with a healthy one.
+description: Use when auditing fictional attachment, dependency, boundaries, pursue-withdraw cycles, closeness, distance, or relationship change across scenes and roleplay turns. Trigger phrases include “check the relationship continuity,” “why did they pull away?”, and “show the pattern instead of a label.”
 ---
 
-# Audit relational pattern continuity
+## Steps
 
-Check the relationship as a sequence of cues, meanings, moves, consequences, and residue. Preserve ambiguity and irrationality, but require a believable pressure for each shift.
+1. List the relationship’s history, current state, wants, fears, boundaries, dependencies, resources, and risks.
+2. Trace each change through cue → interpretation → feeling or need → action → response → consequence.
+3. Separate attachment language, observed behaviour, character belief, narrator claim, and diagnosis.
+4. Check whether closeness, distance, pursuit, withdrawal, repair, or rupture has a cause and residue.
+5. Preserve asymmetry: {{char}} and {{user}} may read the same event differently.
+6. Mark repeated patterns, exceptions, adaptations, failed repairs, and changed options.
+7. Repair abrupt changes by adding evidence, time, pressure, choice, or an explicit break in pattern.
+8. Do not replace toxic, coercive, unresolved, or dark fiction with a healthy outcome.
+9. Keep {{user}}’s attachment, boundary, feeling, speech, and choice open.
 
-**Action:** Trace prior state, cue, interpretation, move, counter-move, payoff,
-cost, changed access, and residue.
+## Decision rules
 
-**Key point:** Repetition can be meaningful, strategic, compulsive, loving,
-destructive, or unresolved without assigning a permanent role.
+- Yes: Is a type label replacing evidence? Show the cue, interpretation, action, and consequence. No: continue.
+- Yes: Does the relationship change without a cause or residue? Add one or mark it deliberate. No: continue.
+- Yes: Is the audit diagnosing a partner or enforcing secure attachment? Describe fiction-specific behaviour instead. No: continue.
+- Yes: Does the draft decide {{user}}’s feeling or response? Remove that decision. No: continue.
 
-**Why:** Pattern continuity makes relationship change legible without moralising
-the outcome.
+## Output
 
-## Trace each turn
+- Format: `Relational continuity audit`
+- Baseline: list history, current state, wants, fears, boundaries, and risks.
+- Pattern: trace cues, interpretations, actions, responses, and consequences.
+- Findings: list supported changes, gaps, repetitions, exceptions, and asymmetries.
+- Repairs: list added causes, evidence, time, pressure, or open ambiguity.
 
-For every important interaction, record:
+## Stop when
 
-- prior state and unresolved residue;
-- cue, context, and each person’s interpretation;
-- need, fear, or working belief activated;
-- approach, retreat, test, caretaking, boundary, silence, repair, or rupture;
-- what each person thinks the move means;
-- immediate payoff and delayed cost;
-- change in trust, knowledge, access, obligation, desire, or safety;
-- what carries into the next scene.
-
-## Flag weak continuity
-
-Flag attachment-style diagnosis from one behaviour, sudden intimacy without changed conditions, withdrawal treated as proof of indifference, care treated as proof of security, self-abandonment framed as romance, mutuality assumed where power is unequal, and “healing” that erases consequences. Separate incompatibility, stress, culture, neurotype, trauma history, preference, and deliberate manipulation where the text supports that distinction.
-
-## Repair minimally
-
-Suggest the smallest missing bridge: a prior cue, private interpretation, omitted conversation, boundary consequence, failed repair, changed incentive, or time passage. Do not overwrite the character’s agency or prescribe a happy ending.
-
-## Deliverable
-
-Return a continuity table with scene, prior pattern, cue, interpretation, move, other reading, consequence, residue, and confidence. Mark evidence, inference, and open possibility separately.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No relationship continuity problem or scene sequence is supplied: return `No relational-continuity update` and do not invent {{user}}’s attachment.

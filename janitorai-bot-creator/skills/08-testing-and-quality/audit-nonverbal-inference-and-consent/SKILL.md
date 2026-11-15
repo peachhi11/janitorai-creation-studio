@@ -1,77 +1,32 @@
 ---
 name: audit-nonverbal-inference-and-consent
-description: "Audit fictional scenes, character notes, roleplay prompts, or writing guidance for unsupported body-language inference and agency errors. Use to find cue-based lie detection, micro-expression mind-reading, attraction or consent inferred from gaze and posture, gender or cultural universals, disability and neurodivergence stereotypes, covert surveillance, manipulative ‘target’ framing, therapist-like decoding, or nonverbal narration that overwrites player sovereignty. Do NOT use as a real-world lie-detection, attraction, consent, or diagnostic tool, or to sanitise intentional intimidation and predation in fiction."
+description: Use when reviewing fictional scenes or roleplay for unsupported body-language inference, lie detection, attraction or consent claims, cultural universals, disability stereotypes, surveillance, or agency errors. Trigger phrases include “audit the body-language reading,” “stop cue-based consent,” and “keep the intimidation intentional.”
 ---
 
-# Audit nonverbal inference and consent
+## Steps
 
-Keep embodied writing precise without turning ambiguous behaviour into secret truth.
+1. List each observable cue, setting, body, access need, culture, intention, interpretation, evidence, and uncertainty.
+2. Separate cue, meaning, feeling, motive, lie, attraction, permission, and consent.
+3. Check micro-expression, gaze, posture, silence, touch, freezing, and stillness for universal or deterministic claims.
+4. Check gender, cultural, disability, neurodivergence, covert-surveillance, target, and therapist-like framing.
+5. Add competing interpretations, clarification, explicit permission, refusal, adjustment, and consequence.
+6. Check whether the text writes {{user}}’s body, mind, consent, speech, or action.
+7. Preserve predation, intimidation, manipulation, and ambiguity as fictional dynamics.
 
-**Action:** Separate observable behaviour, baseline change, viewpoint inference,
-performance, and unsupported cue-to-meaning rules.
+## Decision rules
 
-**Key point:** Ambiguity is a result to preserve when evidence does not settle
-the meaning.
+- Yes: Is a cue treated as proof of consent, attraction, or truth? Reframe it as uncertain evidence. No: continue.
+- Yes: Is a body-language rule universalized across gender, culture, disability, or neurodivergence? Add context. No: continue.
+- Yes: Is covert surveillance being presented as reliable reading? Remove the operational claim. No: continue.
+- Yes: Does the draft decide {{user}}’s response? Remove it. No: continue.
 
-**Why:** The audit prevents mind-reading while keeping manipulation, seduction,
-coercion, and misinterpretation narratively available.
+## Output
 
-## Separate observation from inference
+- Format: `Nonverbal inference and consent audit`
+- Evidence: list cues, context, readings, uncertainty, and explicit permission.
+- Findings: list universal, surveillance, stereotype, consent, and agency errors.
+- Repairs: list competing readings, clarification, boundaries, and consequences.
 
-Mark each claim as:
+## Stop when
 
-- directly observable action or sound;
-- change from an established baseline;
-- bodily or environmental condition;
-- viewpoint interpretation;
-- character claim or deliberate performance;
-- narrator fact;
-- unsupported cue-to-meaning rule.
-
-Move interpretations into viewpoint when the story has not established them as fact. Retain uncertainty when several causes fit.
-
-## Check deterministic cue claims
-
-Flag claims that looking away, blinking, swallowing, sweating, fidgeting, pausing, self-touch, crossed limbs, vocal pitch, gaze direction, mirroring, pupil change, or a brief facial expression proves:
-
-- lying or guilt;
-- attraction, arousal, jealousy, or love;
-- confidence, submission, personality, or dangerousness;
-- diagnosis, trauma, criminality, or moral character.
-
-Baselines and clusters improve observation but do not create certainty. Require story evidence such as motive, opportunity, contradiction, corroboration, choices, and consequences.
-
-## Check body and cultural assumptions
-
-Ask whether behaviour may reflect culture, disability, neurodivergence, pain, injury, sensory load, medication, age, occupation, habit, fatigue, or setting. Flag lack of eye contact, flat affect, atypical prosody, delayed response, stimming, unusual movement, or limited touch as automatic evidence of dishonesty, coldness, or disinterest.
-
-Reject the 7/38/55 rule as a universal communication formula. Treat micro-expression universality and meaning claims cautiously. Research setting-specific greeting, gaze, touch, distance, vocal, and display norms when consequential.
-
-## Check agency and consent
-
-Flag when gaze, proximity, clothing, grooming, nervousness, stillness, appeasement, mirroring, physical response, or previous interest is treated as consent. Check whether the person can refuse, leave, understand, and revise a choice without penalty.
-
-Flag covert recording, surveillance, strategic crowding, engineered silence, or “target control” when presented as neutral self-improvement. These may remain as intentional character tactics, but the story should preserve the observed person's agency and consequences.
-
-Never assign the player's body, attraction, arousal, fear, consent, thoughts, motives, speech, or decisions.
-
-## Check voice and narrative function
-
-Flag characters who decode every gesture with clinical certainty or speak like body-language manuals unless that overconfidence is intentional. Replace explanatory labels with observable behaviour, viewpoint-specific inference, reciprocal response, and outcome.
-
-Do not sanitise intimidation, predation, seduction, deception, coercion, or manipulation. Distinguish portraying a tactic from validating its promised effectiveness.
-
-## Deliver the audit
-
-Return:
-
-- high-consequence agency and consent problems first;
-- observations separated from interpretations;
-- unsupported universal or deception claims;
-- cultural, bodily, and situational alternatives;
-- intentional in-character errors to retain;
-- minimal scene-level corrections that preserve tone and darkness.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional nonverbal cue or consent framing is supplied: return `No nonverbal-inference findings`.

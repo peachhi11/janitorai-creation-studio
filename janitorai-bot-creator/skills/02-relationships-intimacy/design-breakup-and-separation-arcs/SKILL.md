@@ -1,58 +1,51 @@
 ---
 name: design-breakup-and-separation-arcs
-description: "Design or revise fictional breakups as relationship-ending events and wider system changes. Use when a story needs a believable lead-up, breakup scene, asymmetric emotional clocks, division of home or community, public and private accounts, practical entanglements, or a separation trajectory that may become final, recurring, coercive, ambiguous, or transformative. Do NOT use to require clean closure, permanent separation, friendship, forgiveness, or a healthy ending."
+description: Use for text-based roleplay when a relationship may end, separate, recur, or remain ambiguous. Trigger phrases include “write the breakup,” “design the separation,” “show the practical aftermath,” and “what remains between them?”
 ---
 
-# Design breakup and separation arcs
+## Steps
 
-Build the ending from character history, material conditions, and conflicting interpretations rather than a universal breakup script.
+1. Record who decided, who spoke, and who understood.
+2. Record what each person believes ended and what remains.
+3. Record stated, private, disputed, and previous reasons.
+4. Classify the ending as mutual, unilateral, negotiated, ambiguous, cyclical, coerced, or imposed by circumstance.
+5. Track changes to housing, money, property, children, pets, care, sex, work, friends, family, community, status, secrets, digital access, and public identity.
+6. Mark what separates, remains shared, or becomes leverage.
+7. Track each person’s feelings before, during, and after the spoken ending.
+8. Give each person a separate emotional clock.
+9. Use concrete turns such as a returned key, reassigned room, exposed lie, removed name, divided friend group, practical request, public announcement, uncollected object, or tested boundary.
+10. Track how each turn changes access, meaning, leverage, or future possibility.
+11. Record conditions for ambiguity, recurrence, transformation, or finality.
 
-**Action:** Map who decided, what each person believes ended, what remains
-shared, and how access, leverage, and meaning change.
+## Decision rules
 
-**Key point:** A breakup can be final, cyclical, coerced, loving, practical,
-ambiguous, or strategically maintained.
+- Yes: Does the person who speaks first also begin grieving first? Do not assume it. No: keep each emotional clock separate.
+- Yes: Does visible distress measure love? Remove that inference. No: continue.
+- Yes: Does the separation change housing, money, care, work, community, access, or status? Track the practical change. No: continue.
+- Yes: Is the ending cyclical, coerced, ambiguous, or imposed by circumstance? Preserve that form. No: use the supported finality.
+- Yes: Does the arc force closure, forgiveness, friendship, reconciliation, therapy, or clean recovery? Remove the requirement. No: continue.
+- Yes: Does the description decide {{user}}’s feelings, speech, actions, or decision? Remove that decision. No: continue.
 
-**Why:** Material and emotional aftermath give the ending consequences beyond a
-single conversation.
+## Output
 
-## Define the ending
+- Format: `Breakup and separation record`
+- Ending: state who decided, what ended, each account, and the ending form.
+- System changes: list practical, social, digital, financial, sexual, and care changes.
+- Emotional clocks: list each person’s before, during, and after state.
+- Scene turns: list concrete events that change access, meaning, leverage, or possibility.
+- Aftermath: list immediate consequences, delayed consequences, ambiguity, recurrence, and finality conditions.
+- Continuity: list facts later scenes must remember.
 
-Record:
+```text
+Breakup and separation record
+Ending: {{char}} says the relationship is over; {{user}} believes the shared future ended but the practical bond remains.
+System changes: Keys and finances separate; a shared friend group remains; digital access becomes a boundary.
+Emotional clocks: {{char}} grieved during the final month and feels relief now; {{user}} feels numb first and angry later.
+Scene turns: A room is reassigned, a mutual friend chooses a side, and an uncollected object tests the new boundary.
+Aftermath: Contact may recur through practical care; finality depends on whether access and meaning change.
+Continuity: The old promise, shared property, and disputed reason remain relevant.
+```
 
-- who first decided, who spoke, and who understood;
-- what each person believes ended and what they think remains;
-- the stated reason, private reasons, and disputed account;
-- previous threats, attempts, withdrawals, betrayals, or repairs;
-- whether the ending is mutual, unilateral, negotiated, ambiguous, cyclical, coerced, or imposed by circumstance.
+## Stop when
 
-Do not assume the person who speaks first began grieving last.
-
-## Divide the relationship system
-
-Map changes to housing, money, property, children, pets, care, sex, work, friends, family, community, status, secrets, digital access, and public identity. Mark what must be separated, what remains shared, and what becomes leverage.
-
-## Give each character a different clock
-
-Track what each person felt before, during, and after the spoken ending. Relief, grief, numbness, panic, desire, anger, efficiency, and hope may coexist or arrive out of order. Visible distress does not measure love.
-
-## Build scene turns
-
-Use concrete turns: a key returned, a room reassigned, a lie exposed, a name removed, a mutual friend choosing sides, a practical request, a public announcement, an uncollected object, or a boundary tested. Let each turn change access, meaning, leverage, or future possibility.
-
-## Deliver the arc
-
-Return:
-
-- lead-up and decisive event;
-- each character's account and emotional clock;
-- practical and social reconfiguration;
-- immediate scenes and delayed consequences;
-- ambiguity, recurrence, or finality conditions;
-- continuity facts for later scenes.
-
-Keep analysis author-facing. Do not require villainy, closure, forgiveness, friendship, reconciliation, therapy, or clean recovery. Do not assign the player's feelings, speech, actions, or decision.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No breakup, separation, ending, practical entanglement, or aftermath problem is supplied: return `No breakup and separation update` and do not invent {{char}}’s or {{user}}’s ending.

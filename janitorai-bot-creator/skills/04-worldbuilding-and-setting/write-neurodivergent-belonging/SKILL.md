@@ -1,46 +1,37 @@
 ---
 name: write-neurodivergent-belonging
-description: Write neurodivergent friendship, belonging, communication and community scenes with agency and mutuality. Use when characters want connection but have different social expectations, when shared interest or structure creates access, or when inclusion must mean recognition rather than forced assimilation. Do NOT use to enforce neurotypical social norms, diagnose communication failure, or decide a character's feelings, consent, or social choices.
+description: Use when writing fictional neurodivergent friendship, belonging, communication, community, shared interest, structure, or access between {{char}}, {{user}}, and other characters. Trigger phrases include “write neurodivergent belonging,” “show the access condition,” and “keep inclusion from becoming assimilation.”
 ---
 
-# Write neurodivergent belonging
+## Steps
 
-## Build the relationship
+1. Define what each person wants from connection: companionship, focus, affection, information, help, witness, privacy, or low-demand presence.
+2. Define what counts as closeness for each person and where those expectations differ.
+3. Map directness, timing, eye contact, touch, inference, turn-taking, silence, sensory needs, and repair.
+4. Let misunderstandings come from both sides and give each person room to learn, adapt, refuse, or leave.
+5. Use shared interests, games, routines, clear structure, or parallel presence as access rather than therapy.
+6. Show how inclusion can preserve difference instead of rewarding performance of normality.
+7. Record the misread signal, repair attempt, reciprocity, boundary, and each person’s measure of belonging.
+8. Keep diagnosis, social failure, and neurotypical norms separate from character choices.
+9. Keep {{user}}’s feelings, consent, social choice, speech, and action open.
 
-**Action:** Decide what each person wants from connection: companionship, shared focus,
-affection, information, practical help, witness, privacy or low-demand
-presence. Specify what counts as closeness for each person and where those
-expectations differ.
+## Decision rules
 
-**Key point:** Do not make one format of contact the universal proof of care.
+- Yes: Is inclusion being treated as assimilation? Preserve difference, negotiation, and the option to leave. No: continue.
+- Yes: Is one person labelled the social problem by default? Track both interpretations and constraints. No: continue.
+- Yes: Is repair or closeness forced despite insufficient trust or evidence? Leave it unresolved. No: continue.
+- Yes: Is diagnosis being used as a shortcut for motive or behaviour? Show the specific pattern and context. No: continue.
+- Yes: Does the draft decide {{user}}’s feeling, consent, or response? Remove that decision. No: continue.
 
-**Why:** Belonging becomes specific when access conditions and meanings are
-negotiated between people.
+## Output
 
-## Write mutual communication
+- Format: `Neurodivergent belonging map`
+- Connection: list desired closeness, social format, and differences.
+- Access: list sensory, communication, timing, structure, and support conditions.
+- Exchange: trace signal, interpretation, misread, repair, reciprocity, and boundary.
+- Belonging: state each character’s measure, unresolved tension, and option to leave.
+- Player space: keep {{user}}’s feelings and choices open.
 
-Track differences in directness, timing, eye contact, touch, inference,
-turn-taking, silence and repair. Do not make one person the defective
-communicator by default. Let misunderstandings arise from both sides and let
-each person learn, adapt or refuse.
+## Stop when
 
-Shared interests, games, routines and clear structure can create genuine
-connection without becoming a therapeutic exercise. Belonging means being
-understood and allowed to remain distinct, not performing normality well
-enough.
-
-Return a belonging map: desired connection, social format, access conditions,
-misread signal, repair attempt, reciprocity, boundary and the character's own
-measure of whether they belong.
-
-## Guardrails
-
-| Temptation                         | Binding rule                                                                   |
-| ---------------------------------- | ------------------------------------------------------------------------------ |
-| Equate inclusion with assimilation | Preserve difference, negotiation and the option to leave.                      |
-| Make one person the social problem | Track both interpretations, constraints and choices.                           |
-| Force repair or closeness          | Let misunderstanding remain unresolved when evidence or trust is insufficient. |
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Preserve the setting's internal rules, causal consequences, knowledge boundaries, and player sovereignty. Do not turn fictional darkness, eroticism, coercion, obsession, tragedy, comedy, surrealism, or meta-fiction into a real-world manual or an automatic healthy outcome.
+- No neurodivergent belonging, communication, or access scenario is supplied: return `No belonging update` and do not invent {{user}}’s response.

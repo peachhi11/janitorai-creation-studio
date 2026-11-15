@@ -1,46 +1,48 @@
 ---
 name: translate-emotion-into-behaviour
-description: "Translate a fictional character’s emotion into speech, silence, posture, attention, decisions, touch, conflict, intimacy, and aftermath. Use when a profile names feelings without showing them, when emotional prose feels generic, or when the character must remain readable without therapist-like explanation or universal body-language rules. Do NOT use to diagnose emotion, assign the player's internal state, or convert one body cue into a universal meaning."
+description: Use for text-based roleplay when {{char}}’s feelings are named but not shown, emotional prose feels generic, or a reaction needs to stay readable without universal body-language rules. Trigger phrases include “show {{char}}’s emotion,” “turn this feeling into behavior,” “write the emotional aftermath,” and “make the reaction less generic.”
 ---
 
-# Translate emotion into behaviour
+## Steps
 
-Start with what the character does and says. Let the emotion shape the behaviour without making a single cue a guaranteed translation.
+1. Choose two or three channels that fit the scene.
+2. Record speech pace, precision, jokes, repetition, omissions, volume, and formality.
+3. Record what {{char}} notices, avoids, misreads, or remembers.
+4. Record breath, movement, stillness, distance, hands, gaze, and sensory tolerance.
+5. Record the decision to approach, delay, appease, attack, repair, leave, or pretend nothing happened.
+6. Record disclosure, touch, boundaries, invitation, withdrawal, reassurance, retaliation, and changed trust.
+7. Record ritual, rumination, practical action, or delayed feeling afterward.
+8. Filter the emotion through personality, culture, status, neurotype, history, and public mask.
+9. Build cue, private interpretation, visible behavior, other-person reading, adjustment or escalation, and residue.
+10. Show the behavior as an attempt to solve a problem, protect an identity, or avoid a feared meaning.
 
-**Action:** Choose a few channels, anchor them in context and viewpoint, and
-trace behaviour through relationship effect and aftermath.
+## Decision rules
 
-**Key point:** Emotion can be mixed, concealed, misread, delayed, or acted
-against.
+- Yes: Is the emotion mixed, concealed, delayed, misread, or acted against? Preserve that complexity. No: use the supported expression.
+- Yes: Does one body cue have several possible meanings? Use context and later choices. No: continue.
+- Yes: Is the emotion being made louder, tearful, or verbally explicit by default? Rework it through {{char}}’s voice. No: continue.
+- Yes: Does the channel fit {{char}} and the scene? Keep it. No: choose a better channel.
+- Yes: Does the behavior affect the relationship or aftermath? Record the effect. No: add the consequence it creates.
+- Yes: Does the translation decide {{user}}’s interiority, consent, speech, or choice? Remove that decision. No: continue.
 
-**Why:** Behavioural translation keeps emotion embodied without making it
-formulaic.
+## Output
 
-## Select the channel
+- Format: `Emotion-to-behavior record`
+- State: list the emotion, competing feelings, and private interpretation.
+- Channels: list speech, attention, body, decision, relationship, and aftermath behavior.
+- Reading: list what another character may infer and what remains uncertain.
+- Voice: state how personality, culture, status, neurotype, history, and mask shape the expression.
+- Consequence: state the next relationship effect and emotional residue.
 
-Choose two or three channels that fit the character and scene:
+```text
+Emotion-to-behavior record
+State: {{char}} feels affection, fear, and shame after {{user}} offers reassurance.
+Channels: Speech becomes precise; attention fixes on the exit; hands fold around a cup; {{char}} accepts the help but delays a reply.
+Reading: {{user}} may read the delay as rejection, but the scene does not settle that interpretation.
+Voice: {{char}} becomes formal when frightened and useful when ashamed.
+Consequence: The immediate tension drops, but the unanswered feeling remains between them.
+```
 
-- speech: pace, precision, jokes, repetition, omissions, volume, or sudden formality;
-- attention: what they notice, avoid, misread, or remember;
-- body: breath, movement, stillness, distance, hands, gaze, or sensory tolerance;
-- decision: approach, delay, appease, attack, repair, leave, or pretend nothing happened;
-- relationship: disclosure, touch, boundary, invitation, withdrawal, reassurance, or retaliation;
-- aftermath: ritual, rumination, practical action, changed trust, or delayed feeling.
+## Stop when
 
-Use body cues probabilistically. The same silence may mean composure, fear, contempt, fatigue, or concentration; establish meaning through context and later choices.
-
-## Preserve voice
-
-Filter the emotion through personality, culture, status, neurotype, history, and public mask. A character may become quieter when angry, more precise when frightened, useful when ashamed, or funny when desperate. Do not make every emotion louder, tearful, or verbally explicit.
-
-## Build the turn
-
-Write: **cue → private interpretation → visible behaviour → other person’s reading → adjustment or escalation → residue**. Let the character’s behaviour be an attempt to solve a problem, protect an identity, or avoid a feared meaning.
-
-## Deliverable
-
-Return a behaviour translation with internal state, visible evidence, alternative readings, dialogue texture, and the next emotional consequence.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No emotion, reaction, scene, or aftermath problem is supplied: return `No emotion-to-behavior update` and do not invent {{user}}’s internal state.

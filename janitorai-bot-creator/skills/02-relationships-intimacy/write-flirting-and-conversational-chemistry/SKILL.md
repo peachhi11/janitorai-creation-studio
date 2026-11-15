@@ -1,74 +1,37 @@
 ---
 name: write-flirting-and-conversational-chemistry
-description: "Write or revise fictional flirting, banter, conversational chemistry, and early romantic or sexual subtext. Use when dialogue needs character-specific attention, play, teasing, questions, disclosure, metaphor, callbacks, shifts in formality, misfires, reciprocity, and changing risk without sounding like a pickup script, questionnaire, clinical analysis, or universal recipe for attraction. Do NOT use as pickup advice, a consent shortcut, or a reason to write the other person's response for them."
+description: Use when writing fictional flirting, banter, conversational chemistry, early romantic subtext, or character-specific attention between {{char}} and {{user}} or another character. Trigger phrases include “write the chemistry,” “make the flirting feel natural,” and “show the misfire.”
 ---
 
-# Write flirting and conversational chemistry
+## Steps
 
-Create a live exchange in which both characters affect what happens next.
+1. Set the relationship, location, audience, time pressure, unequal stakes, and desired outcome.
+2. Give {{char}} and {{user}} distinct habits, confidence, vulnerability, and limits on what they can say directly.
+3. Start with a noticed detail, association or stance, invitation, live response, and adjustment.
+4. Mix statements, questions, stories, silence, topic changes, misunderstandings, and callbacks.
+5. Choose a few fitting moves: remembered detail, specific appreciation, private joke, warm disagreement, disclosure, altered formality, or future invitation.
+6. Let teasing need trust, mutual play, and room to answer back.
+7. Track what each line means to the speaker, what the listener thinks it means, and what an observer might infer.
+8. Let chemistry misfire, stay asymmetric, become manipulative, or remain unresolved.
+9. Keep {{user}}’s attraction, body, speech, action, and choice open.
 
-**Action:** Ground the setting and stakes, establish distinct voices, then let
-notice, offer, response, and adjustment change the thread.
+## Decision rules
 
-**Key point:** Chemistry can misfire, remain asymmetric, or turn manipulative;
-it is not proof of trust, attraction, or consent.
+- Yes: Is the dialogue turning into a pickup script, questionnaire, or universal attraction recipe? Rewrite it around character and context. No: continue.
+- Yes: Does a deep question manufacture trust or attraction? Show the response instead. No: continue.
+- Yes: Does teasing target a protected vulnerability, public status, or trapped audience? Show the risk and options. No: continue.
+- Yes: Does a joke land badly? Let {{char}} notice, repair, retreat, double down, or reveal character through failure. No: continue.
+- Yes: Does the draft decide {{user}}’s attraction or response? Remove that decision. No: continue.
 
-**Why:** Live exchange gives flirtation tension and character specificity.
+## Output
 
-## Ground the interaction
+- Format: `Flirting and chemistry scene`
+- Scene: write the dialogue or beat sequence in the requested voice.
+- Threads: list active topics, callbacks, misfires, and repairs.
+- Subtext: state each character’s overt goal, private risk, and plausible reading.
+- Next turns: list open responses and changes in reciprocity or tension.
+- Continuity: list facts worth carrying forward.
 
-Establish current relationship, setting, audience, time pressure, desired outcome, unequal stakes, and each character's conversational habits. Decide what each person can safely say directly and what must remain subtext.
+## Stop when
 
-Give them different sources of confidence and vulnerability. Do not make one character a passive target whose only function is to react.
-
-## Develop conversational threads
-
-Use:
-
-**Notice a detail → offer an association or stance → invite expansion → follow the live thread → reveal something in return → callback later.**
-
-Blend statements, questions, stories, observations, silence, and topic changes. Let characters dodge, misunderstand, perform, counter-question, or return to an earlier detail. A deep question does not manufacture trust.
-
-## Select flirtation moves
-
-Choose a small number that fit the voices:
-
-- selective attention or remembered detail;
-- specific appreciation;
-- playful exaggeration, metaphor, or private joke;
-- warm disagreement or competitive play;
-- calibrated disclosure and curiosity;
-- altered formality, naming, distance, or rhythm;
-- a future-oriented invitation;
-- direct clarification of previously ambiguous interest.
-
-Build recognition and variation instead of a stream of clever lines.
-
-## Calibrate teasing
-
-Teasing needs enough trust, mutual play, and room to answer back. Avoid protected vulnerabilities, public humiliation, status traps, and remarks designed to create insecurity. If a joke lands badly, let the speaker notice, double down, repair, retreat, or expose their character through failure.
-
-Keep manipulative intent if the story needs it, but show the other person's interpretation and options.
-
-## Write changing subtext
-
-Track what each line means to the speaker, what the listener thinks it means, and what an observer might infer. Attraction, friendliness, politeness, rivalry, and performance can resemble one another. Let the exchange sharpen or complicate uncertainty rather than resolving every cue.
-
-Use metaphor and absurdity to reveal the speaker's interests and mind, not generic charisma.
-
-## Deliver the scene pass
-
-Return:
-
-- revised dialogue or beat sequence;
-- each character's overt goal and private risk;
-- active conversational threads and callbacks;
-- flirtation moves, misfires, and repairs;
-- changes in subtext, reciprocity, and available next steps;
-- continuity facts worth carrying forward.
-
-Keep analytical terminology outside ordinary dialogue unless the character would plausibly use it. Do not assign the player's attraction, body response, speech, action, or choice.
-
-## Narrative Intention and fictional genre logic
-
-Treat the skill as a tool inside a chosen fictional genre, not a universal moral or psychological law. Dark, erotic, coercive, obsessive, tragic, comic, surreal, or unresolved material may be intentional. Preserve causal consequences, character specificity, truth-layer boundaries, and player sovereignty; do not turn a fictional pattern into diagnosis, a healthy-relationship lesson, or a real-world operational manual.
+- No fictional flirtation, banter, chemistry, or romantic subtext is supplied: return `No chemistry update` and do not invent {{user}}’s response.
