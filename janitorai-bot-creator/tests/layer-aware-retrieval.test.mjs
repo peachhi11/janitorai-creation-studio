@@ -74,7 +74,7 @@ test("working-context assembly enforces item and character budgets", () => {
   });
   assert.equal(context.items.length, 1);
   assert.ok(context.dropped.length >= 1);
-  assert.equal(context.chars, context.items[0].text.length);
+  assert.equal(context.chars, context.text.length);
 });
 
 test("layer-aware retrieval returns classification, ranked evidence, and bounded context", () => {
@@ -356,4 +356,77 @@ test("answerability reflects the final bounded evidence selection", () => {
   assert.equal(result.answerability.status, "insufficient_evidence");
   assert.deepEqual(result.ranked, []);
   assert.deepEqual(result.context.items, []);
+});
+
+test("broad temporal queries retain matching episodes without event keywords", () => {
+  const episodes = [
+    {
+      id: "early",
+      layer: "episodic",
+      text: "Mira met Rowan at the cafe.",
+      timestamp: "2026-02-01T00:00:00Z",
+    },
+    {
+      id: "late",
+      layer: "episodic",
+      text: "Mira spoke with Rowan at home.",
+      timestamp: "2026-02-02T00:00:00Z",
+    },
+  ].map((item) => ({
+    ...item,
+    authority: "observed-event",
+    status: "valid",
+    access: "project",
+  }));
+  const result = retrieveLayerAwareMemory(
+    episodes,
+    "What happened between Mira and Rowan?",
+    { now: "2026-02-03T00:00:00Z" }
+  );
+  assert.equal(result.answerability.status, "answerable");
+  assert.deepEqual(
+    result.context.items.map((item) => item.id),
+    ["early", "late"]
+  );
+});
+
+test("context budget includes labels and separators at exact boundaries", () => {
+  const records = ["a", "b"].map((id) => ({
+    id,
+    layer: "semantic",
+    text: "12345",
+  }));
+  const ranked = records.map(({ id, layer }) => ({ id, layer }));
+  for (const [maxChars, count] of [
+    [5, 0],
+    [16, 1],
+    [33, 1],
+    [34, 2],
+  ]) {
+    const context = assembleWorkingContext(ranked, records, { maxChars });
+    assert.equal(context.items.length, count);
+    assert.equal(context.chars, context.text.length);
+    assert.ok(context.text.length <= maxChars);
+  }
+});
+
+test("broad temporal queries do not treat between as a participant", () => {
+  const unrelated = [
+    "Alice walked between the trees.",
+    "Bob sat between the chairs.",
+  ].map((text, index) => ({
+    id: String(index),
+    layer: "episodic",
+    text,
+    authority: "observed-event",
+    status: "valid",
+    access: "project",
+    timestamp: `2026-02-0${index + 1}T00:00:00Z`,
+  }));
+  const result = retrieveLayerAwareMemory(
+    unrelated,
+    "What happened between Mira and Rowan?"
+  );
+  assert.equal(result.answerability.status, "insufficient_evidence");
+  assert.equal(result.context.text, "");
 });
